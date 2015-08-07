@@ -16,6 +16,8 @@
 		181EF7F91B73CF880010D2EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 181EF7F81B73CF880010D2EA /* Images.xcassets */; };
 		181EF7FC1B73CF880010D2EA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181EF7FA1B73CF880010D2EA /* LaunchScreen.xib */; };
 		181EF8081B73CF880010D2EA /* TempleTripTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 181EF8071B73CF880010D2EA /* TempleTripTests.m */; };
+		18CB44DA1B745444001FA4B4 /* results.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18CB44D91B745444001FA4B4 /* results.txt */; };
+		18CB44E11B751B95001FA4B4 /* Temple.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CB44E01B751B95001FA4B4 /* Temple.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,9 @@
 		181EF8011B73CF880010D2EA /* TempleTripTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TempleTripTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		181EF8061B73CF880010D2EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		181EF8071B73CF880010D2EA /* TempleTripTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TempleTripTests.m; sourceTree = "<group>"; };
+		18CB44D91B745444001FA4B4 /* results.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = results.txt; sourceTree = "<group>"; };
+		18CB44DF1B751B95001FA4B4 /* Temple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Temple.h; path = ../Temple.h; sourceTree = "<group>"; };
+		18CB44E01B751B95001FA4B4 /* Temple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Temple.m; path = ../Temple.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +100,7 @@
 				181EF7F51B73CF880010D2EA /* Main.storyboard */,
 				181EF7F81B73CF880010D2EA /* Images.xcassets */,
 				181EF7FA1B73CF880010D2EA /* LaunchScreen.xib */,
-				181EF7EC1B73CF880010D2EA /* TempleTrip.xcdatamodeld */,
+				18CB44DE1B75195B001FA4B4 /* Model */,
 				181EF7E51B73CF870010D2EA /* Supporting Files */,
 			);
 			path = TempleTrip;
@@ -104,6 +109,7 @@
 		181EF7E51B73CF870010D2EA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18CB44D91B745444001FA4B4 /* results.txt */,
 				181EF7E61B73CF870010D2EA /* Info.plist */,
 				181EF7E71B73CF870010D2EA /* main.m */,
 			);
@@ -125,6 +131,16 @@
 				181EF8061B73CF880010D2EA /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18CB44DE1B75195B001FA4B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				181EF7EC1B73CF880010D2EA /* TempleTrip.xcdatamodeld */,
+				18CB44DF1B751B95001FA4B4 /* Temple.h */,
+				18CB44E01B751B95001FA4B4 /* Temple.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +226,7 @@
 				181EF7F71B73CF880010D2EA /* Main.storyboard in Resources */,
 				181EF7FC1B73CF880010D2EA /* LaunchScreen.xib in Resources */,
 				181EF7F91B73CF880010D2EA /* Images.xcassets in Resources */,
+				18CB44DA1B745444001FA4B4 /* results.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18CB44E11B751B95001FA4B4 /* Temple.m in Sources */,
 				181EF7F41B73CF880010D2EA /* DetailViewController.m in Sources */,
 				181EF7F11B73CF880010D2EA /* MasterViewController.m in Sources */,
 				181EF7EB1B73CF880010D2EA /* AppDelegate.m in Sources */,
@@ -426,6 +444,7 @@
 				181EF80D1B73CF880010D2EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		181EF80E1B73CF880010D2EA /* Build configuration list for PBXNativeTarget "TempleTripTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +453,7 @@
 				181EF8101B73CF880010D2EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

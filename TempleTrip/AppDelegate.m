@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "DetailViewController.h"
 #import "MasterViewController.h"
+#import "Temple.h"
 
 @interface AppDelegate ()
 
@@ -22,6 +23,9 @@
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     MasterViewController *controller = (MasterViewController *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
+    
+    [self preloadData];
+    
     return YES;
 }
 
@@ -126,6 +130,35 @@
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
+    }
+}
+
+#pragma mark - Parse Temples
+
+-(NSArray *)parseTempleJson:(NSString *)path{
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    NSError *error;
+    NSArray *temples = nil;
+    temples =[NSJSONSerialization JSONObjectWithData: data options:NSJSONReadingMutableContainers error:&error];
+    
+    return temples;
+}
+
+-(void)preloadData{
+    NSString *path = [[NSBundle mainBundle]pathForResource:@"results" ofType:@"txt"];
+    NSArray *temples = [self parseTempleJson:path];
+    NSLog(@"Found these items: %@", temples);
+    
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    for (id item in temples) {
+        Temple *temple = [NSEntityDescription insertNewObjectForEntityForName:@"Temple" inManagedObjectContext:context];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+        [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
+        temple.name = [item valueForKey:@"name"];
+    temple.dedication = [formatter dateFromString:[item valueForKey:@"dedication"]];
+        temple.place = [item valueForKey:@"place"];
+        [context save:nil];
     }
 }
 
