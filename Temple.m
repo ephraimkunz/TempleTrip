@@ -14,5 +14,7 @@
 @dynamic name;
 @dynamic dedication;
 @dynamic place;
+@dynamic address;
+@dynamic imageLink;
 
 @end

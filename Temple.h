@@ -15,5 +15,7 @@
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSDate * dedication;
 @property (nonatomic, retain) NSString * place;
+@property (nonatomic, retain) NSString * address;
+@property (nonatomic, retain) NSString * imageLink;
 
 @end

@@ -144,7 +144,19 @@
     return temples;
 }
 
+-(BOOL)dataInCD{
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Temple"];
+    NSArray *templeArray = [context executeFetchRequest:request error:nil];
+    
+    return templeArray.count > 0;
+}
+
 -(void)preloadData{
+    if ([self dataInCD]) {
+        return;
+    }
+    
     [self removeData];
     NSString *path = [[NSBundle mainBundle]pathForResource:@"results" ofType:@"txt"];
     NSArray *temples = [self parseTempleJson:path];
@@ -158,8 +170,10 @@
         NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
         [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
         temple.name = [item valueForKey:@"name"];
-    temple.dedication = [formatter dateFromString:[item valueForKey:@"dedication"]];
+        temple.dedication = [formatter dateFromString:[item valueForKey:@"dedication"]];
         temple.place = [item valueForKey:@"place"];
+        temple.address = [item valueForKey:@"address"];
+        temple.imageLink = [item valueForKey:@"photoLink"];
         [context save:&error];
     }
 }
