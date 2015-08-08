@@ -78,6 +78,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     [self configureCell:cell atIndexPath:indexPath];
+    [cell layoutSubviews]; // To fix the detailText not updating: http://stackoverflow.com/questions/25987135/ios-8-uitableviewcell-detail-text-not-correctly-updating
     return cell;
 }
 
@@ -105,10 +106,20 @@
     NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = [[object valueForKey:@"name"] description];
     
-    //Configure dedication date as detail label
-    NSString *formattedDate = [NSDateFormatter localizedStringFromDate:[object valueForKey:@"dedication"] dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateIntervalFormatterNoStyle];
+    //Configure dedication date as detail label.
+    NSString *dateCandidate = [object valueForKey:@"dedication"];
     
-    cell.detailTextLabel.text = formattedDate;
+    NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+    [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
+    NSDate *date = [formatter dateFromString:dateCandidate];
+    
+    if (date) {
+        NSString *formattedDate = [NSDateFormatter localizedStringFromDate:date dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterNoStyle];
+        cell.detailTextLabel.text = formattedDate;
+    }
+    else{
+        cell.detailTextLabel.text = [object valueForKey:@"dedication"];
+    }
 }
 
 #pragma mark - Fetched results controller

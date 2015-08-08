@@ -2,7 +2,7 @@
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Temple" representedClassName="Temple">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="dedication" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="dedication" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="imageLink" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="place" optional="YES" attributeType="String" syncable="YES"/>

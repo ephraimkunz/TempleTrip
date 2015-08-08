@@ -1,3 +1,4 @@
+
 //
 //  AppDelegate.m
 //  TempleTrip
@@ -167,10 +168,8 @@
     
     for (id item in temples) {
         Temple *temple = [NSEntityDescription insertNewObjectForEntityForName:@"Temple" inManagedObjectContext:context];
-        NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-        [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
         temple.name = [item valueForKey:@"name"];
-        temple.dedication = [formatter dateFromString:[item valueForKey:@"dedication"]];
+        temple.dedication = [item valueForKey:@"dedication"];
         temple.place = [item valueForKey:@"place"];
         temple.address = [item valueForKey:@"address"];
         temple.imageLink = [item valueForKey:@"photoLink"];
