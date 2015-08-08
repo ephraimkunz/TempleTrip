@@ -145,9 +145,11 @@
 }
 
 -(void)preloadData{
+    [self removeData];
     NSString *path = [[NSBundle mainBundle]pathForResource:@"results" ofType:@"txt"];
     NSArray *temples = [self parseTempleJson:path];
     NSLog(@"Found these items: %@", temples);
+    NSError *error;
     
     NSManagedObjectContext *context = [self managedObjectContext];
     
@@ -158,7 +160,16 @@
         temple.name = [item valueForKey:@"name"];
     temple.dedication = [formatter dateFromString:[item valueForKey:@"dedication"]];
         temple.place = [item valueForKey:@"place"];
-        [context save:nil];
+        [context save:&error];
+    }
+}
+
+-(void)removeData{
+    NSManagedObjectContext *context = [self managedObjectContext];
+    NSFetchRequest *delete = [NSFetchRequest fetchRequestWithEntityName:@"Temple"];
+    NSArray *allTemples = [context executeFetchRequest:delete error:nil];
+    for (NSManagedObject* item in allTemples) {
+        [context deleteObject:item];
     }
 }
 
