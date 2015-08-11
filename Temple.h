@@ -17,5 +17,7 @@
 @property (nonatomic, retain) NSString * place;
 @property (nonatomic, retain) NSString * address;
 @property (nonatomic, retain) NSString * imageLink;
+@property (nonatomic, retain) NSString * telephone;
+@property (nonatomic, retain) NSDictionary * endowmentSchedule;
 
 @end

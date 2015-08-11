@@ -19,7 +19,9 @@
     self.DetailViewTopLabel.title = self.currentTemple.name;
     self.addressLabel.text = self.currentTemple.address;
     self.placeLabel.text = self.currentTemple.place;
-    self.addressLabel.lineBreakMode = NSLineBreakByTruncatingTail;
+    
+    NSString *endowmentScheduleString = [NSString stringWithFormat:@"%@", self.currentTemple.endowmentSchedule];
+    self.endowmentScheduleLabel.text = endowmentScheduleString;
     
     //Get the image view from the Internet.
     NSURL *url = [NSURL URLWithString:self.currentTemple.imageLink];

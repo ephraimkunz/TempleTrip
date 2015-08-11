@@ -134,7 +134,7 @@
     }
 }
 
-#pragma mark - Parse Temples
+#pragma mark - Parse Temples Json
 
 -(NSArray *)parseTempleJson:(NSString *)path{
     NSData *data = [NSData dataWithContentsOfFile:path];
@@ -173,6 +173,9 @@
         temple.place = [item valueForKey:@"place"];
         temple.address = [item valueForKey:@"address"];
         temple.imageLink = [item valueForKey:@"photoLink"];
+        temple.telephone = [item valueForKey:@"telephone"];
+        temple.endowmentSchedule = [item valueForKey:@"endowmentSchedule"];
+        
         [context save:&error];
     }
 }

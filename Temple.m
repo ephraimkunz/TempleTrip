@@ -16,5 +16,7 @@
 @dynamic place;
 @dynamic address;
 @dynamic imageLink;
+@dynamic telephone;
+@dynamic endowmentSchedule;
 
 @end

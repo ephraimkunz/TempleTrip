@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *addressLabel;
 @property (weak, nonatomic) IBOutlet UILabel *placeLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *templeImage;
+@property (weak, nonatomic) IBOutlet UILabel *endowmentScheduleLabel;
 
 
 

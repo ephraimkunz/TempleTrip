@@ -99,7 +99,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j1z-Qr-8DC">
-                                <rect key="frame" x="20" y="224" width="560" height="368"/>
+                                <rect key="frame" x="20" y="245" width="560" height="347"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUP-iB-Iey">
                                 <rect key="frame" x="20" y="125" width="560" height="18"/>
@@ -107,19 +107,27 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ft3-uq-se3">
+                                <rect key="frame" x="20" y="204" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ft3-uq-se3" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" constant="20" symbolic="YES" id="2lJ-EY-NCe"/>
                             <constraint firstItem="8Zv-LN-quW" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" constant="20" symbolic="YES" id="7Hg-SU-lL6"/>
                             <constraint firstItem="a0L-h9-sNL" firstAttribute="top" secondItem="j1z-Qr-8DC" secondAttribute="bottom" constant="8" symbolic="YES" id="7Vx-Sa-2Od"/>
                             <constraint firstAttribute="trailing" secondItem="9Y9-Ar-VYt" secondAttribute="trailing" constant="20" symbolic="YES" id="AI0-Qi-jsA"/>
                             <constraint firstItem="8Zv-LN-quW" firstAttribute="top" secondItem="FUP-iB-Iey" secondAttribute="bottom" constant="20" id="FDc-SE-7Im"/>
+                            <constraint firstItem="ft3-uq-se3" firstAttribute="top" secondItem="8Zv-LN-quW" secondAttribute="bottom" constant="20" id="TNc-6t-Y4d"/>
                             <constraint firstItem="j1z-Qr-8DC" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" constant="20" symbolic="YES" id="b9V-Sw-GRa"/>
-                            <constraint firstItem="j1z-Qr-8DC" firstAttribute="top" secondItem="8Zv-LN-quW" secondAttribute="bottom" constant="40" id="d14-Hs-Gr4"/>
                             <constraint firstItem="g56-oK-KFE" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" constant="20" symbolic="YES" id="ddb-Y7-mVP"/>
                             <constraint firstItem="8Zv-LN-quW" firstAttribute="centerY" secondItem="9Y9-Ar-VYt" secondAttribute="centerY" id="g5G-kE-7Gx"/>
                             <constraint firstAttribute="trailing" secondItem="j1z-Qr-8DC" secondAttribute="trailing" constant="20" symbolic="YES" id="hhh-WX-71y"/>
                             <constraint firstAttribute="trailing" secondItem="FUP-iB-Iey" secondAttribute="trailing" constant="20" symbolic="YES" id="iTR-C1-zbX"/>
+                            <constraint firstItem="j1z-Qr-8DC" firstAttribute="top" secondItem="ft3-uq-se3" secondAttribute="bottom" constant="20" id="jkV-90-y22"/>
                             <constraint firstItem="FUP-iB-Iey" firstAttribute="top" secondItem="g56-oK-KFE" secondAttribute="bottom" constant="20" id="ngZ-rV-P8N"/>
                             <constraint firstItem="FUP-iB-Iey" firstAttribute="leading" secondItem="MMQ-IT-qOo" secondAttribute="leading" constant="20" symbolic="YES" id="r9r-eS-xFD"/>
                             <constraint firstItem="g56-oK-KFE" firstAttribute="top" secondItem="cIm-e0-J51" secondAttribute="bottom" constant="20" id="s5e-Af-twi"/>
@@ -129,13 +137,14 @@
                     <connections>
                         <outlet property="DetailViewTopLabel" destination="cra-N8-TIN" id="YDt-aw-ZXF"/>
                         <outlet property="addressLabel" destination="FUP-iB-Iey" id="dN5-uV-K2Q"/>
+                        <outlet property="endowmentScheduleLabel" destination="ft3-uq-se3" id="c6H-2P-hap"/>
                         <outlet property="placeLabel" destination="9Y9-Ar-VYt" id="zpf-MX-qRw"/>
                         <outlet property="templeImage" destination="j1z-Qr-8DC" id="z6o-k0-B8M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lrm-kH-fPn" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1343" y="64"/>
+            <point key="canvasLocation" x="1283" y="64"/>
         </scene>
     </scenes>
 </document>
