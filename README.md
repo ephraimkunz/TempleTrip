@@ -1,6 +1,6 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+The TempleTrip app. This app will allow users to get temple schedules, set goals and get reminders for temple attendance, see closures and special events and get up-to-date info on the next session they could make it to.
 
 ### What is this repository for? ###
 
