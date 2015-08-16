@@ -8,7 +8,6 @@
 //
 
 #import "AppDelegate.h"
-#import "DetailViewController.h"
 #import "MasterViewController.h"
 #import "Temple.h"
 
@@ -138,9 +137,8 @@
 
 -(NSArray *)parseTempleJson:(NSString *)path{
     NSData *data = [NSData dataWithContentsOfFile:path];
-    NSError *error;
     NSArray *temples = nil;
-    temples =[NSJSONSerialization JSONObjectWithData: data options:NSJSONReadingMutableContainers error:&error];
+    temples =[NSJSONSerialization JSONObjectWithData: data options:NSJSONReadingMutableContainers error:nil];
     
     return temples;
 }
@@ -161,8 +159,6 @@
     [self removeData];
     NSString *path = [[NSBundle mainBundle]pathForResource:@"results" ofType:@"txt"];
     NSArray *temples = [self parseTempleJson:path];
-    NSLog(@"Found these items: %@", temples);
-    NSError *error;
     
     NSManagedObjectContext *context = [self managedObjectContext];
     
@@ -176,7 +172,7 @@
         temple.telephone = [item valueForKey:@"telephone"];
         temple.endowmentSchedule = [item valueForKey:@"endowmentSchedule"];
         
-        [context save:&error];
+        [context save:nil];
     }
 }
 
@@ -187,6 +183,7 @@
     for (NSManagedObject* item in allTemples) {
         [context deleteObject:item];
     }
+    
 }
 
 @end

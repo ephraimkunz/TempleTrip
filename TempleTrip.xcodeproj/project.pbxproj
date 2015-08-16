@@ -11,13 +11,13 @@
 		181EF7EB1B73CF880010D2EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 181EF7EA1B73CF880010D2EA /* AppDelegate.m */; };
 		181EF7EE1B73CF880010D2EA /* TempleTrip.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 181EF7EC1B73CF880010D2EA /* TempleTrip.xcdatamodeld */; };
 		181EF7F11B73CF880010D2EA /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181EF7F01B73CF880010D2EA /* MasterViewController.m */; };
-		181EF7F41B73CF880010D2EA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181EF7F31B73CF880010D2EA /* DetailViewController.m */; };
 		181EF7F71B73CF880010D2EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181EF7F51B73CF880010D2EA /* Main.storyboard */; };
 		181EF7F91B73CF880010D2EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 181EF7F81B73CF880010D2EA /* Images.xcassets */; };
 		181EF7FC1B73CF880010D2EA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181EF7FA1B73CF880010D2EA /* LaunchScreen.xib */; };
 		181EF8081B73CF880010D2EA /* TempleTripTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 181EF8071B73CF880010D2EA /* TempleTripTests.m */; };
 		18CB44DA1B745444001FA4B4 /* results.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18CB44D91B745444001FA4B4 /* results.txt */; };
 		18CB44E11B751B95001FA4B4 /* Temple.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CB44E01B751B95001FA4B4 /* Temple.m */; };
+		18F60AB61B7BA4F5003B24E3 /* TempleDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F60AB51B7BA4F5003B24E3 /* TempleDetailTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +39,6 @@
 		181EF7ED1B73CF880010D2EA /* TempleTrip.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TempleTrip.xcdatamodel; sourceTree = "<group>"; };
 		181EF7EF1B73CF880010D2EA /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		181EF7F01B73CF880010D2EA /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		181EF7F21B73CF880010D2EA /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		181EF7F31B73CF880010D2EA /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		181EF7F61B73CF880010D2EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		181EF7F81B73CF880010D2EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		181EF7FB1B73CF880010D2EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -50,6 +48,8 @@
 		18CB44D91B745444001FA4B4 /* results.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = results.txt; sourceTree = "<group>"; };
 		18CB44DF1B751B95001FA4B4 /* Temple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Temple.h; path = ../Temple.h; sourceTree = "<group>"; };
 		18CB44E01B751B95001FA4B4 /* Temple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Temple.m; path = ../Temple.m; sourceTree = "<group>"; };
+		18F60AB41B7BA4F5003B24E3 /* TempleDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempleDetailTableViewController.h; sourceTree = "<group>"; };
+		18F60AB51B7BA4F5003B24E3 /* TempleDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempleDetailTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +95,8 @@
 				181EF7EA1B73CF880010D2EA /* AppDelegate.m */,
 				181EF7EF1B73CF880010D2EA /* MasterViewController.h */,
 				181EF7F01B73CF880010D2EA /* MasterViewController.m */,
-				181EF7F21B73CF880010D2EA /* DetailViewController.h */,
-				181EF7F31B73CF880010D2EA /* DetailViewController.m */,
+				18F60AB41B7BA4F5003B24E3 /* TempleDetailTableViewController.h */,
+				18F60AB51B7BA4F5003B24E3 /* TempleDetailTableViewController.m */,
 				181EF7F51B73CF880010D2EA /* Main.storyboard */,
 				181EF7F81B73CF880010D2EA /* Images.xcassets */,
 				181EF7FA1B73CF880010D2EA /* LaunchScreen.xib */,
@@ -245,11 +245,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				18CB44E11B751B95001FA4B4 /* Temple.m in Sources */,
-				181EF7F41B73CF880010D2EA /* DetailViewController.m in Sources */,
 				181EF7F11B73CF880010D2EA /* MasterViewController.m in Sources */,
 				181EF7EB1B73CF880010D2EA /* AppDelegate.m in Sources */,
 				181EF7E81B73CF870010D2EA /* main.m in Sources */,
 				181EF7EE1B73CF880010D2EA /* TempleTrip.xcdatamodeld in Sources */,
+				18F60AB61B7BA4F5003B24E3 /* TempleDetailTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,9 +7,13 @@
 //
 
 #import "MasterViewController.h"
-#import "DetailViewController.h"
+#define kSearchScopeName 0
+#define kSearchScopePlace 1
 
 @interface MasterViewController ()
+//Private properties
+@property(strong, nonatomic) NSFetchRequest *searchFetchRequest;
+@property(strong, nonatomic) NSArray *filteredList;
 
 @end
 
@@ -21,36 +25,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-
-    //self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-    //UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    //self.navigationItem.rightBarButtonItem = addButton;
+    ///Set up search bar in code since XCode search bar is deprecated: http://useyourloaf.com/blog/2015/02/16/updating-to-the-ios-8-search-controller.html
+    self.searchController = [[UISearchController alloc]initWithSearchResultsController:nil];
+    self.searchController.searchResultsUpdater = self; // This controller will respond to the UISearchResultsUpdating protocol.
+    self.searchController.dimsBackgroundDuringPresentation = NO;
+    self.searchController.searchBar.scopeButtonTitles = @[@"Name", @"Place"];
+    self.searchController.searchBar.delegate = self;
+    self.tableView.tableHeaderView = self.searchController.searchBar;
+    self.definesPresentationContext = YES; //Allows the search view to cover the table view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)insertNewObject:(id)sender {
-    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-    NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
-    NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
-        
-    // If appropriate, configure the new managed object.
-    // Normally you should use accessor methods, but using KVC here avoids the need to add a custom class to the template.
-    [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
-        
-    // Save the context.
-    NSError *error = nil;
-    if (![context save:&error]) {
-        // Replace this implementation with code to handle the error appropriately.
-        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-        abort();
-    }
 }
 
 #pragma mark - Segues
@@ -59,8 +46,8 @@
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-        DetailViewController *nextViewController = [segue destinationViewController];
-        nextViewController.currentTemple = (Temple *)object;
+        //DetailViewController *nextViewController = [segue destinationViewController];
+        //nextViewController.currentTemple = (Temple *)object;
     }
 }
 
@@ -78,7 +65,6 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     [self configureCell:cell atIndexPath:indexPath];
-    [cell layoutSubviews]; // To fix the detailText not updating: http://stackoverflow.com/questions/25987135/ios-8-uitableviewcell-detail-text-not-correctly-updating
     return cell;
 }
 
@@ -223,5 +209,57 @@
     [self.tableView reloadData];
 }
  */
+
+#pragma mark - UISearchResultsUpdating Delegate
+- (void)searchForText:(NSString *)searchString inScope:(NSInteger)scopeOption{
+    if (self.managedObjectContext)
+    {
+        NSString *predicateFormat = @"%K BEGINSWITH[cd] %@";
+        NSString *searchAttribute = @"name";
+        
+        switch (scopeOption) {
+            case kSearchScopeName:
+                searchAttribute = @"name";
+                break;
+              case kSearchScopePlace:
+                searchAttribute = @"place";
+                break;
+            default:
+                NSLog(@"Unrecognized scope option passed in: %ld", (long)scopeOption);
+                break;
+        }
+        
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateFormat, searchAttribute, searchString];
+        [self.searchFetchRequest setPredicate:predicate];
+        
+        NSError *error = nil;
+        self.filteredList = [self.managedObjectContext executeFetchRequest:self.searchFetchRequest error:&error];
+    }
+}
+
+- (NSFetchRequest *)searchFetchRequest{ // Custom getter
+    if (_searchFetchRequest != nil) {
+        return _searchFetchRequest;
+    }
+    
+    _searchFetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Temple" inManagedObjectContext:self.managedObjectContext];
+    [_searchFetchRequest setEntity:entity];
+    
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    [_searchFetchRequest setSortDescriptors:@[sortDescriptor]];
+    
+    return _searchFetchRequest;
+}
+
+
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController{
+    NSString *searchString = searchController.searchBar.text;
+    [self searchForText:searchString inScope:searchController.searchBar.selectedScopeButtonIndex];
+    [self.tableView reloadData];
+    
+}
+
+
 
 @end
