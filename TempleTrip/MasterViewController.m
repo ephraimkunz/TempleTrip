@@ -7,13 +7,14 @@
 //
 
 #import "MasterViewController.h"
-#define kSearchScopeName 0
-#define kSearchScopePlace 1
+#import "Temple.h"
+#import "TempleDetailViewController.h"
 
 @interface MasterViewController ()
-//Private properties
+//Private properties. Why put here rather than in the normal implementation?
 @property(strong, nonatomic) NSFetchRequest *searchFetchRequest;
 @property(strong, nonatomic) NSArray *filteredList;
+@property BOOL isSearching; // Is the user searching for something?
 
 @end
 
@@ -29,9 +30,9 @@
     self.searchController = [[UISearchController alloc]initWithSearchResultsController:nil];
     self.searchController.searchResultsUpdater = self; // This controller will respond to the UISearchResultsUpdating protocol.
     self.searchController.dimsBackgroundDuringPresentation = NO;
-    self.searchController.searchBar.scopeButtonTitles = @[@"Name", @"Place"];
     self.searchController.searchBar.delegate = self;
     self.tableView.tableHeaderView = self.searchController.searchBar;
+    self.searchController.searchBar.scopeButtonTitles = @[]; //Necessary to show search bar.
     self.definesPresentationContext = YES; //Allows the search view to cover the table view.
 }
 
@@ -43,34 +44,82 @@
 #pragma mark - Segues
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+    if ([[segue identifier] isEqualToString:@"ShowDetail"]) {
+        TempleDetailViewController *nextViewController = [segue destinationViewController];
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-        //DetailViewController *nextViewController = [segue destinationViewController];
-        //nextViewController.currentTemple = (Temple *)object;
+        
+        if (self.isSearching) {
+            nextViewController.currentTemple = self.filteredList[[indexPath row]];
+        }else{
+            NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+            nextViewController.currentTemple = (Temple *)object;
+        }
     }
 }
 
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [[self.fetchedResultsController sections] count];
+    if (self.isSearching) {
+        return 1;
+    }else{
+        return [[self.fetchedResultsController sections] count];
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
-    return [sectionInfo numberOfObjects];
+    if (self.isSearching) {
+        return [self.filteredList count];
+    }else{
+        id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
+        return [sectionInfo numberOfObjects];
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    [self configureCell:cell atIndexPath:indexPath];
+    if (self.isSearching) {
+        Temple *filteredTemple = [self.filteredList objectAtIndex:[indexPath row]];
+        cell.textLabel.text = [filteredTemple name];
+        
+        //Configure dedication date as detail label.
+        NSString *dateCandidate = filteredTemple.dedication;
+        
+        NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+        [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
+        NSDate *date = [formatter dateFromString:dateCandidate];
+        
+        if (date) {
+            NSString *formattedDate = [NSDateFormatter localizedStringFromDate:date dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterNoStyle];
+            cell.detailTextLabel.text = formattedDate;
+        }
+        else{
+            cell.detailTextLabel.text = filteredTemple.dedication;
+        }
+    }else{
+        [self configureCell:cell atIndexPath:indexPath];
+    }
     return cell;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     return NO;
+}
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+    return [sectionInfo name];
+}
+
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView{
+     //return [self.fetchedResultsController sectionIndexTitles];
+    return @[UITableViewIndexSearch, @"A", @"B", @"C", @"D", @"E", @"F", @"G", @"H", @"I", @"J", @"K", @"L", @"M", @"N", @"O", @"P", @"Q", @"R", @"S", @"T", @"U", @"V", @"W", @"X", @"Y", @"Z"];
+    
+}
+
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index{
+    return [self.fetchedResultsController sectionForSectionIndexTitle:title atIndex:index];
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -110,7 +159,7 @@
 
 #pragma mark - Fetched results controller
 
-- (NSFetchedResultsController *)fetchedResultsController
+- (NSFetchedResultsController *)fetchedResultsController // Custom getter.
 {
     if (_fetchedResultsController != nil) {
         return _fetchedResultsController;
@@ -152,8 +201,7 @@
     [self.tableView beginUpdates];
 }
 
-- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo
-           atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type
+- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type
 {
     switch(type) {
         case NSFetchedResultsChangeInsert:
@@ -211,23 +259,11 @@
  */
 
 #pragma mark - UISearchResultsUpdating Delegate
-- (void)searchForText:(NSString *)searchString inScope:(NSInteger)scopeOption{
+- (void)searchForText:(NSString *)searchString{
     if (self.managedObjectContext)
     {
-        NSString *predicateFormat = @"%K BEGINSWITH[cd] %@";
+        NSString *predicateFormat = @"%K CONTAINS[cd] %@";
         NSString *searchAttribute = @"name";
-        
-        switch (scopeOption) {
-            case kSearchScopeName:
-                searchAttribute = @"name";
-                break;
-              case kSearchScopePlace:
-                searchAttribute = @"place";
-                break;
-            default:
-                NSLog(@"Unrecognized scope option passed in: %ld", (long)scopeOption);
-                break;
-        }
         
         NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateFormat, searchAttribute, searchString];
         [self.searchFetchRequest setPredicate:predicate];
@@ -238,16 +274,15 @@
 }
 
 - (NSFetchRequest *)searchFetchRequest{ // Custom getter
-    if (_searchFetchRequest != nil) {
-        return _searchFetchRequest;
+    if (_searchFetchRequest == nil) {
+        _searchFetchRequest = [[NSFetchRequest alloc] init];
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"Temple" inManagedObjectContext:self.managedObjectContext];
+        [_searchFetchRequest setEntity:entity];
+        
+        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+        [_searchFetchRequest setSortDescriptors:@[sortDescriptor]];
+
     }
-    
-    _searchFetchRequest = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Temple" inManagedObjectContext:self.managedObjectContext];
-    [_searchFetchRequest setEntity:entity];
-    
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
-    [_searchFetchRequest setSortDescriptors:@[sortDescriptor]];
     
     return _searchFetchRequest;
 }
@@ -255,9 +290,21 @@
 
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController{
     NSString *searchString = searchController.searchBar.text;
-    [self searchForText:searchString inScope:searchController.searchBar.selectedScopeButtonIndex];
+    [self searchForText:searchString];
     [self.tableView reloadData];
-    
+}
+
+#pragma mark - UISearchBar Delegate
+//TODO: Work on these. weird search output.
+
+// For loading the search results into the table view when a new search term is entered.
+- (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
+    self.isSearching = YES; // Do this here so we don't clear the full listing until we change the text, as we would if we did it in searchBarTextDidBeginEditing.
+    [self.tableView reloadData];
+}
+
+- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar{
+    self.isSearching = NO;
 }
 
 

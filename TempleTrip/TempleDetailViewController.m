@@ -6,15 +6,16 @@
 //  Copyright (c) 2015 Ephraim Kunz. All rights reserved.
 //
 
-#import "TempleDetailTableViewController.h"
+#import "TempleDetailViewController.h"
 
-@implementation TempleDetailTableViewController
+@implementation TempleDetailViewController
 
 -(void) configureView{
     //Get the image view from the Internet.
     NSURL *url = [NSURL URLWithString:self.currentTemple.imageLink];
     NSData *data = [NSData dataWithContentsOfURL:url];
     UIImage *img = [UIImage imageWithData:data];
+    self.detailImageView.image = img;
 }
 
 -(void) viewDidLoad{

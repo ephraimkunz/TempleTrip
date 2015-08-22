@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Temple.h"
 
-@interface TempleDetailTableViewController : UITableViewController
+@interface TempleDetailViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIImageView *detailImageView;
 @property(strong, nonatomic) Temple *currentTemple;
 @end
