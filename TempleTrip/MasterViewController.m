@@ -28,12 +28,12 @@
     [super viewDidLoad];
     ///Set up search bar in code since XCode search bar is deprecated: http://useyourloaf.com/blog/2015/02/16/updating-to-the-ios-8-search-controller.html
     self.searchController = [[UISearchController alloc]initWithSearchResultsController:nil];
+    //self.tableView.tableHeaderView = self.searchController.searchBar;
     self.searchController.searchResultsUpdater = self; // This controller will respond to the UISearchResultsUpdating protocol.
     self.searchController.dimsBackgroundDuringPresentation = NO;
     self.searchController.searchBar.delegate = self;
-    self.tableView.tableHeaderView = self.searchController.searchBar;
     self.searchController.searchBar.scopeButtonTitles = @[]; //Necessary to show search bar.
-    self.definesPresentationContext = YES; //Allows the search view to cover the table view.
+    //self.definesPresentationContext = YES; //Allows the search view to cover the table view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -76,6 +76,7 @@
     }
 }
 
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     if (self.isSearching) {
@@ -113,9 +114,7 @@
 }
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView{
-     //return [self.fetchedResultsController sectionIndexTitles];
-    return @[UITableViewIndexSearch, @"A", @"B", @"C", @"D", @"E", @"F", @"G", @"H", @"I", @"J", @"K", @"L", @"M", @"N", @"O", @"P", @"Q", @"R", @"S", @"T", @"U", @"V", @"W", @"X", @"Y", @"Z"];
-    
+     return [self.fetchedResultsController sectionIndexTitles];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index{
@@ -181,7 +180,7 @@
     
     // Edit the section name key path and cache name if appropriate.
     // nil for section name key path means "no sections".
-    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:@"Master"];
+    NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:@"firstLetter" cacheName:@"Master"];
     aFetchedResultsController.delegate = self;
     self.fetchedResultsController = aFetchedResultsController;
     
@@ -266,7 +265,9 @@
         NSString *searchAttribute = @"name";
         
         NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateFormat, searchAttribute, searchString];
-        [self.searchFetchRequest setPredicate:predicate];
+        if (![searchString isEqualToString:@""]) {
+            [self.searchFetchRequest setPredicate:predicate];
+        }
         
         NSError *error = nil;
         self.filteredList = [self.managedObjectContext executeFetchRequest:self.searchFetchRequest error:&error];
@@ -299,8 +300,11 @@
 
 // For loading the search results into the table view when a new search term is entered.
 - (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
-    self.isSearching = YES; // Do this here so we don't clear the full listing until we change the text, as we would if we did it in searchBarTextDidBeginEditing.
     [self.tableView reloadData];
+}
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar{
+    self.isSearching = YES;
 }
 
 - (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar{

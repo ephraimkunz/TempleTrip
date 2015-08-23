@@ -171,6 +171,7 @@
         temple.imageLink = [item valueForKey:@"photoLink"];
         temple.telephone = [item valueForKey:@"telephone"];
         temple.endowmentSchedule = [item valueForKey:@"endowmentSchedule"];
+        temple.firstLetter = [temple.name substringToIndex:1];
         
         [context save:nil];
     }

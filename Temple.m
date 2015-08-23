@@ -10,7 +10,7 @@
 
 
 @implementation Temple
-
+@dynamic  firstLetter;
 @dynamic name;
 @dynamic dedication;
 @dynamic place;
@@ -18,5 +18,4 @@
 @dynamic imageLink;
 @dynamic telephone;
 @dynamic endowmentSchedule;
-
 @end
