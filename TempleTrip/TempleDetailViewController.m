@@ -16,6 +16,7 @@
     NSData *data = [NSData dataWithContentsOfURL:url];
     UIImage *img = [UIImage imageWithData:data];
     self.detailImageView.image = img;
+	self.navigationItem.title = self.currentTemple.name;
 }
 
 -(void) viewDidLoad{
@@ -55,6 +56,9 @@
         cell.imageView.image = img;
     }
 }
+
+#pragma mark - Segues
+
 
 
 

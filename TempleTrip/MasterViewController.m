@@ -11,8 +11,6 @@
 #import "TempleDetailViewController.h"
 
 @interface MasterViewController ()
-//Private properties. Why put here rather than in the normal implementation?
-@property(strong, nonatomic) NSFetchRequest *searchFetchRequest;
 @property(strong, nonatomic) NSArray *filteredList;
 @property BOOL isSearching; // Is the user searching for something?
 
@@ -24,16 +22,10 @@
     [super awakeFromNib];
 }
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    ///Set up search bar in code since XCode search bar is deprecated: http://useyourloaf.com/blog/2015/02/16/updating-to-the-ios-8-search-controller.html
-    self.searchController = [[UISearchController alloc]initWithSearchResultsController:nil];
-    //self.tableView.tableHeaderView = self.searchController.searchBar;
-    self.searchController.searchResultsUpdater = self; // This controller will respond to the UISearchResultsUpdating protocol.
-    self.searchController.dimsBackgroundDuringPresentation = NO;
-    self.searchController.searchBar.delegate = self;
-    self.searchController.searchBar.scopeButtonTitles = @[]; //Necessary to show search bar.
-    //self.definesPresentationContext = YES; //Allows the search view to cover the table view.
+	[self setupSearchBar];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -56,6 +48,9 @@
         }
     }
 }
+
+
+
 
 #pragma mark - Table View
 
@@ -109,16 +104,33 @@
 }
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
-    return [sectionInfo name];
+	if (self.isSearching) {
+		return nil; // No names of any sections in the search view.
+	}else{
+		id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+		return [sectionInfo name];
+	}
 }
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView{
-     return [self.fetchedResultsController sectionIndexTitles];
+	if (self.isSearching) {
+		return nil;
+	}
+	NSArray *letters = [self.fetchedResultsController sectionIndexTitles];
+	NSString *search = UITableViewIndexSearch;
+	NSMutableArray *indexTitles = [[NSMutableArray alloc]initWithArray:letters];
+	[indexTitles insertObject:search atIndex:0];
+	return indexTitles;
+	
 }
 
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index{
-    return [self.fetchedResultsController sectionForSectionIndexTitle:title atIndex:index];
+	if (index == 0) {
+		CGRect searchBarFrame = self.searchController.searchBar.frame;
+		[tableView scrollRectToVisible:searchBarFrame animated:YES];
+		return -1;
+	}
+    return [self.fetchedResultsController sectionForSectionIndexTitle:title atIndex:index - 1]; // Because magnifying glass takes up index 0.
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -247,45 +259,34 @@
     [self.tableView endUpdates];
 }
 
-/*
-// Implementing the above methods to update the table view in response to individual changes may have performance implications if a large number of changes are made simultaneously. If this proves to be an issue, you can instead just implement controllerDidChangeContent: which notifies the delegate that all section and object changes have been processed. 
- 
- - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
-{
-    // In the simplest, most efficient, case, reload the table view.
-    [self.tableView reloadData];
-}
- */
 
 #pragma mark - UISearchResultsUpdating Delegate
 - (void)searchForText:(NSString *)searchString{
     if (self.managedObjectContext)
     {
+		NSFetchRequest *request = [self createSearchFetchRequest];
         NSString *predicateFormat = @"%K CONTAINS[cd] %@";
         NSString *searchAttribute = @"name";
         
         NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateFormat, searchAttribute, searchString];
         if (![searchString isEqualToString:@""]) {
-            [self.searchFetchRequest setPredicate:predicate];
+            [request setPredicate:predicate];
         }
         
         NSError *error = nil;
-        self.filteredList = [self.managedObjectContext executeFetchRequest:self.searchFetchRequest error:&error];
+        self.filteredList = [self.managedObjectContext executeFetchRequest:request error:&error];
     }
 }
 
-- (NSFetchRequest *)searchFetchRequest{ // Custom getter
-    if (_searchFetchRequest == nil) {
-        _searchFetchRequest = [[NSFetchRequest alloc] init];
-        NSEntityDescription *entity = [NSEntityDescription entityForName:@"Temple" inManagedObjectContext:self.managedObjectContext];
-        [_searchFetchRequest setEntity:entity];
-        
-        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
-        [_searchFetchRequest setSortDescriptors:@[sortDescriptor]];
-
-    }
+- (NSFetchRequest *)createSearchFetchRequest{ // Create a new one each time so we can be sure it is "clean" when all text is deleted (returns everything).
+	NSFetchRequest *searchFetchRequest = [[NSFetchRequest alloc] init];
+	NSEntityDescription *entity = [NSEntityDescription entityForName:@"Temple" inManagedObjectContext:self.managedObjectContext];
+	[searchFetchRequest setEntity:entity];
+	
+	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+	[searchFetchRequest setSortDescriptors:@[sortDescriptor]];
     
-    return _searchFetchRequest;
+    return searchFetchRequest;
 }
 
 
@@ -296,12 +297,6 @@
 }
 
 #pragma mark - UISearchBar Delegate
-//TODO: Work on these. weird search output.
-
-// For loading the search results into the table view when a new search term is entered.
-- (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
-    [self.tableView reloadData];
-}
 
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar{
     self.isSearching = YES;
@@ -309,6 +304,18 @@
 
 - (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar{
     self.isSearching = NO;
+}
+
+#pragma mark - Helper Methods
+
+- (void)setupSearchBar {
+	///Set up search bar in code since XCode search bar is deprecated: http://useyourloaf.com/blog/2015/02/16/updating-to-the-ios-8-search-controller.html
+	self.searchController = [[UISearchController alloc]initWithSearchResultsController:nil];
+	self.tableView.tableHeaderView = self.searchController.searchBar;
+	self.searchController.searchResultsUpdater = self; // This controller will respond to the UISearchResultsUpdating protocol.
+	self.searchController.dimsBackgroundDuringPresentation = NO;
+	self.searchController.searchBar.delegate = self;
+	self.definesPresentationContext = YES;  //Allows the search view to cover the table view.
 }
 
 
