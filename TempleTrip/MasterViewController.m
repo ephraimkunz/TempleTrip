@@ -1,3 +1,4 @@
+
 //
 //  MasterViewController.m
 //  TempleTrip
@@ -8,10 +9,13 @@
 
 #import "MasterViewController.h"
 #import "Temple.h"
-#import "TempleDetailViewController.h"
+#import "DetailTableViewController.h"
 
 @interface MasterViewController ()
 @property(strong, nonatomic) NSArray *filteredList;
+// Core location
+@property(strong, nonatomic) CLLocationManager *locationManager;
+@property(strong, nonatomic) CLLocation *currentLocation;
 @property BOOL isSearching; // Is the user searching for something?
 
 @end
@@ -26,6 +30,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	[self setupSearchBar];
+	self.locationManager = [[CLLocationManager alloc]init];
+	[self setupLocationTracking];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,7 +43,7 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"ShowDetail"]) {
-        TempleDetailViewController *nextViewController = [segue destinationViewController];
+        DetailTableViewController *nextViewController = [segue destinationViewController];
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         
         if (self.isSearching) {
@@ -46,8 +52,11 @@
             NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
             nextViewController.currentTemple = (Temple *)object;
         }
+		// Get current location and send it to the new view controller.
+		nextViewController.locationWhenPushed = self.currentLocation;
     }
 }
+
 
 
 
@@ -306,7 +315,7 @@
     self.isSearching = NO;
 }
 
-#pragma mark - Helper Methods
+#pragma mark - Utility Methods
 
 - (void)setupSearchBar {
 	///Set up search bar in code since XCode search bar is deprecated: http://useyourloaf.com/blog/2015/02/16/updating-to-the-ios-8-search-controller.html
@@ -318,6 +327,27 @@
 	self.definesPresentationContext = YES;  //Allows the search view to cover the table view.
 }
 
+- (void)setupLocationTracking{
+	self.locationManager.delegate = self;
+	self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+	self.locationManager.distanceFilter = 100; // Must move 100 meters before delegate is notified of new location.
+	[self.locationManager startUpdatingLocation];
+	
+	if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+		[self.locationManager requestWhenInUseAuthorization];
 
+}
+
+#pragma mark - CLLocationManager Delegate
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
+	self.currentLocation = locations.lastObject; // Most recent location is last in the array.
+	
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
+	UIAlertView *locationErrorAlert = [[UIAlertView alloc]initWithTitle:@"Location Failed" message:@"Failed to determine location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+	[locationErrorAlert show];
+}
 
 @end
