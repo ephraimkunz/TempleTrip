@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14F27" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8193.2" systemVersion="14F27" minimumToolsVersion="Automatic">
     <entity name="Temple" representedClassName="Temple">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dedication" optional="YES" attributeType="String" syncable="YES"/>
@@ -12,6 +12,6 @@
         <userInfo/>
     </entity>
     <elements>
-        <element name="Temple" positionX="261" positionY="189" width="128" height="163"/>
+        <element name="Temple" positionX="261" positionY="189" width="128" height="165"/>
     </elements>
 </model>

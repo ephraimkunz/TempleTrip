@@ -10,10 +10,9 @@
 #import <CoreLocation/CoreLocation.h>
 @class Temple;
 
-@interface DetailTableViewController : UITableViewController
+@interface DetailTableViewController : UITableViewController<CLLocationManagerDelegate>
 
 // General properties
 @property(strong, nonatomic) Temple *currentTemple;
-@property(strong, nonatomic) CLLocation *locationWhenPushed;
 
 @end

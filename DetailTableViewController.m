@@ -18,21 +18,44 @@
 @end
 
 @implementation DetailTableViewController{
+	
 	NSDictionary *scheduleDict;
+	NSArray *scheduleKeys;
+	
 	UIImage *scaledImage; // Use i-var because we need to both set the cell with it and calculate the cell height in 2 separate methods.
-	CLGeocoder *geocoder;
-	CLPlacemark *placemark;
+	CLLocationManager *locationManager;
+	CLLocation *currentLocation;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+	locationManager = [[CLLocationManager alloc]init];
+	[self setupLocationTracking];
 	
-	geocoder = [[CLGeocoder alloc]init];
 	//Set navigation bar title
 	self.navigationItem.title = self.currentTemple.name;
+	
 	scheduleDict = self.currentTemple.endowmentSchedule;
+	scheduleKeys = [[NSArray alloc]initWithArray:[scheduleDict allKeys]];
+	// Sort the schedule into correct day of the week order
+	scheduleKeys = [DetailTableViewController sortByDayOfWeekWithArray:scheduleKeys];
+	
+												  
 	scaledImage = [DetailTableViewController imageWithImage:[self getImage] scaledToWidth:[self getTableViewCellWidth]];
 }
+
+- (void)setupLocationTracking{
+	locationManager.delegate = self;
+	locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+	//locationManager.distanceFilter = 100; // Must move 100 meters before delegate is notified of new location.
+	[locationManager startUpdatingLocation];
+	
+	if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+		[locationManager requestWhenInUseAuthorization];
+	
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -73,7 +96,7 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	UITableViewCell *cell;// = [tableView dequeueReusableCellWithIdentifier: forIndexPath:indexPath];
+	UITableViewCell *cell;
     
 	switch (indexPath.section) {
 		case 0:{
@@ -89,8 +112,13 @@
 			break;
 		case 2:{
 			cell = [tableView dequeueReusableCellWithIdentifier:@"ScheduleCell"];
-			cell.textLabel.text = @"Day of the week here";
-			cell.detailTextLabel.text = @"Schedule goes here";
+			
+			//Load the appropriate schedule data.
+			
+			NSString *scheduleKey = scheduleKeys[indexPath.row];
+			cell.textLabel.text = scheduleKey;
+			
+			cell.detailTextLabel.text = scheduleDict[scheduleKey];
 		}
 		default:
 			break;
@@ -118,15 +146,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 	if(indexPath.section == 0){ // Address tapped
-		__block NSString *currentLocation;
-		[geocoder reverseGeocodeLocation:self.locationWhenPushed completionHandler:^(NSArray *placemarks, NSError *error){
-			if (!error) {
-    placemark = [placemarks lastObject];
-				currentLocation = [NSString stringWithFormat:@"%@ %@, %@, %@ %@ %@", placemark.subThoroughfare, placemark.thoroughfare, placemark.postalCode, placemark.locality, placemark.administrativeArea, placemark.country];
-			}
-		}
-			];
-		NSString *mapsString = [[NSString stringWithFormat:@"http://maps.apple.com/?daddr=%@&saddr=%@", self.currentTemple.address, currentLocation]stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+		
+		NSString *mapsString = [[NSString stringWithFormat:@"http://maps.apple.com/?daddr=%@&saddr=%f,%f", self.currentTemple.address, currentLocation.coordinate.latitude, currentLocation.coordinate.longitude]stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+		NSLog(@"The map query string: %@.", mapsString);
 		NSURL *mapsUrl = [NSURL URLWithString:mapsString];
 		[[UIApplication sharedApplication]openURL:mapsUrl];
 	}
@@ -206,5 +228,42 @@
 	UIGraphicsEndImageContext();
 	return newImage;
 }
+
++(NSArray*)sortByDayOfWeekWithArray: (NSArray *)inputArray{
+	
+	NSDateFormatter *weekdayFormatter = [[NSDateFormatter alloc]init];
+	NSArray *weekdays = weekdayFormatter.weekdaySymbols;
+	
+	
+	NSArray *sortedArray = [inputArray sortedArrayUsingComparator: ^(id obj1, id obj2) {
+		
+		//Break obj1 string into an array seperated by "-". Ex: "Monday-Thursday" becomes ["Monday", "Thursday"].
+		NSArray *weekday1Token = [obj1 componentsSeparatedByString:@"-"];
+		NSArray *weekday2Token = [obj2 componentsSeparatedByString:@"-"];
+		
+		//Find the index of the objects in the weekdays array, and compare them to see which comes first.
+		int obj1Index = [weekdays indexOfObject: weekday1Token[0]];
+		int obj2Index = [weekdays indexOfObject:weekday2Token[0]];
+		
+		if (obj1Index > obj2Index) { //First day later in the week than second.
+			return NSOrderedDescending;
+		}
+		
+		return NSOrderedAscending; //First day earlier in the week than second.
+	}];
+	return sortedArray;
+}
+
+#pragma mark - CLLocationManager Delegate
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
+	currentLocation = locations.lastObject; // Most recent location is last in the array.
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
+	UIAlertView *locationErrorAlert = [[UIAlertView alloc]initWithTitle:@"Location Failed" message:@"Failed to determine location. We don't know why." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+	[locationErrorAlert show];
+}
+
 
 @end

@@ -10,6 +10,7 @@
 #import <CoreData/CoreData.h>
 
 
+
 @interface Temple : NSManagedObject
 
 @property (nonatomic, retain) NSString * name;
