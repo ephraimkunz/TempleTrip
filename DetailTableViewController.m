@@ -41,13 +41,13 @@
 	// Sort the schedule into correct day of the week order
 	scheduleKeys = [DetailTableViewController sortByDayOfWeekWithArray:scheduleKeys];
 	
-	if ([self getCDLocalImagePath] == nil) { // None cached so get from web.
-		scaledImage = [DetailTableViewController imageWithImage:[self getImage] scaledToWidth:[self getTableViewCellWidth]];
+	scaledImage = [DetailTableViewController imageWithImage:[self getImage] scaledToWidth:self.tableView.frame.size.width];
 	}
-	else{
-		scaledImage = [DetailTableViewController imageWithImage:[UIImage imageWithContentsOfFile:[self getCDLocalImagePath]] scaledToWidth:[self getTableViewCellWidth]];
-	}
-	
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
+	// Change the image width if we rotate in the detail view.
+	scaledImage = [DetailTableViewController imageWithImage:[self getImage] scaledToWidth:size.width];
+	[self.tableView reloadData];
 }
 
 - (void)setupLocationTracking{
@@ -208,7 +208,29 @@
 #pragma mark - Utility Methods
 
 - (UIImage*)getImage{
+	// Determine whether or not the image is cached. If cached, get from file. Else, send HTTP request.
 	//Get the image view from the Internet.
+	
+	if ([self getCDLocalImagePath] == nil) { // None cached so get from web.
+		return [self fetchImageFromWeb];
+		//scaledImage = [DetailTableViewController imageWithImage:[self fetchImageFromWeb] scaledToWidth:[self getTableViewCellWidth]];
+	}
+	else{
+		UIImage *cachedImage = [UIImage imageWithContentsOfFile:[self getCDLocalImagePath]];
+		if (cachedImage == nil) {
+			//Something went horribly wrong if this line is executed. Core data says we have a cached image but trying to get it fails. Should only happen when testing, when we reload the app and Core Data
+			//has the old path but the filesystem is not preserved.
+			NSLog(@"Failure to get image that has already been cached with current Temple: %@", self.currentTemple.name);
+			return [self fetchImageFromWeb];
+			//scaledImage	= [DetailTableViewController imageWithImage:[self fetchImageFromWeb] scaledToWidth:[self getTableViewCellWidth]];
+		}
+		else{
+			return cachedImage;
+		}
+	}
+}
+
+- (UIImage *)fetchImageFromWeb{
 	NSURL *url = [NSURL URLWithString:self.currentTemple.imageLink];
 	NSData *data = [NSData dataWithContentsOfURL:url];
 	UIImage *img = [UIImage imageWithData:data];
@@ -240,8 +262,6 @@
 	[results[0] setValue:imagePath forKey:@"localImagePath"];
 	[self.managedObjectContext save:nil];
 	
-	
-	NSLog((@"pre writing to file"));
 	if (![imageData writeToFile:imagePath atomically:NO])
 	{
 		NSLog(@"Failed to cache image data to disk");
@@ -261,7 +281,6 @@
 	[request setPredicate:predicate];
 	
 	NSArray *results = [self.managedObjectContext executeFetchRequest:request error:nil];
-	NSLog(@"Local image path: %@", [results[0] valueForKey:@"localImagePath"]);
 	return [results[0] valueForKey:@"localImagePath"];
 }
 
