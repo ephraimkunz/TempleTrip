@@ -18,4 +18,5 @@
 @dynamic imageLink;
 @dynamic telephone;
 @dynamic endowmentSchedule;
+@dynamic localImagePath;
 @end

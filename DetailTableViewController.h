@@ -14,5 +14,6 @@
 
 // General properties
 @property(strong, nonatomic) Temple *currentTemple;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end

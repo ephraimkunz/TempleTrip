@@ -21,5 +21,6 @@
 @property (nonatomic, retain) NSString * telephone;
 @property (nonatomic, retain) NSDictionary * endowmentSchedule;
 @property (nonatomic, retain) NSString * firstLetter;
+@property (nonatomic, retain) NSString * localImagePath;
 
 @end

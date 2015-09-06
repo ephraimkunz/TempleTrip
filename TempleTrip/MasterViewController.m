@@ -48,6 +48,9 @@
             NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
             nextViewController.currentTemple = (Temple *)object;
         }
+		
+		//Create dependency injection: http://stackoverflow.com/questions/21050408/how-to-get-managedobjectcontext-for-viewcontroller-other-than-getting-it-from-ap to pass managedObjectContext along
+		nextViewController.managedObjectContext = self.managedObjectContext;
 	}
 }
 

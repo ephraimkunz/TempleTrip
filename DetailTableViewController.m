@@ -41,8 +41,13 @@
 	// Sort the schedule into correct day of the week order
 	scheduleKeys = [DetailTableViewController sortByDayOfWeekWithArray:scheduleKeys];
 	
-												  
-	scaledImage = [DetailTableViewController imageWithImage:[self getImage] scaledToWidth:[self getTableViewCellWidth]];
+	if ([self getCDLocalImagePath] == nil) { // None cached so get from web.
+		scaledImage = [DetailTableViewController imageWithImage:[self getImage] scaledToWidth:[self getTableViewCellWidth]];
+	}
+	else{
+		scaledImage = [DetailTableViewController imageWithImage:[UIImage imageWithContentsOfFile:[self getCDLocalImagePath]] scaledToWidth:[self getTableViewCellWidth]];
+	}
+	
 }
 
 - (void)setupLocationTracking{
@@ -207,7 +212,57 @@
 	NSURL *url = [NSURL URLWithString:self.currentTemple.imageLink];
 	NSData *data = [NSData dataWithContentsOfURL:url];
 	UIImage *img = [UIImage imageWithData:data];
+	[self saveImage:img];
 	return img;
+}
+
+- (void)saveImage: (UIImage*)image{
+	//This is the first solution to slow transitions to detail view that I was able to think of.
+	//We will store the newly fetched image in the filesystem and fetch from there in the future. Core Data will
+	//hold the filepath to this cache.
+	//Lazy caching for the win.
+	NSData *imageData = UIImagePNGRepresentation(image);
+	
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	NSString *documentsDirectory = [paths objectAtIndex:0]; // Path to picture directory.
+	
+	NSString *imagePath =[documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png",[self.currentTemple.name stringByReplacingOccurrencesOfString:@" " withString:@"_"]]];
+	
+	//Save new path to CoreData.
+	NSFetchRequest *request = [[NSFetchRequest alloc]init];
+	[request setEntity:[NSEntityDescription entityForName:@"Temple" inManagedObjectContext:[self managedObjectContext]]];
+	
+	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name == %@", self.currentTemple.name];
+	[request setPredicate:predicate];
+	
+	NSArray *results = [self.managedObjectContext executeFetchRequest:request error:nil];
+	
+	[results[0] setValue:imagePath forKey:@"localImagePath"];
+	[self.managedObjectContext save:nil];
+	
+	
+	NSLog((@"pre writing to file"));
+	if (![imageData writeToFile:imagePath atomically:NO])
+	{
+		NSLog(@"Failed to cache image data to disk");
+	}
+	else
+	{
+		NSLog(@"The cachedImagedPath is %@",imagePath);
+	}
+
+}
+
+- (NSString *)getCDLocalImagePath{
+	NSFetchRequest *request = [[NSFetchRequest alloc]init];
+	[request setEntity:[NSEntityDescription entityForName:@"Temple" inManagedObjectContext:[self managedObjectContext]]];
+	
+	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name == %@", self.currentTemple.name];
+	[request setPredicate:predicate];
+	
+	NSArray *results = [self.managedObjectContext executeFetchRequest:request error:nil];
+	NSLog(@"Local image path: %@", [results[0] valueForKey:@"localImagePath"]);
+	return [results[0] valueForKey:@"localImagePath"];
 }
 
 - (float)getTableViewCellWidth{
