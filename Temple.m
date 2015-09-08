@@ -19,4 +19,5 @@
 @dynamic telephone;
 @dynamic endowmentSchedule;
 @dynamic localImagePath;
+@dynamic isFavorite;
 @end

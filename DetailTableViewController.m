@@ -10,6 +10,10 @@
 #import "Temple.h"
 
 #define kDefaultRowHeight 44
+#define kAddressSection 0
+#define kPhotoSection 1
+#define kScheduleSection 2
+#define kAddToFavoritesSection 3
 
 
 
@@ -21,11 +25,14 @@
 	
 	NSDictionary *scheduleDict;
 	NSArray *scheduleKeys;
+	NSArray *weekdays;
 	
 	UIImage *scaledImage; // Use i-var because we need to both set the cell with it and calculate the cell height in 2 separate methods.
 	CLLocationManager *locationManager;
 	CLLocation *currentLocation;
 }
+
+#pragma mark - View Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,10 +43,20 @@
 	//Set navigation bar title
 	self.navigationItem.title = self.currentTemple.name;
 	
-	scheduleDict = self.currentTemple.endowmentSchedule;
-	scheduleKeys = [[NSArray alloc]initWithArray:[scheduleDict allKeys]];
+	scheduleKeys = [[NSArray alloc]initWithArray:[self.currentTemple.endowmentSchedule allKeys]];
+	
+	NSDateFormatter *weekdayFormatter = [[NSDateFormatter alloc]init];
+	
+	//Exlude Sunday. Temples always closed.
+	NSRange range;
+	range.location = 1;
+	range.length = 6;
+	
+	weekdays = [weekdayFormatter.weekdaySymbols subarrayWithRange:range];
+
+	
 	// Sort the schedule into correct day of the week order
-	scheduleKeys = [DetailTableViewController sortByDayOfWeekWithArray:scheduleKeys];
+	scheduleDict = [self scheduleDictFromKeys:scheduleKeys];
 	
 	scaledImage = [DetailTableViewController imageWithImage:[self getImage] scaledToWidth:self.tableView.frame.size.width];
 	}
@@ -70,17 +87,20 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-	return 3;
+	return 4;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	switch (section) {
-		case 0:
-		case 1:
+		case kAddressSection:
+		case kPhotoSection:
 			return 1;
 			break;
-		case 2:
-			return [scheduleDict count];
+		case kScheduleSection:
+			return 6; // Number of schedule items: Monday - Saturday.
+			break;
+		case kAddToFavoritesSection:
+			return 1;
 			break;
 		default:
 			NSLog(@"Not a recognized tableview section.");
@@ -104,27 +124,42 @@
 	UITableViewCell *cell;
     
 	switch (indexPath.section) {
-		case 0:{
+		case kAddressSection:{
 			cell = [tableView dequeueReusableCellWithIdentifier:@"AddressCell"];
 			cell.textLabel.text = self.currentTemple.address;
 			break;
 		}
-		case 1:{
+		case kPhotoSection:{
 			cell = [tableView dequeueReusableCellWithIdentifier:@"PhotoCell"];
 			UIImageView *photo = [[UIImageView alloc]initWithImage:scaledImage];
 			[cell addSubview:photo];
 		}
 			break;
-		case 2:{
+		case kScheduleSection:{
 			cell = [tableView dequeueReusableCellWithIdentifier:@"ScheduleCell"];
 			
 			//Load the appropriate schedule data.
 			
-			NSString *scheduleKey = scheduleKeys[indexPath.row];
-			cell.textLabel.text = scheduleKey;
+			NSString *dayName = weekdays[indexPath.row];
+			NSString *scheduleForDay = scheduleDict[dayName];
+			cell.textLabel.text = dayName;
 			
-			cell.detailTextLabel.text = scheduleDict[scheduleKey];
+			cell.detailTextLabel.text = scheduleForDay;
 		}
+			break;
+		case kAddToFavoritesSection:{
+			cell = [tableView dequeueReusableCellWithIdentifier:@"AddToFavoritesCell"];
+			NSLog(@"%@", self.currentTemple.isFavorite);
+			NSLog(@"%@", [NSNumber numberWithBool:YES]);
+			if ([self.currentTemple.isFavorite isEqualToNumber:[NSNumber numberWithBool:YES]]) {
+				cell.textLabel.text = @"Remove from Favorites";
+			}
+			else{
+				
+				cell.textLabel.text = @"Add to Favorites";
+			}
+		}
+			break;
 		default:
 			break;
 	}
@@ -134,14 +169,17 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
 	switch (section) {
-		case 0:
-			return @"Location";
+		case kAddressSection:
+			return @"Address";
 			break;
-		case 1:
+		case kPhotoSection:
 			return nil;
 			break;
-		case 2:
+		case kScheduleSection:
 			return @"Schedule";
+			break;
+		case kAddToFavoritesSection:
+			return nil;
 			break;
 		default:
 			return @"Bad, bad, bad";
@@ -150,14 +188,30 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-	if(indexPath.section == 0){ // Address tapped
+	if(indexPath.section == kAddressSection){ // Address tapped
 		
 		NSString *mapsString = [[NSString stringWithFormat:@"http://maps.apple.com/?daddr=%@&saddr=%f,%f", self.currentTemple.address, currentLocation.coordinate.latitude, currentLocation.coordinate.longitude]stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 		NSLog(@"The map query string: %@.", mapsString);
 		NSURL *mapsUrl = [NSURL URLWithString:mapsString];
 		[[UIApplication sharedApplication]openURL:mapsUrl];
 	}
-	
+	else if(indexPath.section == kAddToFavoritesSection){
+		NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Temple"];
+		NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name = %@", self.currentTemple.name];
+		[request setPredicate:predicate];
+		Temple *object = [self.managedObjectContext executeFetchRequest:request error:nil][0];
+		if ([self.currentTemple.isFavorite isEqualToNumber:[NSNumber numberWithBool:YES]]) { // The button they tapped read Remove from Favorites
+			object.isFavorite = [NSNumber numberWithBool:NO];
+			[tableView cellForRowAtIndexPath:indexPath].textLabel.text = @"Add to Favorites";
+		}
+		else {// The button they tapped read Add to Favorites
+			
+		object.isFavorite = [NSNumber numberWithBool:YES];
+			[self.managedObjectContext save:nil];
+			[tableView cellForRowAtIndexPath:indexPath].textLabel.text = @"Remove from Favorites";
+		}
+		[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	}
 }
 
 
@@ -243,7 +297,6 @@
 	//We will store the newly fetched image in the filesystem and fetch from there in the future. Core Data will
 	//hold the filepath to this cache.
 	//Lazy caching for the win.
-	NSData *imageData = UIImagePNGRepresentation(image);
 	
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 	NSString *documentsDirectory = [paths objectAtIndex:0]; // Path to picture directory.
@@ -262,15 +315,14 @@
 	[results[0] setValue:imagePath forKey:@"localImagePath"];
 	[self.managedObjectContext save:nil];
 	
-	if (![imageData writeToFile:imagePath atomically:NO])
-	{
-		NSLog(@"Failed to cache image data to disk");
-	}
-	else
-	{
-		NSLog(@"The cachedImagedPath is %@",imagePath);
-	}
-
+	//Profiling shows that we should do this in an operation queue so we don't take so long.
+	
+	NSBlockOperation *block = [NSBlockOperation blockOperationWithBlock:^{
+		NSData *imageData = UIImageJPEGRepresentation(image, 1.0);
+		[imageData writeToFile:imagePath atomically:NO];
+	}];
+	NSOperationQueue *queue = [[NSOperationQueue alloc]init];
+	[queue addOperation:block];
 }
 
 - (NSString *)getCDLocalImagePath{
@@ -303,30 +355,43 @@
 	return newImage;
 }
 
-+(NSArray*)sortByDayOfWeekWithArray: (NSArray *)inputArray{
+- (NSMutableDictionary*)scheduleDictFromKeys:(NSArray *)inputArray{
 	
-	NSDateFormatter *weekdayFormatter = [[NSDateFormatter alloc]init];
-	NSArray *weekdays = weekdayFormatter.weekdaySymbols;
+	NSMutableDictionary *expandedSchedule = [[NSMutableDictionary alloc]init];
 	
-	
-	NSArray *sortedArray = [inputArray sortedArrayUsingComparator: ^(id obj1, id obj2) {
-		
-		//Break obj1 string into an array seperated by "-". Ex: "Monday-Thursday" becomes ["Monday", "Thursday"].
-		NSArray *weekday1Token = [obj1 componentsSeparatedByString:@"-"];
-		NSArray *weekday2Token = [obj2 componentsSeparatedByString:@"-"];
-		
-		//Find the index of the objects in the weekdays array, and compare them to see which comes first.
-		int obj1Index = [weekdays indexOfObject: weekday1Token[0]];
-		int obj2Index = [weekdays indexOfObject:weekday2Token[0]];
-		
-		if (obj1Index > obj2Index) { //First day later in the week than second.
-			return NSOrderedDescending;
+	for (NSString * key in inputArray) {
+		if ([key containsString:@"-"]) {
+			NSArray *firstAndLast = [key componentsSeparatedByString:@"-"];
+			NSInteger first = [weekdays indexOfObject:[firstAndLast firstObject]];
+			NSInteger last = [weekdays indexOfObject:[firstAndLast lastObject]];
+			for (int i = (int)first; i <= last; ++i) {
+				expandedSchedule[weekdays[i]] = self.currentTemple.endowmentSchedule[key];
+			}
 		}
-		
-		return NSOrderedAscending; //First day earlier in the week than second.
-	}];
-	return sortedArray;
+		else{
+			expandedSchedule[key] = self.currentTemple.endowmentSchedule[key];
+		}
+	}
+	return expandedSchedule;
 }
+	
+//	NSArray *sortedArray = [inputArray sortedArrayUsingComparator: ^(id obj1, id obj2) {
+//		
+//		//Break obj1 string into an array seperated by "-". Ex: "Monday-Thursday" becomes ["Monday", "Thursday"].
+//		NSArray *weekday1Token = [obj1 componentsSeparatedByString:@"-"];
+//		NSArray *weekday2Token = [obj2 componentsSeparatedByString:@"-"];
+//		
+//		//Find the index of the objects in the weekdays array, and compare them to see which comes first.
+//		int obj1Index = [weekdays indexOfObject: weekday1Token[0]];
+//		int obj2Index = [weekdays indexOfObject:weekday2Token[0]];
+//		
+//		if (obj1Index > obj2Index) { //First day later in the week than second.
+//			return NSOrderedDescending;
+//		}
+//		
+//		return NSOrderedAscending; //First day earlier in the week than second.
+//	}];
+//	return sortedArray;
 
 #pragma mark - CLLocationManager Delegate
 

@@ -22,5 +22,6 @@
 @property (nonatomic, retain) NSDictionary * endowmentSchedule;
 @property (nonatomic, retain) NSString * firstLetter;
 @property (nonatomic, retain) NSString * localImagePath;
+@property (nonatomic, retain) NSNumber * isFavorite;
 
 @end

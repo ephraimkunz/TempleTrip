@@ -11,23 +11,47 @@
 #import "Temple.h"
 #import "DetailTableViewController.h"
 
+#define kFavoritesSection 0 //What section we keep favorite temples in.
+
 @interface MasterViewController ()
+
 @property(strong, nonatomic) NSArray *filteredList;
-// Core location
+@property(strong, nonatomic) NSMutableArray *favoritesList;
 @property BOOL isSearching; // Is the user searching for something?
 
 @end
 
 @implementation MasterViewController
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-}
-
+#pragma mark - View Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 	[self setupSearchBar];
+	UIColor *magnesium = [UIColor colorWithRed:150.0/255 green:150.0/255 blue:150.0/255 alpha:1.0];
+	self.tableView.sectionIndexColor = magnesium;
+	[self loadFavoritesList];
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+	[super viewDidAppear:animated];
+	
+	//Did we add to favorites list?
+	NSMutableArray *oldFavorites = [self.favoritesList mutableCopy];
+	[self loadFavoritesList];
+	if ([oldFavorites count] > [self.favoritesList count]) { // Removed a favorite temple
+		NSMutableArray *oldFavoritesBeforeDelete = [oldFavorites copy];
+		[oldFavorites removeObjectsInArray:[self.favoritesList copy]];
+		
+		NSIndexPath *path = [NSIndexPath indexPathForItem:[oldFavoritesBeforeDelete indexOfObject:oldFavorites[0]] inSection:kFavoritesSection];
+		[self.tableView deleteRowsAtIndexPaths: @[path] withRowAnimation:UITableViewRowAnimationFade];
+	}
+	else if([oldFavorites count] < [self.favoritesList count]){ // Added a favorite temple on the end
+		NSIndexPath *path = [NSIndexPath indexPathForItem:[self.favoritesList count] - 1 inSection:kFavoritesSection];
+		[self.tableView insertRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationFade];
+	}
+	
+	
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,11 +65,18 @@
     if ([[segue identifier] isEqualToString:@"ShowDetail"]) {
         DetailTableViewController *nextViewController = [segue destinationViewController];
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        
+		NSManagedObject *object;
+		
         if (self.isSearching) {
             nextViewController.currentTemple = self.filteredList[[indexPath row]];
         }else{
-            NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+			if (indexPath.section == kFavoritesSection) {
+				object = [self.favoritesList objectAtIndex:indexPath.row];
+			}
+			else{
+				NSIndexPath *modified = [NSIndexPath indexPathForRow:indexPath.row inSection:indexPath.section - 1];
+				object = [[self fetchedResultsController] objectAtIndexPath:modified];
+			}
             nextViewController.currentTemple = (Temple *)object;
         }
 		
@@ -55,24 +86,22 @@
 }
 
 
-
-
-
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    if (self.isSearching) {
+    if (self.isSearching)
         return 1;
-    }else{
-        return [[self.fetchedResultsController sections] count];
-    }
+    else
+        return [[self.fetchedResultsController sections] count] + 1; // For favorites
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (self.isSearching) {
         return [self.filteredList count];
-    }else{
-        id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
+	}else if(section == kFavoritesSection){
+		return [self.favoritesList count];
+	}else{
+        id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section - 1];
         return [sectionInfo numberOfObjects];
     }
 }
@@ -105,15 +134,16 @@
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return NO;
+	return indexPath.section == kFavoritesSection; // All items in the first section (favorites) will be editable.
 }
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
 	if (self.isSearching) {
 		return nil; // No names of any sections in the search view.
+	}else if(section == kFavoritesSection){
+		return @"Favorites";
 	}else{
-		id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+		id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section  - 1];
 		return [sectionInfo name];
 	}
 }
@@ -133,29 +163,34 @@
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index{
 	if (index == 0) {
 		CGRect searchBarFrame = self.searchController.searchBar.frame;
-		[tableView scrollRectToVisible:searchBarFrame animated:YES];
+		[tableView scrollRectToVisible:searchBarFrame animated:NO];
 		return -1;
 	}
-    return [self.fetchedResultsController sectionForSectionIndexTitle:title atIndex:index - 1]; // Because magnifying glass takes up index 0.
+    return [self.fetchedResultsController sectionForSectionIndexTitle:title atIndex:index - 1] + 1; // Because magnifying glass takes up index 0, and we don't have an index icon for favorites.
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
-        [context deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
-            
-        NSError *error = nil;
-        if (![context save:&error]) {
-            // Replace this implementation with code to handle the error appropriately.
-            // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
-        }
-    }
+		//Fix core data.
+		[self removeFavoritesDesignation:self.favoritesList[indexPath.row]];
+		//Change the data source for this section
+		[self.favoritesList removeObjectAtIndex:indexPath.row];
+		//Remove row on the list
+		[tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+	}
 }
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
+	NSManagedObject *object;
+	
+	if(indexPath.section == kFavoritesSection){
+		object = self.favoritesList[indexPath.row];
+	}
+	else{
+		NSIndexPath *modified = [NSIndexPath indexPathForRow:indexPath.row inSection:indexPath.section - 1];
+		object = [self.fetchedResultsController objectAtIndexPath:modified];
+	}
+	
     cell.textLabel.text = [[object valueForKey:@"name"] description];
     
     //Configure dedication date as detail label.
@@ -200,7 +235,7 @@
     // nil for section name key path means "no sections".
     NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:@"firstLetter" cacheName:@"Master"];
     aFetchedResultsController.delegate = self;
-    self.fetchedResultsController = aFetchedResultsController;
+    _fetchedResultsController = aFetchedResultsController;
     
 	NSError *error = nil;
 	if (![self.fetchedResultsController performFetch:&error]) {
@@ -213,57 +248,6 @@
     return _fetchedResultsController;
 }    
 
-- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
-{
-    [self.tableView beginUpdates];
-}
-
-- (void)controller:(NSFetchedResultsController *)controller didChangeSection:(id <NSFetchedResultsSectionInfo>)sectionInfo atIndex:(NSUInteger)sectionIndex forChangeType:(NSFetchedResultsChangeType)type
-{
-    switch(type) {
-        case NSFetchedResultsChangeInsert:
-            [self.tableView insertSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
-            break;
-            
-        case NSFetchedResultsChangeDelete:
-            [self.tableView deleteSections:[NSIndexSet indexSetWithIndex:sectionIndex] withRowAnimation:UITableViewRowAnimationFade];
-            break;
-            
-        default:
-            return;
-    }
-}
-
-- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject
-       atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type
-      newIndexPath:(NSIndexPath *)newIndexPath
-{
-    UITableView *tableView = self.tableView;
-    
-    switch(type) {
-        case NSFetchedResultsChangeInsert:
-            [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
-            break;
-            
-        case NSFetchedResultsChangeDelete:
-            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-            break;
-            
-        case NSFetchedResultsChangeUpdate:
-            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
-            break;
-            
-        case NSFetchedResultsChangeMove:
-            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-            [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
-            break;
-    }
-}
-
-- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
-{
-    [self.tableView endUpdates];
-}
 
 
 #pragma mark - UISearchResultsUpdating Delegate
@@ -323,4 +307,26 @@
 	self.searchController.searchBar.delegate = self;
 	self.definesPresentationContext = YES;  //Allows the search view to cover the table view.
 }
+
+- (void)loadFavoritesList{
+	NSFetchRequest *favoritesFetch = [[NSFetchRequest alloc]initWithEntityName:@"Temple"];
+	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"isFavorite == YES"];
+	[favoritesFetch setPredicate:predicate];
+
+	NSError *error;
+	self.favoritesList = [NSMutableArray arrayWithArray:[self.managedObjectContext executeFetchRequest:favoritesFetch error:&error]];
+	if (error != nil) {
+		NSLog(@"Fetching favorites failed.");
+	}
+}
+
+- (void)removeFavoritesDesignation:(Temple*)temple{
+	NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Temple"];
+	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name = %@", temple.name];
+	[request setPredicate:predicate];
+	Temple *object = [self.managedObjectContext executeFetchRequest:request error:nil][0];
+	object.isFavorite = [NSNumber numberWithBool:NO];
+	[self.managedObjectContext save:nil];
+}
 @end
+

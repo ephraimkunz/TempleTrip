@@ -155,16 +155,14 @@
     if ([self dataInCD]) {
         return;
     }
-    
     [self removeData];
+	
     NSString *path = [[NSBundle mainBundle]pathForResource:@"results" ofType:@"txt"];
     NSArray *temples = [self parseTempleJson:path];
     
-    NSManagedObjectContext *context = [self managedObjectContext];
-    
     for (id item in temples) {
-        Temple *temple = [NSEntityDescription insertNewObjectForEntityForName:@"Temple" inManagedObjectContext:context];
-        temple.name = [item valueForKey:@"name"];
+        Temple *temple = [NSEntityDescription insertNewObjectForEntityForName:@"Temple" inManagedObjectContext:self.managedObjectContext];
+		temple.name = [item valueForKey:@"name"];
         temple.dedication = [item valueForKey:@"dedication"];
         temple.place = [item valueForKey:@"place"];
         temple.address = [item valueForKey:@"address"];
@@ -172,19 +170,18 @@
         temple.telephone = [item valueForKey:@"telephone"];
         temple.endowmentSchedule = [item valueForKey:@"endowmentSchedule"];
         temple.firstLetter = [temple.name substringToIndex:1];
-        
-        [context save:nil];
     }
+	[self.managedObjectContext save:nil];
 }
 
 -(void)removeData{
     NSManagedObjectContext *context = [self managedObjectContext];
     NSFetchRequest *delete = [NSFetchRequest fetchRequestWithEntityName:@"Temple"];
     NSArray *allTemples = [context executeFetchRequest:delete error:nil];
-    for (NSManagedObject* item in allTemples) {
+    for (Temple* item in allTemples) {
         [context deleteObject:item];
     }
-    
+	[context save:nil];
 }
 
 @end
