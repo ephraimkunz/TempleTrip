@@ -138,7 +138,8 @@
 -(NSArray *)parseTempleJson:(NSString *)path{
     NSData *data = [NSData dataWithContentsOfFile:path];
     NSArray *temples = nil;
-    temples =[NSJSONSerialization JSONObjectWithData: data options:NSJSONReadingMutableContainers error:nil];
+	NSError *error;
+	temples =[NSJSONSerialization JSONObjectWithData: data options:NSJSONReadingMutableContainers error:&error];
     
     return temples;
 }

@@ -59,6 +59,12 @@
 	scheduleDict = [self scheduleDictFromKeys:scheduleKeys];
 	
 	scaledImage = [DetailTableViewController imageWithImage:[self getImage] scaledToWidth:self.tableView.frame.size.width];
+	
+	//Testing code
+	CLGeocoder *geoCoder = [[CLGeocoder alloc]init];
+	[geoCoder geocodeAddressString:self.currentTemple.address completionHandler:^(NSArray *placemarks, NSError *error) {
+		NSLog(@"The latitude and longitude are %@", placemarks[0]);
+	}];
 	}
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{

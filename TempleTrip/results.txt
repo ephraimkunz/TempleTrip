@@ -26,7 +26,6 @@
 "Saturday": "8:30, 10:30 a.m.; 12:30, 2:30, **4:30 p.m.",
 "Tuesday\u2013Friday": "8:30, 10:30 a.m.; 12:30, 2:30, 4:30, **6:30 p.m."
 },
-"id": 24131590490839350144448226082168429949,
 "name": "Aba Nigeria",
 "photoLink": "https://www.lds.org/bc/content/church/temples/aba-nigeria/images/aba-nigeria-808x480-050816_jrn013.jpg",
 "place": "Nigeria, Aba, Abia State",
@@ -42,7 +41,6 @@
 "dedication": "Announced",
 "detailLink": "https://www.lds.org/church/temples/abidjan-ivory-coast?lang=eng",
 "endowmentSchedule": {},
-"id": 246654179486461014179023912218434980752,
 "name": "Abidjan Ivory Coast",
 "photoLink": "https://www.lds.org322",
 "place": "Ivory Coast, Abidjan",
@@ -76,7 +74,6 @@
 "Second Tuesday of every month": "7:00 a.m.",
 "Tuesday-Friday": "8:30, 10:30 a.m.; 12:30, 2:30, 4:30, 6:30 p.m."
 },
-"id": 89547887303620470659504123835089471567,
 "name": "Accra Ghana",
 "photoLink": "https://www.lds.org/bc/content/church/temples/accra-ghana/images/accra-ghana-808x480-050816_jrn009.jpg",
 "place": "Ghana, Ridge, Accra",
@@ -120,7 +117,6 @@
 "Thursday": "9:15, 11:30 a.m.",
 "Wednesday": "7:00 p.m."
 },
-"id": 254829897846843231051095101686248931573,
 "name": "Adelaide Australia",
 "photoLink": "https://www.lds.org/bc/content/church/temples/adelaide-australia/images/adelaide-australia-808x480-CWD_bac3d5b5.jpg",
 "place": "Australia, Marden, South Australia",
@@ -164,7 +160,6 @@
 "Tuesday": "6:30, 8:00, 9:00, 10:30, 11:30 a.m.; 1:00, 2:00, 3:30, 4:30, 6:00, 7:00 p.m.",
 "Wednesday": "8:00, 9:00, 10:30 a.m.; 4:30, 6:00, 7:00 p.m."
 },
-"id": 2575409888292913299136859425533475203,
 "name": "Albuquerque New Mexico",
 "photoLink": "https://www.lds.org/bc/content/church/temples/albuquerque-new-mexico/images/albuquerque-new-mexico-808x480-CU031224-002.jpg",
 "place": "United States, Albuquerque, New Mexico",
@@ -205,7 +200,6 @@
 "Thursday": "10:00 a.m.; 7:00 p.m.",
 "Wednesday": "5:30, 10:00 a.m.; 7:00 p.m."
 },
-"id": 8775023194232543117901995017554124415,
 "name": "Anchorage Alaska",
 "photoLink": "https://www.lds.org/bc/content/church/temples/anchorage-alaska/images/anchorage-alaska-808x480-av050816_jrn022.jpg",
 "place": "United States, Anchorage, Alaska",
@@ -244,7 +238,6 @@
 "Saturday": "6:00, 7:30, 9:00, 10:30 a.m.",
 "Tuesday\u2013Friday": "6:00, 7:30, 9:00 a.m.; 3:00, 4:30, 6:00 p.m."
 },
-"id": 312924941375612305805088080499248980732,
 "name": "Apia Samoa",
 "photoLink": "https://www.lds.org/bc/content/church/temples/apia-samoa/images/apia-samoa-808x480-AV071129cah035.jpg",
 "place": "Samoa, Apia, Pesega",
@@ -260,7 +253,6 @@
 "dedication": "Announced",
 "detailLink": "https://www.lds.org/church/temples/arequipa-peru?lang=eng",
 "endowmentSchedule": {},
-"id": 60870430024769798484188560427727678865,
 "name": "Arequipa Peru",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/cedar-city/temple-Announced_lg.jpg",
 "place": "Peru, Arequipa",
@@ -295,7 +287,6 @@
 "Tuesday": "9:00, 11:00 a.m.",
 "Wednesday\u2013Thursday": "5:00, 7:00 p.m."
 },
-"id": 191074802383896600094671482595750122133,
 "name": "Asunci\u00f3n Paraguay",
 "photoLink": "https://www.lds.org/bc/content/church/temples/asuncion-paraguay/images/asuncion_paraguay-808x480-AV060103_cah012.jpg",
 "place": "Paraguay, Asunci\u00f3n, Centro",
@@ -336,7 +327,6 @@
 "Saturday": "Every hour from 8:00 a.m. to 3:00 p.m.",
 "Tuesday-Friday": "10:00, 11:00 a.m.; 12:00 noon; 6:00, 7:00, 8:00 p.m."
 },
-"id": 335795564752791899171669915342838738308,
 "name": "Atlanta Georgia",
 "photoLink": "https://www.lds.org/bc/content/church/temples/atlanta-georgia/images/atlanta-georgia-808x480-AV110301cah0038.jpg",
 "place": "United States, Sandy Springs, Georgia",
@@ -352,7 +342,6 @@
 "dedication": "Announced",
 "detailLink": "https://www.lds.org/church/temples/bangkok-thailand?lang=eng",
 "endowmentSchedule": {},
-"id": 250388754425353180192437852133015707096,
 "name": "Bangkok Thailand",
 "photoLink": "https://www.lds.org322",
 "place": "Thailand, Bangkok",
@@ -365,7 +354,6 @@
 "dedication": "Announced",
 "detailLink": "https://www.lds.org/church/temples/barranquilla-colombia?lang=eng",
 "endowmentSchedule": {},
-"id": 183181181270446659442724401935712920523,
 "name": "Barranquilla Colombia",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/barranquilla-colombia/temple-announced-lg.jpg",
 "place": "Colombia, Barranquilla",
@@ -402,7 +390,6 @@
 "Tuesday and Thursday": "7:00 p.m.",
 "Wednesday and Friday": "10:00 a.m.; 12:00 noon; 7:00 p.m."
 },
-"id": 227386973012456199007891566430791878260,
 "name": "Baton Rouge Louisiana",
 "photoLink": "https://www.lds.org/bc/content/church/temples/baton-rouge-louisiana/images/baton-rouge-louisiana-808x480-0002060.jpg",
 "place": "United States, Baton Rouge, Louisiana",
@@ -443,7 +430,6 @@
 "Monday": "Closed",
 "Tuesday\u2013Thursday": "8:00, 9:00, 10:30, 11:30 a.m.; 1:00, 3:30 p.m."
 },
-"id": 210008870070927816080624732057083473533,
 "name": "Bern Switzerland",
 "photoLink": "https://www.lds.org/bc/content/church/temples/bern-switzerland/images/bern-switzerland-808x480-CWD_091110_CWills_007.jpg",
 "place": "Switzerland, Zollikofen, Bern",
@@ -484,7 +470,6 @@
 "Saturday": "7:00, 8:30, 10:00, 11:30 a.m.; 1:00, 2:30 p.m.",
 "Tuesday-Friday": "8:00, 10:00 a.m.; 12:00 noon; 2:00, 5:00, 7:00 p.m."
 },
-"id": 184795953356524033667312106937614929058,
 "name": "Billings Montana",
 "photoLink": "https://www.lds.org/bc/content/church/temples/billings-montana/images/billings-montana-808x480-CU091208_bkf01.jpg",
 "place": "United States, Billings, Montana",
@@ -522,7 +507,6 @@
 "Tuesday, Thursday, Friday": "6:00, 8:00 p.m.",
 "Wednesday and Saturday": "9:00, 11:00 a.m.; 1:00 p.m."
 },
-"id": 217476399415222058977079442691412134582,
 "name": "Birmingham Alabama",
 "photoLink": "https://www.lds.org/bc/content/church/temples/birmingham-alabama/images/birmingham-alabama-808x480-0002061.jpg",
 "place": "United States, Gardendale, Alabama",
@@ -565,7 +549,6 @@
 "Third Wednesday of each month": "11:00 a.m.",
 "Thursday and Friday": "6:00, 7:30 p.m."
 },
-"id": 63990545801692181676666107163824298070,
 "name": "Bismarck North Dakota",
 "photoLink": "https://www.lds.org/bc/content/church/temples/bismarck-north-dakota/images/bismarck-north-dakota-808x480-0002102.jpg",
 "place": "United States, Bismarck, North Dakota",
@@ -618,7 +601,6 @@
 "Saturday": "8:30, 9:30, 10:30, 11:30 a.m.",
 "Tuesday\u2013Friday": "6:30 a.m.(Wednesday only); 8:00, 9:00, 10:00 a.m.; 4:30, 5:30, 6:30 p.m."
 },
-"id": 313676757815419362919837392452546766718,
 "name": "Bogot\u00e1 Colombia",
 "photoLink": "https://www.lds.org/bc/content/church/temples/bogota-colombia/images/bogota-colombia-808x480-0002101.jpg",
 "place": "Colombia, Bogot\u00e1, Cundinamarca",
@@ -660,7 +642,6 @@
 "Tuesday": "5:15 a.m.; every 30 minutes from 5:30 a.m. to 8:00 p.m.",
 "Wednesday,Friday,Saturday": "Every 30 minutes from 6:00 a.m. to 8:00 p.m."
 },
-"id": 248908623241808930510395946015191244868,
 "name": "Boise Idaho",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/boise-idaho/images/808-by-480.jpg",
 "place": "United States, Boise, Idaho",
@@ -705,7 +686,6 @@
 "Monday": "Closed",
 "Tuesday-Friday": "Every hour from 8:00 a.m. to 8:00 p.m."
 },
-"id": 69441228023552090747070410347812583494,
 "name": "Boston Massachusetts",
 "photoLink": "https://www.lds.org/bc/content/church/temples/boston-massachusetts/images/boston-massachusetts-450x480-0001988.jpg",
 "place": "United States, Belmont, Massachusetts",
@@ -745,7 +725,6 @@
 "Monday": "Closed",
 "Tuesday-Saturday": "6:00, 6:45, 7:15, 7:45, 8:15, 9:00, 9:30, 10:00, 10:30, 11:15, 11:45 a.m.; 12:15, 12:45,"
 },
-"id": 173435498333994607488379319305302950039,
 "name": "Bountiful Utah",
 "photoLink": "https://www.lds.org/bc/content/church/temples/bountiful-utah/images/bountiful-utah-808x480-0001681.jpg",
 "place": "United States, Bountiful, Utah",
@@ -789,7 +768,6 @@
 "Saturday": "7:00, 9:15 a.m.; 12:00 noon; 2:15, 5:00, 7:15 p.m. Doors close at 8:00 p.m. The baptistry closes at 7:00 p.m. on Saturdays.",
 "Tuesday-Friday": "7:00, 9:15 a.m.; 12:00 noon; 2:15, 5:00, 7:15 p.m. Doors close at 8:00 p.m."
 },
-"id": 30702650518849261343437196949493340859,
 "name": "Brigham City Utah",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/brigham-city-utah/images/Brigham-City-Utah-Temple-480w.jpg",
 "place": "United States, Brigham City, Utah",
@@ -823,7 +801,6 @@
 "Tuesday": "6:30 p.m.",
 "Wednesday-Friday": "8:00, 10:00 a.m.; 12:00 noon; 5:00, 6:30, 8:00 p.m."
 },
-"id": 244347604052500778522860189200840732886,
 "name": "Brisbane Australia",
 "photoLink": "https://www.lds.org/bc/content/church/temples/brisbane-australia/images/brisbane-australia-808x480-CU080604_bkf01ext.jpg",
 "place": "Australia, Kangaroo Point, Queensland",
@@ -858,7 +835,6 @@
 "Saturday": "6:30, 7:15, 8:00, 9:00, 9:45, 10:30, 11:30 a.m., 12:15 p.m.; every hour from 1:00 to 5:00 p.m.",
 "Tuesday-Friday": "Every hour from 8:00 a.m. to 12:00 noon; 2:00 to 8:00 p.m."
 },
-"id": 536851504659532968139330163007322630,
 "name": "Buenos Aires Argentina",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/buenos-aires-argentina/buenos-aires-argentina-temple-1-808x480.jpg",
 "place": "Argentina, Ciudad Evita, Buenos Aires",
@@ -899,7 +875,6 @@
 "Thursday-Friday": "9:30, 11:00 a.m.; 12:30, 4:30, 6:00, 7:30 p.m.",
 "Tuesday-Wednesday": "4:30, 6:00, 7:30 p.m."
 },
-"id": 116282552254105325418393129300199836006,
 "name": "Calgary Alberta",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/calgary-alberta/images/calgary-alberta-temple-new.jpg",
 "place": "Canada, Calgary, Alberta",
@@ -936,7 +911,6 @@
 "Saturday": "7:00, 7:45, 8:30, 9:15, 10:00, 10:45, 11:30 a.m.; 12:15, 1:00, 1:45, 2:30, 3:15 p.m.",
 "Tuesday-Friday": "9:00, 10:00, 11:00 a.m.; 1:00, 2:00, 3:00, 4:00, 7:00, 7:45, 8:30 p.m."
 },
-"id": 319155389321689677136976087442228844896,
 "name": "Campinas Brazil",
 "photoLink": "https://www.lds.org/bc/content/church/temples/campinas-brazil/images/campinas-brazil-808x480-CU050202_ats03.jpg",
 "place": "Brazil, Campinas, Sao Paulo",
@@ -973,7 +947,6 @@
 "Tuesday": "5:30 a.m.; 12:00 noon; 7:30 p.m.",
 "Wednesday": "5:30 a.m.; 12:00 noon; 3:00, 7:30 p.m."
 },
-"id": 10754169718074708756240913197982467507,
 "name": "Caracas Venezuela",
 "photoLink": "https://www.lds.org/bc/content/church/temples/caracas-venezuela/images/caracas-venezuela-808x480-0002093alt.jpg",
 "place": "Venezuela, Caracas, Urbanizaci\u00f3n Cuarimare",
@@ -1019,7 +992,6 @@
 "Saturday": "8:00, 9:00, 10:30, 11:30 a.m.; 1:00, 2:00 p.m.",
 "Tuesday\u2013Friday": "9:30, 10:30 a.m.;12:00 noon; 1:00, 3:30, 4:30, 6:00, 7:00 p.m."
 },
-"id": 287613461343604488398313444784239969002,
 "name": "Cardston Alberta",
 "photoLink": "https://www.lds.org/bc/content/church/temples/cardston-alberta/images/cardston-alberta-808x480-VRL_68149_4845006.jpg",
 "place": "Canada, Cardston, Alberta",
@@ -1058,7 +1030,6 @@
 "Saturday": "9:00, 11:00 a.m.; 1:00, 3:00, 4:30, 6:00 p.m.",
 "Tuesday\u2013Thursday": "9:00, 11:00 a.m.; 1:00, 3:00, 4:30, 6:00 p.m."
 },
-"id": 34923723882700829061437249491929256192,
 "name": "Cebu City Philippines",
 "photoLink": "https://www.lds.org/bc/content/church/temples/cebu-city-philippines/images/cebu-philippines-808x480-AV100419cah007.jpg",
 "place": "Philippines, Cebu City, Cebu",
@@ -1074,7 +1045,6 @@
 "dedication": "Announced",
 "detailLink": "https://www.lds.org/church/temples/cedar-city-utah?lang=eng",
 "endowmentSchedule": {},
-"id": 112853258340477541762717198122553388639,
 "name": "Cedar City Utah",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/cedar-city/temple-Announced_lg.jpg",
 "place": "United States, Cedar City, Utah",
@@ -1118,7 +1088,6 @@
 "Saturday": "2nd Saturday: Every hour from 7:00 a.m. to 7:00 p.m.",
 "Tuesday\u2013Friday": "Every hour from 9:00 a.m. to 6:00 p.m.; every half hour from 6:30 to 7:30 p.m."
 },
-"id": 276547568372246668891233899782526091562,
 "name": "Chicago Illinois",
 "photoLink": "https://www.lds.org/bc/content/church/temples/chicago-illinois/images/chicago-illinois-808x480-CHICAGODAS97.jpg",
 "place": "United States, Glenview, Illinois",
@@ -1157,7 +1126,6 @@
 "Tuesday": "9:00 a.m.; 6:30 p.m.",
 "Wednesday and Friday": "9:00 a.m.; 6:00 p.m."
 },
-"id": 48635624620729698233247561321804331569,
 "name": "Ciudad Ju\u00e1rez Mexico",
 "photoLink": "https://www.lds.org/bc/content/church/temples/ciudad-juarez-mexico/images/ciudad-juarez-mexico-808x480-CUR_IM030924-004.jpg",
 "place": "M\u00e9xico, Ciudad Ju\u00e1rez, Chihuahua",
@@ -1194,7 +1162,6 @@
 "Saturday": "6:30, 7:00, 9:00, 10:30, 11:30 a.m.; 2:00, 3:30, 4:30 p.m.",
 "Tuesday\u2013Friday": "9:00, 10:30, 11:30 a.m.; 5:00, 6:30, 7:30 p.m."
 },
-"id": 161658260151910805040721679068223174603,
 "name": "Cochabamba Bolivia",
 "photoLink": "https://www.lds.org/bc/content/church/temples/cochabamba-bolivia/images/cochabamba-bolivia-808x480-0002054s.jpg",
 "place": "Bolivia, Cercado, Cochabamba",
@@ -1237,7 +1204,6 @@
 "Tuesday": "10:00 a.m.; 7:00 p.m.",
 "Wednesday and Friday": "7:00 p.m."
 },
-"id": 169326876788015016572201886372541921633,
 "name": "Colonia Ju\u00e1rez Chihuahua Mexico",
 "photoLink": "https://www.lds.org/bc/content/church/temples/colonia-juarez-chihuahua-mexico/images/colonia-jurez-chihuahua-mexico-808x480-CUR_IM030924.jpg",
 "place": "M\u00e9xico, Colonia Ju\u00e1rez, Chihuahua",
@@ -1277,7 +1243,6 @@
 "Monday": "Closed",
 "Tuesday\u2013Friday": "8:00, 9:30, 11:00 a.m.; 3:00, 4:30, 6:00, 7:30 p.m."
 },
-"id": 224247725834404715804977533460497156318,
 "name": "Columbia River Washington",
 "photoLink": "https://www.lds.org/bc/content/church/temples/columbia-river-washington/images/columbia-river-washington-450x480-0075835.jpg",
 "place": "United States, Richland, Washington",
@@ -1319,7 +1284,6 @@
 "Tuesday": "5:00, 7:00 p.m.",
 "Wednesday\u2013Thursday": "9:00, 11:00 a.m.; 5:00, 7:00 p.m."
 },
-"id": 222660825703566776522688187057044643107,
 "name": "Columbia South Carolina",
 "photoLink": "https://www.lds.org/bc/content/church/temples/columbia-south-carolina/images/columbia-south-carolina-808x480-CWD_091710_MJennings.jpg",
 "place": "United States, Hopkins, South Carolina",
@@ -1361,7 +1325,6 @@
 "Tuesday": "11:00 a.m.; 1:00, 6:00, 7:30 p.m.",
 "Wednesday": "9:00, 11:00 a.m.; 1:00, 6:00, 7:30 p.m."
 },
-"id": 251151108484095808358162233124949051370,
 "name": "Columbus Ohio",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/columbus-ohio/Columbus_Ohio_Temple_808x480.jpeg",
 "place": "United States, Columbus, Ohio",
@@ -1377,7 +1340,6 @@
 "dedication": "Announced",
 "detailLink": "https://www.lds.org/church/temples/concepcion-chile?lang=eng",
 "endowmentSchedule": {},
-"id": 186793822300333496160284649729354648074,
 "name": "Concepci\u00f3n Chile",
 "photoLink": "https://www.lds.org/bc/content/church/temples/concepcion-chile/images/temple-Announced_lg.jpg",
 "place": "Chile, Concepci\u00f3n, Chile",
@@ -1412,7 +1374,6 @@
 "Tuesday": "Closed",
 "Wednesday": "5:30, 7:30 p.m."
 },
-"id": 336132726444768960331318287267530781071,
 "name": "Copenhagen Denmark",
 "photoLink": "https://www.lds.org/bc/content/church/temples/copenhagen-denmark/images/copenhagen-denmark-808x480-AV060609_vmh9424.jpg",
 "place": "Denmark, Copenhagen, Frederiksberg",
@@ -1437,7 +1398,6 @@
 "Saturday": "7:00, 8:30, 10:00, 11:30 a.m.; 2:00, 3:30, 5:00 p.m.",
 "Tuesday-Thursday": "9:00, 11:00 a.m.; 2:00, 4:00, 6:00 p.m.\u00a0"
 },
-"id": 79686030433585287677268771993422653462,
 "name": "C\u00f3rdoba Argentina",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/cordoba-argentina/images/cordoba-argentina-temples-buildings_808x480.jpg",
 "place": "Argentina, C\u00f3rdoba, C\u00f3rdoba Province",
@@ -1474,7 +1434,6 @@
 "Thursday, Friday": "2:30, 4:30, 6:30, 8:00 p.m.",
 "Tuesday, Wednesday": "9:00, 10:30 a.m.; 12:00 noon; 2:30, 4:30, 6:30, 8:00 p.m."
 },
-"id": 86779368801356617941697508110100001805,
 "name": "Curitiba Brazil",
 "photoLink": "https://www.lds.org/bc/content/church/temples/curitiba-brazil/images/curitiba-brazil-450x480-AV080605_cah006.jpg",
 "place": "Brazil, Curitiba, Curitiba",
@@ -1515,7 +1474,6 @@
 "Saturday": "Every 30 minutes from 6:30 a.m. to 7:00 p.m.",
 "Tuesday\u2013Friday": "Every hour from 7:00 a.m. to 7:00 p.m.; 7:30, 8:00 p.m."
 },
-"id": 136043230141773001373219541650654770396,
 "name": "Dallas Texas",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/dallas-texas/dallas-texas-temple-lds.jpg",
 "place": "United States, Dallas, Texas",
@@ -1555,7 +1513,6 @@
 "Monday": "Closed",
 "Tuesday\u2013Friday": "8:00, 9:00, 10:00, 10:30 a.m.; every hour from 11:00 a.m. to 5:00 p.m.;"
 },
-"id": 136684911518722514094499300519122681880,
 "name": "Denver Colorado",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/denver-colorado/denver-colorado-temple-lds.jpg",
 "place": "United States, Centennial, Colorado",
@@ -1599,7 +1556,6 @@
 "Thursday": "10:00 a.m.; 12:00 noon; 7:00 p.m.",
 "Tuesday\u2013Wednesday": "7:00 p.m."
 },
-"id": 9753738024587762618099560384348882773,
 "name": "Detroit Michigan",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/detroit-michigan/Detroit-Michigan-Temple-01-808x480.jpeg",
 "place": "United States, Bloomfield Hills, Michigan",
@@ -1640,7 +1596,6 @@
 "Monday": "Closed",
 "Tuesday\u2013Saturday": "Every hour from 7:00 a.m. to 8:00 p.m."
 },
-"id": 35088676363767662136903150227283671216,
 "name": "Draper Utah",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/draper-utah-temple-lds.jpg",
 "place": "United States, Draper, Utah",
@@ -1656,7 +1611,6 @@
 "dedication": "Announced",
 "detailLink": "https://www.lds.org/church/temples/durban-south-africa?lang=eng",
 "endowmentSchedule": {},
-"id": 206288626167982513229475983680441833331,
 "name": "Durban South Africa",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/durban-south-africa/temple-announced-lg.jpg",
 "place": "South Africa, Durban",
@@ -1696,7 +1650,6 @@
 "Tuesday": "9:30, 11:30 a.m.; 5:30, 7:30 p.m.",
 "Wednesday\u2013Thursday": "5:30, 7:30 p.m."
 },
-"id": 213884510250921141911949921569680129223,
 "name": "Edmonton Alberta",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/edmonton-alberta/edmonton-alberta-temple-lds.jpg",
 "place": "Canada, Edmonton, Alberta",
@@ -1712,7 +1665,6 @@
 "dedication": "Construction",
 "detailLink": "https://www.lds.org/church/temples/fort-collins-colorado-temple?lang=eng",
 "endowmentSchedule": {},
-"id": 278377002101634227370067036723352096809,
 "name": "Fort Collins Colorado",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/fort-collins/fort-collins-colorado-temple-lds.jpg",
 "place": "United States, Fort Collins, Colorado",
@@ -1749,7 +1701,6 @@
 "Saturday": "8:00, 9:30, 11:00 a.m.; 12:30, 2:00, 3:30 p.m.",
 "Tuesday-Thursday": "6:00, 7:30 p.m."
 },
-"id": 258929124561025535306592109045229336051,
 "name": "Fort Lauderdale Florida",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/fort-lauderdale-florida/images/FtLauderdaleFloridaTemple1_808x480.jpg",
 "place": "United States, Fort Lauderdale, Florida",
@@ -1765,7 +1716,6 @@
 "dedication": "Construction",
 "detailLink": "https://www.lds.org/church/temples/fortaleza-brazil?lang=eng",
 "endowmentSchedule": {},
-"id": 123909783800541635146629491129504790522,
 "name": "Fortaleza Brazil",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/cedar-city/temple-Announced_lg.jpg",
 "place": "Brazil, Fortaleza, Brazil",
@@ -1809,7 +1759,6 @@
 "Tuesday": "8:00, 10:30 a.m.; 1:30, 4:00, 5:00 p.m.",
 "Wednesday": "8:00, 9:15, 10:30 a.m.; 1:30, 4:00, 5:00 p.m."
 },
-"id": 178282257679365503837524755212883431571,
 "name": "Frankfurt Germany",
 "photoLink": "https://www.lds.org/bc/content/church/temples/frankfurt-germany/images/frankfurt-germany-808x480-0001277s.jpg",
 "place": "Germany, Friedrichsdorf, Hessen",
@@ -1825,7 +1774,6 @@
 "dedication": "Renovation",
 "detailLink": "https://www.lds.org/church/temples/freiberg-germany?lang=eng",
 "endowmentSchedule": {},
-"id": 205336525153932772259624799900278810775,
 "name": "Freiberg Germany",
 "photoLink": "https://www.lds.org/bc/content/church/temples/freiberg-germany/images/freiberg-germany-808x480-CU091007_bkf01.jpg",
 "place": "Germany, Freiberg, Freiberg",
@@ -1862,7 +1810,6 @@
 "Saturday": "7:00, 8:30, 10:00 a.m.; 12:30, 2:30 p.m.",
 "Tuesday\u2013Thursday": "8:00, 9:30, 11:30 a.m. 6:00, 7:30 p.m."
 },
-"id": 160764263705832825573332586336839515614,
 "name": "Fresno California",
 "photoLink": "https://www.lds.org/bc/content/church/temples/fresno-california/images/fresno-california-808x480-CUR_IM030916-001alt.jpg",
 "place": "United States, Fresno, California",
@@ -1892,7 +1839,6 @@
 "Saturday": "7:40, 9:10, 10:40 a.m.; 12:10, 1:40 p.m.",
 "Thursday": "7:00 p.m."
 },
-"id": 208386033537414514073282048014903364660,
 "name": "Fukuoka Japan",
 "photoLink": "https://www.lds.org/bc/content/church/temples/fukuoka-japan/images/fukuoka-japan-808x480-0001842s.jpg",
 "place": "Japan, Fukuoka, Fukuoka",
@@ -1932,7 +1878,6 @@
 "Monday": "Closed",
 "Tuesday-Saturday": "Every 45 minutes from 5:30 a.m. to 7:00 p.m."
 },
-"id": 180639666680515194874880700746743435909,
 "name": "Gilbert Arizona",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/gilbert-arizona/images/gilbert-arizona-large-4.jpg",
 "place": "United States, Gilbert, Arizona",
@@ -1971,7 +1916,6 @@
 "Tuesday": "9:30 a.m.; 5:00, 7:00 p.m.",
 "Wednesday-Friday": "5:00, 7:00 p.m."
 },
-"id": 226049526821678725116641042659678483160,
 "name": "Guadalajara Mexico",
 "photoLink": "https://www.lds.org/bc/content/church/temples/guadalajara-mexico/images/guadalajara-mexico-808x480-CUR-IM031005-001alt.jpg",
 "place": "M\u00e9xico, Zapopan, Jalisco",
@@ -2011,7 +1955,6 @@
 "Saturday": "Every hour from 5:00 a.m. to 5:00 p.m.",
 "Tuesday\u2013Friday": "Every hour from 8:00 to 11:00 a.m.; 4:00 to 7:00 p.m."
 },
-"id": 180048065880183778928549627511032526229,
 "name": "Guatemala City Guatemala",
 "photoLink": "https://www.lds.org/bc/content/church/temples/guatemala-city-guatemala/images/guatemala-city-guatemala-400x480-0001278s.jpg",
 "place": "Guatemala, Guatemala City, Guatemala",
@@ -2050,7 +1993,6 @@
 "Saturday": "8:00, 8:45, 9:30, 10:15, 11:00 a.m.; 12:00 noon; 1:00, 2:00 p.m.",
 "Tuesday-Friday": "8:00, 9:00, 10:00 a.m.; 6:00, 6:45, 7:30 p.m."
 },
-"id": 27610783801692547383989581467666102497,
 "name": "Guayaquil Ecuador",
 "photoLink": "https://www.lds.org/bc/content/church/temples/guayaquil-ecuador/images/guayaquil-ecuador-808x480-0002099.jpg",
 "place": "Ecuador, Guayaquil, Guayas",
@@ -2095,7 +2037,6 @@
 "Tuesday": "Closed",
 "Wednesday": "9:30, 11:30 a.m."
 },
-"id": 21655465423771566055433388155636595784,
 "name": "Halifax Nova Scotia",
 "photoLink": "https://www.lds.org/bc/content/church/temples/halifax-nova-scotia/images/halifax-nova-scotia-808x480-CU080407-001.jpg",
 "place": "Canada, Dartmouth, Nova Scotia",
@@ -2143,7 +2084,6 @@
 "Tuesday": "6:00, 8:30, 11:00 a.m.; 1:30, 4:00, 6:30 p.m.",
 "Wednesday-Friday": "8:30, 11:00 a.m.; 1:30, 4:00, 6:30 p.m."
 },
-"id": 262973032691306460799912184092055504409,
 "name": "Hamilton New Zealand",
 "photoLink": "https://www.lds.org/bc/content/church/temples/hamilton-new-zealand/images/hamilton-new-zealand-808x480-CWD_100803_KRowley_005.jpg",
 "place": "New Zealand, Hamilton, New Zealand",
@@ -2159,7 +2099,6 @@
 "dedication": "Construction",
 "detailLink": "https://www.lds.org/church/temples/hartford-connecticut?lang=eng",
 "endowmentSchedule": {},
-"id": 151093702010678030069188154426027852820,
 "name": "Hartford Connecticut",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/hartford-connecticut/images/hartford-temple-808x480.jpg",
 "place": "United States, Hartford, Connecticut",
@@ -2194,7 +2133,6 @@
 "Saturday": "10:00 a.m.; 12:00 noon",
 "Tuesday-Friday": "10:00 a.m.; 12:00 noon; 2:00, 4:00, 6:00 p.m.; Additional group sessions are available by appointment only. Please contact the temple for times."
 },
-"id": 36419876227216348982078118700534515155,
 "name": "Helsinki Finland",
 "photoLink": "https://www.lds.org/bc/content/church/temples/helsinki-finland/images/helsinki-finland-450x480-AV061009_lp001.jpg",
 "place": "Finland, Espoo, Helsinki",
@@ -2233,7 +2171,6 @@
 "Tuesday and Thursday": "5:30, 7:30 p.m.",
 "Wednesday and Friday": "9:00 a.m.; 5:30, 7:30 p.m."
 },
-"id": 206615452123335350477189220410058332954,
 "name": "Hermosillo Sonora Mexico",
 "photoLink": "https://www.lds.org/bc/content/church/temples/hermosillo-sonora-mexico/images/hermosillo-sonora-mexico-808x480-CU040825_ats02.jpg",
 "place": "M\u00e9xico, Hermosillo, Sonora",
@@ -2284,7 +2221,6 @@
 "Saturday": "7:00, 9:00, 10:00, 11:15 a.m.; 12:15 p.m.",
 "Tuesday\u2013Friday": "9:00, 11:00 a.m.; 1:00, 4:00, 6:45, 7:15 p.m."
 },
-"id": 125591589969163388606099677063134634580,
 "name": "Hong Kong China",
 "photoLink": "https://www.lds.org/bc/content/church/temples/hong-kong-china/images/hong-kong-china-450x480-CWD_b24ba465.jpg",
 "place": "China, Hong Kong, Kowloon Tong",
@@ -2324,7 +2260,6 @@
 "Saturday": "Every hour from 7:00 a.m. to 7:00 p.m.",
 "Tuesday\u2013Friday": "Every hour from 8:00 a.m. to 8:00 p.m. (Every 3rd Friday 5:30 a.m.)"
 },
-"id": 205829586371771507887122436394723260985,
 "name": "Houston Texas",
 "photoLink": "https://www.lds.org/bc/content/church/temples/houston-texas/images/houston-texas-808x480-CWD_567d8302.jpg",
 "place": "United States, Klein, Texas",
@@ -2340,7 +2275,6 @@
 "dedication": "Renovation",
 "detailLink": "https://www.lds.org/church/temples/idaho-falls-idaho?lang=eng",
 "endowmentSchedule": {},
-"id": 237588610533310224921666361012416116368,
 "name": "Idaho Falls Idaho",
 "photoLink": "https://www.lds.org/bc/content/church/temples/idaho-falls-idaho/images/idaho-falls-idaho-808x480-0001581s.jpg",
 "place": "United States, Idaho Falls, Idaho",
@@ -2369,7 +2303,6 @@
 "Tuesday and Thursday*": "6:00, 7:30 p.m.",
 "Wednesday and Friday*": "9:00, 11:00 a.m.; 6:00, 7:30 p.m."
 },
-"id": 272220590861302447769938537362575160688,
 "name": "Indianapolis Indiana",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/indianapolis-indiana/images/Indianapolis-Indiana-808x480.jpg",
 "place": "United States, Indianapolis, Indiana",
@@ -2411,7 +2344,6 @@
 "Saturday": "Every hour from 7:00 a.m. to 12:00 noon",
 "Tuesday\u2013Thursday": "3:00, 4:00, 5:00, 6:00 p.m."
 },
-"id": 279537397073118760293583648905749927551,
 "name": "Johannesburg South Africa",
 "photoLink": "https://www.lds.org/bc/content/church/temples/johannesburg-south-africa/images/johannesburg-south-africa-400x480-AV071029cah001.jpg",
 "place": "South Africa, Johannesburg, Gauteng",
@@ -2455,7 +2387,6 @@
 "Tuesday": "Every 30 minutes from 5:00 a.m. to 8:00 p.m.",
 "Wednesday\u2013Saturday": "Every 30 minutes from 6:00 a.m. to 8:00 p.m."
 },
-"id": 67829821428628368799116457255524442760,
 "name": "Jordan River Utah",
 "photoLink": "https://www.lds.org/bc/content/church/temples/jordan-river-utah/images/jordan-river-utah-808x480-0001762.jpg",
 "place": "United States, South Jordan, Utah",
@@ -2494,7 +2425,6 @@
 "Saturday": "7:00, 8:30, 10:00, 11:30 a.m.; 1:00, 2:30 p.m.",
 "Tuesday-Friday": "9:00, 10:30 a.m.; 12:30, 5:00, 6:30, 8:00 p.m."
 },
-"id": 38520651117034727943748063192070879649,
 "name": "Kansas City Missouri",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/kansas-city-missouri/kansas-city-missouri-temple-1-604x480.jpg",
 "place": "United States, Kansas City, Missouri",
@@ -2510,7 +2440,6 @@
 "dedication": "Announced",
 "detailLink": "https://www.lds.org/church/temples/kinshasa-democratic-republic-of-congo?lang=eng",
 "endowmentSchedule": {},
-"id": 303149378975935499023952346819312767473,
 "name": "Kinshasa Democratic Republic of Congo",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/kinshasa-democratic-republic-of-congo/temple-announced-lg.jpg",
 "place": "Democratic Republic of Congo, Kinshasa",
@@ -2545,7 +2474,6 @@
 "Saturday": "8:00, 9:30, 11:00 a.m., 12:30 p.m.",
 "Tuesday-Friday": "8:00, 10:00 a.m.; 6:30 p.m."
 },
-"id": 329028042779387209702110812722388132612,
 "name": "Kona Hawaii",
 "photoLink": "https://www.lds.org/bc/content/church/temples/kona-hawaii/images/kona-hawaii-808x480-0001985.jpg",
 "place": "United States, Kailua-Kona, Hawaii",
@@ -2579,7 +2507,6 @@
 "Saturday": "8:00, 10:30 a.m. 1:00, 3:00, 5:00 p.m.",
 "Tuesday\u2013Friday": "8:00, 10:30 a.m.; 4:30, 7:00 p.m."
 },
-"id": 39011438810327063773319035512292784751,
 "name": "Kyiv Ukraine",
 "photoLink": "https://www.lds.org/bc/content/church/temples/kyiv-ukraine/images/kyiv-ukraine-808x480-CU101029_bkf020alt.jpg",
 "place": "Ukraine, Kyiv, Kyiv Oblast",
@@ -2620,7 +2547,6 @@
 "Saturday": "Every hour from 6:00 a.m. to 1:00 p.m.",
 "Tuesday-Friday": "Every hour from 7:00 a.m. to 2:00 p.m.; 4:00 to 8:00 p.m."
 },
-"id": 295198551258058618633606037047085604471,
 "name": "Laie Hawaii",
 "photoLink": "https://www.lds.org/bc/content/church/temples/laie-hawaii/images/laie-hawaii-808x480-CWD_101022_DNorthrup.jpg",
 "place": "United States, Laie, Hawaii",
@@ -2664,7 +2590,6 @@
 "Tuesday": "Every 60 minutes from 5:30 a.m. to 6:30 p.m.; 7:00, 7:30 p.m.",
 "Wednesday": "Every 60 minutes from 7:30 a.m. to 6:30 p.m.; 7:00, 7:30 p.m."
 },
-"id": 36916541660064182704609810697668757159,
 "name": "Las Vegas Nevada",
 "photoLink": "https://www.lds.org/bc/content/church/temples/las-vegas-nevada/images/las-vegas-nevada-808x480-0001776.jpg",
 "place": "United States, Las Vegas, Nevada",
@@ -2702,7 +2627,6 @@
 "Monday": "Closed",
 "Tuesday-Saturday": "Every 45 minutes from 7:30 a.m. to 6:45 p.m."
 },
-"id": 59703295692949202918188314052307439503,
 "name": "Lima Peru",
 "photoLink": "https://www.lds.org/bc/content/church/temples/lima-peru/images/lima-peru-450x480-0001583.jpg",
 "place": "Peru, La Molina, Lima",
@@ -2718,7 +2642,6 @@
 "dedication": "Announced",
 "detailLink": "https://www.lds.org/church/temples/lisbon-portugal?lang=eng",
 "endowmentSchedule": {},
-"id": 260783567023659619791647446891400036022,
 "name": "Lisbon Portugal",
 "photoLink": "https://www.lds.org/bc/content/church/temples/lisbon-portugal/images/temple-Announced_lg.jpg",
 "place": "Portugal, Lisbon, Lisbon ",
@@ -2757,7 +2680,6 @@
 "Saturday": "Every 30 minutes from 5:30 a.m. to 8:00 p.m.",
 "Tuesday-Friday": "Every 30 minutes from 7:00 a.m. to 8:00 p.m.;\u00a0Wednesday, 5:30 a.m."
 },
-"id": 200927820002925326004172865298883637142,
 "name": "Logan Utah",
 "photoLink": "https://www.lds.org/bc/content/church/temples/logan-utah/images/logan-utah-808x480-CWD_101025_JOlson.jpg",
 "place": "United States, Logan, Utah",
@@ -2802,7 +2724,6 @@
 "Saturday": "8:00, 9:00, 9:30, 10:00, 10:30, 11:15, 11:45 a.m.; 12:15, 12:45, 2:00, 3:00 p.m.",
 "Tuesday\u2013Thursday": "9:00, 10:00, 11:15 a.m.; 12:15, 1:30, 2:30, 3:45, 4:45, 6:00, 7:00 p.m."
 },
-"id": 87205236628370584248120244007351837702,
 "name": "London England",
 "photoLink": "https://www.lds.org/bc/content/church/temples/london-england/images/london-england-808x480-CU091030_bkf01.jpg",
 "place": "United Kingdom, Newchapel, Surrey",
@@ -2851,7 +2772,6 @@
 "Tuesday": "5:30, 6:45, 8:00, 9:15, 10:30, 11:45 a.m.; 1:00, 2:15, 3:30, 5:00, 6:15, 7:30 p.m.",
 "Wednesday\u2013Friday": "6:45, 8:00, 9:15, 10:30, 11:45 a.m.; 1:00, 2:15, 3:30, 5:00, 6:15, 7:30 p.m."
 },
-"id": 104540238127257519062271490982065906149,
 "name": "Los Angeles California",
 "photoLink": "https://www.lds.org/bc/content/church/temples/los-angeles-california/images/los-angeles-california-808x480-CWD_d038c40e.jpg",
 "place": "United States, Los Angeles, California",
@@ -2891,7 +2811,6 @@
 "Tuesday and Thursday": "6:00, 7:45 p.m.",
 "Wednesday": "10:00, 11:45 a.m."
 },
-"id": 85298678256241251472476155554385835430,
 "name": "Louisville Kentucky",
 "photoLink": "https://www.lds.org/bc/content/church/temples/louisville-kentucky/images/louisville-kentucky-808x480-0001947s.jpg",
 "place": "United States, Crestwood, Kentucky",
@@ -2930,7 +2849,6 @@
 "Tuesday": "7:00 p.m.",
 "Wednesday": "7:00 p.m."
 },
-"id": 51338694873027966702391687341023243745,
 "name": "Lubbock Texas",
 "photoLink": "https://www.lds.org/bc/content/church/temples/lubbock-texas/images/lubbock-texas-808x480-LubbockTexasTmpl.jpg",
 "place": "United States, Lubbock, Texas",
@@ -2975,7 +2893,6 @@
 "Saturday": "Every hour from 8:00 a.m. to 5:00 p.m.",
 "Tuesday\u2013Friday": "Every hour from 8:00 a.m. to 12:00 noon; 2:00 to 7:00 p.m."
 },
-"id": 210104455886689327011648442298405894530,
 "name": "Madrid Spain",
 "photoLink": "https://www.lds.org/bc/content/church/temples/madrid-spain/images/madrid-spain-808x480-0002011s.jpg",
 "place": "Spain, Madrid, Madrid",
@@ -3011,7 +2928,6 @@
 "Saturday": "7:00, 8:30, 10:00 a.m.; 12:30, 2:00, 3:30 p.m.",
 "Tuesday\u2013Friday": "3:00, 4:30, 6:30, 8:00 p.m."
 },
-"id": 166843650676787316176355344290337579360,
 "name": "Manaus Brazil",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/manaus-brazil/manaus-brazil-temple-1-720x480.jpg",
 "place": "Brazil, Manaus, Amazonas",
@@ -3061,7 +2977,6 @@
 "Thursday": "6:30, 8:00, 11:00 a.m.; 12:30, 2:00, 6:15, 7:45 p.m.",
 "Tuesday\u2013Wednesday": "11:00 a.m.; 12:30, 2:00, 6:15, 7:45 p.m."
 },
-"id": 21530482474314021652261592480895522218,
 "name": "Manhattan New York",
 "photoLink": "https://www.lds.org/bc/content/church/temples/manhattan-new-york/images/manhattan-new-york-808x480-AV051230_cah005.jpg",
 "place": "United States, New York City, New York",
@@ -3100,7 +3015,6 @@
 "Saturday": "Every 30 minutes from 7:00 a.m. to 1:00 p.m.; every hour from 1:00 to 5:00 p.m.",
 "Tuesday-Friday": "Every hour from 7:00 a.m. to 7:00 p.m."
 },
-"id": 334679755098475572651055629290196883851,
 "name": "Manila Philippines",
 "photoLink": "https://www.lds.org/bc/content/church/temples/manila-philippines/images/manila-philippines-808x480-0001275s.jpg",
 "place": "Philippines, Quezon City, Metro Manila",
@@ -3144,7 +3058,6 @@
 "Saturday": "Every 60 minutes from 7:30 a.m. to 6:30 p.m.",
 "Tuesday\u2013Friday": "Every 60 minutes from 7:30 a.m. to 7:30 p.m."
 },
-"id": 125827635632033040580529581730267537674,
 "name": "Manti Utah",
 "photoLink": "https://www.lds.org/bc/content/church/temples/manti-utah/images/manti-utah-808x480-0001882.jpg",
 "place": "United States, Manti, Utah",
@@ -3187,7 +3100,6 @@
 "Tuesday and Friday": "5:00 p.m., 7:00 p.m.",
 "Wednesday": "10:00 a.m., 12:00 p.m., 5:00 p.m., 7:00 p.m."
 },
-"id": 100710262544975778332608162483612570435,
 "name": "Medford Oregon",
 "photoLink": "https://www.lds.org/bc/content/church/temples/medford-oregon/images/medford-oregon-808x480-CUR_IM030916-002.jpg",
 "place": "United States, Central Point, Oregon",
@@ -3227,7 +3139,6 @@
 "Tuesday": "7:30 p.m.",
 "Wednesday\u2013Friday": "9:30, 11:00 a.m.; 6:00, 7:30 p.m."
 },
-"id": 335181840679498971309475941238489471107,
 "name": "Melbourne Australia",
 "photoLink": "https://www.lds.org/bc/content/church/temples/melbourne-australia/images/melbourne-australia-808x480-0002059.jpg",
 "place": "Australia, Wantirna South, Victoria",
@@ -3269,7 +3180,6 @@
 "Tuesday": "7:00 p.m.",
 "Wednesday": "10:30 a.m.; 12:30, 7:00 p.m."
 },
-"id": 206026352015062749151789708381156629566,
 "name": "Memphis Tennessee",
 "photoLink": "https://www.lds.org/bc/content/church/temples/memphis-tennessee/images/memphis-tennessee-808x480-0002090.jpg",
 "place": "United States, Bartlett, Tennessee",
@@ -3307,7 +3217,6 @@
 "Thursday": "5:00, 7:00 p.m.",
 "Tuesday, Wednesday, and Friday": "9:00 a.m.; 5:00, 7:00 p.m."
 },
-"id": 199290977702989098640701408123782798191,
 "name": "M\u00e9rida Mexico",
 "photoLink": "https://www.lds.org/bc/content/church/temples/merida-mexico/images/merida-mexico-808x480-0002062.jpg",
 "place": "M\u00e9xico, M\u00e9rida, Yucatan",
@@ -3323,7 +3232,6 @@
 "dedication": "Construction",
 "detailLink": "https://www.lds.org/church/temples/meridian-idaho-temple?lang=eng",
 "endowmentSchedule": {},
-"id": 162999307071793598091870576041260815190,
 "name": "Meridian Idaho",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/meridian-idaho/temple-announced-lg.jpg",
 "place": "United States, Meridian, Idaho",
@@ -3365,7 +3273,6 @@
 "Monday": "Closed",
 "Tuesday-Saturday": "Every 30 minutes from 5:30 a.m. to 7:30 p.m."
 },
-"id": 92823484081733178293876116045871462094,
 "name": "Mesa Arizona",
 "photoLink": "https://www.lds.org/bc/content/church/temples/mesa-arizona/images/mesa-arizona-808x480-0001145salt.jpg",
 "place": "United States, Mesa, Arizona",
@@ -3381,7 +3288,6 @@
 "dedication": "Renovation",
 "detailLink": "https://www.lds.org/church/temples/mexico-city-mexico?lang=eng",
 "endowmentSchedule": {},
-"id": 221884119847184270123532050115751945569,
 "name": "Mexico City Mexico",
 "photoLink": "https://www.lds.org/bc/content/church/temples/mexico-city-mexico/images/mexico-city-mexico-808x480-AV081029_cah009.jpg",
 "place": "M\u00e9xico, M\u00e9xico City, Distrito Federal",
@@ -3415,7 +3321,6 @@
 "Saturday": "6:00, 7:40, 9:20, 11:00 a.m.; 12:40, 2:20, 4:00, 5:40 p.m.",
 "Tuesday-Friday": "9:00 a.m.; 5:30, 7:30 p.m."
 },
-"id": 60954670908526668467429830267554262468,
 "name": "Monterrey Mexico",
 "photoLink": "https://www.lds.org/bc/content/church/temples/monterrey-mexico/images/monterrey-mexico-808x480-MonterreyMexicoTmplalt.jpg",
 "place": "M\u00e9xico, Monterrey, Nuevo Le\u00f3n",
@@ -3455,7 +3360,6 @@
 "Thursday": "9:30, 11:00 a.m.; 2:00, 4:00, 6:00, 7:30 p.m.",
 "Tuesday\u2013Wednesday": "9:30, 11:00 a.m.; 2:00, 4:00, 6:00 p.m."
 },
-"id": 81343325555579126509389994585055605184,
 "name": "Montevideo Uruguay",
 "photoLink": "https://www.lds.org/bc/content/church/temples/montevideo-uruguay/images/montevideo-uruguay-808x480-0002055.jpg",
 "place": "Uruguay, Montevideo, Montevideo",
@@ -3497,7 +3401,6 @@
 "Saturday": "8:00, 10:15 a.m.; 1:00, 3:15 p.m.",
 "Tuesday-Friday": "10:00 a.m.; 12:15; 5:00, 7:15 p.m."
 },
-"id": 209144406076683592010549518323959368594,
 "name": "Monticello Utah",
 "photoLink": "https://www.lds.org/bc/content/church/temples/monticello-utah/images/monticello-utah-808x480-0001878.jpg",
 "place": "United States, Monticello, Utah",
@@ -3513,7 +3416,6 @@
 "dedication": "Renovation",
 "detailLink": "https://www.lds.org/church/temples/montreal-quebec?lang=eng",
 "endowmentSchedule": {},
-"id": 206217853351668117962726305354692018229,
 "name": "Montreal Quebec",
 "photoLink": "https://www.lds.org/bc/content/church/temples/montreal-quebec/images/montreal-quebec-808x480-0002017.jpg",
 "place": "Canada, Longueuil, Quebec",
@@ -3552,7 +3454,6 @@
 "Tuesday and Saturday only": "5:30 a.m.",
 "Tuesday\u2013Saturday": "6:00, 6:30, 7:00, 7:45, 8:15, 8:45, 9:15, 10:00, 10:30, 11:00, 11:30 a.m.; 12:15,"
 },
-"id": 300457817938224137325215399867171023322,
 "name": "Mount Timpanogos Utah",
 "photoLink": "https://www.lds.org/bc/content/church/temples/mount-timpanogos-utah/images/mount-timpanogos-utah-808x480-CWD_c8d714c9.jpg",
 "place": "United States, American Fork, Utah",
@@ -3592,7 +3493,6 @@
 "Tuesday and Thursday": "6:00, 7:30 p.m.",
 "Wednesday": "10:00, 11:30 a.m."
 },
-"id": 338250422661472462024466680312652884290,
 "name": "Nashville Tennessee",
 "photoLink": "https://www.lds.org/bc/content/church/temples/nashville-tennessee/images/nashville-tennessee-808x480-0002014.jpg",
 "place": "United States, Franklin, Tennessee",
@@ -3632,7 +3532,6 @@
 "dedication": "2002-06-27T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/nauvoo-illinois?lang=eng",
 "endowmentSchedule": {},
-"id": 4514541765169685941180914932542761418,
 "name": "Nauvoo Illinois",
 "photoLink": "https://www.lds.org/bc/content/church/temples/nauvoo-illinois/images/nauvoo-illinois-808x480-CWD_091410_JArnesen.jpg",
 "place": "United States, Nauvoo, Illinois",
@@ -3677,7 +3576,6 @@
 "Monday": "Closed",
 "Tuesday\u2013Saturday": "\u00a07:00, 8:30, 10:00 a.m.; 12:00 noon; 1:30, 3:00, 5:00, 6:30, 8:00 p.m."
 },
-"id": 163358082726637591609043899742358773487,
 "name": "Newport Beach California",
 "photoLink": "https://www.lds.org/bc/content/church/temples/newport-beach-california/images/newport-beach-california-808x480-N6LCA19C.jpg",
 "place": "United States, Newport Beach, California",
@@ -3716,7 +3614,6 @@
 "Saturday": "5:00, 6:00, 7:30, 8:30, 10:00, 11:00 a.m.",
 "Tuesday-Friday": "5:00, 6:00, 7:30, 8:30, 10:00, 11:00 a.m.; 12:30, 1:30, 3:00, 4:00, 5:30, 6:30 p.m."
 },
-"id": 156408234601232651615109148327824799363,
 "name": "Nuku'alofa Tonga",
 "photoLink": "https://www.lds.org/bc/content/church/temples/nukualofa-tonga/images/nukualofa-tonga-808x480-AV071009cah066.jpg",
 "place": "Tonga, Liahona, Tongatapu",
@@ -3762,7 +3659,6 @@
 "Tuesday Only:": "5:30, 6:00 a.m.",
 "Tuesday\u2013Friday": "Every 60 minutes from 7:00 a.m. to 8:00 p.m."
 },
-"id": 122499924609617681112093267055321468546,
 "name": "Oakland California",
 "photoLink": "https://www.lds.org/bc/content/church/temples/oakland-california/images/oakland-california-808x480-0001569s.jpg",
 "place": "United States, Oakland, California",
@@ -3794,7 +3690,6 @@
 "dedication": "2000-03-11T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/oaxaca-mexico?lang=eng",
 "endowmentSchedule": {},
-"id": 79094099486112081748913821790871530703,
 "name": "Oaxaca Mexico",
 "photoLink": "https://www.lds.org/bc/content/church/temples/oaxaca-mexico/images/oaxaca-mexico-808x480-0002053.jpg",
 "place": "M\u00e9xico, Oaxaca de Ju\u00e1rez, Oaxaca",
@@ -3834,7 +3729,6 @@
 "Monday": "Closed",
 "Tuesday\u2013Saturday": "Every 30 Minutes from 7:00 a.m.-8:00 p.m."
 },
-"id": 119901152568032620949075348565393814710,
 "name": "Ogden Utah",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/ogden-utah/OgdenUtahTemple1-808x480.jpg",
 "place": "United States, Ogden, Utah",
@@ -3869,7 +3763,6 @@
 "dedication": "2000-07-30T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/oklahoma-city-oklahoma?lang=eng",
 "endowmentSchedule": {},
-"id": 199953239013899396410205442328361169538,
 "name": "Oklahoma City Oklahoma",
 "photoLink": "https://www.lds.org/bc/content/church/temples/oklahoma-city-oklahoma/images/oklahoma-city-oklahoma-808x480-CU031114-002.jpg",
 "place": "United States, Oklahoma City, Oklahoma",
@@ -3909,7 +3802,6 @@
 "Monday": "Closed",
 "Tuesday\u2013Saturday": "Every hour from 7:00 a.m. to 8:00 p.m."
 },
-"id": 30936247407059277652221084667460458417,
 "name": "Oquirrh Mountain Utah",
 "photoLink": "https://www.lds.org/bc/content/church/temples/oquirrh-mountain-utah/images/oquirrh-mountain-utah-450x480-AV090428keh009sm.jpg",
 "place": "United States, South Jordan, Utah",
@@ -3947,7 +3839,6 @@
 "Saturday": "7:30, 8:15, 9:00, 9:45, 10:30, 11:15 a.m.; 12:00 noon; 12:45, 1:30, 2:15, 3:00 p.m.",
 "Tuesday-Friday": "Every hour from 8:00 a.m. to 4:00 p.m.; 5:30, 6:15, 7:00, 7:30 p.m."
 },
-"id": 301236844409364603289683277478753551255,
 "name": "Orlando Florida",
 "photoLink": "https://www.lds.org/bc/content/church/temples/orlando-florida/images/orlando-florida-808x480-CWD_110208_RHLaw.jpg",
 "place": "United States, Windermere, Florida",
@@ -3990,7 +3881,6 @@
 "Monday": "Summer:",
 "Tuesday\u2013Wednesday": "Summer:"
 },
-"id": 213742683200799749459016253585087099152,
 "name": "Palmyra New York",
 "photoLink": "https://www.lds.org/bc/content/church/temples/palmyra-new-york/images/palmyra-new-york-808x480-CWD_110208_RHLaw_24.jpg",
 "place": "United States, Palmyra, New York",
@@ -4035,7 +3925,6 @@
 "Thursday": "4:00, 6:30 p.m.",
 "Tuesday, Wednesday, Friday": "9:00, 11:00 a.m.; 4:00, 6:30 p.m."
 },
-"id": 207864453875371397580969000455854889787,
 "name": "Panama City Panama",
 "photoLink": "https://www.lds.org/bc/content/church/temples/panama-city-panama/images/panama-city-panama-808x480-AV080808_cah003.jpg",
 "place": "Panam\u00e1, Panam\u00e1 City, Republic of Panam\u00e1",
@@ -4082,7 +3971,6 @@
 "Tuesday and Thursday": "7:00, 8:00, 9:30 a.m.; 4:00, 4:30, 6:00, 6:45 p.m.",
 "Wednesday and Friday": "8:00, 9:00 a.m.; 4:00, 4:30, 6:00, 6:45 p.m."
 },
-"id": 186294686093305293565278431337492114730,
 "name": "Papeete Tahiti",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/papeete-tahiti/images/Papeete Tahiti Temple - 01 - 808x480.jpg",
 "place": "France, Papeete, Tahiti",
@@ -4105,7 +3993,6 @@
 "Tuesday": "TBA",
 "Wednesday": "TBA"
 },
-"id": 13763718931621400389514050426458793398,
 "name": "Paris France",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/paris-france/Paris-ExteriorRenderings-Nov2011_808x480_web.jpg",
 "place": "France, Paris",
@@ -4139,7 +4026,6 @@
 "Monday": "Closed",
 "Tuesday - Thursday": "Every 45 minutes from 7:00 a.m. to 7:45 p.m."
 },
-"id": 249414944863263926218639800638200944011,
 "name": "Payson Utah",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/payson-utah/Payson-Temple_808x513.jpg",
 "place": "United States, Payson, Utah",
@@ -4177,7 +4063,6 @@
 "Thursday": "9:30, 11:30 a.m.; 1:30 p.m.",
 "Wednesday": "2:00, 4:00, 6:00, 7:30 p.m."
 },
-"id": 167097366970400878587717865177149913141,
 "name": "Perth Australia",
 "photoLink": "https://www.lds.org/bc/content/church/temples/perth-australia/images/perth-australia-808x480-0002056.jpg",
 "place": "Australia, Yokine, Western Australia",
@@ -4193,7 +4078,6 @@
 "dedication": "Construction",
 "detailLink": "https://www.lds.org/church/temples/philadelphia-pennsylvania?lang=eng",
 "endowmentSchedule": {},
-"id": 135127121443348382016993530792296403993,
 "name": "Philadelphia Pennsylvania",
 "photoLink": "https://www.lds.org/bc/content/church/temples/philadelphia-pennsylvania/images/philadelphia-pennsylvania-808x480-rendering.jpg",
 "place": "United States, Philadelphia, Pennsylvania",
@@ -4234,7 +4118,6 @@
 "Saturday": "Every 90 minutes from 6:00 a.m.-6:00 p.m.",
 "Tuesday-Thursday": "7:30, 9:00, 10:30 a.m.; 4:30, 6:00, 7:30 p.m."
 },
-"id": 92588292048541623772727512242101872098,
 "name": "Phoenix Arizona",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/phoenix-arizona/images/PhoenixArizonaTemple1-808x480.jpg",
 "place": "United States, Phoenix, Arizona",
@@ -4250,7 +4133,6 @@
 "dedication": "Announced",
 "detailLink": "https://www.lds.org/church/temples/port-au-prince-haiti?lang=eng",
 "endowmentSchedule": {},
-"id": 125784264955544046088018686558682501382,
 "name": "Port-au-Prince Haiti",
 "photoLink": "https://www.lds.org322",
 "place": "Haiti, Port-au-Prince",
@@ -4287,7 +4169,6 @@
 "Monday": "Closed",
 "Tuesday-Friday": "On the hour from 7:00 a.m. to 5:00 p.m.; every 30 minutes from 5:30 to 8:00 p.m."
 },
-"id": 290989501091922398624145636346155668314,
 "name": "Portland Oregon",
 "photoLink": "https://www.lds.org/bc/content/church/temples/portland-oregon/images/portland-oregon-808x480-CWD_091310_RKashow.jpg",
 "place": "United States, Lake Oswego, Oregon",
@@ -4324,7 +4205,6 @@
 "Saturday and National Holidays": "8:00, 9:30, 11:00 a.m.; 2:00, 3:30 p.m.",
 "Tuesday-Friday": "3:00, 4:30, 7:00, 8:30 p.m."
 },
-"id": 289816075288614170652561205775750381550,
 "name": "Porto Alegre Brazil",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/porto-alegre-brazil/porto-alegre-brazil-temple-256605.jpg",
 "place": "Brazil, Porto Alegre, Rio Grande do Sul",
@@ -4368,7 +4248,6 @@
 "Saturday": "Every hour from 8.00 a.m. to 4:00 p.m.",
 "Tuesday-Friday": "Every 90 minutes from 8:00 a.m. to 6:30 p.m.; 7.30 p.m."
 },
-"id": 76741585998254804305139973820972661234,
 "name": "Preston England",
 "photoLink": "https://www.lds.org/bc/content/church/temples/preston-england/images/preston-england-808x480-0001851.jpg",
 "place": "United Kingdom, Chorley, Lancashire",
@@ -4384,7 +4263,6 @@
 "dedication": "Construction",
 "detailLink": "https://www.lds.org/church/temples/new-provo-temple-provo-tabernacle?lang=eng",
 "endowmentSchedule": {},
-"id": 243305642388226734167033440592777236368,
 "name": "Provo City Center",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/provo-city-center/images/provo-city-center-temple-rendering-808x480.jpg",
 "place": "United States, Provo, Utah",
@@ -4425,7 +4303,6 @@
 "Tuesday": "Every 20 minutes from 5:40 a.m. to 8:00 p.m.",
 "Wednesday\u2013Saturday": "Every 20 minutes from 7:00 a.m. to 8:00 p.m."
 },
-"id": 96995703863860618431896997047776908644,
 "name": "Provo Utah",
 "photoLink": "https://www.lds.org/bc/content/church/temples/provo-utah/images/provo-utah-808x480-AV090827cah001.jpg",
 "place": "United States, Provo, Utah",
@@ -4462,7 +4339,6 @@
 "Monday": "Closed",
 "Tuesday-Friday": "8:00, 9:30, 11:00 a.m.; 4:00, 5:30, 7:00 p.m."
 },
-"id": 3519434061493617328214798800147688394,
 "name": "Quetzaltenango Guatemala",
 "photoLink": "https://www.lds.org/bc/content/church/temples/quetzaltenango-guatemala/images/quetzaltenango-guatemala-808x480-AV110927_cah258alt.jpg",
 "place": "Guatemala, Quetzaltenango, Guatemala",
@@ -4499,7 +4375,6 @@
 "Tuesday and Thursday": "6:00, 7:45 p.m.",
 "Wednesday and Friday": "9:00, 11:00 a.m.; 6:00, 7:45 p.m."
 },
-"id": 286136909943674582052479236525370976105,
 "name": "Raleigh North Carolina",
 "photoLink": "https://www.lds.org/bc/content/church/temples/raleigh-north-carolina/images/raleigh-north-carolina-808x480-0001986.jpg",
 "place": "United States, Apex, North Carolina",
@@ -4535,7 +4410,6 @@
 "Saturday": "8:00, 9:30, 11:00 a.m.; 12:30, 2:00, 3:30 p.m.",
 "Tuesday-Friday": "8:00, 9:30, 11:00 a.m.; 12:30, 2:00, 3:30, 5:00, 6:30, 7:45 p.m."
 },
-"id": 300138318422670521841819379531996849830,
 "name": "Recife Brazil",
 "photoLink": "https://www.lds.org/bc/content/church/temples/recife-brazil/images/recife-brazil-808x480-AV100326cah039.jpg",
 "place": "Brazil, Recife, Pernambuco",
@@ -4574,7 +4448,6 @@
 "Monday": "Closed",
 "Tuesday\u2013Saturday": "7:00, 8:30, 10:00 a.m.; 12:00 noon; 1:30, 3:00, 5:00, 6:30, 8:00 p.m."
 },
-"id": 321679624213385905417396839352960528199,
 "name": "Redlands California",
 "photoLink": "https://www.lds.org/bc/content/church/temples/redlands-california/images/redlands-california-808x480-CWD_100817_MPeterson_004.jpg",
 "place": "United States, Redlands, California",
@@ -4615,7 +4488,6 @@
 "Thursday": "7:00 p.m.",
 "Wednesday": "9:30 a.m.; 1:30 p.m."
 },
-"id": 137078837640984105085320602695214728806,
 "name": "Regina Saskatchewan",
 "photoLink": "https://www.lds.org/bc/content/church/temples/regina-saskatchewan/images/regina-saskatchewan-808x480-0002098.jpg",
 "place": "Canada, Regina, Saskatchewan",
@@ -4660,7 +4532,6 @@
 "Tuesday": "10:00, 11:30 a.m.; 4:00, 5:30, 7:00 p.m.",
 "Wednesday": "10:00, 11:30 a.m.; 1:00, 6:00, 7:30 p.m."
 },
-"id": 59295220070215278513357746667077820159,
 "name": "Reno Nevada",
 "photoLink": "https://www.lds.org/bc/content/church/temples/reno-nevada/images/reno-nevada-808x480-CU031112-006.jpg",
 "place": "United States, Reno, Nevada",
@@ -4700,7 +4571,6 @@
 "Monday": "Closed",
 "Tuesday-Saturday \u00a0": "6:00, 6:45, 7:30, 8:15, 9:00, 9:45, 10:30, 11:15 a.m.; 12:00 noon, 12:45, 1:30, 2:15, 3:00, 3:45, 4:30, 5:15, 6:00, 6:45, 7:30 p.m."
 },
-"id": 248344649668255080876377260242543590362,
 "name": "Rexburg Idaho",
 "photoLink": "https://www.lds.org/bc/content/church/temples/rexburg-idaho/images/rexburg-idaho-808x480-CWD_101106_RWooley_008.jpg",
 "place": "United States, Rexburg, Idaho",
@@ -4716,7 +4586,6 @@
 "dedication": "Announced",
 "detailLink": "https://www.lds.org/church/temples/rio-de-janiero-brazil?lang=eng",
 "endowmentSchedule": {},
-"id": 160573533588308588677102954487135406655,
 "name": "Rio de Janeiro Brazil",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/cedar-city/temple-Announced_lg.jpg",
 "place": "Brazil, Rio de Janeiro",
@@ -4729,7 +4598,6 @@
 "dedication": "Construction",
 "detailLink": "https://www.lds.org/church/temples/rome-italy?lang=eng",
 "endowmentSchedule": {},
-"id": 120540438178072385211720787632321449323,
 "name": "Rome Italy",
 "photoLink": "https://www.lds.org/bc/content/church/temples/rome-italy/images/rome-italy-450x480-CU101008_jlm02_Rome.jpg",
 "place": "Italy, Rome, Rome",
@@ -4766,7 +4634,6 @@
 "Monday": "Closed",
 "Tuesday-Saturday": "7:00, 8:30, 10:00 a.m.; 12:00 noon; 1:30, 3:00, 5:00, 6:30, 8:00 p.m."
 },
-"id": 120760164295794161804711410439771703724,
 "name": "Sacramento California",
 "photoLink": "https://www.lds.org/bc/content/church/temples/sacramento-california/images/sacramento-california-808x480-CWD_101006_APerson_003.jpg",
 "place": "United States, Sacramento, California",
@@ -4808,7 +4675,6 @@
 "Monday": "Closed",
 "Tuesday\u2013Saturday": "Every hour from 6:00 a.m. to 7:00 p.m."
 },
-"id": 300517750530047032311431453597685792085,
 "name": "Salt Lake",
 "photoLink": "https://www.lds.org/bc/content/church/temples/salt-lake/images/salt-lake-808x480-SLTEMPLEKIOSK2.jpg",
 "place": "United States, Salt Lake City, Utah",
@@ -4852,7 +4718,6 @@
 "Tuesday": "4:00, 6:30, 8:00 p.m.",
 "Wednesday": "9:00, 10:30 a.m.; 12:00 noon"
 },
-"id": 278916676803471334447837186123120203111,
 "name": "San Antonio Texas",
 "photoLink": "https://www.lds.org/bc/content/church/temples/san-antonio-texas/images/san-antonio-texas-808x480-CU061214_bkf02.jpg",
 "place": "United States, San Antonio, Texas",
@@ -4899,7 +4764,6 @@
 "Tuesday": "5:30, 8:00, 9:00, 9:30 a.m., then every hour from 10:00 a.m. to 6:00 p.m.; every 30 minutes from 6:30 to 8:00 p.m.",
 "Wednesday-Friday": "8:00, 9:00, 9:30 a.m., then every hour from 10:00 a.m. to 6:00 p.m.; every 30 minutes from 6:30 to 8:00 p.m."
 },
-"id": 26720820476264867278523401730313366299,
 "name": "San Diego California",
 "photoLink": "https://www.lds.org/bc/content/church/temples/san-diego-california/images/san-diego-california-808x480-CWD_7c8cb6ac.jpg",
 "place": "United States, San Diego, California",
@@ -4935,7 +4799,6 @@
 "Thursday and Friday": "5:00, 7:00 p.m.",
 "Wednesday": "9:00, 11:00 a.m.; 5:00, 7:00 p.m."
 },
-"id": 251888819210981241357051277986243445743,
 "name": "San Jos\u00e9 Costa Rica",
 "photoLink": "https://www.lds.org/bc/content/church/temples/san-jose-costa-rica/images/san-jose-costa-rica-808x480-0002091.jpg",
 "place": "Costa Rica, La Ribera de Belen, Heredia",
@@ -4973,7 +4836,6 @@
 "Saturday": "5:30, 7:00, 8:30, 10:00, 11:30 a.m.; 1:00, 2:30, 4:00 p.m.",
 "Tuesday-Friday": "7:00, 8:30, 10:00, 11:30 a.m.; 2:30, 4:00, 5:30, 7:00 p.m."
 },
-"id": 313229721668664483750219966609156327679,
 "name": "San Salvador El Salvador",
 "photoLink": "https://www.lds.org/bc/content/church/temples/san-salvador-el-salvador/images/san-salvador-el-salvador-808x480-AV110624_cah117.jpg",
 "place": "El Salvador, San Salvador, El Salvador",
@@ -5021,7 +4883,6 @@
 "Saturday": "6:30, 8:00, 9:15, 10:45 a.m.; 12:00 noon; 1:30, 2:45, 4:15, 5:30 p.m.",
 "Tuesday-Friday": "9:00, 10:00, 11:30 a.m.; 12:30, 4:30, 5:30, 7:00, 8:00 p.m."
 },
-"id": 191249431240967093012857030367882548866,
 "name": "Santiago Chile",
 "photoLink": "https://www.lds.org/bc/content/church/temples/santiago-chile/images/santiago-chile-450x480-060119_sm001.jpg",
 "place": "Chile, Providencia, Santiago",
@@ -5068,7 +4929,6 @@
 "Saturday": "Every hour from 6:00 a.m. to 4:00 p.m.",
 "Tuesday-Friday": "9:00, 10:00 a.m.; 5:00, 5:45, 6:30, 7:15 p.m."
 },
-"id": 336377726785414680444183594232549181815,
 "name": "Santo Domingo Dominican Republic",
 "photoLink": "https://www.lds.org/bc/content/church/temples/santo-domingo-dominican-republic/images/santo-domingo-dominican-republic-808x480-L3DIMC16B.jpg",
 "place": "Dominican Republic, Los Robles, Santo Domingo",
@@ -5115,7 +4975,6 @@
 "Saturday": "7:00, 8:00, 9:30, 10:30 a.m.; 12:00 noon; 1:00, 2:30, 3:30 p.m.",
 "Tuesday\u2013Friday": "9:00, 10:30 a.m.; 12:00 noon; 3:30, 5:30, 7:45, 8:15 p.m."
 },
-"id": 59713979731932854237526557270196847191,
 "name": "S\u00e3o Paulo Brazil",
 "photoLink": "https://www.lds.org/bc/content/church/temples/sao-paulo-brazil/images/sao-paulo-brazil-808x480-CU050202_ats01.jpg",
 "place": "Brazil, S\u00e3o Paulo, S\u00e3o Paulo",
@@ -5131,7 +4990,6 @@
 "dedication": "Construction",
 "detailLink": "https://www.lds.org/church/temples/sapporo-japan?lang=eng",
 "endowmentSchedule": {},
-"id": 272208164755800159429506885641136922691,
 "name": "Sapporo Japan",
 "photoLink": "https://www.lds.org/bc/content/church/temples/sapporo-japan/images/sapporo-japan-808x480.jpg",
 "place": "Japan, Sapporo, Japan",
@@ -5172,7 +5030,6 @@
 "Tuesday": "5:30, 6:30 a.m.; every hour from 7:00 a.m. to 6:00 p.m.; every 30 minutes from 6:30 to 8:00 p.m.",
 "Wednesday": "5:30 a.m.; every hour from 7:00 a.m. to 6:00 p.m.; every 30 minutes from 6:30 to 8:00 p.m."
 },
-"id": 329063478917032545946428773336548788353,
 "name": "Seattle Washington",
 "photoLink": "https://www.lds.org/bc/content/church/temples/seattle-washington/images/seattle-washington-450x480-0001671.jpg",
 "place": "United States, Bellevue, Washington",
@@ -5208,7 +5065,6 @@
 "Monday": "Closed",
 "Tuesday-Friday": "10:00 a.m.; 1:30, 2:30, 3:30, 7:20, 7:40 p.m.; every 20 minutes as needed;"
 },
-"id": 72771294150206419982419839562221393965,
 "name": "Seoul Korea",
 "photoLink": "https://www.lds.org/bc/content/church/temples/seoul-korea/images/seoul-korea-808x480-AV070727_cah001extalt.jpg",
 "place": "South Korea, Seoul, South Korea",
@@ -5254,7 +5110,6 @@
 "Tuesday and Thursday": "7:00, 8:30, 10:30 a.m.; 3:00, 4:30 and 6:30 p.m.",
 "Wednesday\u00a0": "8:30, 10:30 a.m.; 4:30 p.m.-6:30 p.m."
 },
-"id": 228720773883910082430161645612023309729,
 "name": "Snowflake Arizona",
 "photoLink": "https://www.lds.org/bc/content/church/temples/snowflake-arizona/images/snowflake-arizona-808x480-CWD_ec6b9cbe.jpg",
 "place": "United States, Snowflake, Arizona",
@@ -5302,7 +5157,6 @@
 "Tuesday and Thursday": "9:45, 11:30 a.m.; 1:15, 4:15, 6:00, 7:45 p.m.",
 "Wednesday": "5:45, 7:30, 9:15 a.m.; 4:15, 6:00, 7:45 p.m."
 },
-"id": 278093809157377466566914435741326206083,
 "name": "Spokane Washington",
 "photoLink": "https://www.lds.org/bc/content/church/temples/spokane-washington/images/spokane-washington-808x480-CU100727_bkf01.jpg",
 "place": "United States, Spokane, Washington",
@@ -5341,7 +5195,6 @@
 "Monday": "7:20, 8:00, 8:40, 9:20, 10:00, 10:40, 11:20 a.m.",
 "Tuesday-Saturday": "Every 40 minutes from 7:20 a.m. to 8:00 p.m."
 },
-"id": 23676915523304472351450168034424009692,
 "name": "St. George Utah",
 "photoLink": "https://www.lds.org/bc/content/church/temples/st-george-utah/images/st-george-utah-808x480-AV050916_cah010.jpg",
 "place": "United States, St. George, Utah",
@@ -5381,7 +5234,6 @@
 "Saturday": "8:00, 9:00, 10:00, 11:00 a.m.; 12:00 noon; 1:00 p.m.",
 "Tuesday\u2013Thursday": "9:00, 10:00, 11:00 a.m.; 12:00 noon; 6:00, 7:00, 7:30 p.m."
 },
-"id": 300037422861653459889517746242213126869,
 "name": "St. Louis Missouri",
 "photoLink": "https://www.lds.org/bc/content/church/temples/st-louis-missouri/images/st-louis-missouri-808x480-CWD_139bc26f.jpg",
 "place": "United States, Town and Country, Missouri",
@@ -5422,7 +5274,6 @@
 "Tuesday": "6:00, 7:45 p.m.",
 "Wednesday-Friday": "10:00 a.m.; 12:00 noon; 6:00, 7:45 p.m."
 },
-"id": 268941915914771202788492330419625971560,
 "name": "St. Paul Minnesota",
 "photoLink": "https://www.lds.org/bc/content/church/temples/st-paul-minnesota/images/st-paul-minnesota-808x480-0001987.jpg",
 "place": "United States, Oakdale, Minnesota",
@@ -5438,7 +5289,6 @@
 "dedication": "Construction",
 "detailLink": "https://www.lds.org/church/temples/star-valley-wyoming?lang=eng",
 "endowmentSchedule": {},
-"id": 325371291048841639335921083856779509342,
 "name": "Star Valley Wyoming",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/star-valley-wyoming/temple-announced-lg.jpg",
 "place": "United States, Afton, Wyoming",
@@ -5477,7 +5327,6 @@
 "Tuesday and Friday": "9:00, 10:00, 11:00 a.m.; every hour from 1:00 to 7:00 p.m.",
 "Wednesday\u2013Thursday": "9:00, 10:00, 11:00 a.m.; every hour from 1:00 to 4:00 p.m."
 },
-"id": 317922564500286280625205735763434843746,
 "name": "Stockholm Sweden",
 "photoLink": "https://www.lds.org/bc/content/church/temples/stockholm-sweden/images/stockholm-sweden-450x480-0001193s.jpg",
 "place": "Sweden, Vasterhaninge, Sweden",
@@ -5493,7 +5342,6 @@
 "dedication": "Renovation",
 "detailLink": "https://www.lds.org/church/temples/suva-fiji?lang=eng",
 "endowmentSchedule": {},
-"id": 150738059616979915123023697646550658191,
 "name": "Suva Fiji",
 "photoLink": "https://www.lds.org/bc/content/church/temples/suva-fiji/images/suva-fiji-808x480-AV060324_cah046.jpg",
 "place": "Fiji, Suva, Naitasivi",
@@ -5533,7 +5381,6 @@
 "Saturday": "6:00, 7:00, 8:30, 9:30, 11:00 a.m.; 12:00 noon",
 "Tuesday\u2013Friday": "9:00, 10:00, 11:00 a.m.; 5:00, 7:00, 7:15 p.m."
 },
-"id": 46678549956233410199922771059047914682,
 "name": "Sydney Australia",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/sydney-australia/images/sydney-temple-808x480-08456255.jpg",
 "place": "Australia, Carlingford, New South Wales",
@@ -5568,7 +5415,6 @@
 "Saturday": "Every 30 minutes from 7:00 a.m. to 3:00 p.m. or as needed.",
 "Tuesday\u2013Friday": "9:30 a.m.; 12:00 noon; 2:15, 7:30 p.m."
 },
-"id": 280460466645823490983032887772468104150,
 "name": "Taipei Taiwan",
 "photoLink": "https://www.lds.org/bc/content/church/temples/taipei-taiwan/images/taipei-taiwan-808x480-AV071127cah429.jpg",
 "place": "Taiwan, Taipei, Taiwan",
@@ -5604,7 +5450,6 @@
 "Saturday": "6:00, 7:30, 9:00, 10:30 a.m.; 12:00 noon; 1:30, 3:00, 4:30 p.m.",
 "Tuesday\u2013Friday": "9:30 a.m.; 5:30, 7:00 p.m."
 },
-"id": 8345492534596538665734571660652792008,
 "name": "Tampico Mexico",
 "photoLink": "https://www.lds.org/bc/content/church/temples/tampico-mexico/images/tampico-mexico-808x480-TampicoMexicoTmpl-1.jpg",
 "place": "Mexico, Madero, Tamaulipas",
@@ -5642,7 +5487,6 @@
 "Saturday": "6:00, 8:00, 10:00 a.m.; 12:00 noon; 2:00, 4:00 p.m.",
 "Tuesday\u2013Friday": "8:00, 10:00 a.m.; 12:00 noon; 2:00, 4:00, 6:00 p.m."
 },
-"id": 87149657245991066322634723431816079613,
 "name": "Tegucigalpa Honduras",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/teguigalpa-honduras/tegucigalpa-honduras-temple-1.jpg",
 "place": "Honduras, Tegucigalpa, Distrito Central",
@@ -5680,7 +5524,6 @@
 "Monday": "Closed",
 "Tuesday\u2013Saturday": "8:00, 10:00 a.m.; 12:00 noon; 2:00, 4:00, 5:30, 7:00 p.m."
 },
-"id": 126022573916082462828975203366235048542,
 "name": "The Gila Valley Arizona",
 "photoLink": "https://www.lds.org/bc/content/church/temples/the-gila-valley-arizona/images/the-gila-valley-arizona-808x480-AV100419cah036.jpg",
 "place": "United States, Central, Arizona",
@@ -5713,7 +5556,6 @@
 "dedication": "2002-09-08T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/the-hague-netherlands?lang=eng",
 "endowmentSchedule": {},
-"id": 234613422717845992793070433677661367180,
 "name": "The Hague Netherlands",
 "photoLink": "https://www.lds.org/bc/content/church/temples/the-hague-netherlands/images/the-hague-netherlands-808x480-CU061005_sm001.jpg",
 "place": "Netherlands, Zoetermeer, Netherland",
@@ -5729,7 +5571,6 @@
 "dedication": "Construction",
 "detailLink": "https://www.lds.org/church/temples/tijuana-mexico?lang=eng",
 "endowmentSchedule": {},
-"id": 17176526882759158345593324544107701395,
 "name": "Tijuana Mexico",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/tijuana-mexico/tijuana-mormon-temple.jpg",
 "place": "Mexico, Tijuana, Baja California",
@@ -5765,7 +5606,6 @@
 "Saturday": "7:00, 8:00, 9:30, 10:30 a.m.12:00 noon; 1:00, 2:30 p.m.",
 "Tuesday\u2013Friday": "10:00, 11:00 a.m.; 2:00, 4:30, 7:00 p.m."
 },
-"id": 211651346850404931632498107398425778461,
 "name": "Tokyo Japan",
 "photoLink": "https://www.lds.org/bc/content/church/temples/tokyo-japan/images/tokyo-japan-450x480-CU100722_bkf02.jpg",
 "place": "Japan, Minato-ku, Tokyo",
@@ -5803,7 +5643,6 @@
 "Thursday-Friday": "11:00 a.m.; 12:30, 1:30, 5:15, 6:45, 7:30 p.m.",
 "Tuesday-Wednesday": "5:15, 6:45, 7:30 p.m."
 },
-"id": 176643976766154279306652309791121476137,
 "name": "Toronto Ontario",
 "photoLink": "https://www.lds.org/bc/content/church/temples/toronto-ontario/images/toronto-ontario-808x480-0001001.jpg",
 "place": "Canada, Brampton, Ontario",
@@ -5832,7 +5671,6 @@
 "Saturday": "8:30, 10:00, 11:30 a.m.; 2:00, 3:30 p.m.",
 "Tuesday-Thursday": "9:00, 11:00 a.m.; 4:00, 6:00 p.m.\u00a0"
 },
-"id": 61781018289127508016699155993921509367,
 "name": "Trujillo Peru",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/trujilo-peru/images/trujillo-peru-temple808x480.jpg",
 "place": "Peru, Trujillo, Trujillo",
@@ -5848,7 +5686,6 @@
 "dedication": "Announced",
 "detailLink": "https://www.lds.org/church/temples/tucson-arizona?lang=eng",
 "endowmentSchedule": {},
-"id": 333085528121491781391972051496945311331,
 "name": "Tucson Arizona",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/cedar-city/temple-Announced_lg.jpg",
 "place": "United States, Tucson, Arizona",
@@ -5885,7 +5722,6 @@
 "Tuesday": "5:00, 7:00 p.m.",
 "Wednesday": "9:30 a.m.; 5:00, 7:00 p.m."
 },
-"id": 5087391510867325782806824635386321967,
 "name": "Tuxtla Guti\u00e9rrez Mexico",
 "photoLink": "https://www.lds.org/bc/content/church/temples/tuxtla-gutierrez-mexico/images/tuxtla-gutierrez-mexico-808x480-0002097.jpg",
 "place": "M\u00e9xico, Tuxtla Guti\u00e9rrez, Chiapas",
@@ -5925,7 +5761,6 @@
 "Monday": "Closed",
 "Tuesday\u2013Saturday": "7:00, 9:00, 11:00 a.m.; 1:00, 3:00, 5:00, 7:00 p.m."
 },
-"id": 145034588909355560276509174352539639136,
 "name": "Twin Falls Idaho",
 "photoLink": "https://www.lds.org/bc/content/church/temples/twin-falls-idaho/images/twin-falls-idaho-808x480-CU080605_bkf01.jpg",
 "place": "United States, Twin Falls, Idaho",
@@ -5941,7 +5776,6 @@
 "dedication": "Announced",
 "detailLink": "https://www.lds.org/church/temples/urdaneta-philippines?lang=eng",
 "endowmentSchedule": {},
-"id": 34706999534395952996124832485886006946,
 "name": "Urdaneta Philippines",
 "photoLink": "https://www.lds.org/bc/content/church/temples/urdaneta-philippines/images/temple-Announced_lg.jpg",
 "place": "Philippines, Urdaneta, Pangasinan ",
@@ -5981,7 +5815,6 @@
 "Tuesday": "9:30, 11:30* a.m.; 6:00, 7:30* p.m.",
 "Wednesday": "10:30 a.m.; 12:30*, 6:00, 7:30* p.m."
 },
-"id": 118252976355945031622694786493822927575,
 "name": "Vancouver British Columbia",
 "photoLink": "https://www.lds.org/bc/content/church/temples/vancouver-british-columbia/images/vancouver-british-columbia-808x480-CWD_091310_SDavis_003.jpg",
 "place": "Canada, Langley, British Columbia",
@@ -6018,7 +5851,6 @@
 "Tuesday and Thursday": "4:30, 6:30 p.m.",
 "Wednesday and Friday": "9:00 a.m.; 4:30, 6:30 p.m."
 },
-"id": 219827586851877915220298548907423962868,
 "name": "Veracruz Mexico",
 "photoLink": "https://www.lds.org/bc/content/church/temples/veracruz-mexico/images/veracruz-mexico-808x480-0002092.jpg",
 "place": "Mexico, Boca del Rio, Veracruz",
@@ -6059,7 +5891,6 @@
 "Monday": "Closed",
 "Tuesday\u2013Saturday": "7:30, 9:00, 10:30 a.m.; 12:00 noon; 1:30, 3:00, 4:30, 6:00, 7:30 p.m."
 },
-"id": 94392377408233620917671222151198230102,
 "name": "Vernal Utah",
 "photoLink": "https://www.lds.org/bc/content/church/temples/vernal-utah/images/vernal-utah-808x480-0001003.jpg",
 "place": "United States, Vernal, Utah",
@@ -6096,7 +5927,6 @@
 "Thursday": "9:30 a.m.; 5:00, 7:00 p.m.",
 "Tuesday, Wednesday, Friday": "5:00, 7:00 p.m."
 },
-"id": 166726746113581266913361517429112739333,
 "name": "Villahermosa Mexico",
 "photoLink": "https://www.lds.org/bc/content/church/temples/villahermosa-mexico/images/villahermosa-mexico-808x480-0002063.jpg",
 "place": "Mexico, Villahermosa, Tabasco",
@@ -6142,7 +5972,6 @@
 "Saturday": "Every 30 minutes from 7:00 a.m. to 8:00 p.m.",
 "Tuesday\u2013Friday": "Every hour from 8:00 a.m. to 6:00 p.m.; every 30 minutes from 6:30 to 8:00 p.m."
 },
-"id": 53640296891465027089198317252452479867,
 "name": "Washington D.C.",
 "photoLink": "https://www.lds.org/bc/content/church/temples/washington-dc/images/washington-dc-808x480-0001505.jpg",
 "place": "United States, Kensington, Maryland",
@@ -6158,7 +5987,6 @@
 "dedication": "Announced",
 "detailLink": "https://www.lds.org/church/temples/winnipeg-manitoba-temple?lang=eng",
 "endowmentSchedule": {},
-"id": 89092502739025361862149704726360172866,
 "name": "Winnipeg Manitoba",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/winnipeg-manitoba/temple-announced-lg.jpg",
 "place": "Canada, Winnipeg, Manitoba",
@@ -6193,7 +6021,6 @@
 "Thursday": "4:00, 6:00, 7:30 p.m.",
 "Tuesday\u2013Wednesday": "6:00, 7:30 p.m."
 },
-"id": 232777208027050654885967516526299047441,
 "name": "Winter Quarters Nebraska",
 "photoLink": "https://www.lds.org/bc/content/church/temples/winter-quarters-nebraska/images/winter-quarters-nebraska-808x480-CWD_101013_MPalmer.jpg",
 "place": "United States, Omaha, Nebraska",

@@ -293,7 +293,7 @@
 }
 
 - (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar{
-    self.isSearching = NO;
+	self.isSearching = NO;
 }
 
 #pragma mark - Utility Methods
