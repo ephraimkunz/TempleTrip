@@ -22,13 +22,21 @@
 "dedication": "2005-08-07T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/aba-nigeria?lang=eng",
 "endowmentSchedule": {
+"Friday": "8:30, 10:30, 12:30, 14:30, 16:30, 18:30",
 "Monday": "Closed",
-"Saturday": "8:30, 10:30 a.m.; 12:30, 2:30, **4:30 p.m.",
-"Tuesday\u2013Friday": "8:30, 10:30 a.m.; 12:30, 2:30, 4:30, **6:30 p.m."
+"Saturday": "8:30, 10:30, 12:30, 14:30, 16:30 p.m.",
+"Thursday": "8:30, 10:30, 12:30, 14:30, 16:30, 18:30",
+"Tuesday": "8:30, 10:30, 12:30, 14:30, 16:30, 18:30",
+"Wednesday": "8:30, 10:30, 12:30, 14:30, 16:30, 18:30"
 },
 "name": "Aba Nigeria",
 "photoLink": "https://www.lds.org/bc/content/church/temples/aba-nigeria/images/aba-nigeria-808x480-050816_jrn013.jpg",
 "place": "Nigeria, Aba, Abia State",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "8:30, 10:30 a.m.; 12:30, 2:30, **4:30 p.m.",
+"Tuesday\u2013Friday": "8:30, 10:30 a.m.; 12:30, 2:30, 4:30, **6:30 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -40,10 +48,18 @@
 "closures": {},
 "dedication": "Announced",
 "detailLink": "https://www.lds.org/church/temples/abidjan-ivory-coast?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "",
+"Monday": "",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "Abidjan Ivory Coast",
 "photoLink": "https://www.lds.org322",
 "place": "Ivory Coast, Abidjan",
+"rawEndowmentSchedule": {},
 "servicesAvailable": {},
 "telephone": ""
 },
@@ -69,14 +85,22 @@
 "dedication": "2004-01-11T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/accra-ghana?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
+"Monday": "Closed",
+"Saturday": "8:30, 10:00, 11:30, 13:00",
+"Thursday": "8:30, 10:30, 12:30, 14:30, 16:30, 18:30",
+"Tuesday": "",
+"Wednesday": ""
+},
+"name": "Accra Ghana",
+"photoLink": "https://www.lds.org/bc/content/church/temples/accra-ghana/images/accra-ghana-808x480-050816_jrn009.jpg",
+"place": "Ghana, Ridge, Accra",
+"rawEndowmentSchedule": {
 "Monday": "Closed",
 "Saturday": "8:30, 10:00, 11:30 a.m.; 1:00 p.m.",
 "Second Tuesday of every month": "7:00 a.m.",
 "Tuesday-Friday": "8:30, 10:30 a.m.; 12:30, 2:30, 4:30, 6:30 p.m."
 },
-"name": "Accra Ghana",
-"photoLink": "https://www.lds.org/bc/content/church/temples/accra-ghana/images/accra-ghana-808x480-050816_jrn009.jpg",
-"place": "Ghana, Ridge, Accra",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -111,15 +135,23 @@
 "dedication": "2000-06-15T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/adelaide-australia?lang=eng",
 "endowmentSchedule": {
+"Friday": "17:15, 19:30",
+"Monday": "Closed",
+"Saturday": "7:30, 9:45",
+"Thursday": "9:15, 11:30",
+"Tuesday": "Closed",
+"Wednesday": "19:00"
+},
+"name": "Adelaide Australia",
+"photoLink": "https://www.lds.org/bc/content/church/temples/adelaide-australia/images/adelaide-australia-808x480-CWD_bac3d5b5.jpg",
+"place": "Australia, Marden, South Australia",
+"rawEndowmentSchedule": {
 "Friday": "5:15, 7:30 p.m.",
 "Monday-Tuesday": "Closed",
 "Saturday": "7:30, 9:45 a.m.",
 "Thursday": "9:15, 11:30 a.m.",
 "Wednesday": "7:00 p.m."
 },
-"name": "Adelaide Australia",
-"photoLink": "https://www.lds.org/bc/content/church/temples/adelaide-australia/images/adelaide-australia-808x480-CWD_bac3d5b5.jpg",
-"place": "Australia, Marden, South Australia",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -154,15 +186,23 @@
 "dedication": "2000-03-05T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/albuquerque-new-mexico?lang=eng",
 "endowmentSchedule": {
+"Friday": "8:00, 9:00, 10:30, 11:30, 13:00, 14:00, 15:30, 16:30, 18:00, 19:00",
+"Monday": "Closed",
+"Saturday": "6:30, 8:00, 9:00, 10:30, 11:30, 13:00, 14:00, 15:30, 16:30, 18:00",
+"Thursday": "8:00, 9:00, 10:30, 11:30, 13:00, 14:00, 15:30, 16:30, 18:00, 19:00",
+"Tuesday": "6:30, 8:00, 9:00, 10:30, 11:30, 13:00, 14:00, 15:30, 16:30, 18:00, 19:00",
+"Wednesday": "8:00, 9:00, 10:30, 16:30, 18:00, 19:00"
+},
+"name": "Albuquerque New Mexico",
+"photoLink": "https://www.lds.org/bc/content/church/temples/albuquerque-new-mexico/images/albuquerque-new-mexico-808x480-CU031224-002.jpg",
+"place": "United States, Albuquerque, New Mexico",
+"rawEndowmentSchedule": {
 "Monday": "Closed",
 "Saturday": "6:30, 8:00, 9:00, 10:30, 11:30 a.m.; 1:00, 2:00, 3:30, 4:30, 6:00 p.m.",
 "Thursday-Friday": "8:00, 9:00, 10:30, 11:30 a.m.; 1:00, 2:00, 3:30, 4:30, 6:00, 7:00 p.m.",
 "Tuesday": "6:30, 8:00, 9:00, 10:30, 11:30 a.m.; 1:00, 2:00, 3:30, 4:30, 6:00, 7:00 p.m.",
 "Wednesday": "8:00, 9:00, 10:30 a.m.; 4:30, 6:00, 7:00 p.m."
 },
-"name": "Albuquerque New Mexico",
-"photoLink": "https://www.lds.org/bc/content/church/temples/albuquerque-new-mexico/images/albuquerque-new-mexico-808x480-CU031224-002.jpg",
-"place": "United States, Albuquerque, New Mexico",
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -195,14 +235,22 @@
 "detailLink": "https://www.lds.org/church/temples/anchorage-alaska?lang=eng",
 "endowmentSchedule": {
 "Friday": "10:00 a.m.; 6:00, 8:00 p.m.",
-"Monday-Tuesday": "Closed",
+"Monday": "",
 "Saturday": "8:00, 10:00 a.m.; 12:00 noon",
 "Thursday": "10:00 a.m.; 7:00 p.m.",
+"Tuesday": "",
 "Wednesday": "5:30, 10:00 a.m.; 7:00 p.m."
 },
 "name": "Anchorage Alaska",
 "photoLink": "https://www.lds.org/bc/content/church/temples/anchorage-alaska/images/anchorage-alaska-808x480-av050816_jrn022.jpg",
 "place": "United States, Anchorage, Alaska",
+"rawEndowmentSchedule": {
+"Friday": "10:00 a.m.; 6:00, 8:00 p.m.",
+"Monday-Tuesday": "Closed",
+"Saturday": "8:00, 10:00 a.m.; 12:00 noon",
+"Thursday": "10:00 a.m.; 7:00 p.m.",
+"Wednesday": "5:30, 10:00 a.m.; 7:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -234,13 +282,21 @@
 "dedication": "1983-08-05T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/apia-samoa?lang=eng",
 "endowmentSchedule": {
+"Friday": "6:00, 7:30, 9:00, 15:00, 16:30, 18:00",
 "Monday": "Closed",
-"Saturday": "6:00, 7:30, 9:00, 10:30 a.m.",
-"Tuesday\u2013Friday": "6:00, 7:30, 9:00 a.m.; 3:00, 4:30, 6:00 p.m."
+"Saturday": "6:00, 7:30, 9:00, 10:30",
+"Thursday": "6:00, 7:30, 9:00, 15:00, 16:30, 18:00",
+"Tuesday": "6:00, 7:30, 9:00, 15:00, 16:30, 18:00",
+"Wednesday": "6:00, 7:30, 9:00, 15:00, 16:30, 18:00"
 },
 "name": "Apia Samoa",
 "photoLink": "https://www.lds.org/bc/content/church/temples/apia-samoa/images/apia-samoa-808x480-AV071129cah035.jpg",
 "place": "Samoa, Apia, Pesega",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "6:00, 7:30, 9:00, 10:30 a.m.",
+"Tuesday\u2013Friday": "6:00, 7:30, 9:00 a.m.; 3:00, 4:30, 6:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -252,10 +308,18 @@
 "closures": {},
 "dedication": "Announced",
 "detailLink": "https://www.lds.org/church/temples/arequipa-peru?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "",
+"Monday": "",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "Arequipa Peru",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/cedar-city/temple-Announced_lg.jpg",
 "place": "Peru, Arequipa",
+"rawEndowmentSchedule": {},
 "servicesAvailable": {},
 "telephone": ""
 },
@@ -281,15 +345,23 @@
 "dedication": "2002-05-19T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/asuncion-paraguay?lang=eng",
 "endowmentSchedule": {
+"Friday": "16:00, 18:00, 20:00",
+"Monday": "Closed",
+"Saturday": "8:00, 10:00, 12:00, 14:00, 16:00",
+"Thursday": "17:00, 19:00",
+"Tuesday": "9:00, 11:00",
+"Wednesday": "17:00, 19:00"
+},
+"name": "Asunci\u00f3n Paraguay",
+"photoLink": "https://www.lds.org/bc/content/church/temples/asuncion-paraguay/images/asuncion_paraguay-808x480-AV060103_cah012.jpg",
+"place": "Paraguay, Asunci\u00f3n, Centro",
+"rawEndowmentSchedule": {
 "Friday": "4:00, 6:00, 8:00 p.m.",
 "Monday": "Closed",
 "Saturday": "8:00, 10:00 a.m.; 12:00 noon; 2:00, 4:00 p.m.",
 "Tuesday": "9:00, 11:00 a.m.",
 "Wednesday\u2013Thursday": "5:00, 7:00 p.m."
 },
-"name": "Asunci\u00f3n Paraguay",
-"photoLink": "https://www.lds.org/bc/content/church/temples/asuncion-paraguay/images/asuncion_paraguay-808x480-AV060103_cah012.jpg",
-"place": "Paraguay, Asunci\u00f3n, Centro",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -323,13 +395,21 @@
 "dedication": "1983-06-01T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/atlanta-georgia?lang=eng",
 "endowmentSchedule": {
+"Friday": "10:00, 11:00, 12:00, 18:00, 19:00, 20:00",
 "Monday": "Closed",
-"Saturday": "Every hour from 8:00 a.m. to 3:00 p.m.",
-"Tuesday-Friday": "10:00, 11:00 a.m.; 12:00 noon; 6:00, 7:00, 8:00 p.m."
+"Saturday": "8:00, 9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00",
+"Thursday": "10:00, 11:00, 12:00, 18:00, 19:00, 20:00",
+"Tuesday": "10:00, 11:00, 12:00, 18:00, 19:00, 20:00",
+"Wednesday": "10:00, 11:00, 12:00, 18:00, 19:00, 20:00"
 },
 "name": "Atlanta Georgia",
 "photoLink": "https://www.lds.org/bc/content/church/temples/atlanta-georgia/images/atlanta-georgia-808x480-AV110301cah0038.jpg",
 "place": "United States, Sandy Springs, Georgia",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "Every hour from 8:00 a.m. to 3:00 p.m.",
+"Tuesday-Friday": "10:00, 11:00 a.m.; 12:00 noon; 6:00, 7:00, 8:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria vending",
 "Clothing": "No clothing service"
@@ -341,10 +421,18 @@
 "closures": {},
 "dedication": "Announced",
 "detailLink": "https://www.lds.org/church/temples/bangkok-thailand?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "",
+"Monday": "",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "Bangkok Thailand",
 "photoLink": "https://www.lds.org322",
 "place": "Thailand, Bangkok",
+"rawEndowmentSchedule": {},
 "servicesAvailable": {},
 "telephone": ""
 },
@@ -353,10 +441,18 @@
 "closures": {},
 "dedication": "Announced",
 "detailLink": "https://www.lds.org/church/temples/barranquilla-colombia?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "",
+"Monday": "",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "Barranquilla Colombia",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/barranquilla-colombia/temple-announced-lg.jpg",
 "place": "Colombia, Barranquilla",
+"rawEndowmentSchedule": {},
 "servicesAvailable": {},
 "telephone": ""
 },
@@ -385,14 +481,22 @@
 "dedication": "2000-07-16T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/baton-rouge-louisiana?lang=eng",
 "endowmentSchedule": {
+"Friday": "10:00, 12:00, 19:00",
+"Monday": "Closed",
+"Saturday": "9:00, 11:00, 13:00",
+"Thursday": "19:00",
+"Tuesday": "19:00",
+"Wednesday": "10:00, 12:00, 19:00"
+},
+"name": "Baton Rouge Louisiana",
+"photoLink": "https://www.lds.org/bc/content/church/temples/baton-rouge-louisiana/images/baton-rouge-louisiana-808x480-0002060.jpg",
+"place": "United States, Baton Rouge, Louisiana",
+"rawEndowmentSchedule": {
 "Monday": "Closed",
 "Saturday": "9:00, 11:00 a.m.; 1:00 p.m.",
 "Tuesday and Thursday": "7:00 p.m.",
 "Wednesday and Friday": "10:00 a.m.; 12:00 noon; 7:00 p.m."
 },
-"name": "Baton Rouge Louisiana",
-"photoLink": "https://www.lds.org/bc/content/church/temples/baton-rouge-louisiana/images/baton-rouge-louisiana-808x480-0002060.jpg",
-"place": "United States, Baton Rouge, Louisiana",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -426,13 +530,21 @@
 "dedication": "1955-09-11T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/bern-switzerland?lang=eng",
 "endowmentSchedule": {
-"Friday": "8:00, 9:00, 10:30, 11:30 a.m.; 1:00, 3:30, 6:00, 7:00 p.m.",
+"Friday": "8:00, 9:00, 10:30, 11:30, 13:00, 15:30, 18:00, 19:00",
 "Monday": "Closed",
-"Tuesday\u2013Thursday": "8:00, 9:00, 10:30, 11:30 a.m.; 1:00, 3:30 p.m."
+"Saturday": "",
+"Thursday": "8:00, 9:00, 10:30, 11:30, 13:00, 15:30",
+"Tuesday": "8:00, 9:00, 10:30, 11:30, 13:00, 15:30",
+"Wednesday": "8:00, 9:00, 10:30, 11:30, 13:00, 15:30"
 },
 "name": "Bern Switzerland",
 "photoLink": "https://www.lds.org/bc/content/church/temples/bern-switzerland/images/bern-switzerland-808x480-CWD_091110_CWills_007.jpg",
 "place": "Switzerland, Zollikofen, Bern",
+"rawEndowmentSchedule": {
+"Friday": "8:00, 9:00, 10:30, 11:30 a.m.; 1:00, 3:30, 6:00, 7:00 p.m.",
+"Monday": "Closed",
+"Tuesday\u2013Thursday": "8:00, 9:00, 10:30, 11:30 a.m.; 1:00, 3:30 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria vending",
 "Clothing": "Clothing service available"
@@ -466,13 +578,21 @@
 "dedication": "1999-11-20T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/billings-montana?lang=eng",
 "endowmentSchedule": {
+"Friday": "8:00, 10:00, 12:00, 14:00, 17:00, 19:00",
 "Monday": "Closed",
-"Saturday": "7:00, 8:30, 10:00, 11:30 a.m.; 1:00, 2:30 p.m.",
-"Tuesday-Friday": "8:00, 10:00 a.m.; 12:00 noon; 2:00, 5:00, 7:00 p.m."
+"Saturday": "7:00, 8:30, 10:00, 11:30, 13:00, 14:30",
+"Thursday": "8:00, 10:00, 12:00, 14:00, 17:00, 19:00",
+"Tuesday": "8:00, 10:00, 12:00, 14:00, 17:00, 19:00",
+"Wednesday": "8:00, 10:00, 12:00, 14:00, 17:00, 19:00"
 },
 "name": "Billings Montana",
 "photoLink": "https://www.lds.org/bc/content/church/temples/billings-montana/images/billings-montana-808x480-CU091208_bkf01.jpg",
 "place": "United States, Billings, Montana",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "7:00, 8:30, 10:00, 11:30 a.m.; 1:00, 2:30 p.m.",
+"Tuesday-Friday": "8:00, 10:00 a.m.; 12:00 noon; 2:00, 5:00, 7:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria vending",
 "Clothing": "Clothing service available"
@@ -503,13 +623,21 @@
 "dedication": "2000-09-03T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/birmingham-alabama?lang=eng",
 "endowmentSchedule": {
+"Friday": "18:00, 20:00",
 "Monday": "Closed",
-"Tuesday, Thursday, Friday": "6:00, 8:00 p.m.",
-"Wednesday and Saturday": "9:00, 11:00 a.m.; 1:00 p.m."
+"Saturday": "9:00, 11:00, 13:00",
+"Thursday": "18:00, 20:00",
+"Tuesday": "18:00, 20:00",
+"Wednesday": "9:00, 11:00, 13:00"
 },
 "name": "Birmingham Alabama",
 "photoLink": "https://www.lds.org/bc/content/church/temples/birmingham-alabama/images/birmingham-alabama-808x480-0002061.jpg",
 "place": "United States, Gardendale, Alabama",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Tuesday, Thursday, Friday": "6:00, 8:00 p.m.",
+"Wednesday and Saturday": "9:00, 11:00 a.m.; 1:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -544,14 +672,22 @@
 "dedication": "1999-09-19T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/bismarck-north-dakota?lang=eng",
 "endowmentSchedule": {
+"Friday": "18:00, 19:30",
+"Monday": "",
+"Saturday": "9:00, 11:15, 13:30",
+"Thursday": "18:00, 19:30",
+"Tuesday": "",
+"Wednesday": ""
+},
+"name": "Bismarck North Dakota",
+"photoLink": "https://www.lds.org/bc/content/church/temples/bismarck-north-dakota/images/bismarck-north-dakota-808x480-0002102.jpg",
+"place": "United States, Bismarck, North Dakota",
+"rawEndowmentSchedule": {
 "First Wednesday of each month": "9:00 a.m.",
 "Saturday": "9:00, 11:15 a.m.; 1:30 p.m.",
 "Third Wednesday of each month": "11:00 a.m.",
 "Thursday and Friday": "6:00, 7:30 p.m."
 },
-"name": "Bismarck North Dakota",
-"photoLink": "https://www.lds.org/bc/content/church/temples/bismarck-north-dakota/images/bismarck-north-dakota-808x480-0002102.jpg",
-"place": "United States, Bismarck, North Dakota",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -597,13 +733,21 @@
 "dedication": "1999-04-24T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/bogota-colombia?lang=eng",
 "endowmentSchedule": {
+"Friday": "8:00, 9:00, 10:00, 16:30, 17:30, 18:30",
 "Monday": "Closed",
-"Saturday": "8:30, 9:30, 10:30, 11:30 a.m.",
-"Tuesday\u2013Friday": "6:30 a.m.(Wednesday only); 8:00, 9:00, 10:00 a.m.; 4:30, 5:30, 6:30 p.m."
+"Saturday": "8:30, 9:30, 10:30, 11:30",
+"Thursday": "8:00, 9:00, 10:00, 16:30, 17:30, 18:30",
+"Tuesday": "8:00, 9:00, 10:00, 16:30, 17:30, 18:30",
+"Wednesday": "6:30, 8:00, 9:00, 10:00, 16:30, 17:30, 18:30"
 },
 "name": "Bogot\u00e1 Colombia",
 "photoLink": "https://www.lds.org/bc/content/church/temples/bogota-colombia/images/bogota-colombia-808x480-0002101.jpg",
 "place": "Colombia, Bogot\u00e1, Cundinamarca",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "8:30, 9:30, 10:30, 11:30 a.m.",
+"Tuesday\u2013Friday": "6:30 a.m.(Wednesday only); 8:00, 9:00, 10:00 a.m.; 4:30, 5:30, 6:30 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -637,14 +781,22 @@
 "dedication": "1984-05-25T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/boise-idaho?lang=eng",
 "endowmentSchedule": {
+"Friday": "6:00, 6:30, 7:00, 7:30, 8:00, 8:30, 9:00, 9:30, 10:00, 10:30, 11:00, 11:30, 12:00, 12:30, 13:00, 13:30, 14:00, 14:30, 15:00, 15:30, 16:00, 16:30, 17:00, 18:00, 18:30, 19:00, 19:30, 20:00",
+"Monday": "Closed",
+"Saturday": "6:00, 6:30, 7:00, 7:30, 8:00, 8:30, 9:00, 9:30, 10:00, 10:30, 11:00, 11:30, 12:00, 12:30, 13:00, 13:30, 14:00, 14:30, 15:00, 15:30, 16:00, 16:30, 17:00, 18:00, 18:30, 19:00, 19:30, 20:00",
+"Thursday": "5:30, 6:00, 6:30, 7:00, 7:30, 8:00, 8:30, 9:00, 9:30, 10:00, 10:30, 11:00, 11:30, 12:00, 12:30, 13:00, 13:30, 14:00, 14:30, 15:00, 15:30, 16:00, 16:30, 17:00, 18:00, 18:30, 19:00, 19:30, 20:00",
+"Tuesday": "5:15, 5:30, 6:00, 6:30, 7:00, 7:30, 8:00, 8:30, 9:00, 9:30, 10:00, 10:30, 11:00, 11:30, 12:00, 12:30, 13:00, 13:30, 14:00, 14:30, 15:00, 15:30, 16:00, 16:30, 17:00, 18:00, 18:30, 19:00, 19:30, 20:00",
+"Wednesday": "6:00, 6:30, 7:00, 7:30, 8:00, 8:30, 9:00, 9:30, 10:00, 10:30, 11:00, 11:30, 12:00, 12:30, 13:00, 13:30, 14:00, 14:30, 15:00, 15:30, 16:00, 16:30, 17:00, 18:00, 18:30, 19:00, 19:30, 20:00"
+},
+"name": "Boise Idaho",
+"photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/boise-idaho/images/808-by-480.jpg",
+"place": "United States, Boise, Idaho",
+"rawEndowmentSchedule": {
 "Monday": "Closed",
 "Thursday": "Every 30 minutes from 5:30 a.m. to 8:00 p.m.",
 "Tuesday": "5:15 a.m.; every 30 minutes from 5:30 a.m. to 8:00 p.m.",
 "Wednesday,Friday,Saturday": "Every 30 minutes from 6:00 a.m. to 8:00 p.m."
 },
-"name": "Boise Idaho",
-"photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/boise-idaho/images/808-by-480.jpg",
-"place": "United States, Boise, Idaho",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -683,12 +835,20 @@
 "dedication": "2000-10-01T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/boston-massachusetts?lang=eng",
 "endowmentSchedule": {
+"Friday": "8:00, 9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00",
 "Monday": "Closed",
-"Tuesday-Friday": "Every hour from 8:00 a.m. to 8:00 p.m."
+"Saturday": "8:00, 9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00",
+"Thursday": "8:00, 9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00",
+"Tuesday": "8:00, 9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00",
+"Wednesday": "8:00, 9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00"
 },
 "name": "Boston Massachusetts",
 "photoLink": "https://www.lds.org/bc/content/church/temples/boston-massachusetts/images/boston-massachusetts-450x480-0001988.jpg",
 "place": "United States, Belmont, Massachusetts",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Tuesday-Friday": "Every hour from 8:00 a.m. to 8:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -706,28 +866,36 @@
 "Other Dates": [
 "2015",
 "Thursday, January 1",
-"Saturday, March 28 (after the 12:45 p.m. session)",
+"Saturday, March 28 (after the 10:00 a.m. session)",
 "Saturday, April 4",
 "Saturday, July 4",
-"Saturday, September 26 (after the 12:45 p.m. session)",
+"Saturday, September 26 (after the 10:00 a.m. session)",
 "Saturday, October 3",
-"Wednesday, November 25 (after the 10:30 a.m. session)",
+"Wednesday, November 25 (after the 10:00 a.m. session)",
 "Thursday, November 26",
 "Thursday, December 24",
 "Friday, December 25",
-"Thursday, December 31 (after the 10:30 a.m. session)"
+"Thursday, December 31 (after the 10:00 a.m. session)"
 ],
 "Special Openings": []
 },
 "dedication": "1995-01-08T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/bountiful-utah?lang=eng",
 "endowmentSchedule": {
+"Friday": "6:00, 6:45, 7:15, 7:45, 8:15, 9:00, 9:30, 10:00, 10:30, 11:15, 11:45, 12:15, 12:45",
 "Monday": "Closed",
-"Tuesday-Saturday": "6:00, 6:45, 7:15, 7:45, 8:15, 9:00, 9:30, 10:00, 10:30, 11:15, 11:45 a.m.; 12:15, 12:45,"
+"Saturday": "6:00, 6:45, 7:15, 7:45, 8:15, 9:00, 9:30, 10:00, 10:30, 11:15, 11:45, 12:15, 12:45",
+"Thursday": "6:00, 6:45, 7:15, 7:45, 8:15, 9:00, 9:30, 10:00, 10:30, 11:15, 11:45, 12:15, 12:45",
+"Tuesday": "6:00, 6:45, 7:15, 7:45, 8:15, 9:00, 9:30, 10:00, 10:30, 11:15, 11:45, 12:15, 12:45",
+"Wednesday": "6:00, 6:45, 7:15, 7:45, 8:15, 9:00, 9:30, 10:00, 10:30, 11:15, 11:45, 12:15, 12:45"
 },
 "name": "Bountiful Utah",
 "photoLink": "https://www.lds.org/bc/content/church/temples/bountiful-utah/images/bountiful-utah-808x480-0001681.jpg",
 "place": "United States, Bountiful, Utah",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Tuesday - Saturday": "6:00, 6:45, 7:15, 7:45, 8:15, 9:00, 9:30, 10:00, 10:30, 11:15, 11:45 a.m.; 12:15, 12:45,"
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -764,13 +932,21 @@
 "dedication": "2012-09-23T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/brigham-city-utah?lang=eng",
 "endowmentSchedule": {
+"Friday": "7:00, 9:15, 12:00; 14:15, 17:00, 19:15",
 "Monday": "Closed",
-"Saturday": "7:00, 9:15 a.m.; 12:00 noon; 2:15, 5:00, 7:15 p.m. Doors close at 8:00 p.m. The baptistry closes at 7:00 p.m. on Saturdays.",
-"Tuesday-Friday": "7:00, 9:15 a.m.; 12:00 noon; 2:15, 5:00, 7:15 p.m. Doors close at 8:00 p.m."
+"Saturday": "7:00, 9:15, 12:00; 14:15, 17:00, 19:15",
+"Thursday": "7:00, 9:15, 12:00; 14:15, 17:00, 19:15",
+"Tuesday": "7:00, 9:15, 12:00; 14:15, 17:00, 19:15",
+"Wednesday": "7:00, 9:15, 12:00; 14:15, 17:00, 19:15"
 },
 "name": "Brigham City Utah",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/brigham-city-utah/images/Brigham-City-Utah-Temple-480w.jpg",
 "place": "United States, Brigham City, Utah",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "7:00, 9:15 a.m.; 12:00 noon; 2:15, 5:00, 7:15 p.m. Doors close at 8:00 p.m. The baptistry closes at 7:00 p.m. on Saturdays.",
+"Tuesday-Friday": "7:00, 9:15 a.m.; 12:00 noon; 2:15, 5:00, 7:15 p.m. Doors close at 8:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -796,14 +972,22 @@
 "dedication": "2003-06-15T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/brisbane-australia?lang=eng",
 "endowmentSchedule": {
+"Friday": "8:00, 10:00, 12:00, 17:00, 18:30, 20:00",
+"Monday": "Closed",
+"Saturday": "7:00, 9:00, 10:30, 12:00",
+"Thursday": "8:00, 10:00, 12:00, 17:00, 18:30, 20:00",
+"Tuesday": "18:30",
+"Wednesday": "8:00, 10:00, 12:00, 17:00, 18:30, 20:00"
+},
+"name": "Brisbane Australia",
+"photoLink": "https://www.lds.org/bc/content/church/temples/brisbane-australia/images/brisbane-australia-808x480-CU080604_bkf01ext.jpg",
+"place": "Australia, Kangaroo Point, Queensland",
+"rawEndowmentSchedule": {
 "Monday": "Closed",
 "Saturday": "7:00, 9:00, 10:30 a.m.; 12:00 noon",
 "Tuesday": "6:30 p.m.",
 "Wednesday-Friday": "8:00, 10:00 a.m.; 12:00 noon; 5:00, 6:30, 8:00 p.m."
 },
-"name": "Brisbane Australia",
-"photoLink": "https://www.lds.org/bc/content/church/temples/brisbane-australia/images/brisbane-australia-808x480-CU080604_bkf01ext.jpg",
-"place": "Australia, Kangaroo Point, Queensland",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -831,13 +1015,21 @@
 "dedication": "1986-01-17T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/buenos-aires-argentina?lang=eng",
 "endowmentSchedule": {
+"Friday": "8:00, 9:00, 10:00, 11:00, 12:00, 14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00",
 "Monday": "Closed",
-"Saturday": "6:30, 7:15, 8:00, 9:00, 9:45, 10:30, 11:30 a.m., 12:15 p.m.; every hour from 1:00 to 5:00 p.m.",
-"Tuesday-Friday": "Every hour from 8:00 a.m. to 12:00 noon; 2:00 to 8:00 p.m."
+"Saturday": "6:30, 7:15, 8:00, 9:00, 9:45, 10:30, 11:30, 12:15, 13:00, 14:00, 15:00, 16:00, 17:00",
+"Thursday": "8:00, 9:00, 10:00, 11:00, 12:00, 14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00",
+"Tuesday": "8:00, 9:00, 10:00, 11:00, 12:00, 14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00",
+"Wednesday": "8:00, 9:00, 10:00, 11:00, 12:00, 14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00"
 },
 "name": "Buenos Aires Argentina",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/buenos-aires-argentina/buenos-aires-argentina-temple-1-808x480.jpg",
 "place": "Argentina, Ciudad Evita, Buenos Aires",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "6:30, 7:15, 8:00, 9:00, 9:45, 10:30, 11:30 a.m., 12:15 p.m.; every hour from 1:00 to 5:00 p.m.",
+"Tuesday-Friday": "Every hour from 8:00 a.m. to 12:00 noon; 2:00 to 8:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -870,14 +1062,22 @@
 "dedication": "2012-10-28T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/calgary-alberta?lang=eng",
 "endowmentSchedule": {
+"Friday": "9:30, 11:00, 12:30, 16:30, 18:00, 19:30",
+"Monday": "Closed",
+"Saturday": "7:00, 8:30, 10:00, 12:00, 13:30, 15:00 p.m.",
+"Thursday": "9:30, 11:00, 12:30, 16:30, 18:00, 19:30",
+"Tuesday": "16:30, 18:00, 19:30",
+"Wednesday": "16:30, 18:00, 19:30"
+},
+"name": "Calgary Alberta",
+"photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/calgary-alberta/images/calgary-alberta-temple-new.jpg",
+"place": "Canada, Calgary, Alberta",
+"rawEndowmentSchedule": {
 "Monday": "Closed",
 "Saturday": "7:00, 8:30, 10:00 a.m.; 12:00 noon; 1:30, 3:00 p.m.",
 "Thursday-Friday": "9:30, 11:00 a.m.; 12:30, 4:30, 6:00, 7:30 p.m.",
 "Tuesday-Wednesday": "4:30, 6:00, 7:30 p.m."
 },
-"name": "Calgary Alberta",
-"photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/calgary-alberta/images/calgary-alberta-temple-new.jpg",
-"place": "Canada, Calgary, Alberta",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -907,13 +1107,21 @@
 "dedication": "2002-05-17T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/campinas-brazil?lang=eng",
 "endowmentSchedule": {
+"Friday": "9:00, 10:00, 11:00, 13:00, 14:00, 15:00, 16:00, 19:00, 19:45, 20:30",
 "Monday": "Closed",
-"Saturday": "7:00, 7:45, 8:30, 9:15, 10:00, 10:45, 11:30 a.m.; 12:15, 1:00, 1:45, 2:30, 3:15 p.m.",
-"Tuesday-Friday": "9:00, 10:00, 11:00 a.m.; 1:00, 2:00, 3:00, 4:00, 7:00, 7:45, 8:30 p.m."
+"Saturday": "7:00, 7:45, 8:30, 9:15, 10:00, 10:45, 11:30, 12:15, 13:00, 13:45, 14:30, 15:15",
+"Thursday": "9:00, 10:00, 11:00, 13:00, 14:00, 15:00, 16:00, 19:00, 19:45, 20:30",
+"Tuesday": "9:00, 10:00, 11:00, 13:00, 14:00, 15:00, 16:00, 19:00, 19:45, 20:30",
+"Wednesday": "9:00, 10:00, 11:00, 13:00, 14:00, 15:00, 16:00, 19:00, 19:45, 20:30"
 },
 "name": "Campinas Brazil",
 "photoLink": "https://www.lds.org/bc/content/church/temples/campinas-brazil/images/campinas-brazil-808x480-CU050202_ats03.jpg",
 "place": "Brazil, Campinas, Sao Paulo",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "7:00, 7:45, 8:30, 9:15, 10:00, 10:45, 11:30 a.m.; 12:15, 1:00, 1:45, 2:30, 3:15 p.m.",
+"Tuesday-Friday": "9:00, 10:00, 11:00 a.m.; 1:00, 2:00, 3:00, 4:00, 7:00, 7:45, 8:30 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -940,6 +1148,17 @@
 "dedication": "2000-08-20T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/caracas-venezuela?lang=eng",
 "endowmentSchedule": {
+"Friday": "8:00, 11:30, 13:30, 15:30, 17:30, 19:30",
+"Monday": "Closed",
+"Saturday": "5:30, 7:30, 9:30, 11:30, 13:30, 15:30, 17:30, 19:30",
+"Thursday": "8:00, 12:00, 15:00, 19:30",
+"Tuesday": "5:30, 12:00, 19:30",
+"Wednesday": "5:30, 12:00, 15:00, 19:30"
+},
+"name": "Caracas Venezuela",
+"photoLink": "https://www.lds.org/bc/content/church/temples/caracas-venezuela/images/caracas-venezuela-808x480-0002093alt.jpg",
+"place": "Venezuela, Caracas, Urbanizaci\u00f3n Cuarimare",
+"rawEndowmentSchedule": {
 "Friday": "8:00, 11:30 a.m.; 1:30, 3:30, 5:30, 7:30 p.m.",
 "Monday": "Closed",
 "Saturday": "5:30, 7:30, 9:30, 11:30 a.m.; 1:30, 3:30, 5:30, 7:30 p.m.",
@@ -947,9 +1166,6 @@
 "Tuesday": "5:30 a.m.; 12:00 noon; 7:30 p.m.",
 "Wednesday": "5:30 a.m.; 12:00 noon; 3:00, 7:30 p.m."
 },
-"name": "Caracas Venezuela",
-"photoLink": "https://www.lds.org/bc/content/church/temples/caracas-venezuela/images/caracas-venezuela-808x480-0002093alt.jpg",
-"place": "Venezuela, Caracas, Urbanizaci\u00f3n Cuarimare",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -988,13 +1204,21 @@
 "dedication": "1923-08-26T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/cardston-alberta?lang=eng",
 "endowmentSchedule": {
+"Friday": "9:30, 10:30, 12:00, 13:00, 15:30, 16:30, 18:00, 19:00",
 "Monday": "Closed",
-"Saturday": "8:00, 9:00, 10:30, 11:30 a.m.; 1:00, 2:00 p.m.",
-"Tuesday\u2013Friday": "9:30, 10:30 a.m.;12:00 noon; 1:00, 3:30, 4:30, 6:00, 7:00 p.m."
+"Saturday": "8:00, 9:00, 10:30, 11:30, 13:00, 14:00",
+"Thursday": "9:30, 10:30, 12:00, 13:00, 15:30, 16:30, 18:00, 19:00",
+"Tuesday": "9:30, 10:30, 12:00, 13:00, 15:30, 16:30, 18:00, 19:00",
+"Wednesday": "9:30, 10:30, 12:00, 13:00, 15:30, 16:30, 18:00, 19:00"
 },
 "name": "Cardston Alberta",
 "photoLink": "https://www.lds.org/bc/content/church/temples/cardston-alberta/images/cardston-alberta-808x480-VRL_68149_4845006.jpg",
 "place": "Canada, Cardston, Alberta",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "8:00, 9:00, 10:30, 11:30 a.m.; 1:00, 2:00 p.m.",
+"Tuesday\u2013Friday": "9:30, 10:30 a.m.;12:00 noon; 1:00, 3:30, 4:30, 6:00, 7:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -1025,14 +1249,22 @@
 "dedication": "2010-06-13T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/cebu-city-philippines?lang=eng",
 "endowmentSchedule": {
+"Friday": "9:00, 11:00, 13:00, 15:00, 17:00, 19:00",
+"Monday": "Closed",
+"Saturday": "9:00, 11:00, 13:00, 15:00, 16:30, 18:00",
+"Thursday": "9:00, 11:00, 13:00, 15:00, 16:30, 18:00",
+"Tuesday": "9:00, 11:00, 13:00, 15:00, 16:30, 18:00",
+"Wednesday": "9:00, 11:00, 13:00, 15:00, 16:30, 18:00"
+},
+"name": "Cebu City Philippines",
+"photoLink": "https://www.lds.org/bc/content/church/temples/cebu-city-philippines/images/cebu-philippines-808x480-AV100419cah007.jpg",
+"place": "Philippines, Cebu City, Cebu",
+"rawEndowmentSchedule": {
 "Friday": "9:00, 11:00 a.m.; 1:00, 3:00, 5:00, 7:00 p.m.",
 "Monday": "Closed",
 "Saturday": "9:00, 11:00 a.m.; 1:00, 3:00, 4:30, 6:00 p.m.",
 "Tuesday\u2013Thursday": "9:00, 11:00 a.m.; 1:00, 3:00, 4:30, 6:00 p.m."
 },
-"name": "Cebu City Philippines",
-"photoLink": "https://www.lds.org/bc/content/church/temples/cebu-city-philippines/images/cebu-philippines-808x480-AV100419cah007.jpg",
-"place": "Philippines, Cebu City, Cebu",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "Clothing service available"
@@ -1044,10 +1276,18 @@
 "closures": {},
 "dedication": "Announced",
 "detailLink": "https://www.lds.org/church/temples/cedar-city-utah?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "",
+"Monday": "",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "Cedar City Utah",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/cedar-city/temple-Announced_lg.jpg",
 "place": "United States, Cedar City, Utah",
+"rawEndowmentSchedule": {},
 "servicesAvailable": {},
 "telephone": ""
 },
@@ -1084,13 +1324,21 @@
 "dedication": "1985-08-09T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/chicago-illinois?lang=eng",
 "endowmentSchedule": {
+"Friday": "9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00, 18:30, 19:00, 19:30",
 "Monday": "Closed",
-"Saturday": "2nd Saturday: Every hour from 7:00 a.m. to 7:00 p.m.",
-"Tuesday\u2013Friday": "Every hour from 9:00 a.m. to 6:00 p.m.; every half hour from 6:30 to 7:30 p.m."
+"Saturday": "7:00, 8:00, 9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00, 19:00",
+"Thursday": "9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00, 18:30, 19:00, 19:30",
+"Tuesday": "9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00, 18:30, 19:00, 19:30",
+"Wednesday": "9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00, 18:30, 19:00, 19:30"
 },
 "name": "Chicago Illinois",
 "photoLink": "https://www.lds.org/bc/content/church/temples/chicago-illinois/images/chicago-illinois-808x480-CHICAGODAS97.jpg",
 "place": "United States, Glenview, Illinois",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "2nd Saturday: Every hour from 7:00 a.m. to 7:00 p.m.",
+"Tuesday\u2013Friday": "Every hour from 9:00 a.m. to 6:00 p.m.; every half hour from 6:30 to 7:30 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria vending",
 "Clothing": "No clothing service"
@@ -1120,15 +1368,23 @@
 "dedication": "2000-02-26T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/ciudad-juarez-mexico?lang=eng",
 "endowmentSchedule": {
+"Friday": "9:00, 18:00",
+"Monday": "Closed",
+"Saturday": "6:30, 8:00, 9:30, 11:00, 12:30, 14:00",
+"Thursday": "9:00, 18:00, 19:30",
+"Tuesday": "9:00, 18:30",
+"Wednesday": "9:00, 18:00"
+},
+"name": "Ciudad Ju\u00e1rez Mexico",
+"photoLink": "https://www.lds.org/bc/content/church/temples/ciudad-juarez-mexico/images/ciudad-juarez-mexico-808x480-CUR_IM030924-004.jpg",
+"place": "M\u00e9xico, Ciudad Ju\u00e1rez, Chihuahua",
+"rawEndowmentSchedule": {
 "Monday": "Closed",
 "Saturday": "6:30, 8:00, 9:30, 11:00 a.m.; 12:30, 2:00 p.m.",
 "Thursday": "9:00 a.m.; 6:00, 7:30 p.m.",
 "Tuesday": "9:00 a.m.; 6:30 p.m.",
 "Wednesday and Friday": "9:00 a.m.; 6:00 p.m."
 },
-"name": "Ciudad Ju\u00e1rez Mexico",
-"photoLink": "https://www.lds.org/bc/content/church/temples/ciudad-juarez-mexico/images/ciudad-juarez-mexico-808x480-CUR_IM030924-004.jpg",
-"place": "M\u00e9xico, Ciudad Ju\u00e1rez, Chihuahua",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -1158,13 +1414,21 @@
 "dedication": "2000-04-30T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/cochabamba-bolivia?lang=eng",
 "endowmentSchedule": {
+"Friday": "9:00, 10:30, 11:30, 17:00, 18:30, 19:30",
 "Monday": "Closed",
-"Saturday": "6:30, 7:00, 9:00, 10:30, 11:30 a.m.; 2:00, 3:30, 4:30 p.m.",
-"Tuesday\u2013Friday": "9:00, 10:30, 11:30 a.m.; 5:00, 6:30, 7:30 p.m."
+"Saturday": "6:30, 7:00, 9:00, 10:30, 11:30, 14:00, 15:30, 16:30",
+"Thursday": "9:00, 10:30, 11:30, 17:00, 18:30, 19:30",
+"Tuesday": "9:00, 10:30, 11:30, 17:00, 18:30, 19:30",
+"Wednesday": "9:00, 10:30, 11:30, 17:00, 18:30, 19:30"
 },
 "name": "Cochabamba Bolivia",
 "photoLink": "https://www.lds.org/bc/content/church/temples/cochabamba-bolivia/images/cochabamba-bolivia-808x480-0002054s.jpg",
 "place": "Bolivia, Cercado, Cochabamba",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "6:30, 7:00, 9:00, 10:30, 11:30 a.m.; 2:00, 3:30, 4:30 p.m.",
+"Tuesday\u2013Friday": "9:00, 10:30, 11:30 a.m.; 5:00, 6:30, 7:30 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -1198,15 +1462,23 @@
 "dedication": "1999-03-06T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/colonia-juarez-chihuahua-mexico?lang=eng",
 "endowmentSchedule": {
+"Friday": "19:00",
+"Monday": "Closed",
+"Saturday": "10:00, 18:00",
+"Thursday": "Closed",
+"Tuesday": "10:00, 19:00",
+"Wednesday": "19:00"
+},
+"name": "Colonia Ju\u00e1rez Chihuahua Mexico",
+"photoLink": "https://www.lds.org/bc/content/church/temples/colonia-juarez-chihuahua-mexico/images/colonia-jurez-chihuahua-mexico-808x480-CUR_IM030924.jpg",
+"place": "M\u00e9xico, Colonia Ju\u00e1rez, Chihuahua",
+"rawEndowmentSchedule": {
 "Monday": "Closed",
 "Saturday": "10:00 a.m.; 6:00 p.m.",
 "Thursday": "Closed",
 "Tuesday": "10:00 a.m.; 7:00 p.m.",
 "Wednesday and Friday": "7:00 p.m."
 },
-"name": "Colonia Ju\u00e1rez Chihuahua Mexico",
-"photoLink": "https://www.lds.org/bc/content/church/temples/colonia-juarez-chihuahua-mexico/images/colonia-jurez-chihuahua-mexico-808x480-CUR_IM030924.jpg",
-"place": "M\u00e9xico, Colonia Ju\u00e1rez, Chihuahua",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -1240,12 +1512,20 @@
 "dedication": "2001-11-18T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/columbia-river-washington?lang=eng",
 "endowmentSchedule": {
+"Friday": "8:00, 9:30, 11:00, 15:00, 16:30, 18:00, 19:30",
 "Monday": "Closed",
-"Tuesday\u2013Friday": "8:00, 9:30, 11:00 a.m.; 3:00, 4:30, 6:00, 7:30 p.m."
+"Saturday": "8:00, 9:30, 11:00, 15:00, 16:30, 18:00, 19:30",
+"Thursday": "8:00, 9:30, 11:00, 15:00, 16:30, 18:00, 19:30",
+"Tuesday": "8:00, 9:30, 11:00, 15:00, 16:30, 18:00, 19:30",
+"Wednesday": "8:00, 9:30, 11:00, 15:00, 16:30, 18:00, 19:30"
 },
 "name": "Columbia River Washington",
 "photoLink": "https://www.lds.org/bc/content/church/temples/columbia-river-washington/images/columbia-river-washington-450x480-0075835.jpg",
 "place": "United States, Richland, Washington",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Tuesday\u2013Friday": "8:00, 9:30, 11:00 a.m.; 3:00, 4:30, 6:00, 7:30 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -1278,15 +1558,23 @@
 "dedication": "1999-10-16T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/columbia-south-carolina?lang=eng",
 "endowmentSchedule": {
+"Friday": "17:00, 19:00",
+"Monday": "Closed",
+"Saturday": "8:00, 10:00, 12:30, 14:30",
+"Thursday": "9:00, 11:00, 17:00, 19:00",
+"Tuesday": "17:00, 19:00",
+"Wednesday": "9:00, 11:00, 17:00, 19:00"
+},
+"name": "Columbia South Carolina",
+"photoLink": "https://www.lds.org/bc/content/church/temples/columbia-south-carolina/images/columbia-south-carolina-808x480-CWD_091710_MJennings.jpg",
+"place": "United States, Hopkins, South Carolina",
+"rawEndowmentSchedule": {
 "Friday": "5:00, 7:00 p.m.",
 "Monday": "Closed",
 "Saturday": "8:00, 10:00 a.m.; 12:30, 2:30 p.m.",
 "Tuesday": "5:00, 7:00 p.m.",
 "Wednesday\u2013Thursday": "9:00, 11:00 a.m.; 5:00, 7:00 p.m."
 },
-"name": "Columbia South Carolina",
-"photoLink": "https://www.lds.org/bc/content/church/temples/columbia-south-carolina/images/columbia-south-carolina-808x480-CWD_091710_MJennings.jpg",
-"place": "United States, Hopkins, South Carolina",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -1318,6 +1606,17 @@
 "dedication": "1999-09-04T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/columbus-ohio?lang=eng",
 "endowmentSchedule": {
+"Friday": "11:00, 13:00, 18:00, 20:00",
+"Monday": "Closed",
+"Saturday": "9:00, 11:00, 13:00, 15:00, 17:00",
+"Thursday": "11:00, 13:00, 18:00, 19:30",
+"Tuesday": "11:00, 13:00, 18:00, 19:30",
+"Wednesday": "9:00, 11:00, 13:00, 18:00, 19:30"
+},
+"name": "Columbus Ohio",
+"photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/columbus-ohio/Columbus_Ohio_Temple_808x480.jpeg",
+"place": "United States, Columbus, Ohio",
+"rawEndowmentSchedule": {
 "Friday": "11:00 a.m.; 1:00, 6:00, 8:00 p.m.",
 "Monday": "Closed",
 "Saturday": "9:00, 11:00 a.m.; 1:00, 3:00, 5:00 p.m.",
@@ -1325,9 +1624,6 @@
 "Tuesday": "11:00 a.m.; 1:00, 6:00, 7:30 p.m.",
 "Wednesday": "9:00, 11:00 a.m.; 1:00, 6:00, 7:30 p.m."
 },
-"name": "Columbus Ohio",
-"photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/columbus-ohio/Columbus_Ohio_Temple_808x480.jpeg",
-"place": "United States, Columbus, Ohio",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -1339,10 +1635,18 @@
 "closures": {},
 "dedication": "Announced",
 "detailLink": "https://www.lds.org/church/temples/concepcion-chile?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "",
+"Monday": "",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "Concepci\u00f3n Chile",
 "photoLink": "https://www.lds.org/bc/content/church/temples/concepcion-chile/images/temple-Announced_lg.jpg",
 "place": "Chile, Concepci\u00f3n, Chile",
+"rawEndowmentSchedule": {},
 "servicesAvailable": {},
 "telephone": ""
 },
@@ -1367,6 +1671,17 @@
 "dedication": "2004-05-23T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/copenhagen-denmark?lang=eng",
 "endowmentSchedule": {
+"Friday": "10:00, 12:30, 14:30, 16:30, 18:30",
+"Monday": "Closed",
+"Saturday": "10:00, 12:00, 14:00",
+"Thursday": "15:30, 17:30, 19:30",
+"Tuesday": "Closed",
+"Wednesday": "17:30, 19:30"
+},
+"name": "Copenhagen Denmark",
+"photoLink": "https://www.lds.org/bc/content/church/temples/copenhagen-denmark/images/copenhagen-denmark-808x480-AV060609_vmh9424.jpg",
+"place": "Denmark, Copenhagen, Frederiksberg",
+"rawEndowmentSchedule": {
 "Friday": "10:00 a.m.; 12:30, 2:30, 4:30, 6:30 p.m.",
 "Monday": "Closed",
 "Saturday": "10:00 a.m.; 12:00 noon; 2:00 p.m. (2:00 p.m. session available by appointment only)",
@@ -1374,9 +1689,6 @@
 "Tuesday": "Closed",
 "Wednesday": "5:30, 7:30 p.m."
 },
-"name": "Copenhagen Denmark",
-"photoLink": "https://www.lds.org/bc/content/church/temples/copenhagen-denmark/images/copenhagen-denmark-808x480-AV060609_vmh9424.jpg",
-"place": "Denmark, Copenhagen, Frederiksberg",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -1393,14 +1705,22 @@
 "dedication": "2015-05-17T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/cordoba-argentina?lang=eng",
 "endowmentSchedule": {
+"Friday": "8:00, 10:00, 12:00, 14:00, 16:00, 18:00, 20:00",
+"Monday": "Closed",
+"Saturday": "7:00, 8:30, 10:00, 11:30, 14:00, 15:30, 17:00",
+"Thursday": "9:00, 11:00, 14:00, 16:00, 18:00",
+"Tuesday": "9:00, 11:00, 14:00, 16:00, 18:00",
+"Wednesday": "9:00, 11:00, 14:00, 16:00, 18:00"
+},
+"name": "C\u00f3rdoba Argentina",
+"photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/cordoba-argentina/images/cordoba-argentina-temples-buildings_808x480.jpg",
+"place": "Argentina, C\u00f3rdoba, C\u00f3rdoba Province",
+"rawEndowmentSchedule": {
 "Friday": "8:00, 10:00 a.m.; 12:00 noon, 2:00, 4:00, 6:00, 8:00 p.m.",
 "Monday": "Closed",
 "Saturday": "7:00, 8:30, 10:00, 11:30 a.m.; 2:00, 3:30, 5:00 p.m.",
 "Tuesday-Thursday": "9:00, 11:00 a.m.; 2:00, 4:00, 6:00 p.m.\u00a0"
 },
-"name": "C\u00f3rdoba Argentina",
-"photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/cordoba-argentina/images/cordoba-argentina-temples-buildings_808x480.jpg",
-"place": "Argentina, C\u00f3rdoba, C\u00f3rdoba Province",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -1429,14 +1749,22 @@
 "dedication": "2008-06-01T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/curitiba-brazil?lang=eng",
 "endowmentSchedule": {
+"Friday": "14:30, 16:30, 18:30, 20:00",
+"Monday": "Closed",
+"Saturday": "7:30, 9:00, 10:30, 12:00, 13:30, 15:00",
+"Thursday": "14:30, 16:30, 18:30, 20:00",
+"Tuesday": "9:00, 10:30, 12:00, 14:30, 16:30, 18:30, 20:00",
+"Wednesday": "9:00, 10:30, 12:00, 14:30, 16:30, 18:30, 20:00"
+},
+"name": "Curitiba Brazil",
+"photoLink": "https://www.lds.org/bc/content/church/temples/curitiba-brazil/images/curitiba-brazil-450x480-AV080605_cah006.jpg",
+"place": "Brazil, Curitiba, Curitiba",
+"rawEndowmentSchedule": {
 "Monday": "Closed",
 "Saturday": "7:30, 9:00, 10:30 a.m.; 12:00 noon; 1:30, 3:00 p.m.",
 "Thursday, Friday": "2:30, 4:30, 6:30, 8:00 p.m.",
 "Tuesday, Wednesday": "9:00, 10:30 a.m.; 12:00 noon; 2:30, 4:30, 6:30, 8:00 p.m."
 },
-"name": "Curitiba Brazil",
-"photoLink": "https://www.lds.org/bc/content/church/temples/curitiba-brazil/images/curitiba-brazil-450x480-AV080605_cah006.jpg",
-"place": "Brazil, Curitiba, Curitiba",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -1470,13 +1798,21 @@
 "dedication": "1984-10-19T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/dallas-texas?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
-"Saturday": "Every 30 minutes from 6:30 a.m. to 7:00 p.m.",
-"Tuesday\u2013Friday": "Every hour from 7:00 a.m. to 7:00 p.m.; 7:30, 8:00 p.m."
+"Saturday": "6:30, 7:00, 7:30, 8:00, 8:30, 9:00, 9:30, 10:00, 10:30, 11:00, 11:30, 12:00, 12:30, 13:00, 13:30, 14:00, 14:30, 15:00, 15:30, 16:00, 16:30, 17:00, 17:30, 18:00, 18:30, 19:00",
+"Thursday": "7:00, 8:00, 9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 19:30, 20:00",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Dallas Texas",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/dallas-texas/dallas-texas-temple-lds.jpg",
 "place": "United States, Dallas, Texas",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "Every 30 minutes from 6:30 a.m. to 7:00 p.m.",
+"Tuesday\u2013Friday": "Every hour from 7:00 a.m. to 7:00 p.m.; 7:30, 8:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -1510,12 +1846,20 @@
 "dedication": "1986-10-24T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/denver-colorado?lang=eng",
 "endowmentSchedule": {
+"Friday": "8:00, 9:00, 10:00, 10:30, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00",
 "Monday": "Closed",
-"Tuesday\u2013Friday": "8:00, 9:00, 10:00, 10:30 a.m.; every hour from 11:00 a.m. to 5:00 p.m.;"
+"Saturday": "8:00, 9:00, 10:00, 10:30, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00",
+"Thursday": "8:00, 9:00, 10:00, 10:30, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00",
+"Tuesday": "8:00, 9:00, 10:00, 10:30, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00",
+"Wednesday": "8:00, 9:00, 10:00, 10:30, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00"
 },
 "name": "Denver Colorado",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/denver-colorado/denver-colorado-temple-lds.jpg",
 "place": "United States, Centennial, Colorado",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Tuesday\u2013Friday": "8:00, 9:00, 10:00, 10:30 a.m.; every hour from 11:00 a.m. to 5:00 p.m.;"
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "Clothing service available"
@@ -1550,15 +1894,23 @@
 "dedication": "1999-10-23T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/detroit-michigan?lang=eng",
 "endowmentSchedule": {
+"Friday": "10:00, 12:00, 18:30, 20:00",
+"Monday": "Closed",
+"Saturday": "9:00, 11:00, 13:00, 15:00",
+"Thursday": "10:00, 12:00, 19:00",
+"Tuesday": "19:00",
+"Wednesday": "19:00"
+},
+"name": "Detroit Michigan",
+"photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/detroit-michigan/Detroit-Michigan-Temple-01-808x480.jpeg",
+"place": "United States, Bloomfield Hills, Michigan",
+"rawEndowmentSchedule": {
 "Friday": "10:00 a.m.; 12:00 noon; 6:30, 8:00 p.m.",
 "Monday": "Closed",
 "Saturday": "9:00, 11:00 a.m.; 1:00, 3:00 p.m.",
 "Thursday": "10:00 a.m.; 12:00 noon; 7:00 p.m.",
 "Tuesday\u2013Wednesday": "7:00 p.m."
 },
-"name": "Detroit Michigan",
-"photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/detroit-michigan/Detroit-Michigan-Temple-01-808x480.jpeg",
-"place": "United States, Bloomfield Hills, Michigan",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -1593,12 +1945,20 @@
 "dedication": "2009-03-20T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/draper-utah?lang=eng",
 "endowmentSchedule": {
+"Friday": "7:00, 8:00, 9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00",
 "Monday": "Closed",
-"Tuesday\u2013Saturday": "Every hour from 7:00 a.m. to 8:00 p.m."
+"Saturday": "7:00, 8:00, 9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00",
+"Thursday": "7:00, 8:00, 9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00",
+"Tuesday": "7:00, 8:00, 9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00",
+"Wednesday": "7:00, 8:00, 9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00"
 },
 "name": "Draper Utah",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/draper-utah-temple-lds.jpg",
 "place": "United States, Draper, Utah",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Tuesday\u2013Saturday": "Every hour from 7:00 a.m. to 8:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -1610,10 +1970,18 @@
 "closures": {},
 "dedication": "Announced",
 "detailLink": "https://www.lds.org/church/temples/durban-south-africa?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "",
+"Monday": "",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "Durban South Africa",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/durban-south-africa/temple-announced-lg.jpg",
 "place": "South Africa, Durban",
+"rawEndowmentSchedule": {},
 "servicesAvailable": {},
 "telephone": ""
 },
@@ -1644,15 +2012,23 @@
 "dedication": "1999-12-11T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/edmonton-alberta?lang=eng",
 "endowmentSchedule": {
+"Friday": "11:00, 13:00, 16:30, 18:00, 19:30",
+"Monday": "Closed",
+"Saturday": "8:00, 10:00, 12:00, 13:30, 15:00",
+"Thursday": "17:30, 19:30",
+"Tuesday": "9:30, 11:30, 17:30, 19:30",
+"Wednesday": "17:30, 19:30"
+},
+"name": "Edmonton Alberta",
+"photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/edmonton-alberta/edmonton-alberta-temple-lds.jpg",
+"place": "Canada, Edmonton, Alberta",
+"rawEndowmentSchedule": {
 "Friday": "11:00 a.m.; 1:00, 4:30, 6:00, 7:30 p.m.",
 "Monday": "Closed",
 "Saturday": "8:00, 10:00 a.m.; 12:00 noon; 1:30, 3:00 p.m.",
 "Tuesday": "9:30, 11:30 a.m.; 5:30, 7:30 p.m.",
 "Wednesday\u2013Thursday": "5:30, 7:30 p.m."
 },
-"name": "Edmonton Alberta",
-"photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/edmonton-alberta/edmonton-alberta-temple-lds.jpg",
-"place": "Canada, Edmonton, Alberta",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -1664,10 +2040,18 @@
 "closures": {},
 "dedication": "Construction",
 "detailLink": "https://www.lds.org/church/temples/fort-collins-colorado-temple?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "",
+"Monday": "",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "Fort Collins Colorado",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/fort-collins/fort-collins-colorado-temple-lds.jpg",
 "place": "United States, Fort Collins, Colorado",
+"rawEndowmentSchedule": {},
 "servicesAvailable": {},
 "telephone": ""
 },
@@ -1685,7 +2069,7 @@
 "Saturday, April 4",
 "Saturday, July 4",
 "Saturday, October 3",
-"Wednesday, November  25 (after 11:00 a.m. session)",
+"Wednesday, November  25",
 "Thursday, November  26",
 "Thursday, December  24",
 "Friday, December  25",
@@ -1696,14 +2080,22 @@
 "dedication": "2014-05-04T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/fort-lauderdale-florida?lang=eng",
 "endowmentSchedule": {
+"Friday": "8:00, 10:00, 12:00, 14:00, 16:00, 18:00, 19:30",
+"Monday": "Closed",
+"Saturday": "8:00, 9:30, 11:00, 12:30, 14:00, 15:30",
+"Thursday": "18:00, 19:30",
+"Tuesday": "18:00, 19:30",
+"Wednesday": "18:00, 19:30"
+},
+"name": "Fort Lauderdale Florida",
+"photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/fort-lauderdale-florida/images/FtLauderdaleFloridaTemple1_808x480.jpg",
+"place": "United States, Fort Lauderdale, Florida",
+"rawEndowmentSchedule": {
 "Friday": "8:00, 10:00 a.m.; 12:00 noon; 2:00, 4:00, 6:00, 7:30 p.m.",
 "Monday": "Closed",
 "Saturday": "8:00, 9:30, 11:00 a.m.; 12:30, 2:00, 3:30 p.m.",
 "Tuesday-Thursday": "6:00, 7:30 p.m."
 },
-"name": "Fort Lauderdale Florida",
-"photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/fort-lauderdale-florida/images/FtLauderdaleFloridaTemple1_808x480.jpg",
-"place": "United States, Fort Lauderdale, Florida",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -1715,10 +2107,18 @@
 "closures": {},
 "dedication": "Construction",
 "detailLink": "https://www.lds.org/church/temples/fortaleza-brazil?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "",
+"Monday": "",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "Fortaleza Brazil",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/cedar-city/temple-Announced_lg.jpg",
 "place": "Brazil, Fortaleza, Brazil",
+"rawEndowmentSchedule": {},
 "servicesAvailable": {},
 "telephone": ""
 },
@@ -1752,6 +2152,17 @@
 "dedication": "1987-08-28T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/frankfurt-germany?lang=eng",
 "endowmentSchedule": {
+"Friday": "8:00, 10:30, 13:30, 16:00, 17:00, 19:30",
+"Monday": "Closed",
+"Saturday": "8:00, 10:30, 12:00, 13:30",
+"Thursday": "8:00, 10:30, 13:30, 16:00, 17:00",
+"Tuesday": "8:00, 10:30, 13:30, 16:00, 17:00",
+"Wednesday": "8:00, 9:15, 10:30, 13:30, 16:00, 17:00"
+},
+"name": "Frankfurt Germany",
+"photoLink": "https://www.lds.org/bc/content/church/temples/frankfurt-germany/images/frankfurt-germany-808x480-0001277s.jpg",
+"place": "Germany, Friedrichsdorf, Hessen",
+"rawEndowmentSchedule": {
 "Friday": "8:00, 10:30 a.m.; 1:30, 4:00, 5:00, 7:30 p.m.",
 "Monday": "Closed",
 "Saturday": "8:00, 10:30 a.m.; 12:00 noon, 1:30 p.m.",
@@ -1759,9 +2170,6 @@
 "Tuesday": "8:00, 10:30 a.m.; 1:30, 4:00, 5:00 p.m.",
 "Wednesday": "8:00, 9:15, 10:30 a.m.; 1:30, 4:00, 5:00 p.m."
 },
-"name": "Frankfurt Germany",
-"photoLink": "https://www.lds.org/bc/content/church/temples/frankfurt-germany/images/frankfurt-germany-808x480-0001277s.jpg",
-"place": "Germany, Friedrichsdorf, Hessen",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "Clothing service available"
@@ -1773,10 +2181,18 @@
 "closures": {},
 "dedication": "Renovation",
 "detailLink": "https://www.lds.org/church/temples/freiberg-germany?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "",
+"Monday": "",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "Freiberg Germany",
 "photoLink": "https://www.lds.org/bc/content/church/temples/freiberg-germany/images/freiberg-germany-808x480-CU091007_bkf01.jpg",
 "place": "Germany, Freiberg, Freiberg",
+"rawEndowmentSchedule": {},
 "servicesAvailable": {},
 "telephone": ""
 },
@@ -1805,14 +2221,22 @@
 "dedication": "2000-04-09T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/fresno-california?lang=eng",
 "endowmentSchedule": {
+"Friday": "8:00, 9:30, 11:30, 17:00, 18:30, 20:00",
+"Monday": "Closed",
+"Saturday": "7:00, 8:30, 10:00, 12:30, 14:30",
+"Thursday": "8:00, 9:30, 11:30, 18:00, 19:30",
+"Tuesday": "8:00, 9:30, 11:30, 18:00, 19:30",
+"Wednesday": "8:00, 9:30, 11:30, 18:00, 19:30"
+},
+"name": "Fresno California",
+"photoLink": "https://www.lds.org/bc/content/church/temples/fresno-california/images/fresno-california-808x480-CUR_IM030916-001alt.jpg",
+"place": "United States, Fresno, California",
+"rawEndowmentSchedule": {
 "Friday": "8:00, 9:30, 11:30 a.m.; 5:00, 6:30, 8:00 p.m.",
 "Monday": "Closed",
 "Saturday": "7:00, 8:30, 10:00 a.m.; 12:30, 2:30 p.m.",
 "Tuesday\u2013Thursday": "8:00, 9:30, 11:30 a.m. 6:00, 7:30 p.m."
 },
-"name": "Fresno California",
-"photoLink": "https://www.lds.org/bc/content/church/temples/fresno-california/images/fresno-california-808x480-CUR_IM030916-001alt.jpg",
-"place": "United States, Fresno, California",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -1833,15 +2257,23 @@
 "dedication": "2000-06-11T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/fukuoka-japan?lang=eng",
 "endowmentSchedule": {
+"Friday": "11:00, 19:00",
+"Monday": "Closed",
+"Saturday": "7:40, 9:10, 10:40, 12:10, 13:40",
+"Thursday": "19:00",
+"Tuesday": "",
+"Wednesday": ""
+},
+"name": "Fukuoka Japan",
+"photoLink": "https://www.lds.org/bc/content/church/temples/fukuoka-japan/images/fukuoka-japan-808x480-0001842s.jpg",
+"place": "Japan, Fukuoka, Fukuoka",
+"rawEndowmentSchedule": {
 "1st Wednesday": "8:00 p.m.",
 "Friday": "11:00 a.m.; 7:00 p.m.",
 "Monday": "Closed",
 "Saturday": "7:40, 9:10, 10:40 a.m.; 12:10, 1:40 p.m.",
 "Thursday": "7:00 p.m."
 },
-"name": "Fukuoka Japan",
-"photoLink": "https://www.lds.org/bc/content/church/temples/fukuoka-japan/images/fukuoka-japan-808x480-0001842s.jpg",
-"place": "Japan, Fukuoka, Fukuoka",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -1875,12 +2307,20 @@
 "dedication": "2014-03-02T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/gilbert-arizona?lang=eng",
 "endowmentSchedule": {
+"Friday": "5:30, 6:15, 7:00, 7:45, 8:30, 9:15, 10:00, 10:45, 11:30, 12:15, 13:00, 13:45, 14:30, 15:15, 16:00, 16:45, 17:30, 18:15, 19:00",
 "Monday": "Closed",
-"Tuesday-Saturday": "Every 45 minutes from 5:30 a.m. to 7:00 p.m."
+"Saturday": "5:30, 6:15, 7:00, 7:45, 8:30, 9:15, 10:00, 10:45, 11:30, 12:15, 13:00, 13:45, 14:30, 15:15, 16:00, 16:45, 17:30, 18:15, 19:00",
+"Thursday": "5:30, 6:15, 7:00, 7:45, 8:30, 9:15, 10:00, 10:45, 11:30, 12:15, 13:00, 13:45, 14:30, 15:15, 16:00, 16:45, 17:30, 18:15, 19:00",
+"Tuesday": "5:30, 6:15, 7:00, 7:45, 8:30, 9:15, 10:00, 10:45, 11:30, 12:15, 13:00, 13:45, 14:30, 15:15, 16:00, 16:45, 17:30, 18:15, 19:00",
+"Wednesday": "5:30, 6:15, 7:00, 7:45, 8:30, 9:15, 10:00, 10:45, 11:30, 12:15, 13:00, 13:45, 14:30, 15:15, 16:00, 16:45, 17:30, 18:15, 19:00"
 },
 "name": "Gilbert Arizona",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/gilbert-arizona/images/gilbert-arizona-large-4.jpg",
 "place": "United States, Gilbert, Arizona",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Tuesday-Saturday": "Every 45 minutes from 5:30 a.m. to 7:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -1911,14 +2351,22 @@
 "dedication": "2001-04-29T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/guadalajara-mexico?lang=eng",
 "endowmentSchedule": {
+"Friday": "17:00, 19:00",
+"Monday": "Closed",
+"Saturday": "6:30, 8:00, 9:30, 11:00, 12:30, 17:00, 19:00",
+"Thursday": "17:00, 19:00",
+"Tuesday": "9:30, 17:00, 19:00",
+"Wednesday": "17:00, 19:00"
+},
+"name": "Guadalajara Mexico",
+"photoLink": "https://www.lds.org/bc/content/church/temples/guadalajara-mexico/images/guadalajara-mexico-808x480-CUR-IM031005-001alt.jpg",
+"place": "M\u00e9xico, Zapopan, Jalisco",
+"rawEndowmentSchedule": {
 "Monday": "Closed",
 "Saturday": "6:30, 8:00, 9:30, 11:00 a.m.; 12:30, 5:00, 7:00 p.m.",
 "Tuesday": "9:30 a.m.; 5:00, 7:00 p.m.",
 "Wednesday-Friday": "5:00, 7:00 p.m."
 },
-"name": "Guadalajara Mexico",
-"photoLink": "https://www.lds.org/bc/content/church/temples/guadalajara-mexico/images/guadalajara-mexico-808x480-CUR-IM031005-001alt.jpg",
-"place": "M\u00e9xico, Zapopan, Jalisco",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -1951,13 +2399,21 @@
 "dedication": "1984-12-14T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/guatemala-city-guatemala?lang=eng",
 "endowmentSchedule": {
+"Friday": "8:00, 9:00, 10:00, 11:00, 16:00, 17:00, 18:00, 19:00",
 "Monday": "Closed",
-"Saturday": "Every hour from 5:00 a.m. to 5:00 p.m.",
-"Tuesday\u2013Friday": "Every hour from 8:00 to 11:00 a.m.; 4:00 to 7:00 p.m."
+"Saturday": "5:00, 6:00, 7:00, 8:00, 9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00",
+"Thursday": "8:00, 9:00, 10:00, 11:00, 16:00, 17:00, 18:00, 19:00",
+"Tuesday": "8:00, 9:00, 10:00, 11:00, 16:00, 17:00, 18:00, 19:00",
+"Wednesday": "8:00, 9:00, 10:00, 11:00, 16:00, 17:00, 18:00, 19:00"
 },
 "name": "Guatemala City Guatemala",
 "photoLink": "https://www.lds.org/bc/content/church/temples/guatemala-city-guatemala/images/guatemala-city-guatemala-400x480-0001278s.jpg",
 "place": "Guatemala, Guatemala City, Guatemala",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "Every hour from 5:00 a.m. to 5:00 p.m.",
+"Tuesday\u2013Friday": "Every hour from 8:00 to 11:00 a.m.; 4:00 to 7:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -1989,13 +2445,21 @@
 "dedication": "1999-08-01T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/guayaquil-ecuador?lang=eng",
 "endowmentSchedule": {
+"Friday": "8:00, 9:00, 10:00, 18:00, 18:45, 19:30",
 "Monday": "Closed",
-"Saturday": "8:00, 8:45, 9:30, 10:15, 11:00 a.m.; 12:00 noon; 1:00, 2:00 p.m.",
-"Tuesday-Friday": "8:00, 9:00, 10:00 a.m.; 6:00, 6:45, 7:30 p.m."
+"Saturday": "8:00, 8:45, 9:30, 10:15, 11:00, 12:00, 13:00, 14:00",
+"Thursday": "8:00, 9:00, 10:00, 18:00, 18:45, 19:30",
+"Tuesday": "8:00, 9:00, 10:00, 18:00, 18:45, 19:30",
+"Wednesday": "8:00, 9:00, 10:00, 18:00, 18:45, 19:30"
 },
 "name": "Guayaquil Ecuador",
 "photoLink": "https://www.lds.org/bc/content/church/temples/guayaquil-ecuador/images/guayaquil-ecuador-808x480-0002099.jpg",
 "place": "Ecuador, Guayaquil, Guayas",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "8:00, 8:45, 9:30, 10:15, 11:00 a.m.; 12:00 noon; 1:00, 2:00 p.m.",
+"Tuesday-Friday": "8:00, 9:00, 10:00 a.m.; 6:00, 6:45, 7:30 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -2030,6 +2494,17 @@
 "dedication": "1999-11-14T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/halifax-nova-scotia?lang=eng",
 "endowmentSchedule": {
+"Friday": "18:00, 20:00",
+"Monday": "Closed",
+"Saturday": "9:00, 11:15, 13:30",
+"Thursday": "19:00",
+"Tuesday": "Closed",
+"Wednesday": "9:30, 11:30"
+},
+"name": "Halifax Nova Scotia",
+"photoLink": "https://www.lds.org/bc/content/church/temples/halifax-nova-scotia/images/halifax-nova-scotia-808x480-CU080407-001.jpg",
+"place": "Canada, Dartmouth, Nova Scotia",
+"rawEndowmentSchedule": {
 "Friday": "6:00, 8:00 p.m.",
 "Monday": "Closed",
 "Saturday": "9:00, 11:15 a.m.; 1:30 p.m.",
@@ -2037,9 +2512,6 @@
 "Tuesday": "Closed",
 "Wednesday": "9:30, 11:30 a.m."
 },
-"name": "Halifax Nova Scotia",
-"photoLink": "https://www.lds.org/bc/content/church/temples/halifax-nova-scotia/images/halifax-nova-scotia-808x480-CU080407-001.jpg",
-"place": "Canada, Dartmouth, Nova Scotia",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -2079,14 +2551,22 @@
 "dedication": "1958-04-20T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/hamilton-new-zealand?lang=eng",
 "endowmentSchedule": {
+"Friday": "8:30, 11:00, 13:30, 16:00, 18:30",
+"Monday": "Closed",
+"Saturday": "8:30, 11:00, 13:30, 16:00",
+"Thursday": "8:30, 11:00, 13:30, 16:00, 18:30",
+"Tuesday": "6:00, 8:30, 11:00, 13:30, 16:00, 18:30",
+"Wednesday": "8:30, 11:00, 13:30, 16:00, 18:30"
+},
+"name": "Hamilton New Zealand",
+"photoLink": "https://www.lds.org/bc/content/church/temples/hamilton-new-zealand/images/hamilton-new-zealand-808x480-CWD_100803_KRowley_005.jpg",
+"place": "New Zealand, Hamilton, New Zealand",
+"rawEndowmentSchedule": {
 "Monday": "Closed",
 "Saturday": "8:30, 11:00 a.m.; 1:30, 4:00 p.m.",
 "Tuesday": "6:00, 8:30, 11:00 a.m.; 1:30, 4:00, 6:30 p.m.",
 "Wednesday-Friday": "8:30, 11:00 a.m.; 1:30, 4:00, 6:30 p.m."
 },
-"name": "Hamilton New Zealand",
-"photoLink": "https://www.lds.org/bc/content/church/temples/hamilton-new-zealand/images/hamilton-new-zealand-808x480-CWD_100803_KRowley_005.jpg",
-"place": "New Zealand, Hamilton, New Zealand",
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -2098,10 +2578,18 @@
 "closures": {},
 "dedication": "Construction",
 "detailLink": "https://www.lds.org/church/temples/hartford-connecticut?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "",
+"Monday": "",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "Hartford Connecticut",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/hartford-connecticut/images/hartford-temple-808x480.jpg",
 "place": "United States, Hartford, Connecticut",
+"rawEndowmentSchedule": {},
 "servicesAvailable": {},
 "telephone": ""
 },
@@ -2129,13 +2617,21 @@
 "dedication": "2006-10-22T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/helsinki-finland?lang=eng",
 "endowmentSchedule": {
+"Friday": "10:00, 12:00, 14:00, 16:00, 18:00",
 "Monday": "Closed",
-"Saturday": "10:00 a.m.; 12:00 noon",
-"Tuesday-Friday": "10:00 a.m.; 12:00 noon; 2:00, 4:00, 6:00 p.m.; Additional group sessions are available by appointment only. Please contact the temple for times."
+"Saturday": "10:00, 12:00",
+"Thursday": "10:00, 12:00, 14:00, 16:00, 18:00",
+"Tuesday": "10:00, 12:00, 14:00, 16:00, 18:00",
+"Wednesday": "10:00, 12:00, 14:00, 16:00, 18:00"
 },
 "name": "Helsinki Finland",
 "photoLink": "https://www.lds.org/bc/content/church/temples/helsinki-finland/images/helsinki-finland-450x480-AV061009_lp001.jpg",
 "place": "Finland, Espoo, Helsinki",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "10:00 a.m.; 12:00 noon",
+"Tuesday-Friday": "10:00 a.m.; 12:00 noon; 2:00, 4:00, 6:00 p.m.; Additional group sessions are available by appointment only. Please contact the temple for times."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -2166,14 +2662,22 @@
 "dedication": "2000-02-27T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/hermosillo-sonora-mexico?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
+"Monday": "Closed",
+"Saturday": "7:00, 9:00, 11:00 a.m.; 3:00, 5:00, 7:00 p.m.\u00a0",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
+"name": "Hermosillo Sonora Mexico",
+"photoLink": "https://www.lds.org/bc/content/church/temples/hermosillo-sonora-mexico/images/hermosillo-sonora-mexico-808x480-CU040825_ats02.jpg",
+"place": "M\u00e9xico, Hermosillo, Sonora",
+"rawEndowmentSchedule": {
 "Monday": "Closed",
 "Saturday": "7:00, 9:00, 11:00 a.m.; 3:00, 5:00, 7:00 p.m.\u00a0",
 "Tuesday and Thursday": "5:30, 7:30 p.m.",
 "Wednesday and Friday": "9:00 a.m.; 5:30, 7:30 p.m."
 },
-"name": "Hermosillo Sonora Mexico",
-"photoLink": "https://www.lds.org/bc/content/church/temples/hermosillo-sonora-mexico/images/hermosillo-sonora-mexico-808x480-CU040825_ats02.jpg",
-"place": "M\u00e9xico, Hermosillo, Sonora",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -2217,13 +2721,21 @@
 "dedication": "1996-05-26T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/hong-kong-china?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
 "Saturday": "7:00, 9:00, 10:00, 11:15 a.m.; 12:15 p.m.",
-"Tuesday\u2013Friday": "9:00, 11:00 a.m.; 1:00, 4:00, 6:45, 7:15 p.m."
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Hong Kong China",
 "photoLink": "https://www.lds.org/bc/content/church/temples/hong-kong-china/images/hong-kong-china-450x480-CWD_b24ba465.jpg",
 "place": "China, Hong Kong, Kowloon Tong",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "7:00, 9:00, 10:00, 11:15 a.m.; 12:15 p.m.",
+"Tuesday\u2013Friday": "9:00, 11:00 a.m.; 1:00, 4:00, 6:45, 7:15 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "Clothing service available"
@@ -2256,13 +2768,21 @@
 "dedication": "2000-08-26T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/houston-texas?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
 "Saturday": "Every hour from 7:00 a.m. to 7:00 p.m.",
-"Tuesday\u2013Friday": "Every hour from 8:00 a.m. to 8:00 p.m. (Every 3rd Friday 5:30 a.m.)"
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Houston Texas",
 "photoLink": "https://www.lds.org/bc/content/church/temples/houston-texas/images/houston-texas-808x480-CWD_567d8302.jpg",
 "place": "United States, Klein, Texas",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "Every hour from 7:00 a.m. to 7:00 p.m.",
+"Tuesday\u2013Friday": "Every hour from 8:00 a.m. to 8:00 p.m. (Every 3rd Friday 5:30 a.m.)"
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "Clothing service available"
@@ -2274,10 +2794,18 @@
 "closures": {},
 "dedication": "Renovation",
 "detailLink": "https://www.lds.org/church/temples/idaho-falls-idaho?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "",
+"Monday": "",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "Idaho Falls Idaho",
 "photoLink": "https://www.lds.org/bc/content/church/temples/idaho-falls-idaho/images/idaho-falls-idaho-808x480-0001581s.jpg",
 "place": "United States, Idaho Falls, Idaho",
+"rawEndowmentSchedule": {},
 "servicesAvailable": {},
 "telephone": ""
 },
@@ -2298,14 +2826,22 @@
 "dedication": "2015-08-23T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/indianapolis-indiana?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
+"Monday": "Closed",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
+"name": "Indianapolis Indiana",
+"photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/indianapolis-indiana/images/Indianapolis-Indiana-808x480.jpg",
+"place": "United States, Indianapolis, Indiana",
+"rawEndowmentSchedule": {
 "Monday": "Closed",
 "Saturday*": "8:30, 10:00 a.m.; 12:00 noon, 1:30 p.m.",
 "Tuesday and Thursday*": "6:00, 7:30 p.m.",
 "Wednesday and Friday*": "9:00, 11:00 a.m.; 6:00, 7:30 p.m."
 },
-"name": "Indianapolis Indiana",
-"photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/indianapolis-indiana/images/Indianapolis-Indiana-808x480.jpg",
-"place": "United States, Indianapolis, Indiana",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -2342,11 +2878,19 @@
 "Friday": "6:00, 7:00, 8:00, 9:00, 10:00 a.m.; 3:00, 4:00, 5:00, 6:00 p.m.",
 "Monday": "Closed",
 "Saturday": "Every hour from 7:00 a.m. to 12:00 noon",
-"Tuesday\u2013Thursday": "3:00, 4:00, 5:00, 6:00 p.m."
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Johannesburg South Africa",
 "photoLink": "https://www.lds.org/bc/content/church/temples/johannesburg-south-africa/images/johannesburg-south-africa-400x480-AV071029cah001.jpg",
 "place": "South Africa, Johannesburg, Gauteng",
+"rawEndowmentSchedule": {
+"Friday": "6:00, 7:00, 8:00, 9:00, 10:00 a.m.; 3:00, 4:00, 5:00, 6:00 p.m.",
+"Monday": "Closed",
+"Saturday": "Every hour from 7:00 a.m. to 12:00 noon",
+"Tuesday\u2013Thursday": "3:00, 4:00, 5:00, 6:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "Clothing service available"
@@ -2383,13 +2927,21 @@
 "dedication": "1981-11-16T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/jordan-river-utah?lang=eng",
 "endowmentSchedule": {
-"Monday": "Every 60 minutes from 7:00 a.m. to 10:00 a.m.",
-"Tuesday": "Every 30 minutes from 5:00 a.m. to 8:00 p.m.",
-"Wednesday\u2013Saturday": "Every 30 minutes from 6:00 a.m. to 8:00 p.m."
+"Friday": "6:00, 6:30, 7:00, 7:30, 8:00, 8:30, 9:00, 9:30, 10:00, 10:30, 11:00, 11:30, 12:00, 12:30, 13:00, 13:30, 14:00, 14:30, 15:00, 15:30, 16:00, 16:30, 17:00, 17:30, 18:00, 18:30, 19:00, 19:30, 20:00",
+"Monday": "7:00, 8:00, 9:00, 10:00, 11:00, 12:00",
+"Saturday": "6:00, 6:30, 7:00, 7:30, 8:00, 8:30, 9:00, 9:30, 10:00, 10:30, 11:00, 11:30, 12:00, 12:30, 13:00, 13:30, 14:00, 14:30, 15:00, 15:30, 16:00, 16:30, 17:00, 17:30, 18:00, 18:30, 19:00, 19:30, 20:00",
+"Thursday": "6:00, 6:30, 7:00, 7:30, 8:00, 8:30, 9:00, 9:30, 10:00, 10:30, 11:00, 11:30, 12:00, 12:30, 13:00, 13:30, 14:00, 14:30, 15:00, 15:30, 16:00, 16:30, 17:00, 17:30, 18:00, 18:30, 19:00, 19:30, 20:00",
+"Tuesday": "5:00, 5:30, 6:00, 6:30, 7:00, 7:30, 8:00, 8:30, 9:00, 9:30, 10:00, 10:30, 11:00, 11:30, 12:00, 12:30, 13:00, 13:30, 14:00, 14:30, 15:00, 15:30, 16:00, 16:30, 17:00, 17:30, 18:00, 18:30, 19:00, 19:30, 20:00",
+"Wednesday": "6:00, 6:30, 7:00, 7:30, 8:00, 8:30, 9:00, 9:30, 10:00, 10:30, 11:00, 11:30, 12:00, 12:30, 13:00, 13:30, 14:00, 14:30, 15:00, 15:30, 16:00, 16:30, 17:00, 17:30, 18:00, 18:30, 19:00, 19:30, 20:00"
 },
 "name": "Jordan River Utah",
 "photoLink": "https://www.lds.org/bc/content/church/temples/jordan-river-utah/images/jordan-river-utah-808x480-0001762.jpg",
 "place": "United States, South Jordan, Utah",
+"rawEndowmentSchedule": {
+"Monday": "Every 60 minutes from 7:00 a.m. to 10:00 a.m.",
+"Tuesday": "Every 30 minutes from 5:00 a.m. to 8:00 p.m.",
+"Wednesday\u2013Saturday": "Every 30 minutes from 6:00 a.m. to 8:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -2421,13 +2973,21 @@
 "dedication": "2012-05-06T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/kansas-city-missouri?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
 "Saturday": "7:00, 8:30, 10:00, 11:30 a.m.; 1:00, 2:30 p.m.",
-"Tuesday-Friday": "9:00, 10:30 a.m.; 12:30, 5:00, 6:30, 8:00 p.m."
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Kansas City Missouri",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/kansas-city-missouri/kansas-city-missouri-temple-1-604x480.jpg",
 "place": "United States, Kansas City, Missouri",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "7:00, 8:30, 10:00, 11:30 a.m.; 1:00, 2:30 p.m.",
+"Tuesday-Friday": "9:00, 10:30 a.m.; 12:30, 5:00, 6:30, 8:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria vending",
 "Clothing": "Clothing service available"
@@ -2439,10 +2999,18 @@
 "closures": {},
 "dedication": "Announced",
 "detailLink": "https://www.lds.org/church/temples/kinshasa-democratic-republic-of-congo?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "",
+"Monday": "",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "Kinshasa Democratic Republic of Congo",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/kinshasa-democratic-republic-of-congo/temple-announced-lg.jpg",
 "place": "Democratic Republic of Congo, Kinshasa",
+"rawEndowmentSchedule": {},
 "servicesAvailable": {},
 "telephone": ""
 },
@@ -2470,13 +3038,21 @@
 "dedication": "2000-01-23T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/kona-hawaii?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Open for group requests until 5:00 p.m.",
 "Saturday": "8:00, 9:30, 11:00 a.m., 12:30 p.m.",
-"Tuesday-Friday": "8:00, 10:00 a.m.; 6:30 p.m."
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Kona Hawaii",
 "photoLink": "https://www.lds.org/bc/content/church/temples/kona-hawaii/images/kona-hawaii-808x480-0001985.jpg",
 "place": "United States, Kailua-Kona, Hawaii",
+"rawEndowmentSchedule": {
+"Monday": "Open for group requests until 5:00 p.m.",
+"Saturday": "8:00, 9:30, 11:00 a.m., 12:30 p.m.",
+"Tuesday-Friday": "8:00, 10:00 a.m.; 6:30 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -2503,13 +3079,21 @@
 "dedication": "2010-08-29T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/kyiv-ukraine?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
 "Saturday": "8:00, 10:30 a.m. 1:00, 3:00, 5:00 p.m.",
-"Tuesday\u2013Friday": "8:00, 10:30 a.m.; 4:30, 7:00 p.m."
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Kyiv Ukraine",
 "photoLink": "https://www.lds.org/bc/content/church/temples/kyiv-ukraine/images/kyiv-ukraine-808x480-CU101029_bkf020alt.jpg",
 "place": "Ukraine, Kyiv, Kyiv Oblast",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "8:00, 10:30 a.m. 1:00, 3:00, 5:00 p.m.",
+"Tuesday\u2013Friday": "8:00, 10:30 a.m.; 4:30, 7:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -2543,13 +3127,21 @@
 "dedication": "1919-11-27T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/laie-hawaii?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
 "Saturday": "Every hour from 6:00 a.m. to 1:00 p.m.",
-"Tuesday-Friday": "Every hour from 7:00 a.m. to 2:00 p.m.; 4:00 to 8:00 p.m."
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Laie Hawaii",
 "photoLink": "https://www.lds.org/bc/content/church/temples/laie-hawaii/images/laie-hawaii-808x480-CWD_101022_DNorthrup.jpg",
 "place": "United States, Laie, Hawaii",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "Every hour from 6:00 a.m. to 1:00 p.m.",
+"Tuesday-Friday": "Every hour from 7:00 a.m. to 2:00 p.m.; 4:00 to 8:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -2593,6 +3185,14 @@
 "name": "Las Vegas Nevada",
 "photoLink": "https://www.lds.org/bc/content/church/temples/las-vegas-nevada/images/las-vegas-nevada-808x480-0001776.jpg",
 "place": "United States, Las Vegas, Nevada",
+"rawEndowmentSchedule": {
+"Friday": "Every 60 minutes from 7:30 a.m. to 5:30 p.m.; 6:00, 6:30, 7:00, 7:30 p.m.",
+"Monday": "Closed",
+"Saturday": "Every 60 minutes from 5:30 a.m. to 4:30 p.m.; 5:00, 5:30, 6:00 p.m.",
+"Thursday": "Every 60 minutes from 5:30 a.m. to 6:30 p.m.; 7:00, 7:30 p.m.",
+"Tuesday": "Every 60 minutes from 5:30 a.m. to 6:30 p.m.; 7:00, 7:30 p.m.",
+"Wednesday": "Every 60 minutes from 7:30 a.m. to 6:30 p.m.; 7:00, 7:30 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -2624,12 +3224,20 @@
 "dedication": "1986-01-10T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/lima-peru?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
-"Tuesday-Saturday": "Every 45 minutes from 7:30 a.m. to 6:45 p.m."
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Lima Peru",
 "photoLink": "https://www.lds.org/bc/content/church/temples/lima-peru/images/lima-peru-450x480-0001583.jpg",
 "place": "Peru, La Molina, Lima",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Tuesday-Saturday": "Every 45 minutes from 7:30 a.m. to 6:45 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -2641,10 +3249,18 @@
 "closures": {},
 "dedication": "Announced",
 "detailLink": "https://www.lds.org/church/temples/lisbon-portugal?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "",
+"Monday": "",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "Lisbon Portugal",
 "photoLink": "https://www.lds.org/bc/content/church/temples/lisbon-portugal/images/temple-Announced_lg.jpg",
 "place": "Portugal, Lisbon, Lisbon ",
+"rawEndowmentSchedule": {},
 "servicesAvailable": {},
 "telephone": ""
 },
@@ -2676,13 +3292,21 @@
 "dedication": "1884-05-17T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/logan-utah?lang=eng",
 "endowmentSchedule": {
+"Friday": "7:00, 7:30, 8:00, 8:30, 9:00, 9:30, 10:00, 10:30, 11:00, 11:30, 12:00, 12:30, 13:00, 13:30, 14:00, 14:30, 15:00, 15:30, 16:00, 16:30, 17:00, 17:30, 18:00, 18:30, 19:00, 19:30, 20:00",
 "Monday": "Closed",
-"Saturday": "Every 30 minutes from 5:30 a.m. to 8:00 p.m.",
-"Tuesday-Friday": "Every 30 minutes from 7:00 a.m. to 8:00 p.m.;\u00a0Wednesday, 5:30 a.m."
+"Saturday": "5:30, 6:00, 6:30, 7:00, 7:30, 8:00, 8:30, 9:00, 9:30, 10:00, 10:30, 11:00, 11:30, 12:00, 12:30, 13:00, 13:30, 14:00, 14:30, 15:00, 15:30, 16:00, 16:30, 17:00, 17:30, 18:00, 18:30, 19:00, 19:30, 20:00",
+"Thursday": "7:00, 7:30, 8:00, 8:30, 9:00, 9:30, 10:00, 10:30, 11:00, 11:30, 12:00, 12:30, 13:00, 13:30, 14:00, 14:30, 15:00, 15:30, 16:00, 16:30, 17:00, 17:30, 18:00, 18:30, 19:00, 19:30, 20:00",
+"Tuesday": "7:00, 7:30, 8:00, 8:30, 9:00, 9:30, 10:00, 10:30, 11:00, 11:30, 12:00, 12:30, 13:00, 13:30, 14:00, 14:30, 15:00, 15:30, 16:00, 16:30, 17:00, 17:30, 18:00, 18:30, 19:00, 19:30, 20:00",
+"Wednesday": "5:30, 7:00, 7:30, 8:00, 8:30, 9:00, 9:30, 10:00, 10:30, 11:00, 11:30, 12:00, 12:30, 13:00, 13:30, 14:00, 14:30, 15:00, 15:30, 16:00, 16:30, 17:00, 17:30, 18:00, 18:30, 19:00, 19:30, 20:00"
 },
 "name": "Logan Utah",
 "photoLink": "https://www.lds.org/bc/content/church/temples/logan-utah/images/logan-utah-808x480-CWD_101025_JOlson.jpg",
 "place": "United States, Logan, Utah",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "Every 30 minutes from 5:30 a.m. to 8:00 p.m.",
+"Tuesday-Friday": "Every 30 minutes from 7:00 a.m. to 8:00 p.m.;\u00a0Wednesday, 5:30 a.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -2722,13 +3346,21 @@
 "Friday": "9:00, 10:00, 11:15 a.m.; 12:15, 1:30, 2:30, 3:45, 4:45, 6:00, 7:00, 8:00 p.m.",
 "Monday": "Closed",
 "Saturday": "8:00, 9:00, 9:30, 10:00, 10:30, 11:15, 11:45 a.m.; 12:15, 12:45, 2:00, 3:00 p.m.",
-"Tuesday\u2013Thursday": "9:00, 10:00, 11:15 a.m.; 12:15, 1:30, 2:30, 3:45, 4:45, 6:00, 7:00 p.m."
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "London England",
 "photoLink": "https://www.lds.org/bc/content/church/temples/london-england/images/london-england-808x480-CU091030_bkf01.jpg",
 "place": "United Kingdom, Newchapel, Surrey",
+"rawEndowmentSchedule": {
+"Friday": "9:00, 10:00, 11:15 a.m.; 12:15, 1:30, 2:30, 3:45, 4:45, 6:00, 7:00, 8:00 p.m.",
+"Monday": "Closed",
+"Saturday": "8:00, 9:00, 9:30, 10:00, 10:30, 11:15, 11:45 a.m.; 12:15, 12:45, 2:00, 3:00 p.m.",
+"Tuesday\u2013Thursday": "9:00, 10:00, 11:15 a.m.; 12:15, 1:30, 2:30, 3:45, 4:45, 6:00, 7:00 p.m."
+},
 "servicesAvailable": {
-"Cafeteria": "Cafeteria service available",
+"Cafeteria": "No cafeteria service",
 "Clothing": "Clothing service available"
 },
 "telephone": "(44) 1342-832-759"
@@ -2767,14 +3399,22 @@
 "dedication": "1956-03-11T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/los-angeles-california?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
+"Monday": "Closed",
+"Saturday": "5:30, 6:45, 8:00, 9:15, 10:30, 11:45 a.m.; 1:00, 2:15, 3:30, 5:00 p.m.",
+"Thursday": "",
+"Tuesday": "5:30, 6:45, 8:00, 9:15, 10:30, 11:45 a.m.; 1:00, 2:15, 3:30, 5:00, 6:15, 7:30 p.m.",
+"Wednesday": ""
+},
+"name": "Los Angeles California",
+"photoLink": "https://www.lds.org/bc/content/church/temples/los-angeles-california/images/los-angeles-california-808x480-CWD_d038c40e.jpg",
+"place": "United States, Los Angeles, California",
+"rawEndowmentSchedule": {
 "Monday": "Closed",
 "Saturday": "5:30, 6:45, 8:00, 9:15, 10:30, 11:45 a.m.; 1:00, 2:15, 3:30, 5:00 p.m.",
 "Tuesday": "5:30, 6:45, 8:00, 9:15, 10:30, 11:45 a.m.; 1:00, 2:15, 3:30, 5:00, 6:15, 7:30 p.m.",
 "Wednesday\u2013Friday": "6:45, 8:00, 9:15, 10:30, 11:45 a.m.; 1:00, 2:15, 3:30, 5:00, 6:15, 7:30 p.m."
 },
-"name": "Los Angeles California",
-"photoLink": "https://www.lds.org/bc/content/church/temples/los-angeles-california/images/los-angeles-california-808x480-CWD_d038c40e.jpg",
-"place": "United States, Los Angeles, California",
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -2808,12 +3448,20 @@
 "Friday": "10:00, 11:45 a.m.; 6:00, 7:45 p.m.",
 "Monday": "Closed",
 "Saturday": "8:30, 10:00, 11:30 a.m.; 1:00, 2:30, 4:00 p.m.",
-"Tuesday and Thursday": "6:00, 7:45 p.m.",
+"Thursday": "",
+"Tuesday": "",
 "Wednesday": "10:00, 11:45 a.m."
 },
 "name": "Louisville Kentucky",
 "photoLink": "https://www.lds.org/bc/content/church/temples/louisville-kentucky/images/louisville-kentucky-808x480-0001947s.jpg",
 "place": "United States, Crestwood, Kentucky",
+"rawEndowmentSchedule": {
+"Friday": "10:00, 11:45 a.m.; 6:00, 7:45 p.m.",
+"Monday": "Closed",
+"Saturday": "8:30, 10:00, 11:30 a.m.; 1:00, 2:30, 4:00 p.m.",
+"Tuesday and Thursday": "6:00, 7:45 p.m.",
+"Wednesday": "10:00, 11:45 a.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -2852,6 +3500,14 @@
 "name": "Lubbock Texas",
 "photoLink": "https://www.lds.org/bc/content/church/temples/lubbock-texas/images/lubbock-texas-808x480-LubbockTexasTmpl.jpg",
 "place": "United States, Lubbock, Texas",
+"rawEndowmentSchedule": {
+"Friday": "7:00, 8:20 p.m.; 2nd calendar Friday 5:30 p.m.",
+"Monday": "Closed",
+"Saturday": "9:00, 11:00 a.m.; 1:00, 3:00 p.m.; 1st and 3rd calendar Saturdays 7:00 a.m.",
+"Thursday": "9:00, 11:00 a.m.; 7:00 p.m.",
+"Tuesday": "7:00 p.m.",
+"Wednesday": "7:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -2889,13 +3545,21 @@
 "dedication": "1999-03-19T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/madrid-spain?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
 "Saturday": "Every hour from 8:00 a.m. to 5:00 p.m.",
-"Tuesday\u2013Friday": "Every hour from 8:00 a.m. to 12:00 noon; 2:00 to 7:00 p.m."
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Madrid Spain",
 "photoLink": "https://www.lds.org/bc/content/church/temples/madrid-spain/images/madrid-spain-808x480-0002011s.jpg",
 "place": "Spain, Madrid, Madrid",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "Every hour from 8:00 a.m. to 5:00 p.m.",
+"Tuesday\u2013Friday": "Every hour from 8:00 a.m. to 12:00 noon; 2:00 to 7:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -2924,13 +3588,21 @@
 "dedication": "2012-06-10T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/manaus-brazil?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
 "Saturday": "7:00, 8:30, 10:00 a.m.; 12:30, 2:00, 3:30 p.m.",
-"Tuesday\u2013Friday": "3:00, 4:30, 6:30, 8:00 p.m."
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Manaus Brazil",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/manaus-brazil/manaus-brazil-temple-1-720x480.jpg",
 "place": "Brazil, Manaus, Amazonas",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "7:00, 8:30, 10:00 a.m.; 12:30, 2:00, 3:30 p.m.",
+"Tuesday\u2013Friday": "3:00, 4:30, 6:30, 8:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -2975,11 +3647,19 @@
 "Monday": "Closed",
 "Saturday": "6:30, 8:00, 9:30, 11:00 a.m.; 12:30, 2:00, 3:30, 5:00 p.m.",
 "Thursday": "6:30, 8:00, 11:00 a.m.; 12:30, 2:00, 6:15, 7:45 p.m.",
-"Tuesday\u2013Wednesday": "11:00 a.m.; 12:30, 2:00, 6:15, 7:45 p.m."
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Manhattan New York",
 "photoLink": "https://www.lds.org/bc/content/church/temples/manhattan-new-york/images/manhattan-new-york-808x480-AV051230_cah005.jpg",
 "place": "United States, New York City, New York",
+"rawEndowmentSchedule": {
+"Friday": "11:00 a.m.; 12:30, 2:00, 4:00, 5:30, 7:00, 8:30 p.m.",
+"Monday": "Closed",
+"Saturday": "6:30, 8:00, 9:30, 11:00 a.m.; 12:30, 2:00, 3:30, 5:00 p.m.",
+"Thursday": "6:30, 8:00, 11:00 a.m.; 12:30, 2:00, 6:15, 7:45 p.m.",
+"Tuesday\u2013Wednesday": "11:00 a.m.; 12:30, 2:00, 6:15, 7:45 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "Clothing service available"
@@ -3011,13 +3691,21 @@
 "dedication": "1984-09-25T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/manila-philippines?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
 "Saturday": "Every 30 minutes from 7:00 a.m. to 1:00 p.m.; every hour from 1:00 to 5:00 p.m.",
-"Tuesday-Friday": "Every hour from 7:00 a.m. to 7:00 p.m."
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Manila Philippines",
 "photoLink": "https://www.lds.org/bc/content/church/temples/manila-philippines/images/manila-philippines-808x480-0001275s.jpg",
 "place": "Philippines, Quezon City, Metro Manila",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "Every 30 minutes from 7:00 a.m. to 1:00 p.m.; every hour from 1:00 to 5:00 p.m.",
+"Tuesday-Friday": "Every hour from 7:00 a.m. to 7:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "Clothing service available"
@@ -3054,13 +3742,21 @@
 "dedication": "1888-05-21T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/manti-utah?lang=eng",
 "endowmentSchedule": {
+"Friday": "7:30, 8:30, 9:30, 10:30, 11:30, 12:30, 13:30, 14:30, 15:30, 16:30, 17:30, 18:30, 19:30",
 "Monday": "Closed",
-"Saturday": "Every 60 minutes from 7:30 a.m. to 6:30 p.m.",
-"Tuesday\u2013Friday": "Every 60 minutes from 7:30 a.m. to 7:30 p.m."
+"Saturday": "7:30, 8:30, 9:30, 10:30, 11:30, 12:30, 13:30, 14:30, 15:30, 16:30, 17:30, 18:30",
+"Thursday": "7:30, 8:30, 9:30, 10:30, 11:30, 12:30, 13:30, 14:30, 15:30, 16:30, 17:30, 18:30, 19:30",
+"Tuesday": "7:30, 8:30, 9:30, 10:30, 11:30, 12:30, 13:30, 14:30, 15:30, 16:30, 17:30, 18:30, 19:30",
+"Wednesday": "7:30, 8:30, 9:30, 10:30, 11:30, 12:30, 13:30, 14:30, 15:30, 16:30, 17:30, 18:30, 19:30"
 },
 "name": "Manti Utah",
 "photoLink": "https://www.lds.org/bc/content/church/temples/manti-utah/images/manti-utah-808x480-0001882.jpg",
 "place": "United States, Manti, Utah",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "Every 60 minutes from 7:30 a.m. to 6:30 p.m.",
+"Tuesday\u2013Friday": "Every 60 minutes from 7:30 a.m. to 7:30 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -3094,15 +3790,23 @@
 "dedication": "2000-04-16T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/medford-oregon?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
+"Monday": "Closed",
+"Saturday": "9:30 a.m., 11:30 a.m., 3:00 p.m.",
+"Thursday": "12:00 p.m., 5:00 p.m., 7:00 p.m.",
+"Tuesday": "",
+"Wednesday": "10:00 a.m., 12:00 p.m., 5:00 p.m., 7:00 p.m."
+},
+"name": "Medford Oregon",
+"photoLink": "https://www.lds.org/bc/content/church/temples/medford-oregon/images/medford-oregon-808x480-CUR_IM030916-002.jpg",
+"place": "United States, Central Point, Oregon",
+"rawEndowmentSchedule": {
 "Monday": "Closed",
 "Saturday": "9:30 a.m., 11:30 a.m., 3:00 p.m.",
 "Thursday": "12:00 p.m., 5:00 p.m., 7:00 p.m.",
 "Tuesday and Friday": "5:00 p.m., 7:00 p.m.",
 "Wednesday": "10:00 a.m., 12:00 p.m., 5:00 p.m., 7:00 p.m."
 },
-"name": "Medford Oregon",
-"photoLink": "https://www.lds.org/bc/content/church/temples/medford-oregon/images/medford-oregon-808x480-CUR_IM030916-002.jpg",
-"place": "United States, Central Point, Oregon",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -3134,14 +3838,22 @@
 "dedication": "2000-06-16T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/melbourne-australia?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
+"Monday": "Closed",
+"Saturday": "7:30, 9:00, 10:30 a.m.",
+"Thursday": "",
+"Tuesday": "7:30 p.m.",
+"Wednesday": ""
+},
+"name": "Melbourne Australia",
+"photoLink": "https://www.lds.org/bc/content/church/temples/melbourne-australia/images/melbourne-australia-808x480-0002059.jpg",
+"place": "Australia, Wantirna South, Victoria",
+"rawEndowmentSchedule": {
 "Monday": "Closed",
 "Saturday": "7:30, 9:00, 10:30 a.m.",
 "Tuesday": "7:30 p.m.",
 "Wednesday\u2013Friday": "9:30, 11:00 a.m.; 6:00, 7:30 p.m."
 },
-"name": "Melbourne Australia",
-"photoLink": "https://www.lds.org/bc/content/church/temples/melbourne-australia/images/melbourne-australia-808x480-0002059.jpg",
-"place": "Australia, Wantirna South, Victoria",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -3183,6 +3895,14 @@
 "name": "Memphis Tennessee",
 "photoLink": "https://www.lds.org/bc/content/church/temples/memphis-tennessee/images/memphis-tennessee-808x480-0002090.jpg",
 "place": "United States, Bartlett, Tennessee",
+"rawEndowmentSchedule": {
+"Friday": "6:00, 7:30 p.m.",
+"Monday": "Closed",
+"Saturday": "9:00, 10:30 a.m.; 12:00 noon, 1:30 p.m.",
+"Thursday": "7:00 p.m.",
+"Tuesday": "7:00 p.m.",
+"Wednesday": "10:30 a.m.; 12:30, 7:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -3212,14 +3932,22 @@
 "dedication": "2000-07-08T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/merida-mexico?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
+"Monday": "Closed",
+"Saturday": "6:00, 7:30, 9:00, 10:30 a.m.; 12:00 noon; 2:00, 4:00, 6:00, 7:30 p.m.",
+"Thursday": "5:00, 7:00 p.m.",
+"Tuesday": "",
+"Wednesday": ""
+},
+"name": "M\u00e9rida Mexico",
+"photoLink": "https://www.lds.org/bc/content/church/temples/merida-mexico/images/merida-mexico-808x480-0002062.jpg",
+"place": "M\u00e9xico, M\u00e9rida, Yucatan",
+"rawEndowmentSchedule": {
 "Monday": "Closed",
 "Saturday": "6:00, 7:30, 9:00, 10:30 a.m.; 12:00 noon; 2:00, 4:00, 6:00, 7:30 p.m.",
 "Thursday": "5:00, 7:00 p.m.",
 "Tuesday, Wednesday, and Friday": "9:00 a.m.; 5:00, 7:00 p.m."
 },
-"name": "M\u00e9rida Mexico",
-"photoLink": "https://www.lds.org/bc/content/church/temples/merida-mexico/images/merida-mexico-808x480-0002062.jpg",
-"place": "M\u00e9xico, M\u00e9rida, Yucatan",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -3231,10 +3959,18 @@
 "closures": {},
 "dedication": "Construction",
 "detailLink": "https://www.lds.org/church/temples/meridian-idaho-temple?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "",
+"Monday": "",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "Meridian Idaho",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/meridian-idaho/temple-announced-lg.jpg",
 "place": "United States, Meridian, Idaho",
+"rawEndowmentSchedule": {},
 "servicesAvailable": {},
 "telephone": ""
 },
@@ -3270,12 +4006,20 @@
 "dedication": "1927-10-23T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/mesa-arizona?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
-"Tuesday-Saturday": "Every 30 minutes from 5:30 a.m. to 7:30 p.m."
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Mesa Arizona",
 "photoLink": "https://www.lds.org/bc/content/church/temples/mesa-arizona/images/mesa-arizona-808x480-0001145salt.jpg",
 "place": "United States, Mesa, Arizona",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Tuesday-Saturday": "Every 30 minutes from 5:30 a.m. to 7:30 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -3283,16 +4027,47 @@
 "telephone": "(1) 480-833-1211"
 },
 {
-"address": "",
-"closures": {},
-"dedication": "Renovation",
+"address": "Avenida 510 no. 90, Col. San Juan de Aragon, 07950  M\u00e9xico City, DF, M\u00e9xico",
+"closures": {
+"Maintenance Dates": [
+"2016",
+"May 30 \u2013 June 13",
+"November 14 \u2013 November 28"
+],
+"Other Dates": [
+"2015",
+"Saturday, September 26, after 2:00 p.m. session",
+"Saturday, October 3",
+"Thursday, December 24",
+"Friday, December 25",
+"Thursday, December 31"
+],
+"Special Openings": []
+},
+"dedication": "1983-12-02T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/mexico-city-mexico?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "8:00 a.m. - 7:00 p.m.",
+"Monday": "Closed",
+"Saturday": "7:00 a.m. - 6:00 p.m.",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "Mexico City Mexico",
 "photoLink": "https://www.lds.org/bc/content/church/temples/mexico-city-mexico/images/mexico-city-mexico-808x480-AV081029_cah009.jpg",
 "place": "M\u00e9xico, M\u00e9xico City, Distrito Federal",
-"servicesAvailable": {},
-"telephone": ""
+"rawEndowmentSchedule": {
+"Friday": "8:00 a.m. - 7:00 p.m.",
+"Monday": "Closed",
+"Saturday": "7:00 a.m. - 6:00 p.m.",
+"Tuesday\u2013Thursday": "8:00 a.m. - 7:00 p.m."
+},
+"servicesAvailable": {
+"Cafeteria": "Cafeteria service available",
+"Clothing": "Clothing service available"
+},
+"telephone": "(52) 55-5003-3734/3736"
 },
 {
 "address": "Avenida Eugenio Garza Sada, Esq. Privada Valle de la Estanzuela, Colonia Valle Alto, 64989  Monterrey, Nuevo Le\u00f3n, Mexico",
@@ -3317,13 +4092,21 @@
 "dedication": "2002-04-28T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/monterrey-mexico?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
 "Saturday": "6:00, 7:40, 9:20, 11:00 a.m.; 12:40, 2:20, 4:00, 5:40 p.m.",
-"Tuesday-Friday": "9:00 a.m.; 5:30, 7:30 p.m."
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Monterrey Mexico",
 "photoLink": "https://www.lds.org/bc/content/church/temples/monterrey-mexico/images/monterrey-mexico-808x480-MonterreyMexicoTmplalt.jpg",
 "place": "M\u00e9xico, Monterrey, Nuevo Le\u00f3n",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "6:00, 7:40, 9:20, 11:00 a.m.; 12:40, 2:20, 4:00, 5:40 p.m.",
+"Tuesday-Friday": "9:00 a.m.; 5:30, 7:30 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -3358,11 +4141,19 @@
 "Monday": "Closed",
 "Saturday": "8:00, 9:30, 11:00 a.m.; 1:30, 3:00, 5:00 p.m.",
 "Thursday": "9:30, 11:00 a.m.; 2:00, 4:00, 6:00, 7:30 p.m.",
-"Tuesday\u2013Wednesday": "9:30, 11:00 a.m.; 2:00, 4:00, 6:00 p.m."
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Montevideo Uruguay",
 "photoLink": "https://www.lds.org/bc/content/church/temples/montevideo-uruguay/images/montevideo-uruguay-808x480-0002055.jpg",
 "place": "Uruguay, Montevideo, Montevideo",
+"rawEndowmentSchedule": {
+"Friday": "9:30, 11:00 a.m.; 2:00, 3:30, 5:00, 7:00, 8:30 p.m.",
+"Monday": "Closed",
+"Saturday": "8:00, 9:30, 11:00 a.m.; 1:30, 3:00, 5:00 p.m.",
+"Thursday": "9:30, 11:00 a.m.; 2:00, 4:00, 6:00, 7:30 p.m.",
+"Tuesday\u2013Wednesday": "9:30, 11:00 a.m.; 2:00, 4:00, 6:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -3397,13 +4188,21 @@
 "dedication": "1998-07-26T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/monticello-utah?lang=eng",
 "endowmentSchedule": {
+"Friday": "10:00, 12:15, 17:00, 19:15",
 "Monday": "Closed",
-"Saturday": "8:00, 10:15 a.m.; 1:00, 3:15 p.m.",
-"Tuesday-Friday": "10:00 a.m.; 12:15; 5:00, 7:15 p.m."
+"Saturday": "8:00, 10:15, 13:00, 15:15",
+"Thursday": "10:00, 12:15, 17:00, 19:15",
+"Tuesday": "10:00, 12:15, 17:00, 19:15",
+"Wednesday": "10:00, 12:15, 17:00, 19:15"
 },
 "name": "Monticello Utah",
 "photoLink": "https://www.lds.org/bc/content/church/temples/monticello-utah/images/monticello-utah-808x480-0001878.jpg",
 "place": "United States, Monticello, Utah",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "8:00, 10:15 a.m.; 1:00, 3:15 p.m.",
+"Tuesday-Friday": "10:00 a.m.; 12:15; 5:00, 7:15 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -3411,16 +4210,46 @@
 "telephone": "(1) 435-587-3500"
 },
 {
-"address": "",
-"closures": {},
-"dedication": "Renovation",
+"address": "1450 Blvd Marie-Victorin, Longueuil, Quebec, Canada",
+"closures": {
+"Maintenance Dates": [
+"2015",
+"Current Day until Wednesday, November 4"
+],
+"Other Dates": [
+"2015",
+"Friday, December 24",
+"Saturday, December 25",
+"Friday, December 31"
+],
+"Special Openings": [
+"2015"
+]
+},
+"dedication": "2000-06-04T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/montreal-quebec?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "10:00 a.m.; 12:00 noon; 6:30, 7:45 p.m.",
+"Monday": "",
+"Saturday": "9:00, 11:00 a.m.; 1:00 p.m.",
+"Thursday": "",
+"Tuesday": "9:00, 11:00 a.m.; 7:30 p.m.",
+"Wednesday": ""
+},
 "name": "Montreal Quebec",
 "photoLink": "https://www.lds.org/bc/content/church/temples/montreal-quebec/images/montreal-quebec-808x480-0002017.jpg",
 "place": "Canada, Longueuil, Quebec",
-"servicesAvailable": {},
-"telephone": ""
+"rawEndowmentSchedule": {
+"Friday": "10:00 a.m.; 12:00 noon; 6:30, 7:45 p.m.",
+"Saturday": "9:00, 11:00 a.m.; 1:00 p.m.",
+"Tuesday": "9:00, 11:00 a.m.; 7:30 p.m.",
+"Wednesday and Thursday": "7:30 p.m."
+},
+"servicesAvailable": {
+"Cafeteria": "No cafeteria service",
+"Clothing": "No clothing service"
+},
+"telephone": "450-646-5775"
 },
 {
 "address": "742 North 900 East, American Fork, Utah  84003-9124, United States of America",
@@ -3450,13 +4279,21 @@
 "dedication": "1996-10-13T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/mount-timpanogos-utah?lang=eng",
 "endowmentSchedule": {
+"Friday": "6:00, 6:30, 7:00, 7:45, 8:15, 8:45, 9:15, 10:00, 10:30, 11:00, 11:30,12:15",
 "Monday": "Closed",
-"Tuesday and Saturday only": "5:30 a.m.",
-"Tuesday\u2013Saturday": "6:00, 6:30, 7:00, 7:45, 8:15, 8:45, 9:15, 10:00, 10:30, 11:00, 11:30 a.m.; 12:15,"
+"Saturday": "5:30, 6:00, 6:30, 7:00, 7:45, 8:15, 8:45, 9:15, 10:00, 10:30, 11:00, 11:30, 12:15",
+"Thursday": "6:00, 6:30, 7:00, 7:45, 8:15, 8:45, 9:15, 10:00, 10:30, 11:00, 11:30, 12:15",
+"Tuesday": "5:30, 6:00, 6:30, 7:00, 7:45, 8:15, 8:45, 9:15, 10:00, 10:30, 11:00, 11:30, 12:15",
+"Wednesday": "6:00, 6:30, 7:00, 7:45, 8:15, 8:45, 9:15, 10:00, 10:30, 11:00, 11:30, 12:15"
 },
 "name": "Mount Timpanogos Utah",
 "photoLink": "https://www.lds.org/bc/content/church/temples/mount-timpanogos-utah/images/mount-timpanogos-utah-808x480-CWD_c8d714c9.jpg",
 "place": "United States, American Fork, Utah",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Tuesday and Saturday only": "5:30 a.m.",
+"Tuesday\u2013Saturday": "6:00, 6:30, 7:00, 7:45, 8:15, 8:45, 9:15, 10:00, 10:30, 11:00, 11:30 a.m.; 12:15,"
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -3490,12 +4327,20 @@
 "Friday": "10:00, 11:30 a.m.; 6:00, 7:30 p.m.",
 "Monday": "Closed",
 "Saturday": "8:00, 10:00 a.m., 12:00 noon; 2:00 p.m.",
-"Tuesday and Thursday": "6:00, 7:30 p.m.",
+"Thursday": "",
+"Tuesday": "",
 "Wednesday": "10:00, 11:30 a.m."
 },
 "name": "Nashville Tennessee",
 "photoLink": "https://www.lds.org/bc/content/church/temples/nashville-tennessee/images/nashville-tennessee-808x480-0002014.jpg",
 "place": "United States, Franklin, Tennessee",
+"rawEndowmentSchedule": {
+"Friday": "10:00, 11:30 a.m.; 6:00, 7:30 p.m.",
+"Monday": "Closed",
+"Saturday": "8:00, 10:00 a.m., 12:00 noon; 2:00 p.m.",
+"Tuesday and Thursday": "6:00, 7:30 p.m.",
+"Wednesday": "10:00, 11:30 a.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -3531,10 +4376,18 @@
 },
 "dedication": "2002-06-27T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/nauvoo-illinois?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "",
+"Monday": "",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "Nauvoo Illinois",
 "photoLink": "https://www.lds.org/bc/content/church/temples/nauvoo-illinois/images/nauvoo-illinois-808x480-CWD_091410_JArnesen.jpg",
 "place": "United States, Nauvoo, Illinois",
+"rawEndowmentSchedule": {},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "Clothing service available"
@@ -3573,12 +4426,20 @@
 "dedication": "2005-08-28T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/newport-beach-california?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
-"Tuesday\u2013Saturday": "\u00a07:00, 8:30, 10:00 a.m.; 12:00 noon; 1:30, 3:00, 5:00, 6:30, 8:00 p.m."
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Newport Beach California",
 "photoLink": "https://www.lds.org/bc/content/church/temples/newport-beach-california/images/newport-beach-california-808x480-N6LCA19C.jpg",
 "place": "United States, Newport Beach, California",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Tuesday\u2013Saturday": "\u00a07:00, 8:30, 10:00 a.m.; 12:00 noon; 1:30, 3:00, 5:00, 6:30, 8:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -3610,13 +4471,21 @@
 "dedication": "1983-08-09T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/nukualofa-tonga?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
 "Saturday": "5:00, 6:00, 7:30, 8:30, 10:00, 11:00 a.m.",
-"Tuesday-Friday": "5:00, 6:00, 7:30, 8:30, 10:00, 11:00 a.m.; 12:30, 1:30, 3:00, 4:00, 5:30, 6:30 p.m."
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Nuku'alofa Tonga",
 "photoLink": "https://www.lds.org/bc/content/church/temples/nukualofa-tonga/images/nukualofa-tonga-808x480-AV071009cah066.jpg",
 "place": "Tonga, Liahona, Tongatapu",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "5:00, 6:00, 7:30, 8:30, 10:00, 11:00 a.m.",
+"Tuesday-Friday": "5:00, 6:00, 7:30, 8:30, 10:00, 11:00 a.m.; 12:30, 1:30, 3:00, 4:00, 5:30, 6:30 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -3654,14 +4523,22 @@
 "dedication": "1964-11-17T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/oakland-california?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
+"Monday": "Closed",
+"Saturday": "Every 45 minutes from 7:00 a.m. to 12:15 p.m.",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
+"name": "Oakland California",
+"photoLink": "https://www.lds.org/bc/content/church/temples/oakland-california/images/oakland-california-808x480-0001569s.jpg",
+"place": "United States, Oakland, California",
+"rawEndowmentSchedule": {
 "Monday": "Closed",
 "Saturday": "Every 45 minutes from 7:00 a.m. to 12:15 p.m.",
 "Tuesday Only:": "5:30, 6:00 a.m.",
 "Tuesday\u2013Friday": "Every 60 minutes from 7:00 a.m. to 8:00 p.m."
 },
-"name": "Oakland California",
-"photoLink": "https://www.lds.org/bc/content/church/temples/oakland-california/images/oakland-california-808x480-0001569s.jpg",
-"place": "United States, Oakland, California",
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -3689,10 +4566,18 @@
 },
 "dedication": "2000-03-11T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/oaxaca-mexico?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "",
+"Monday": "",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "Oaxaca Mexico",
 "photoLink": "https://www.lds.org/bc/content/church/temples/oaxaca-mexico/images/oaxaca-mexico-808x480-0002053.jpg",
 "place": "M\u00e9xico, Oaxaca de Ju\u00e1rez, Oaxaca",
+"rawEndowmentSchedule": {},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -3726,12 +4611,20 @@
 "dedication": "1972-01-18T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/ogden-utah?lang=eng",
 "endowmentSchedule": {
+"Friday": "7:00, 7:30, 8:00, 8:30, 9:00, 9:30, 10:00, 10:30, 11:00, 11:30, 12:00, 12:30, 13:00, 13:30, 14:00, 14:30, 15:00, 15:30, 16:00, 16:30, 17:00, 17:30, 18:00, 18:30, 19:00, 19:30, 20:00",
 "Monday": "Closed",
-"Tuesday\u2013Saturday": "Every 30 Minutes from 7:00 a.m.-8:00 p.m."
+"Saturday": "7:00, 7:30, 8:00, 8:30, 9:00, 9:30, 10:00, 10:30, 11:00, 11:30, 12:00, 12:30, 13:00, 13:30, 14:00, 14:30, 15:00, 15:30, 16:00, 16:30, 17:00, 17:30, 18:00, 18:30, 19:00, 19:30, 20:00",
+"Thursday": "7:00, 7:30, 8:00, 8:30, 9:00, 9:30, 10:00, 10:30, 11:00, 11:30, 12:00, 12:30, 13:00, 13:30, 14:00, 14:30, 15:00, 15:30, 16:00, 16:30, 17:00, 17:30, 18:00, 18:30, 19:00, 19:30, 20:00",
+"Tuesday": "7:00, 7:30, 8:00, 8:30, 9:00, 9:30, 10:00, 10:30, 11:00, 11:30, 12:00, 12:30, 13:00, 13:30, 14:00, 14:30, 15:00, 15:30, 16:00, 16:30, 17:00, 17:30, 18:00, 18:30, 19:00, 19:30, 20:00",
+"Wednesday": "7:00, 7:30, 8:00, 8:30, 9:00, 9:30, 10:00, 10:30, 11:00, 11:30, 12:00, 12:30, 13:00, 13:30, 14:00, 14:30, 15:00, 15:30, 16:00, 16:30, 17:00, 17:30, 18:00, 18:30, 19:00, 19:30, 20:00"
 },
 "name": "Ogden Utah",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/ogden-utah/OgdenUtahTemple1-808x480.jpg",
 "place": "United States, Ogden, Utah",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Tuesday\u2013Saturday": "Every 30 Minutes from 7:00 a.m.-8:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -3762,10 +4655,18 @@
 },
 "dedication": "2000-07-30T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/oklahoma-city-oklahoma?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "",
+"Monday": "",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "Oklahoma City Oklahoma",
 "photoLink": "https://www.lds.org/bc/content/church/temples/oklahoma-city-oklahoma/images/oklahoma-city-oklahoma-808x480-CU031114-002.jpg",
 "place": "United States, Oklahoma City, Oklahoma",
+"rawEndowmentSchedule": {},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -3799,12 +4700,20 @@
 "dedication": "2009-08-21T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/oquirrh-mountain-utah?lang=eng",
 "endowmentSchedule": {
+"Friday": "7:00, 8:00, 9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00",
 "Monday": "Closed",
-"Tuesday\u2013Saturday": "Every hour from 7:00 a.m. to 8:00 p.m."
+"Saturday": "7:00, 8:00, 9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00",
+"Thursday": "7:00, 8:00, 9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00",
+"Tuesday": "7:00, 8:00, 9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00",
+"Wednesday": "7:00, 8:00, 9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00, 19:00, 20:00"
 },
 "name": "Oquirrh Mountain Utah",
 "photoLink": "https://www.lds.org/bc/content/church/temples/oquirrh-mountain-utah/images/oquirrh-mountain-utah-450x480-AV090428keh009sm.jpg",
 "place": "United States, South Jordan, Utah",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Tuesday\u2013Saturday": "Every hour from 7:00 a.m. to 8:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -3835,13 +4744,21 @@
 "dedication": "1994-10-09T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/orlando-florida?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
 "Saturday": "7:30, 8:15, 9:00, 9:45, 10:30, 11:15 a.m.; 12:00 noon; 12:45, 1:30, 2:15, 3:00 p.m.",
-"Tuesday-Friday": "Every hour from 8:00 a.m. to 4:00 p.m.; 5:30, 6:15, 7:00, 7:30 p.m."
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Orlando Florida",
 "photoLink": "https://www.lds.org/bc/content/church/temples/orlando-florida/images/orlando-florida-808x480-CWD_110208_RHLaw.jpg",
 "place": "United States, Windermere, Florida",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "7:30, 8:15, 9:00, 9:45, 10:30, 11:15 a.m.; 12:00 noon; 12:45, 1:30, 2:15, 3:00 p.m.",
+"Tuesday-Friday": "Every hour from 8:00 a.m. to 4:00 p.m.; 5:30, 6:15, 7:00, 7:30 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria vending",
 "Clothing": "Clothing service available"
@@ -3878,12 +4795,20 @@
 "dedication": "2000-04-06T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/palmyra-new-york?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Summer:",
-"Tuesday\u2013Wednesday": "Summer:"
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Palmyra New York",
 "photoLink": "https://www.lds.org/bc/content/church/temples/palmyra-new-york/images/palmyra-new-york-808x480-CWD_110208_RHLaw_24.jpg",
 "place": "United States, Palmyra, New York",
+"rawEndowmentSchedule": {
+"Monday": "Summer:",
+"Tuesday\u2013Wednesday": "Summer:"
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -3921,13 +4846,21 @@
 "dedication": "2008-08-10T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/panama-city-panama?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
+"Saturday": "",
 "Thursday": "4:00, 6:30 p.m.",
-"Tuesday, Wednesday, Friday": "9:00, 11:00 a.m.; 4:00, 6:30 p.m."
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Panama City Panama",
 "photoLink": "https://www.lds.org/bc/content/church/temples/panama-city-panama/images/panama-city-panama-808x480-AV080808_cah003.jpg",
 "place": "Panam\u00e1, Panam\u00e1 City, Republic of Panam\u00e1",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Thursday": "4:00, 6:30 p.m.",
+"Tuesday, Wednesday, Friday": "9:00, 11:00 a.m.; 4:00, 6:30 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -3966,14 +4899,22 @@
 "dedication": "1983-10-27T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/papeete-tahiti?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
+"Monday": "Closed",
+"Saturday": "7:00, 8:00, 9:30, 10:00 a.m.",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
+"name": "Papeete Tahiti",
+"photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/papeete-tahiti/images/Papeete Tahiti Temple - 01 - 808x480.jpg",
+"place": "France, Papeete, Tahiti",
+"rawEndowmentSchedule": {
 "Monday": "Closed",
 "Saturday": "7:00, 8:00, 9:30, 10:00 a.m.",
 "Tuesday and Thursday": "7:00, 8:00, 9:30 a.m.; 4:00, 4:30, 6:00, 6:45 p.m.",
 "Wednesday and Friday": "8:00, 9:00 a.m.; 4:00, 4:30, 6:00, 6:45 p.m."
 },
-"name": "Papeete Tahiti",
-"photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/papeete-tahiti/images/Papeete Tahiti Temple - 01 - 808x480.jpg",
-"place": "France, Papeete, Tahiti",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -3996,6 +4937,14 @@
 "name": "Paris France",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/paris-france/Paris-ExteriorRenderings-Nov2011_808x480_web.jpg",
 "place": "France, Paris",
+"rawEndowmentSchedule": {
+"Friday": "TBA",
+"Monday": "TBA",
+"Saturday": "TBA",
+"Thursday": "TBA",
+"Tuesday": "TBA",
+"Wednesday": "TBA"
+},
 "servicesAvailable": {},
 "telephone": ""
 },
@@ -4022,13 +4971,21 @@
 "dedication": "2015-06-07T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/payson-utah?lang=eng",
 "endowmentSchedule": {
-"Friday - Saturday": "Every 45 minutes from 5:30 a.m. to 7:45 p.m.",
+"Friday": "5:30, 6:15, 7:00, 7:45, 8:30, 9:15, 10:00, 10:45, 11:30, 12:15, 13:00, 13:45, 14:30, 15:15, 16:00, 16:45, 17:30, 18:15, 19:00, 19:45",
 "Monday": "Closed",
-"Tuesday - Thursday": "Every 45 minutes from 7:00 a.m. to 7:45 p.m."
+"Saturday": "5:30, 6:15, 7:00, 7:45, 8:30, 9:15, 10:00, 10:45, 11:30, 12:15, 13:00, 13:45, 14:30, 15:15, 16:00, 16:45, 17:30, 18:15, 19:00, 19:45",
+"Thursday": "7:00, 7:45, 8:30, 9:15, 10:00, 10:45, 11:30, 12:15, 13:00, 13:45, 14:30, 15:15, 16:00, 16:45, 17:30, 18:15, 19:00, 19:45",
+"Tuesday": "7:00, 7:45, 8:30, 9:15, 10:00, 10:45, 11:30, 12:15, 13:00, 13:45, 14:30, 15:15, 16:00, 16:45, 17:30, 18:15, 19:00, 19:45",
+"Wednesday": "7:00, 7:45, 8:30, 9:15, 10:00, 10:45, 11:30, 12:15, 13:00, 13:45, 14:30, 15:15, 16:00, 16:45, 17:30, 18:15, 19:00, 19:45"
 },
 "name": "Payson Utah",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/payson-utah/Payson-Temple_808x513.jpg",
 "place": "United States, Payson, Utah",
+"rawEndowmentSchedule": {
+"Friday - Saturday": "Every 45 minutes from 5:30 a.m. to 7:45 p.m.",
+"Monday": "Closed",
+"Tuesday - Thursday": "Every 45 minutes from 7:00 a.m. to 7:45 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -4061,11 +5018,19 @@
 "Monday": "Closed",
 "Saturday": "7:00, 9:00, 11:00 a.m.",
 "Thursday": "9:30, 11:30 a.m.; 1:30 p.m.",
+"Tuesday": "",
 "Wednesday": "2:00, 4:00, 6:00, 7:30 p.m."
 },
 "name": "Perth Australia",
 "photoLink": "https://www.lds.org/bc/content/church/temples/perth-australia/images/perth-australia-808x480-0002056.jpg",
 "place": "Australia, Yokine, Western Australia",
+"rawEndowmentSchedule": {
+"Friday": "4:00, 6:00, 7:30 p.m.",
+"Monday": "Closed",
+"Saturday": "7:00, 9:00, 11:00 a.m.",
+"Thursday": "9:30, 11:30 a.m.; 1:30 p.m.",
+"Wednesday": "2:00, 4:00, 6:00, 7:30 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -4077,10 +5042,18 @@
 "closures": {},
 "dedication": "Construction",
 "detailLink": "https://www.lds.org/church/temples/philadelphia-pennsylvania?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "",
+"Monday": "",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "Philadelphia Pennsylvania",
 "photoLink": "https://www.lds.org/bc/content/church/temples/philadelphia-pennsylvania/images/philadelphia-pennsylvania-808x480-rendering.jpg",
 "place": "United States, Philadelphia, Pennsylvania",
+"rawEndowmentSchedule": {},
 "servicesAvailable": {},
 "telephone": ""
 },
@@ -4116,11 +5089,19 @@
 "Friday": "Every 90 minutes from 7:30 a.m.-7:30 p.m.",
 "Monday": "Closed",
 "Saturday": "Every 90 minutes from 6:00 a.m.-6:00 p.m.",
-"Tuesday-Thursday": "7:30, 9:00, 10:30 a.m.; 4:30, 6:00, 7:30 p.m."
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Phoenix Arizona",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/phoenix-arizona/images/PhoenixArizonaTemple1-808x480.jpg",
 "place": "United States, Phoenix, Arizona",
+"rawEndowmentSchedule": {
+"Friday": "Every 90 minutes from 7:30 a.m.-7:30 p.m.",
+"Monday": "Closed",
+"Saturday": "Every 90 minutes from 6:00 a.m.-6:00 p.m.",
+"Tuesday-Thursday": "7:30, 9:00, 10:30 a.m.; 4:30, 6:00, 7:30 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -4132,10 +5113,18 @@
 "closures": {},
 "dedication": "Announced",
 "detailLink": "https://www.lds.org/church/temples/port-au-prince-haiti?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "",
+"Monday": "",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "Port-au-Prince Haiti",
 "photoLink": "https://www.lds.org322",
 "place": "Haiti, Port-au-Prince",
+"rawEndowmentSchedule": {},
 "servicesAvailable": {},
 "telephone": ""
 },
@@ -4166,12 +5155,20 @@
 "dedication": "1989-08-19T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/portland-oregon?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
-"Tuesday-Friday": "On the hour from 7:00 a.m. to 5:00 p.m.; every 30 minutes from 5:30 to 8:00 p.m."
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Portland Oregon",
 "photoLink": "https://www.lds.org/bc/content/church/temples/portland-oregon/images/portland-oregon-808x480-CWD_091310_RKashow.jpg",
 "place": "United States, Lake Oswego, Oregon",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Tuesday-Friday": "On the hour from 7:00 a.m. to 5:00 p.m.; every 30 minutes from 5:30 to 8:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -4201,13 +5198,21 @@
 "dedication": "2000-12-17T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/porto-alegre-brazil?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
-"Saturday and National Holidays": "8:00, 9:30, 11:00 a.m.; 2:00, 3:30 p.m.",
-"Tuesday-Friday": "3:00, 4:30, 7:00, 8:30 p.m."
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Porto Alegre Brazil",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/porto-alegre-brazil/porto-alegre-brazil-temple-256605.jpg",
 "place": "Brazil, Porto Alegre, Rio Grande do Sul",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday and National Holidays": "8:00, 9:30, 11:00 a.m.; 2:00, 3:30 p.m.",
+"Tuesday-Friday": "3:00, 4:30, 7:00, 8:30 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -4244,13 +5249,21 @@
 "dedication": "1998-06-07T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/preston-england?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
 "Saturday": "Every hour from 8.00 a.m. to 4:00 p.m.",
-"Tuesday-Friday": "Every 90 minutes from 8:00 a.m. to 6:30 p.m.; 7.30 p.m."
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Preston England",
 "photoLink": "https://www.lds.org/bc/content/church/temples/preston-england/images/preston-england-808x480-0001851.jpg",
 "place": "United Kingdom, Chorley, Lancashire",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "Every hour from 8.00 a.m. to 4:00 p.m.",
+"Tuesday-Friday": "Every 90 minutes from 8:00 a.m. to 6:30 p.m.; 7.30 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -4262,10 +5275,18 @@
 "closures": {},
 "dedication": "Construction",
 "detailLink": "https://www.lds.org/church/temples/new-provo-temple-provo-tabernacle?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "",
+"Monday": "",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "Provo City Center",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/provo-city-center/images/provo-city-center-temple-rendering-808x480.jpg",
 "place": "United States, Provo, Utah",
+"rawEndowmentSchedule": {},
 "servicesAvailable": {},
 "telephone": ""
 },
@@ -4299,13 +5320,21 @@
 "dedication": "1972-02-09T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/provo-utah?lang=eng",
 "endowmentSchedule": {
-"Monday": "Every 20 minutes from 5:40 to 10:00 a.m.",
-"Tuesday": "Every 20 minutes from 5:40 a.m. to 8:00 p.m.",
-"Wednesday\u2013Saturday": "Every 20 minutes from 7:00 a.m. to 8:00 p.m."
+"Friday": "7:00, 7:20, 7:40, 8:00, 8:20, 8:40, 9:00, 9:20, 9:40, 10:00, 10:20, 10:40, 11:00, 11:20, 11:40, 12:00, 12:20, 12:40, 13:00, 13:20, 13:40, 14:00, 14:20, 14:40, 15:00, 15:20 15:40, 16:00, 16:20, 16:40, 17:00, 17:20, 17:40, 18:00, 18:20, 18:40, 19:00, 19:20, 19:40, 20:00",
+"Monday": "5:40, 6:00, 6:20, 6:40, 7:00, 7:20, 7:40, 8:00, 8:20, 8:40, 9:00, 9:20, 9:40, 10:00",
+"Saturday": "7:00, 7:20, 7:40, 8:00, 8:20, 8:40, 9:00, 9:20, 9:40, 10:00, 10:20, 10:40, 11:00, 11:20, 11:40, 12:00, 12:20, 12:40, 13:00, 13:20, 13:40, 14:00, 14:20, 14:40, 15:00, 15:20 15:40, 16:00, 16:20, 16:40, 17:00, 17:20, 17:40, 18:00, 18:20, 18:40, 19:00, 19:20, 19:40, 20:00",
+"Thursday": "7:00, 7:20, 7:40, 8:00, 8:20, 8:40, 9:00, 9:20, 9:40, 10:00, 10:20, 10:40, 11:00, 11:20, 11:40, 12:00, 12:20, 12:40, 13:00, 13:20, 13:40, 14:00, 14:20, 14:40, 15:00, 15:20 15:40, 16:00, 16:20, 16:40, 17:00, 17:20, 17:40, 18:00, 18:20, 18:40, 19:00, 19:20, 19:40, 20:00",
+"Tuesday": "5:40, 6:00, 6:20, 6:40, 7:00, 7:20, 7:40, 8:00, 8:20, 8:40, 9:00, 9:20, 9:40, 10:00, 10:20, 10:40, 11:00, 11:20, 11:40, 12:00, 12:20, 12:40, 13:00, 13:20, 13:40, 14:00, 14:20, 14:40, 15:00, 15:20 15:40, 16:00, 16:20, 16:40, 17:00, 17:20, 17:40, 18:00, 18:20, 18:40, 19:00, 19:20, 19:40, 20:00",
+"Wednesday": "7:00, 7:20, 7:40, 8:00, 8:20, 8:40, 9:00, 9:20, 9:40, 10:00, 10:20, 10:40, 11:00, 11:20, 11:40, 12:00, 12:20, 12:40, 13:00, 13:20, 13:40, 14:00, 14:20, 14:40, 15:00, 15:20 15:40, 16:00, 16:20, 16:40, 17:00, 17:20, 17:40, 18:00, 18:20, 18:40, 19:00, 19:20, 19:40, 20:00"
 },
 "name": "Provo Utah",
 "photoLink": "https://www.lds.org/bc/content/church/temples/provo-utah/images/provo-utah-808x480-AV090827cah001.jpg",
 "place": "United States, Provo, Utah",
+"rawEndowmentSchedule": {
+"Monday": "Every 20 minutes from 5:40 to 10:00 a.m.",
+"Tuesday": "Every 20 minutes from 5:40 a.m. to 8:00 p.m.",
+"Wednesday\u2013Saturday": "Every 20 minutes from 7:00 a.m. to 8:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -4336,12 +5365,20 @@
 "dedication": "2011-12-11T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/quetzaltenango-guatemala?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
-"Tuesday-Friday": "8:00, 9:30, 11:00 a.m.; 4:00, 5:30, 7:00 p.m."
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Quetzaltenango Guatemala",
 "photoLink": "https://www.lds.org/bc/content/church/temples/quetzaltenango-guatemala/images/quetzaltenango-guatemala-808x480-AV110927_cah258alt.jpg",
 "place": "Guatemala, Quetzaltenango, Guatemala",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Tuesday-Friday": "8:00, 9:30, 11:00 a.m.; 4:00, 5:30, 7:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -4371,13 +5408,21 @@
 "dedication": "1999-12-18T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/raleigh-north-carolina?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
-"Tuesday and Thursday": "6:00, 7:45 p.m.",
-"Wednesday and Friday": "9:00, 11:00 a.m.; 6:00, 7:45 p.m."
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Raleigh North Carolina",
 "photoLink": "https://www.lds.org/bc/content/church/temples/raleigh-north-carolina/images/raleigh-north-carolina-808x480-0001986.jpg",
 "place": "United States, Apex, North Carolina",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Tuesday and Thursday": "6:00, 7:45 p.m.",
+"Wednesday and Friday": "9:00, 11:00 a.m.; 6:00, 7:45 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -4406,13 +5451,21 @@
 "dedication": "2000-12-15T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/recife-brazil?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
 "Saturday": "8:00, 9:30, 11:00 a.m.; 12:30, 2:00, 3:30 p.m.",
-"Tuesday-Friday": "8:00, 9:30, 11:00 a.m.; 12:30, 2:00, 3:30, 5:00, 6:30, 7:45 p.m."
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Recife Brazil",
 "photoLink": "https://www.lds.org/bc/content/church/temples/recife-brazil/images/recife-brazil-808x480-AV100326cah039.jpg",
 "place": "Brazil, Recife, Pernambuco",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "8:00, 9:30, 11:00 a.m.; 12:30, 2:00, 3:30 p.m.",
+"Tuesday-Friday": "8:00, 9:30, 11:00 a.m.; 12:30, 2:00, 3:30, 5:00, 6:30, 7:45 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -4445,12 +5498,20 @@
 "dedication": "2003-09-14T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/redlands-california?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
-"Tuesday\u2013Saturday": "7:00, 8:30, 10:00 a.m.; 12:00 noon; 1:30, 3:00, 5:00, 6:30, 8:00 p.m."
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Redlands California",
 "photoLink": "https://www.lds.org/bc/content/church/temples/redlands-california/images/redlands-california-808x480-CWD_100817_MPeterson_004.jpg",
 "place": "United States, Redlands, California",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Tuesday\u2013Friday": "7:00, 8:30, 10:00 a.m.; 12:00 noon; 1:30, 3:00, 5:00, 6:30, 8:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -4486,11 +5547,19 @@
 "Monday": "Closed",
 "Saturday": "8:00, 10:00 a.m.; 12:00 noon",
 "Thursday": "7:00 p.m.",
+"Tuesday": "",
 "Wednesday": "9:30 a.m.; 1:30 p.m."
 },
 "name": "Regina Saskatchewan",
 "photoLink": "https://www.lds.org/bc/content/church/temples/regina-saskatchewan/images/regina-saskatchewan-808x480-0002098.jpg",
 "place": "Canada, Regina, Saskatchewan",
+"rawEndowmentSchedule": {
+"Friday": "6:30, 8:30 p.m.",
+"Monday": "Closed",
+"Saturday": "8:00, 10:00 a.m.; 12:00 noon",
+"Thursday": "7:00 p.m.",
+"Wednesday": "9:30 a.m.; 1:30 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -4535,6 +5604,14 @@
 "name": "Reno Nevada",
 "photoLink": "https://www.lds.org/bc/content/church/temples/reno-nevada/images/reno-nevada-808x480-CU031112-006.jpg",
 "place": "United States, Reno, Nevada",
+"rawEndowmentSchedule": {
+"Friday": "10:00, 11:30 a.m.; 1:00, 4:30, 6:00, 7:30 p.m.",
+"Monday": "Closed",
+"Saturday": "8:00, 9:30, 11:00 a.m.; 2:00, 3:30, 5:00 p.m.",
+"Thursday": "6:00, 8:00, 10:00 a.m.; 6:00, 7:30 p.m.",
+"Tuesday": "10:00, 11:30 a.m.; 4:00, 5:30, 7:00 p.m.",
+"Wednesday": "10:00, 11:30 a.m.; 1:00, 6:00, 7:30 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -4567,13 +5644,21 @@
 "dedication": "2008-02-10T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/rexburg-idaho?lang=eng",
 "endowmentSchedule": {
-"1st Wednesday, 7:15-8:45 p.m.": "\u00a0",
+"Friday": "",
 "Monday": "Closed",
-"Tuesday-Saturday \u00a0": "6:00, 6:45, 7:30, 8:15, 9:00, 9:45, 10:30, 11:15 a.m.; 12:00 noon, 12:45, 1:30, 2:15, 3:00, 3:45, 4:30, 5:15, 6:00, 6:45, 7:30 p.m."
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Rexburg Idaho",
 "photoLink": "https://www.lds.org/bc/content/church/temples/rexburg-idaho/images/rexburg-idaho-808x480-CWD_101106_RWooley_008.jpg",
 "place": "United States, Rexburg, Idaho",
+"rawEndowmentSchedule": {
+"1st Wednesday, 7:15-8:45 p.m.": "\u00a0",
+"Monday": "Closed",
+"Tuesday-Saturday \u00a0": "6:00, 6:45, 7:30, 8:15, 9:00, 9:45, 10:30, 11:15 a.m.; 12:00 noon, 12:45, 1:30, 2:15, 3:00, 3:45, 4:30, 5:15, 6:00, 6:45, 7:30 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "Clothing service available"
@@ -4585,10 +5670,18 @@
 "closures": {},
 "dedication": "Announced",
 "detailLink": "https://www.lds.org/church/temples/rio-de-janiero-brazil?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "",
+"Monday": "",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "Rio de Janeiro Brazil",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/cedar-city/temple-Announced_lg.jpg",
 "place": "Brazil, Rio de Janeiro",
+"rawEndowmentSchedule": {},
 "servicesAvailable": {},
 "telephone": ""
 },
@@ -4597,10 +5690,18 @@
 "closures": {},
 "dedication": "Construction",
 "detailLink": "https://www.lds.org/church/temples/rome-italy?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "",
+"Monday": "",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "Rome Italy",
 "photoLink": "https://www.lds.org/bc/content/church/temples/rome-italy/images/rome-italy-450x480-CU101008_jlm02_Rome.jpg",
 "place": "Italy, Rome, Rome",
+"rawEndowmentSchedule": {},
 "servicesAvailable": {},
 "telephone": ""
 },
@@ -4631,12 +5732,20 @@
 "dedication": "2006-09-03T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/sacramento-california?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
-"Tuesday-Saturday": "7:00, 8:30, 10:00 a.m.; 12:00 noon; 1:30, 3:00, 5:00, 6:30, 8:00 p.m."
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Sacramento California",
 "photoLink": "https://www.lds.org/bc/content/church/temples/sacramento-california/images/sacramento-california-808x480-CWD_101006_APerson_003.jpg",
 "place": "United States, Sacramento, California",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Tuesday-Saturday": "7:00, 8:30, 10:00 a.m.; 12:00 noon; 1:30, 3:00, 5:00, 6:30, 8:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -4672,12 +5781,20 @@
 "dedication": "1893-04-06T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/salt-lake?lang=eng",
 "endowmentSchedule": {
+"Friday": "6:00, 7:00, 8:00, 9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00, 19:00",
 "Monday": "Closed",
-"Tuesday\u2013Saturday": "Every hour from 6:00 a.m. to 7:00 p.m."
+"Saturday": "6:00, 7:00, 8:00, 9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00, 19:00",
+"Thursday": "6:00, 7:00, 8:00, 9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00, 19:00",
+"Tuesday": "6:00, 7:00, 8:00, 9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00, 19:00",
+"Wednesday": "6:00, 7:00, 8:00, 9:00, 10:00, 11:00, 12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00, 19:00"
 },
 "name": "Salt Lake",
 "photoLink": "https://www.lds.org/bc/content/church/temples/salt-lake/images/salt-lake-808x480-SLTEMPLEKIOSK2.jpg",
 "place": "United States, Salt Lake City, Utah",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Tuesday\u2013Saturday": "Every hour from 6:00 a.m. to 7:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -4721,6 +5838,14 @@
 "name": "San Antonio Texas",
 "photoLink": "https://www.lds.org/bc/content/church/temples/san-antonio-texas/images/san-antonio-texas-808x480-CU061214_bkf02.jpg",
 "place": "United States, San Antonio, Texas",
+"rawEndowmentSchedule": {
+"Friday": "3:30, 5:00, 6:30, 8:00 p.m.",
+"Monday": "Closed",
+"Saturday": "8:00, 9:30, 11:30 a.m.; 1:00, 2:30, 4:30, 6:00 p.m.",
+"Thursday": "5:30 a.m. (1st Thursday), 9:00, 10:30 a.m.; 3:30, 5:00, 6:30, 8:00 p.m.",
+"Tuesday": "4:00, 6:30, 8:00 p.m.",
+"Wednesday": "9:00, 10:30 a.m.; 12:00 noon"
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -4759,14 +5884,22 @@
 "dedication": "1993-04-25T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/san-diego-california?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
+"Monday": "Closed",
+"Saturday": "Every 30 minutes from 7:30 to 9:00 a.m., from 10:00 to 11:30 a.m., and from 12:30 to 2:00 p.m.; every hour from 3:00 to 6:00 p.m.; 6:30, 7:00 p.m.",
+"Thursday": "",
+"Tuesday": "5:30, 8:00, 9:00, 9:30 a.m., then every hour from 10:00 a.m. to 6:00 p.m.; every 30 minutes from 6:30 to 8:00 p.m.",
+"Wednesday": ""
+},
+"name": "San Diego California",
+"photoLink": "https://www.lds.org/bc/content/church/temples/san-diego-california/images/san-diego-california-808x480-CWD_7c8cb6ac.jpg",
+"place": "United States, San Diego, California",
+"rawEndowmentSchedule": {
 "Monday": "Closed",
 "Saturday": "Every 30 minutes from 7:30 to 9:00 a.m., from 10:00 to 11:30 a.m., and from 12:30 to 2:00 p.m.; every hour from 3:00 to 6:00 p.m.; 6:30, 7:00 p.m.",
 "Tuesday": "5:30, 8:00, 9:00, 9:30 a.m., then every hour from 10:00 a.m. to 6:00 p.m.; every 30 minutes from 6:30 to 8:00 p.m.",
 "Wednesday-Friday": "8:00, 9:00, 9:30 a.m., then every hour from 10:00 a.m. to 6:00 p.m.; every 30 minutes from 6:30 to 8:00 p.m."
 },
-"name": "San Diego California",
-"photoLink": "https://www.lds.org/bc/content/church/temples/san-diego-california/images/san-diego-california-808x480-CWD_7c8cb6ac.jpg",
-"place": "United States, San Diego, California",
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -4794,14 +5927,22 @@
 "dedication": "2000-06-04T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/san-jose-costa-rica?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
 "Saturday": "7:00, 9:00, 11:00 a.m.; 12:30 p.m.",
-"Thursday and Friday": "5:00, 7:00 p.m.",
+"Thursday": "",
+"Tuesday": "",
 "Wednesday": "9:00, 11:00 a.m.; 5:00, 7:00 p.m."
 },
 "name": "San Jos\u00e9 Costa Rica",
 "photoLink": "https://www.lds.org/bc/content/church/temples/san-jose-costa-rica/images/san-jose-costa-rica-808x480-0002091.jpg",
 "place": "Costa Rica, La Ribera de Belen, Heredia",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "7:00, 9:00, 11:00 a.m.; 12:30 p.m.",
+"Thursday and Friday": "5:00, 7:00 p.m.",
+"Wednesday": "9:00, 11:00 a.m.; 5:00, 7:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -4832,13 +5973,21 @@
 "dedication": "2011-08-21T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/san-salvador-el-salvador?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
 "Saturday": "5:30, 7:00, 8:30, 10:00, 11:30 a.m.; 1:00, 2:30, 4:00 p.m.",
-"Tuesday-Friday": "7:00, 8:30, 10:00, 11:30 a.m.; 2:30, 4:00, 5:30, 7:00 p.m."
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "San Salvador El Salvador",
 "photoLink": "https://www.lds.org/bc/content/church/temples/san-salvador-el-salvador/images/san-salvador-el-salvador-808x480-AV110624_cah117.jpg",
 "place": "El Salvador, San Salvador, El Salvador",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "5:30, 7:00, 8:30, 10:00, 11:30 a.m.; 1:00, 2:30, 4:00 p.m.",
+"Tuesday-Friday": "7:00, 8:30, 10:00, 11:30 a.m.; 2:30, 4:00, 5:30, 7:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -4879,13 +6028,21 @@
 "dedication": "1983-09-15T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/santiago-chile?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
 "Saturday": "6:30, 8:00, 9:15, 10:45 a.m.; 12:00 noon; 1:30, 2:45, 4:15, 5:30 p.m.",
-"Tuesday-Friday": "9:00, 10:00, 11:30 a.m.; 12:30, 4:30, 5:30, 7:00, 8:00 p.m."
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Santiago Chile",
 "photoLink": "https://www.lds.org/bc/content/church/temples/santiago-chile/images/santiago-chile-450x480-060119_sm001.jpg",
 "place": "Chile, Providencia, Santiago",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "6:30, 8:00, 9:15, 10:45 a.m.; 12:00 noon; 1:30, 2:45, 4:15, 5:30 p.m.",
+"Tuesday-Friday": "9:00, 10:00, 11:30 a.m.; 12:30, 4:30, 5:30, 7:00, 8:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "Clothing service available"
@@ -4925,13 +6082,21 @@
 "dedication": "2000-09-17T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/santo-domingo-dominican-republic?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
 "Saturday": "Every hour from 6:00 a.m. to 4:00 p.m.",
-"Tuesday-Friday": "9:00, 10:00 a.m.; 5:00, 5:45, 6:30, 7:15 p.m."
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Santo Domingo Dominican Republic",
 "photoLink": "https://www.lds.org/bc/content/church/temples/santo-domingo-dominican-republic/images/santo-domingo-dominican-republic-808x480-L3DIMC16B.jpg",
 "place": "Dominican Republic, Los Robles, Santo Domingo",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "Every hour from 6:00 a.m. to 4:00 p.m.",
+"Tuesday-Friday": "9:00, 10:00 a.m.; 5:00, 6:00, 7:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria vending",
 "Clothing": "Clothing service available"
@@ -4971,13 +6136,21 @@
 "dedication": "1978-10-30T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/sao-paulo-brazil?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
 "Saturday": "7:00, 8:00, 9:30, 10:30 a.m.; 12:00 noon; 1:00, 2:30, 3:30 p.m.",
-"Tuesday\u2013Friday": "9:00, 10:30 a.m.; 12:00 noon; 3:30, 5:30, 7:45, 8:15 p.m."
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "S\u00e3o Paulo Brazil",
 "photoLink": "https://www.lds.org/bc/content/church/temples/sao-paulo-brazil/images/sao-paulo-brazil-808x480-CU050202_ats01.jpg",
 "place": "Brazil, S\u00e3o Paulo, S\u00e3o Paulo",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "7:00, 8:00, 9:30, 10:30 a.m.; 12:00 noon; 1:00, 2:30, 3:30 p.m.",
+"Tuesday\u2013Friday": "9:00, 10:30 a.m.; 12:00 noon; 3:30, 5:30, 7:45, 8:15 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -4989,10 +6162,18 @@
 "closures": {},
 "dedication": "Construction",
 "detailLink": "https://www.lds.org/church/temples/sapporo-japan?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "",
+"Monday": "",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "Sapporo Japan",
 "photoLink": "https://www.lds.org/bc/content/church/temples/sapporo-japan/images/sapporo-japan-808x480.jpg",
 "place": "Japan, Sapporo, Japan",
+"rawEndowmentSchedule": {},
 "servicesAvailable": {},
 "telephone": ""
 },
@@ -5024,15 +6205,23 @@
 "dedication": "1980-11-17T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/seattle-washington?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
 "Saturday": "6:00, 6:30, 7:00, 8:00, 8:30, 9:00, 10:00, 10:30, 11:00, 11:30 a.m.; 12:30, 1:00, 1:30 p.m.; every hour from 2:00 to 6:00 p.m.; 6:30, 7:00, 8:00 p.m.",
-"Thursday - Friday": "Every hour from 7:00 a.m. to 6:00 p.m.; every 30 minutes from 6:30 to 8:00 p.m.",
+"Thursday": "",
 "Tuesday": "5:30, 6:30 a.m.; every hour from 7:00 a.m. to 6:00 p.m.; every 30 minutes from 6:30 to 8:00 p.m.",
 "Wednesday": "5:30 a.m.; every hour from 7:00 a.m. to 6:00 p.m.; every 30 minutes from 6:30 to 8:00 p.m."
 },
 "name": "Seattle Washington",
 "photoLink": "https://www.lds.org/bc/content/church/temples/seattle-washington/images/seattle-washington-450x480-0001671.jpg",
 "place": "United States, Bellevue, Washington",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "6:00, 6:30, 7:00, 8:00, 8:30, 9:00, 10:00, 10:30, 11:00, 11:30 a.m.; 12:30, 1:00, 1:30 p.m.; every hour from 2:00 to 6:00 p.m.; 6:30, 7:00, 8:00 p.m.",
+"Thursday - Friday": "Every hour from 7:00 a.m. to 6:00 p.m.; every 30 minutes from 6:30 to 8:00 p.m.",
+"Tuesday": "5:30, 6:30 a.m.; every hour from 7:00 a.m. to 6:00 p.m.; every 30 minutes from 6:30 to 8:00 p.m.",
+"Wednesday": "5:30 a.m.; every hour from 7:00 a.m. to 6:00 p.m.; every 30 minutes from 6:30 to 8:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -5062,12 +6251,20 @@
 "dedication": "1985-12-14T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/seoul-korea?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
-"Tuesday-Friday": "10:00 a.m.; 1:30, 2:30, 3:30, 7:20, 7:40 p.m.; every 20 minutes as needed;"
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Seoul Korea",
 "photoLink": "https://www.lds.org/bc/content/church/temples/seoul-korea/images/seoul-korea-808x480-AV070727_cah001extalt.jpg",
 "place": "South Korea, Seoul, South Korea",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Tuesday-Friday": "10:00 a.m.; 1:30, 2:30, 3:30, 7:20, 7:40 p.m.; every 20 minutes as needed;"
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria vending",
 "Clothing": "Clothing service available"
@@ -5107,12 +6304,20 @@
 "Friday": "5:30, 8:30, 10:30 a.m.; 4:30, 6:30 p.m.",
 "Monday": "Closed",
 "Saturday": "7:00, 8:30, 10:00 a.m.-12:30, 2:00, 3:30, 5:00 p.m.",
-"Tuesday and Thursday": "7:00, 8:30, 10:30 a.m.; 3:00, 4:30 and 6:30 p.m.",
-"Wednesday\u00a0": "8:30, 10:30 a.m.; 4:30 p.m.-6:30 p.m."
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Snowflake Arizona",
 "photoLink": "https://www.lds.org/bc/content/church/temples/snowflake-arizona/images/snowflake-arizona-808x480-CWD_ec6b9cbe.jpg",
 "place": "United States, Snowflake, Arizona",
+"rawEndowmentSchedule": {
+"Friday": "5:30, 8:30, 10:30 a.m.; 4:30, 6:30 p.m.",
+"Monday": "Closed",
+"Saturday": "7:00, 8:30, 10:00 a.m.-12:30, 2:00, 3:30, 5:00 p.m.",
+"Tuesday and Thursday": "7:00, 8:30, 10:30 a.m.; 3:00, 4:30 and 6:30 p.m.",
+"Wednesday\u00a0": "8:30, 10:30 a.m.; 4:30 p.m.-6:30 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -5154,12 +6359,20 @@
 "Friday": "10:30 a.m.; 12:15, 2:00, 4:15, 6:00, 7:45 p.m.",
 "Monday": "Closed",
 "Saturday": "6:15, 8:00, 9:45 a.m.; 12:00 noon; 1:45, 3:30, *6:00 p.m.",
-"Tuesday and Thursday": "9:45, 11:30 a.m.; 1:15, 4:15, 6:00, 7:45 p.m.",
+"Thursday": "",
+"Tuesday": "",
 "Wednesday": "5:45, 7:30, 9:15 a.m.; 4:15, 6:00, 7:45 p.m."
 },
 "name": "Spokane Washington",
 "photoLink": "https://www.lds.org/bc/content/church/temples/spokane-washington/images/spokane-washington-808x480-CU100727_bkf01.jpg",
 "place": "United States, Spokane, Washington",
+"rawEndowmentSchedule": {
+"Friday": "10:30 a.m.; 12:15, 2:00, 4:15, 6:00, 7:45 p.m.",
+"Monday": "Closed",
+"Saturday": "6:15, 8:00, 9:45 a.m.; 12:00 noon; 1:45, 3:30, *6:00 p.m.",
+"Tuesday and Thursday": "9:45, 11:30 a.m.; 1:15, 4:15, 6:00, 7:45 p.m.",
+"Wednesday": "5:45, 7:30, 9:15 a.m.; 4:15, 6:00, 7:45 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -5192,12 +6405,20 @@
 "dedication": "1877-04-06T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/st-george-utah?lang=eng",
 "endowmentSchedule": {
-"Monday": "7:20, 8:00, 8:40, 9:20, 10:00, 10:40, 11:20 a.m.",
-"Tuesday-Saturday": "Every 40 minutes from 7:20 a.m. to 8:00 p.m."
+"Friday": "7:20, 8:00, 8:40, 9:20, 10:00, 10:40, 11:20, 12:00, 12:40, 13:20, 14:00, 14:40, 15:20, 16:00, 16:40, 17:20, 18:00, 18:40, 19:20, 20:00",
+"Monday": "7:20, 8:00, 8:40, 9:20, 10:00, 10:40, 11:20",
+"Saturday": "7:20, 8:00, 8:40, 9:20, 10:00, 10:40, 11:20, 12:00, 12:40, 13:20, 14:00, 14:40, 15:20, 16:00, 16:40, 17:20, 18:00, 18:40, 19:20, 20:00",
+"Thursday": "7:20, 8:00, 8:40, 9:20, 10:00, 10:40, 11:20, 12:00, 12:40, 13:20, 14:00, 14:40, 15:20, 16:00, 16:40, 17:20, 18:00, 18:40, 19:20, 20:00",
+"Tuesday": "7:20, 8:00, 8:40, 9:20, 10:00, 10:40, 11:20, 12:00, 12:40, 13:20, 14:00, 14:40, 15:20, 16:00, 16:40, 17:20, 18:00, 18:40, 19:20, 20:00",
+"Wednesday": "7:20, 8:00, 8:40, 9:20, 10:00, 10:40, 11:20, 12:00, 12:40, 13:20, 14:00, 14:40, 15:20, 16:00, 16:40, 17:20, 18:00, 18:40, 19:20, 20:00"
 },
 "name": "St. George Utah",
 "photoLink": "https://www.lds.org/bc/content/church/temples/st-george-utah/images/st-george-utah-808x480-AV050916_cah010.jpg",
 "place": "United States, St. George, Utah",
+"rawEndowmentSchedule": {
+"Monday": "7:20, 8:00, 8:40, 9:20, 10:00, 10:40, 11:20 a.m.",
+"Tuesday-Saturday": "Every 40 minutes from 7:20 a.m. to 8:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -5232,11 +6453,19 @@
 "Friday": "Every hour from 9:00 a.m. to 7:00 p.m., 7:30 p.m.",
 "Monday": "Closed",
 "Saturday": "8:00, 9:00, 10:00, 11:00 a.m.; 12:00 noon; 1:00 p.m.",
-"Tuesday\u2013Thursday": "9:00, 10:00, 11:00 a.m.; 12:00 noon; 6:00, 7:00, 7:30 p.m."
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "St. Louis Missouri",
 "photoLink": "https://www.lds.org/bc/content/church/temples/st-louis-missouri/images/st-louis-missouri-808x480-CWD_139bc26f.jpg",
 "place": "United States, Town and Country, Missouri",
+"rawEndowmentSchedule": {
+"Friday": "Every hour from 9:00 a.m. to 7:00 p.m., 7:30 p.m.",
+"Monday": "Closed",
+"Saturday": "8:00, 9:00, 10:00, 11:00 a.m.; 12:00 noon; 1:00 p.m.",
+"Tuesday\u2013Thursday": "9:00, 10:00, 11:00 a.m.; 12:00 noon; 6:00, 7:00, 7:30 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria vending",
 "Clothing": "Clothing service available"
@@ -5270,13 +6499,21 @@
 "dedication": "2000-01-09T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/st-paul-minnesota?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
+"Saturday": "",
+"Thursday": "",
 "Tuesday": "6:00, 7:45 p.m.",
-"Wednesday-Friday": "10:00 a.m.; 12:00 noon; 6:00, 7:45 p.m."
+"Wednesday": ""
 },
 "name": "St. Paul Minnesota",
 "photoLink": "https://www.lds.org/bc/content/church/temples/st-paul-minnesota/images/st-paul-minnesota-808x480-0001987.jpg",
 "place": "United States, Oakdale, Minnesota",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Tuesday": "6:00, 7:45 p.m.",
+"Wednesday-Friday": "10:00 a.m.; 12:00 noon; 6:00, 7:45 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -5288,10 +6525,18 @@
 "closures": {},
 "dedication": "Construction",
 "detailLink": "https://www.lds.org/church/temples/star-valley-wyoming?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "",
+"Monday": "",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "Star Valley Wyoming",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/star-valley-wyoming/temple-announced-lg.jpg",
 "place": "United States, Afton, Wyoming",
+"rawEndowmentSchedule": {},
 "servicesAvailable": {},
 "telephone": ""
 },
@@ -5322,14 +6567,22 @@
 "dedication": "1985-07-02T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/stockholm-sweden?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
+"Monday": "Closed",
+"Saturday": "8:00, 10:00 a.m.; 12:00 noon",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
+"name": "Stockholm Sweden",
+"photoLink": "https://www.lds.org/bc/content/church/temples/stockholm-sweden/images/stockholm-sweden-450x480-0001193s.jpg",
+"place": "Sweden, Vasterhaninge, Sweden",
+"rawEndowmentSchedule": {
 "Monday": "Closed",
 "Saturday": "8:00, 10:00 a.m.; 12:00 noon",
 "Tuesday and Friday": "9:00, 10:00, 11:00 a.m.; every hour from 1:00 to 7:00 p.m.",
 "Wednesday\u2013Thursday": "9:00, 10:00, 11:00 a.m.; every hour from 1:00 to 4:00 p.m."
 },
-"name": "Stockholm Sweden",
-"photoLink": "https://www.lds.org/bc/content/church/temples/stockholm-sweden/images/stockholm-sweden-450x480-0001193s.jpg",
-"place": "Sweden, Vasterhaninge, Sweden",
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -5341,15 +6594,23 @@
 "closures": {},
 "dedication": "Renovation",
 "detailLink": "https://www.lds.org/church/temples/suva-fiji?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "",
+"Monday": "",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "Suva Fiji",
 "photoLink": "https://www.lds.org/bc/content/church/temples/suva-fiji/images/suva-fiji-808x480-AV060324_cah046.jpg",
 "place": "Fiji, Suva, Naitasivi",
+"rawEndowmentSchedule": {},
 "servicesAvailable": {},
 "telephone": ""
 },
 {
-"address": "756 Pennant Hills Road, (Corner of Pennant Hills Rd ,  Moseley St), Carlingford, NSW  2118, Australia",
+"address": "756 Pennant Hills Road, (Corner of Pennant Hills Rd & Moseley St), Carlingford, NSW  2118, Australia",
 "closures": {
 "Maintenance Dates": [
 "2015",
@@ -5377,13 +6638,21 @@
 "dedication": "1984-09-20T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/sydney-australia?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
 "Saturday": "6:00, 7:00, 8:30, 9:30, 11:00 a.m.; 12:00 noon",
-"Tuesday\u2013Friday": "9:00, 10:00, 11:00 a.m.; 5:00, 7:00, 7:15 p.m."
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Sydney Australia",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/sydney-australia/images/sydney-temple-808x480-08456255.jpg",
 "place": "Australia, Carlingford, New South Wales",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "6:00, 7:00, 8:30, 9:30, 11:00 a.m.; 12:00 noon",
+"Tuesday\u2013Friday": "9:00, 10:00, 11:00 a.m.; 5:00, 7:00, 7:15 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -5411,13 +6680,21 @@
 "dedication": "1984-11-17T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/taipei-taiwan?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
 "Saturday": "Every 30 minutes from 7:00 a.m. to 3:00 p.m. or as needed.",
-"Tuesday\u2013Friday": "9:30 a.m.; 12:00 noon; 2:15, 7:30 p.m."
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Taipei Taiwan",
 "photoLink": "https://www.lds.org/bc/content/church/temples/taipei-taiwan/images/taipei-taiwan-808x480-AV071127cah429.jpg",
 "place": "Taiwan, Taipei, Taiwan",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "Every 30 minutes from 7:00 a.m. to 3:00 p.m. or as needed.",
+"Tuesday\u2013Friday": "9:30 a.m.; 12:00 noon; 2:15, 7:30 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "Clothing service available"
@@ -5446,13 +6723,21 @@
 "dedication": "2000-05-20T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/tampico-mexico?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
 "Saturday": "6:00, 7:30, 9:00, 10:30 a.m.; 12:00 noon; 1:30, 3:00, 4:30 p.m.",
-"Tuesday\u2013Friday": "9:30 a.m.; 5:30, 7:00 p.m."
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Tampico Mexico",
 "photoLink": "https://www.lds.org/bc/content/church/temples/tampico-mexico/images/tampico-mexico-808x480-TampicoMexicoTmpl-1.jpg",
 "place": "Mexico, Madero, Tamaulipas",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "6:00, 7:30, 9:00, 10:30 a.m.; 12:00 noon; 1:30, 3:00, 4:30 p.m.",
+"Tuesday\u2013Friday": "9:30 a.m.; 5:30, 7:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -5483,13 +6768,21 @@
 "dedication": "2013-03-17T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/tegucigalpa-honduras?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
 "Saturday": "6:00, 8:00, 10:00 a.m.; 12:00 noon; 2:00, 4:00 p.m.",
-"Tuesday\u2013Friday": "8:00, 10:00 a.m.; 12:00 noon; 2:00, 4:00, 6:00 p.m."
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Tegucigalpa Honduras",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/teguigalpa-honduras/tegucigalpa-honduras-temple-1.jpg",
 "place": "Honduras, Tegucigalpa, Distrito Central",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "6:00, 8:00, 10:00 a.m.; 12:00 noon; 2:00, 4:00 p.m.",
+"Tuesday\u2013Friday": "8:00, 10:00 a.m.; 12:00 noon; 2:00, 4:00, 6:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "Clothing service available"
@@ -5521,12 +6814,20 @@
 "dedication": "2010-05-23T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/the-gila-valley-arizona?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
-"Tuesday\u2013Saturday": "8:00, 10:00 a.m.; 12:00 noon; 2:00, 4:00, 5:30, 7:00 p.m."
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "The Gila Valley Arizona",
 "photoLink": "https://www.lds.org/bc/content/church/temples/the-gila-valley-arizona/images/the-gila-valley-arizona-808x480-AV100419cah036.jpg",
 "place": "United States, Central, Arizona",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Tuesday\u2013Saturday": "8:00, 10:00 a.m.; 12:00 noon; 2:00, 4:00, 5:30, 7:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -5555,10 +6856,18 @@
 },
 "dedication": "2002-09-08T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/the-hague-netherlands?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "",
+"Monday": "",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "The Hague Netherlands",
 "photoLink": "https://www.lds.org/bc/content/church/temples/the-hague-netherlands/images/the-hague-netherlands-808x480-CU061005_sm001.jpg",
 "place": "Netherlands, Zoetermeer, Netherland",
+"rawEndowmentSchedule": {},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -5570,10 +6879,18 @@
 "closures": {},
 "dedication": "Construction",
 "detailLink": "https://www.lds.org/church/temples/tijuana-mexico?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "",
+"Monday": "",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "Tijuana Mexico",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/tijuana-mexico/tijuana-mormon-temple.jpg",
 "place": "Mexico, Tijuana, Baja California",
+"rawEndowmentSchedule": {},
 "servicesAvailable": {},
 "telephone": ""
 },
@@ -5602,13 +6919,21 @@
 "dedication": "1980-10-27T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/tokyo-japan?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
 "Saturday": "7:00, 8:00, 9:30, 10:30 a.m.12:00 noon; 1:00, 2:30 p.m.",
-"Tuesday\u2013Friday": "10:00, 11:00 a.m.; 2:00, 4:30, 7:00 p.m."
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Tokyo Japan",
 "photoLink": "https://www.lds.org/bc/content/church/temples/tokyo-japan/images/tokyo-japan-450x480-CU100722_bkf02.jpg",
 "place": "Japan, Minato-ku, Tokyo",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "7:00, 8:00, 9:30, 10:30 a.m.12:00 noon; 1:00, 2:30 p.m.",
+"Tuesday\u2013Friday": "10:00, 11:00 a.m.; 2:00, 4:30, 7:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria service available",
 "Clothing": "Clothing service available"
@@ -5638,14 +6963,22 @@
 "dedication": "1990-08-25T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/toronto-ontario?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
+"Monday": "Closed",
+"Saturday": "Every 45 minutes from 7:00 a.m.-2:30 p.m..",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
+"name": "Toronto Ontario",
+"photoLink": "https://www.lds.org/bc/content/church/temples/toronto-ontario/images/toronto-ontario-808x480-0001001.jpg",
+"place": "Canada, Brampton, Ontario",
+"rawEndowmentSchedule": {
 "Monday": "Closed",
 "Saturday": "Every 45 minutes from 7:00 a.m.-2:30 p.m..",
 "Thursday-Friday": "11:00 a.m.; 12:30, 1:30, 5:15, 6:45, 7:30 p.m.",
 "Tuesday-Wednesday": "5:15, 6:45, 7:30 p.m."
 },
-"name": "Toronto Ontario",
-"photoLink": "https://www.lds.org/bc/content/church/temples/toronto-ontario/images/toronto-ontario-808x480-0001001.jpg",
-"place": "Canada, Brampton, Ontario",
 "servicesAvailable": {
 "Cafeteria": "Cafeteria vending",
 "Clothing": "Clothing service available"
@@ -5669,11 +7002,19 @@
 "Friday": "9:00, 11:00 a.m.; 1:00, 3:00, 5:00, 7:00 p.m.",
 "Monday": "Closed",
 "Saturday": "8:30, 10:00, 11:30 a.m.; 2:00, 3:30 p.m.",
-"Tuesday-Thursday": "9:00, 11:00 a.m.; 4:00, 6:00 p.m.\u00a0"
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Trujillo Peru",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/trujilo-peru/images/trujillo-peru-temple808x480.jpg",
 "place": "Peru, Trujillo, Trujillo",
+"rawEndowmentSchedule": {
+"Friday": "9:00, 11:00 a.m.; 1:00, 3:00, 5:00, 7:00 p.m.",
+"Monday": "Closed",
+"Saturday": "8:30, 10:00, 11:30 a.m.; 2:00, 3:30 p.m.",
+"Tuesday-Thursday": "9:00, 11:00 a.m.; 4:00, 6:00 p.m.\u00a0"
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -5685,10 +7026,18 @@
 "closures": {},
 "dedication": "Announced",
 "detailLink": "https://www.lds.org/church/temples/tucson-arizona?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "",
+"Monday": "",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "Tucson Arizona",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/cedar-city/temple-Announced_lg.jpg",
 "place": "United States, Tucson, Arizona",
+"rawEndowmentSchedule": {},
 "servicesAvailable": {},
 "telephone": ""
 },
@@ -5716,15 +7065,23 @@
 "dedication": "2000-03-12T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/tuxtla-gutierrez-mexico?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
 "Saturday": "7:00, 9:00, 11:00 a.m.",
-"Thursday\u2013Friday": "5:00, 7:00 p.m",
+"Thursday": "",
 "Tuesday": "5:00, 7:00 p.m.",
 "Wednesday": "9:30 a.m.; 5:00, 7:00 p.m."
 },
 "name": "Tuxtla Guti\u00e9rrez Mexico",
 "photoLink": "https://www.lds.org/bc/content/church/temples/tuxtla-gutierrez-mexico/images/tuxtla-gutierrez-mexico-808x480-0002097.jpg",
 "place": "M\u00e9xico, Tuxtla Guti\u00e9rrez, Chiapas",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "7:00, 9:00, 11:00 a.m.",
+"Thursday\u2013Friday": "5:00, 7:00 p.m",
+"Tuesday": "5:00, 7:00 p.m.",
+"Wednesday": "9:30 a.m.; 5:00, 7:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -5758,12 +7115,20 @@
 "dedication": "2008-08-24T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/twin-falls-idaho?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
-"Tuesday\u2013Saturday": "7:00, 9:00, 11:00 a.m.; 1:00, 3:00, 5:00, 7:00 p.m."
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Twin Falls Idaho",
 "photoLink": "https://www.lds.org/bc/content/church/temples/twin-falls-idaho/images/twin-falls-idaho-808x480-CU080605_bkf01.jpg",
 "place": "United States, Twin Falls, Idaho",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Tuesday\u2013Saturday": "7:00, 9:00, 11:00 a.m.; 1:00, 3:00, 5:00, 7:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -5775,10 +7140,18 @@
 "closures": {},
 "dedication": "Announced",
 "detailLink": "https://www.lds.org/church/temples/urdaneta-philippines?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "",
+"Monday": "",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "Urdaneta Philippines",
 "photoLink": "https://www.lds.org/bc/content/church/temples/urdaneta-philippines/images/temple-Announced_lg.jpg",
 "place": "Philippines, Urdaneta, Pangasinan ",
+"rawEndowmentSchedule": {},
 "servicesAvailable": {},
 "telephone": ""
 },
@@ -5818,6 +7191,14 @@
 "name": "Vancouver British Columbia",
 "photoLink": "https://www.lds.org/bc/content/church/temples/vancouver-british-columbia/images/vancouver-british-columbia-808x480-CWD_091310_SDavis_003.jpg",
 "place": "Canada, Langley, British Columbia",
+"rawEndowmentSchedule": {
+"Friday": "9:30, 11:30* a.m.; 6:00, 7:30* p.m.",
+"Monday": "Closed",
+"Saturday": "7:30, 9:00, 10:30* a.m., 12:00 noon; 1:30* p.m.",
+"Thursday": "6:00, 7:30* p.m.",
+"Tuesday": "9:30, 11:30* a.m.; 6:00, 7:30* p.m.",
+"Wednesday": "10:30 a.m.; 12:30*, 6:00, 7:30* p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -5846,14 +7227,22 @@
 "dedication": "2000-07-09T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/veracruz-mexico?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
+"Monday": "Closed",
+"Saturday": "8:00, 9:15, 10:30 a.m.; 12:00 noon; 1:30 p.m.",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
+"name": "Veracruz Mexico",
+"photoLink": "https://www.lds.org/bc/content/church/temples/veracruz-mexico/images/veracruz-mexico-808x480-0002092.jpg",
+"place": "Mexico, Boca del Rio, Veracruz",
+"rawEndowmentSchedule": {
 "Monday": "Closed",
 "Saturday": "8:00, 9:15, 10:30 a.m.; 12:00 noon; 1:30 p.m.",
 "Tuesday and Thursday": "4:30, 6:30 p.m.",
 "Wednesday and Friday": "9:00 a.m.; 4:30, 6:30 p.m."
 },
-"name": "Veracruz Mexico",
-"photoLink": "https://www.lds.org/bc/content/church/temples/veracruz-mexico/images/veracruz-mexico-808x480-0002092.jpg",
-"place": "Mexico, Boca del Rio, Veracruz",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -5888,12 +7277,20 @@
 "dedication": "1997-11-02T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/vernal-utah?lang=eng",
 "endowmentSchedule": {
+"Friday": "7:30, 9:00, 10:30, 12:00, 13:30, 15:00, 16:30, 18:00, 19:30",
 "Monday": "Closed",
-"Tuesday\u2013Saturday": "7:30, 9:00, 10:30 a.m.; 12:00 noon; 1:30, 3:00, 4:30, 6:00, 7:30 p.m."
+"Saturday": "7:30, 9:00, 10:30, 12:00, 13:30, 15:00, 16:30, 18:00, 19:30",
+"Thursday": "7:30, 9:00, 10:30, 12:00, 13:30, 15:00, 16:30, 18:00, 19:30",
+"Tuesday": "7:30, 9:00, 10:30, 12:00, 13:30, 15:00, 16:30, 18:00, 19:30",
+"Wednesday": "7:30, 9:00, 10:30, 12:00, 13:30, 15:00, 16:30, 18:00, 19:30"
 },
 "name": "Vernal Utah",
 "photoLink": "https://www.lds.org/bc/content/church/temples/vernal-utah/images/vernal-utah-808x480-0001003.jpg",
 "place": "United States, Vernal, Utah",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Tuesday\u2013Saturday": "7:30, 9:00, 10:30 a.m.; 12:00 noon; 1:30, 3:00, 4:30, 6:00, 7:30 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "Clothing service available"
@@ -5922,14 +7319,22 @@
 "dedication": "2000-05-21T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/villahermosa-mexico?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
+"Monday": "Closed",
+"Saturday": "6:00, 8:30, 9:15, 10:00, 11:30 a.m.; 1:00 p.m.",
+"Thursday": "9:30 a.m.; 5:00, 7:00 p.m.",
+"Tuesday": "",
+"Wednesday": ""
+},
+"name": "Villahermosa Mexico",
+"photoLink": "https://www.lds.org/bc/content/church/temples/villahermosa-mexico/images/villahermosa-mexico-808x480-0002063.jpg",
+"place": "Mexico, Villahermosa, Tabasco",
+"rawEndowmentSchedule": {
 "Monday": "Closed",
 "Saturday": "6:00, 8:30, 9:15, 10:00, 11:30 a.m.; 1:00 p.m.",
 "Thursday": "9:30 a.m.; 5:00, 7:00 p.m.",
 "Tuesday, Wednesday, Friday": "5:00, 7:00 p.m."
 },
-"name": "Villahermosa Mexico",
-"photoLink": "https://www.lds.org/bc/content/church/temples/villahermosa-mexico/images/villahermosa-mexico-808x480-0002063.jpg",
-"place": "Mexico, Villahermosa, Tabasco",
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"
@@ -5968,13 +7373,21 @@
 "dedication": "1974-11-19T00:00:00",
 "detailLink": "https://www.lds.org/church/temples/washington-dc?lang=eng",
 "endowmentSchedule": {
+"Friday": "",
 "Monday": "Closed",
 "Saturday": "Every 30 minutes from 7:00 a.m. to 8:00 p.m.",
-"Tuesday\u2013Friday": "Every hour from 8:00 a.m. to 6:00 p.m.; every 30 minutes from 6:30 to 8:00 p.m."
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Washington D.C.",
 "photoLink": "https://www.lds.org/bc/content/church/temples/washington-dc/images/washington-dc-808x480-0001505.jpg",
 "place": "United States, Kensington, Maryland",
+"rawEndowmentSchedule": {
+"Monday": "Closed",
+"Saturday": "Every 30 minutes from 7:00 a.m. to 8:00 p.m.",
+"Tuesday\u2013Friday": "Every hour from 8:00 a.m. to 6:00 p.m.; every 30 minutes from 6:30 to 8:00 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "Cafeteria vending",
 "Clothing": "Clothing service available"
@@ -5986,10 +7399,18 @@
 "closures": {},
 "dedication": "Announced",
 "detailLink": "https://www.lds.org/church/temples/winnipeg-manitoba-temple?lang=eng",
-"endowmentSchedule": {},
+"endowmentSchedule": {
+"Friday": "",
+"Monday": "",
+"Saturday": "",
+"Thursday": "",
+"Tuesday": "",
+"Wednesday": ""
+},
 "name": "Winnipeg Manitoba",
 "photoLink": "https://www.lds.org/bc/content/ldsorg/church/temples/winnipeg-manitoba/temple-announced-lg.jpg",
 "place": "Canada, Winnipeg, Manitoba",
+"rawEndowmentSchedule": {},
 "servicesAvailable": {},
 "telephone": ""
 },
@@ -6018,12 +7439,20 @@
 "endowmentSchedule": {
 "Friday": "10:00 a.m.; 12:00 noon; 2:00, 4:00, 6:00, 7:30 p.m.",
 "Monday": "Closed",
+"Saturday": "",
 "Thursday": "4:00, 6:00, 7:30 p.m.",
-"Tuesday\u2013Wednesday": "6:00, 7:30 p.m."
+"Tuesday": "",
+"Wednesday": ""
 },
 "name": "Winter Quarters Nebraska",
 "photoLink": "https://www.lds.org/bc/content/church/temples/winter-quarters-nebraska/images/winter-quarters-nebraska-808x480-CWD_101013_MPalmer.jpg",
 "place": "United States, Omaha, Nebraska",
+"rawEndowmentSchedule": {
+"Friday": "10:00 a.m.; 12:00 noon; 2:00, 4:00, 6:00, 7:30 p.m.",
+"Monday": "Closed",
+"Thursday": "4:00, 6:00, 7:30 p.m.",
+"Tuesday\u2013Wednesday": "6:00, 7:30 p.m."
+},
 "servicesAvailable": {
 "Cafeteria": "No cafeteria service",
 "Clothing": "No clothing service"

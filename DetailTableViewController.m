@@ -8,6 +8,7 @@
 
 #import "DetailTableViewController.h"
 #import "Temple.h"
+#import "ScheduleViewController.h"
 
 #define kDefaultRowHeight 44
 #define kAddressSection 0
@@ -26,6 +27,7 @@
 	NSDictionary *scheduleDict;
 	NSArray *scheduleKeys;
 	NSArray *weekdays;
+	NSString * dayTapped;
 	
 	UIImage *scaledImage; // Use i-var because we need to both set the cell with it and calculate the cell height in 2 separate methods.
 	CLLocationManager *locationManager;
@@ -66,6 +68,16 @@
 		NSLog(@"The latitude and longitude are %@", placemarks[0]);
 	}];
 	}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+	if ([segue.identifier isEqualToString:@"Schedule"]) {
+		ScheduleViewController * nextViewController = [[ScheduleViewController alloc]init];
+		nextViewController.templeName = self.currentTemple.name;
+		nextViewController.scheduleDict = scheduleDict;
+		nextViewController.daysOfWeek = weekdays;
+		nextViewController.dayTapped = dayTapped;
+	}
+}
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
 	// Change the image width if we rotate in the detail view.
@@ -147,10 +159,11 @@
 			//Load the appropriate schedule data.
 			
 			NSString *dayName = weekdays[indexPath.row];
-			NSString *scheduleForDay = scheduleDict[dayName];
-			cell.textLabel.text = dayName;
+			NSArray *scheduleForDay = scheduleDict[dayName];
+			NSString *displayTime = [self getDateStringStart: scheduleForDay[0] end:[scheduleForDay lastObject]];
+			cell.detailTextLabel.text = displayTime;//[NSString stringWithFormat:@"%@ - %@", scheduleForDay[0], [scheduleForDay lastObject]];
 			
-			cell.detailTextLabel.text = scheduleForDay;
+			cell.textLabel.text = dayName;
 		}
 			break;
 		case kAddToFavoritesSection:{
@@ -200,6 +213,7 @@
 		NSLog(@"The map query string: %@.", mapsString);
 		NSURL *mapsUrl = [NSURL URLWithString:mapsString];
 		[[UIApplication sharedApplication]openURL:mapsUrl];
+		[self.tableView deselectRowAtIndexPath:indexPath animated:NO];
 	}
 	else if(indexPath.section == kAddToFavoritesSection){
 		NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Temple"];
@@ -217,6 +231,10 @@
 			[tableView cellForRowAtIndexPath:indexPath].textLabel.text = @"Remove from Favorites";
 		}
 		[tableView deselectRowAtIndexPath:indexPath animated:YES];
+	}
+	else if(indexPath.section == kScheduleSection){
+		dayTapped = [tableView cellForRowAtIndexPath:indexPath].textLabel.text;
+		[self performSegueWithIdentifier:@"Schedule" sender:[tableView cellForRowAtIndexPath:indexPath]];
 	}
 }
 
@@ -264,6 +282,7 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 #pragma mark - Utility Methods
 
@@ -366,43 +385,45 @@
 	NSMutableDictionary *expandedSchedule = [[NSMutableDictionary alloc]init];
 	
 	for (NSString * key in inputArray) {
-		if ([key containsString:@"-"]) {
-			NSArray *firstAndLast = [key componentsSeparatedByString:@"-"];
-			NSInteger first = [weekdays indexOfObject:[firstAndLast firstObject]];
-			NSInteger last = [weekdays indexOfObject:[firstAndLast lastObject]];
-			for (int i = (int)first; i <= last; ++i) {
-				expandedSchedule[weekdays[i]] = self.currentTemple.endowmentSchedule[key];
-			}
-		}
-		else{
-			expandedSchedule[key] = self.currentTemple.endowmentSchedule[key];
-		}
+		NSString * values = self.currentTemple.endowmentSchedule[key];
+		NSArray * distinctTimes = [values componentsSeparatedByString:@","];
+		expandedSchedule[key] = distinctTimes;
 	}
 	return expandedSchedule;
 }
+
+
+- (NSString *)getDateStringStart:(NSString*) start end: (NSString*) end{
+	if ([start isEqualToString:end]) { // Also handles closed case.
+		return start;
+	}
+	return [NSString stringWithFormat:@"%@ - %@", [self getDisplayDate: start], [self getDisplayDate: end]];
+}
+
+-(NSString*)getDisplayDate:(NSString*) militaryTime{
+	BOOL isAfternoon = NO;
+	NSRange colonPosition = [militaryTime rangeOfString:@":"];
+	NSInteger hour = [[militaryTime substringToIndex:colonPosition.location] integerValue];
+	NSString *minutes = [militaryTime substringFromIndex:colonPosition.location + 1];
 	
-//	NSArray *sortedArray = [inputArray sortedArrayUsingComparator: ^(id obj1, id obj2) {
-//		
-//		//Break obj1 string into an array seperated by "-". Ex: "Monday-Thursday" becomes ["Monday", "Thursday"].
-//		NSArray *weekday1Token = [obj1 componentsSeparatedByString:@"-"];
-//		NSArray *weekday2Token = [obj2 componentsSeparatedByString:@"-"];
-//		
-//		//Find the index of the objects in the weekdays array, and compare them to see which comes first.
-//		int obj1Index = [weekdays indexOfObject: weekday1Token[0]];
-//		int obj2Index = [weekdays indexOfObject:weekday2Token[0]];
-//		
-//		if (obj1Index > obj2Index) { //First day later in the week than second.
-//			return NSOrderedDescending;
-//		}
-//		
-//		return NSOrderedAscending; //First day earlier in the week than second.
-//	}];
-//	return sortedArray;
+	if (hour > 12) {
+		hour = hour - 12;
+		isAfternoon = YES;
+	}
+	NSString *postfix = @"am";
+	if (isAfternoon) {
+		postfix = @"pm";
+	}
+	return [NSString stringWithFormat:@"%ld:%@ %@", (long)hour, minutes, postfix];
+}
 
 #pragma mark - CLLocationManager Delegate
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
 	currentLocation = locations.lastObject; // Most recent location is last in the array.
+	
+	//Don't waste battery.
+	[locationManager stopUpdatingLocation];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{

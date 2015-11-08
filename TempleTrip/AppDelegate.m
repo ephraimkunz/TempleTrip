@@ -8,6 +8,8 @@
 //
 
 #import "AppDelegate.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 #import "MasterViewController.h"
 #import "Temple.h"
 
@@ -20,6 +22,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+	[Fabric with:@[[Crashlytics class]]];
+
     UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     MasterViewController *controller = (MasterViewController *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
@@ -144,7 +148,7 @@
     return temples;
 }
 
--(BOOL)dataInCD{
+-(BOOL)dataInCoreData{
     NSManagedObjectContext *context = [self managedObjectContext];
     NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Temple"];
     NSArray *templeArray = [context executeFetchRequest:request error:nil];
@@ -153,7 +157,7 @@
 }
 
 -(void)preloadData{
-    if ([self dataInCD]) {
+    if ([self dataInCoreData]) {
         return;
     }
     [self removeData];

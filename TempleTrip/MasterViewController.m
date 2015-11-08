@@ -27,9 +27,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	
 	[self setupSearchBar];
+	
 	UIColor *magnesium = [UIColor colorWithRed:150.0/255 green:150.0/255 blue:150.0/255 alpha:1.0];
 	self.tableView.sectionIndexColor = magnesium;
+	
 	[self loadFavoritesList];
 }
 
