@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@import EventKit;
 
 @interface ScheduleViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>
 
@@ -16,6 +17,9 @@
 @property(nonatomic) NSString *dayTapped;
 @property(nonatomic) NSArray *today;
 
+@property (weak, nonatomic) IBOutlet UILabel *FullDateLabel;
 @property (weak, nonatomic) IBOutlet UIPickerView *schedulePicker;
+
+-(BOOL)dateIsToday:(NSDate*) date;
 
 @end

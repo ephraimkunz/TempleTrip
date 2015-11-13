@@ -17,9 +17,10 @@
 		181EF7FC1B73CF880010D2EA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181EF7FA1B73CF880010D2EA /* LaunchScreen.xib */; };
 		181EF8081B73CF880010D2EA /* TempleTripTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 181EF8071B73CF880010D2EA /* TempleTripTests.m */; };
 		18A2EF6F1BE87A4000FB4D69 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2EF6E1BE87A4000FB4D69 /* ScheduleViewController.m */; };
+		18ABEC421BF5579900AA7EB7 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18ABEC411BF5579900AA7EB7 /* EventKit.framework */; };
+		18ABEC461BF587BD00AA7EB7 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18ABEC441BF587BD00AA7EB7 /* Fabric.framework */; };
+		18ABEC471BF587BD00AA7EB7 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18ABEC451BF587BD00AA7EB7 /* Crashlytics.framework */; };
 		18C8F5041BD1D29000FFF64A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180C096F1B8EB62200764003 /* CoreLocation.framework */; };
-		18C8F5081BD1D38200FFF64A /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C8F5061BD1D38200FFF64A /* Fabric.framework */; };
-		18C8F5091BD1D38200FFF64A /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18C8F5071BD1D38200FFF64A /* Crashlytics.framework */; };
 		18CB44DA1B745444001FA4B4 /* results.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18CB44D91B745444001FA4B4 /* results.txt */; };
 		18CB44E11B751B95001FA4B4 /* Temple.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CB44E01B751B95001FA4B4 /* Temple.m */; };
 /* End PBXBuildFile section */
@@ -67,8 +68,9 @@
 		181EF8071B73CF880010D2EA /* TempleTripTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TempleTripTests.m; sourceTree = "<group>"; };
 		18A2EF6D1BE87A4000FB4D69 /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
 		18A2EF6E1BE87A4000FB4D69 /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
-		18C8F5061BD1D38200FFF64A /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
-		18C8F5071BD1D38200FFF64A /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
+		18ABEC411BF5579900AA7EB7 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		18ABEC441BF587BD00AA7EB7 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
+		18ABEC451BF587BD00AA7EB7 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
 		18CB44D91B745444001FA4B4 /* results.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = results.txt; sourceTree = "<group>"; };
 		18CB44DF1B751B95001FA4B4 /* Temple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Temple.h; path = ../Temple.h; sourceTree = "<group>"; };
 		18CB44E01B751B95001FA4B4 /* Temple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Temple.m; path = ../Temple.m; sourceTree = "<group>"; };
@@ -79,9 +81,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18ABEC421BF5579900AA7EB7 /* EventKit.framework in Frameworks */,
 				18C8F5041BD1D29000FFF64A /* CoreLocation.framework in Frameworks */,
-				18C8F5091BD1D38200FFF64A /* Crashlytics.framework in Frameworks */,
-				18C8F5081BD1D38200FFF64A /* Fabric.framework in Frameworks */,
+				18ABEC471BF587BD00AA7EB7 /* Crashlytics.framework in Frameworks */,
+				18ABEC461BF587BD00AA7EB7 /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,8 +139,9 @@
 		181EF7E51B73CF870010D2EA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				18C8F5061BD1D38200FFF64A /* Fabric.framework */,
-				18C8F5071BD1D38200FFF64A /* Crashlytics.framework */,
+				18ABEC441BF587BD00AA7EB7 /* Fabric.framework */,
+				18ABEC451BF587BD00AA7EB7 /* Crashlytics.framework */,
+				18ABEC411BF5579900AA7EB7 /* EventKit.framework */,
 				180C096F1B8EB62200764003 /* CoreLocation.framework */,
 				18CB44D91B745444001FA4B4 /* results.txt */,
 				181EF7E61B73CF870010D2EA /* Info.plist */,
@@ -184,7 +188,7 @@
 				181EF7DF1B73CF870010D2EA /* Frameworks */,
 				181EF7E01B73CF870010D2EA /* Resources */,
 				18C8F4FF1BD1D0CE00FFF64A /* Embed Frameworks */,
-				18C8F5051BD1D36A00FFF64A /* ShellScript */,
+				18ABEC431BF5879C00AA7EB7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -202,7 +206,6 @@
 				181EF7FD1B73CF880010D2EA /* Sources */,
 				181EF7FE1B73CF880010D2EA /* Frameworks */,
 				181EF7FF1B73CF880010D2EA /* Resources */,
-				18C8F4F61BD1C9B400FFF64A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -274,20 +277,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		18C8F4F61BD1C9B400FFF64A /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "./Fabric.framework/run abd7e04d91a9cd3680a3cac4718edbb8b6044ad8 0b7f30e6caca457e72ae2610360cae3ce53bed94b81a4fa41b590d5277d38b34";
-		};
-		18C8F5051BD1D36A00FFF64A /* ShellScript */ = {
+		18ABEC431BF5879C00AA7EB7 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -446,6 +436,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SRCROOT)";
 				INFOPLIST_FILE = TempleTrip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.EphraimKunz.$(PRODUCT_NAME:rfc1034identifier)";

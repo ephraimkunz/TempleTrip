@@ -65,19 +65,9 @@
 	//Testing code
 	CLGeocoder *geoCoder = [[CLGeocoder alloc]init];
 	[geoCoder geocodeAddressString:self.currentTemple.address completionHandler:^(NSArray *placemarks, NSError *error) {
-		NSLog(@"The latitude and longitude are %@", placemarks[0]);
+		//NSLog(@"The latitude and longitude are %@", placemarks[0]);
 	}];
 	}
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-	if ([segue.identifier isEqualToString:@"Schedule"]) {
-		ScheduleViewController * nextViewController = [[ScheduleViewController alloc]init];
-		nextViewController.templeName = self.currentTemple.name;
-		nextViewController.scheduleDict = scheduleDict;
-		nextViewController.daysOfWeek = weekdays;
-		nextViewController.dayTapped = dayTapped;
-	}
-}
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
 	// Change the image width if we rotate in the detail view.
@@ -100,6 +90,25 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Navigation
+
+-(BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
+	//Don't perform a segue if the temple is closed
+	return [identifier isEqualToString:@"Schedule"] && (![[[self.tableView cellForRowAtIndexPath:[self.tableView indexPathForCell:sender]]detailTextLabel].text isEqualToString:@"Closed"] && ![[[self.tableView cellForRowAtIndexPath:[self.tableView indexPathForCell:sender]]detailTextLabel].text isEqualToString:@""]);
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+	if ([[segue identifier] isEqualToString:@"Schedule"]) {
+		
+		NSString *weekdayTapped = [self.tableView cellForRowAtIndexPath:[self.tableView indexPathForCell:(UITableViewCell*)sender]].textLabel.text;
+		ScheduleViewController *nextViewController = [segue destinationViewController];
+		nextViewController.dayTapped = weekdayTapped;
+		nextViewController.daysOfWeek = weekdays;
+		nextViewController.scheduleDict = scheduleDict;
+		nextViewController.templeName = self.currentTemple.name;
+	}
 }
 
 #pragma mark - Table view data source
@@ -168,8 +177,6 @@
 			break;
 		case kAddToFavoritesSection:{
 			cell = [tableView dequeueReusableCellWithIdentifier:@"AddToFavoritesCell"];
-			NSLog(@"%@", self.currentTemple.isFavorite);
-			NSLog(@"%@", [NSNumber numberWithBool:YES]);
 			if ([self.currentTemple.isFavorite isEqualToNumber:[NSNumber numberWithBool:YES]]) {
 				cell.textLabel.text = @"Remove from Favorites";
 			}
@@ -206,11 +213,20 @@
 	}
 }
 
+-(BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath{
+	if (indexPath.section == kScheduleSection) {
+		if ([[self.tableView cellForRowAtIndexPath:indexPath].detailTextLabel.text isEqualToString:@"Closed"]
+			|| [[self.tableView cellForRowAtIndexPath:indexPath].detailTextLabel.text isEqualToString:@""]) {
+			return false;
+		}
+	}
+	return true;
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 	if(indexPath.section == kAddressSection){ // Address tapped
 		
 		NSString *mapsString = [[NSString stringWithFormat:@"http://maps.apple.com/?daddr=%@&saddr=%f,%f", self.currentTemple.address, currentLocation.coordinate.latitude, currentLocation.coordinate.longitude]stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-		NSLog(@"The map query string: %@.", mapsString);
 		NSURL *mapsUrl = [NSURL URLWithString:mapsString];
 		[[UIApplication sharedApplication]openURL:mapsUrl];
 		[self.tableView deselectRowAtIndexPath:indexPath animated:NO];
@@ -232,11 +248,8 @@
 		}
 		[tableView deselectRowAtIndexPath:indexPath animated:YES];
 	}
-	else if(indexPath.section == kScheduleSection){
-		dayTapped = [tableView cellForRowAtIndexPath:indexPath].textLabel.text;
-		[self performSegueWithIdentifier:@"Schedule" sender:[tableView cellForRowAtIndexPath:indexPath]];
-	}
 }
+
 
 
 /*
@@ -270,16 +283,6 @@
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the item to be re-orderable.
     return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
 */
 
@@ -395,17 +398,22 @@
 
 - (NSString *)getDateStringStart:(NSString*) start end: (NSString*) end{
 	if ([start isEqualToString:end]) { // Also handles closed case.
-		return start;
+		return [DetailTableViewController getDisplayDate:start];
 	}
-	return [NSString stringWithFormat:@"%@ - %@", [self getDisplayDate: start], [self getDisplayDate: end]];
+	return [NSString stringWithFormat:@"%@ - %@", [DetailTableViewController getDisplayDate: start], [DetailTableViewController getDisplayDate: end]];
 }
 
--(NSString*)getDisplayDate:(NSString*) militaryTime{
++(NSString*)getDisplayDate:(NSString*) militaryTime{
+	if ([militaryTime  isEqual: @"Closed"] || [militaryTime isEqualToString:@""]) {
+		return militaryTime;
+	}
 	BOOL isAfternoon = NO;
 	NSRange colonPosition = [militaryTime rangeOfString:@":"];
 	NSInteger hour = [[militaryTime substringToIndex:colonPosition.location] integerValue];
 	NSString *minutes = [militaryTime substringFromIndex:colonPosition.location + 1];
-	
+	if (hour == 12) {
+		isAfternoon = YES;
+	}
 	if (hour > 12) {
 		hour = hour - 12;
 		isAfternoon = YES;

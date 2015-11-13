@@ -15,4 +15,6 @@
 @property(strong, nonatomic) Temple *currentTemple;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
++(NSString*)getDisplayDate:(NSString*) militaryTime;
+
 @end
