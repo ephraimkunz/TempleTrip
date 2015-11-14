@@ -1,0 +1,21 @@
+PODS:
+  - ChameleonFramework (2.0.4):
+    - ChameleonFramework/Default (= 2.0.4)
+  - ChameleonFramework/Default (2.0.4)
+  - DZNEmptyDataSet (1.7.2)
+  - iRate (1.11.4)
+  - SVProgressHUD (1.1.3)
+
+DEPENDENCIES:
+  - ChameleonFramework
+  - DZNEmptyDataSet
+  - iRate
+  - SVProgressHUD
+
+SPEC CHECKSUMS:
+  ChameleonFramework: 5abe69b1f2a6cc79c3c435fcd9d3d855748225ee
+  DZNEmptyDataSet: 0ec00bfc230d7450997b60c127afdd0b9f24f3b6
+  iRate: 599ed07c854e0695f3c605d1b2a64c67d912acb7
+  SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
+
+COCOAPODS: 0.39.0

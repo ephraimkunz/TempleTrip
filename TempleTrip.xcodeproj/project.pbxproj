@@ -23,6 +23,7 @@
 		18C8F5041BD1D29000FFF64A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180C096F1B8EB62200764003 /* CoreLocation.framework */; };
 		18CB44DA1B745444001FA4B4 /* results.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18CB44D91B745444001FA4B4 /* results.txt */; };
 		18CB44E11B751B95001FA4B4 /* Temple.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CB44E01B751B95001FA4B4 /* Temple.m */; };
+		B17337A31D402B66B45A9046 /* libPods-TempleTrip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9F817408A94A39DD7C4C510 /* libPods-TempleTrip.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		181EF8011B73CF880010D2EA /* TempleTripTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TempleTripTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		181EF8061B73CF880010D2EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		181EF8071B73CF880010D2EA /* TempleTripTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TempleTripTests.m; sourceTree = "<group>"; };
+		1859A9E830CF7D6084253730 /* Pods-TempleTrip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TempleTrip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TempleTrip/Pods-TempleTrip.debug.xcconfig"; sourceTree = "<group>"; };
 		18A2EF6D1BE87A4000FB4D69 /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
 		18A2EF6E1BE87A4000FB4D69 /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
 		18ABEC411BF5579900AA7EB7 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
@@ -74,6 +76,8 @@
 		18CB44D91B745444001FA4B4 /* results.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = results.txt; sourceTree = "<group>"; };
 		18CB44DF1B751B95001FA4B4 /* Temple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Temple.h; path = ../Temple.h; sourceTree = "<group>"; };
 		18CB44E01B751B95001FA4B4 /* Temple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Temple.m; path = ../Temple.m; sourceTree = "<group>"; };
+		E4E72406A801A3DFFF7336DA /* Pods-TempleTrip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TempleTrip.release.xcconfig"; path = "Pods/Target Support Files/Pods-TempleTrip/Pods-TempleTrip.release.xcconfig"; sourceTree = "<group>"; };
+		E9F817408A94A39DD7C4C510 /* libPods-TempleTrip.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TempleTrip.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,7 @@
 				18C8F5041BD1D29000FFF64A /* CoreLocation.framework in Frameworks */,
 				18ABEC471BF587BD00AA7EB7 /* Crashlytics.framework in Frameworks */,
 				18ABEC461BF587BD00AA7EB7 /* Fabric.framework in Frameworks */,
+				B17337A31D402B66B45A9046 /* libPods-TempleTrip.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,12 +103,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B6469DFF2B77495BD0496C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E9F817408A94A39DD7C4C510 /* libPods-TempleTrip.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		181EF7D91B73CF870010D2EA = {
 			isa = PBXGroup;
 			children = (
 				181EF7E41B73CF870010D2EA /* TempleTrip */,
 				181EF8041B73CF880010D2EA /* TempleTripTests */,
 				181EF7E31B73CF870010D2EA /* Products */,
+				589D1933D07ECC7B24E4FF7C /* Pods */,
+				0B6469DFF2B77495BD0496C0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,6 +192,15 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		589D1933D07ECC7B24E4FF7C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1859A9E830CF7D6084253730 /* Pods-TempleTrip.debug.xcconfig */,
+				E4E72406A801A3DFFF7336DA /* Pods-TempleTrip.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -184,11 +208,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 181EF80B1B73CF880010D2EA /* Build configuration list for PBXNativeTarget "TempleTrip" */;
 			buildPhases = (
+				F27FBA8F2F59559AD34BFE74 /* Check Pods Manifest.lock */,
 				181EF7DE1B73CF870010D2EA /* Sources */,
 				181EF7DF1B73CF870010D2EA /* Frameworks */,
 				181EF7E01B73CF870010D2EA /* Resources */,
 				18C8F4FF1BD1D0CE00FFF64A /* Embed Frameworks */,
 				18ABEC431BF5879C00AA7EB7 /* ShellScript */,
+				7A13CDF7DCA4344C311D241C /* Embed Pods Frameworks */,
+				07D83EC197DCBF83273D5F1C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -277,6 +304,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		07D83EC197DCBF83273D5F1C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TempleTrip/Pods-TempleTrip-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		18ABEC431BF5879C00AA7EB7 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -289,6 +331,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "./Fabric.framework/run abd7e04d91a9cd3680a3cac4718edbb8b6044ad8 0b7f30e6caca457e72ae2610360cae3ce53bed94b81a4fa41b590d5277d38b34";
+		};
+		7A13CDF7DCA4344C311D241C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TempleTrip/Pods-TempleTrip-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F27FBA8F2F59559AD34BFE74 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -428,6 +500,7 @@
 		};
 		181EF80C1B73CF880010D2EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1859A9E830CF7D6084253730 /* Pods-TempleTrip.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -448,6 +521,7 @@
 		};
 		181EF80D1B73CF880010D2EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4E72406A801A3DFFF7336DA /* Pods-TempleTrip.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
