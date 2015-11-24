@@ -4,11 +4,7 @@ platform :ios, '8.0'
 # use_frameworks!
 
 target 'TempleTrip' do
-
-pod 'DZNEmptyDataSet'
-pod 'ChameleonFramework'
 pod 'iRate'
-pod 'SVProgressHUD'
 end
 
 target 'TempleTripTests' do

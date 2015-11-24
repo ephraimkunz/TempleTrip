@@ -16,5 +16,6 @@
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 +(NSString*)getDisplayDate:(NSString*) militaryTime;
-
+-(NSString *)parsePhoneNumber:(NSString *)number;
+	
 @end

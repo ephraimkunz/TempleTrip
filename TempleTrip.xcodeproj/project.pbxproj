@@ -255,7 +255,7 @@
 				TargetAttributes = {
 					181EF7E11B73CF870010D2EA = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = GLEN6PYDLZ;
+						DevelopmentTeam = D5ED37V79V;
 					};
 					181EF8001B73CF880010D2EA = {
 						CreatedOnToolsVersion = 6.4;
@@ -512,7 +512,7 @@
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SRCROOT)";
 				INFOPLIST_FILE = TempleTrip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.EphraimKunz.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ephraimhowardkunz.templetrip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -532,7 +532,7 @@
 				);
 				INFOPLIST_FILE = TempleTrip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.EphraimKunz.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ephraimhowardkunz.templetrip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

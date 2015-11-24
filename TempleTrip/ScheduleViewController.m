@@ -22,7 +22,11 @@
 	upcomingDates = [ScheduleViewController getUpcomingDatesArrayWithDay: self.dayTapped count: 52 weekdays:self.daysOfWeek];
 	
 	store = [[EKEventStore alloc]init];
-	[store requestAccessToEntityType:EKEntityTypeEvent completion:nil];
+	[store requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error){
+		if (error != nil) {
+			NSLog(@"There was an error granting access to Event entities:%@", error.description);
+		}
+	}];
 	
 	self.FullDateLabel.text = @"Choose a day and time";
 }
@@ -110,13 +114,13 @@
 	
 	NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
 	NSDateComponents *comps = [gregorian components:NSCalendarUnitWeekday fromDate:[NSDate date]];
-	int realWeekday = [comps weekday];
-	int viewingWeekday = [weekdays indexOfObjectIdenticalTo:startDay] + 2; //To compare with realWeekDay, we can't be 0 indexed and we have to start on Sunday.
+	long realWeekday = [comps weekday];
+	long viewingWeekday = [weekdays indexOfObjectIdenticalTo:startDay] + 2; //To compare with realWeekDay, we can't be 0 indexed and we have to start on Sunday.
 	
 	if (viewingWeekday < realWeekday) {
 		viewingWeekday += 7;
 	}
-	int daysAhead = viewingWeekday - realWeekday;
+	long daysAhead = viewingWeekday - realWeekday;
 	
 	NSDateComponents* comps2 = [NSDateComponents new];
 	comps2.day	= daysAhead;
@@ -148,7 +152,7 @@
 	
 	NSDate *dateWithoutTime = upcomingDates[[self.schedulePicker selectedRowInComponent:0]];
 	NSString * time = self.today[[self.schedulePicker selectedRowInComponent:1]];
-	int colonLocation = [time rangeOfString:@":"].location;
+	long colonLocation = [time rangeOfString:@":"].location;
 	NSInteger hour = [[time substringToIndex:colonLocation]integerValue];
 	NSInteger minute = [[time substringFromIndex:colonLocation + 1]integerValue];
 	

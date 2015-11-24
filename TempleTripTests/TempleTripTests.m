@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "DetailTableViewController.h"
 
 @interface TempleTripTests : XCTestCase
 
@@ -25,15 +26,27 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+-(void)testParsePhoneNumber{
+	NSString *input = @"1(435)512-1155";
+	
+	DetailTableViewController *target = [[DetailTableViewController alloc]init];
+	
+	NSString *result = [target parsePhoneNumber:input];
+	XCTAssertTrue([result isEqualToString:@"14355121155"]);
+}
+
+-(void)testGetDisplayDate{
+	NSString *input = @"14:34";
+	
+	NSString *result = [DetailTableViewController getDisplayDate:input];
+	XCTAssertTrue([result isEqualToString:@"2:34 pm"]);
 }
 
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{
-        // Put the code you want to measure the time of here.
+		NSString *result = [DetailTableViewController getDisplayDate:@"20:34"];
+		XCTAssertNotNil(result);
     }];
 }
 

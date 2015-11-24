@@ -67,7 +67,13 @@
 	[geoCoder geocodeAddressString:self.currentTemple.address completionHandler:^(NSArray *placemarks, NSError *error) {
 		//NSLog(@"The latitude and longitude are %@", placemarks[0]);
 	}];
+	
+	//Set up the call button in the navigation bar.
+	if ([[UIApplication sharedApplication] canOpenURL: [NSURL URLWithString:@"tel://"]]) {
+		UIBarButtonItem *callButton = [[UIBarButtonItem alloc]initWithTitle:@"Call" style:UIBarButtonItemStylePlain target:self action:@selector(beginCall)];
+		self.navigationItem.rightBarButtonItem = callButton;
 	}
+}
 
 - (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
 	// Change the image width if we rotate in the detail view.
@@ -425,6 +431,18 @@
 	return [NSString stringWithFormat:@"%ld:%@ %@", (long)hour, minutes, postfix];
 }
 
+-(void)beginCall{
+	NSString *number = self.currentTemple.telephone;
+	
+	NSString *parsedNumber = [self parsePhoneNumber:number];
+	NSString *callUri = [@"tel://" stringByAppendingString:parsedNumber];
+	[[UIApplication sharedApplication] openURL:[NSURL URLWithString:callUri]];
+}
+
+-(NSString *)parsePhoneNumber:(NSString *)number{
+	NSString *cleanedString = [[number componentsSeparatedByCharactersInSet:[[NSCharacterSet characterSetWithCharactersInString:@"0123456789"] invertedSet]] componentsJoinedByString:@""];
+	return cleanedString;
+}
 #pragma mark - CLLocationManager Delegate
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
