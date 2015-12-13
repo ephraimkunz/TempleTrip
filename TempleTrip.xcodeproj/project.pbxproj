@@ -49,6 +49,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1802C4001C1CFE420079A631 /* FavoritesDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesDelegate.h; sourceTree = "<group>"; };
 		180C096C1B8EA01F00764003 /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailTableViewController.h; path = ../DetailTableViewController.h; sourceTree = "<group>"; };
 		180C096D1B8EA01F00764003 /* DetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailTableViewController.m; path = ../DetailTableViewController.m; sourceTree = "<group>"; };
 		180C096F1B8EB62200764003 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -125,6 +126,7 @@
 				181EF7F01B73CF880010D2EA /* MasterViewController.m */,
 				180C096C1B8EA01F00764003 /* DetailTableViewController.h */,
 				180C096D1B8EA01F00764003 /* DetailTableViewController.m */,
+				1802C4001C1CFE420079A631 /* FavoritesDelegate.h */,
 				181EF7F51B73CF880010D2EA /* Main.storyboard */,
 				18A2EF6D1BE87A4000FB4D69 /* ScheduleViewController.h */,
 				18A2EF6E1BE87A4000FB4D69 /* ScheduleViewController.m */,

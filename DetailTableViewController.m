@@ -237,6 +237,7 @@
 		[[UIApplication sharedApplication]openURL:mapsUrl];
 		[self.tableView deselectRowAtIndexPath:indexPath animated:NO];
 	}
+	
 	else if(indexPath.section == kAddToFavoritesSection){
 		NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Temple"];
 		NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name = %@", self.currentTemple.name];
@@ -245,14 +246,17 @@
 		if ([self.currentTemple.isFavorite isEqualToNumber:[NSNumber numberWithBool:YES]]) { // The button they tapped read Remove from Favorites
 			object.isFavorite = [NSNumber numberWithBool:NO];
 			[tableView cellForRowAtIndexPath:indexPath].textLabel.text = @"Add to Favorites";
+			[self.favoritesDelegate removedFromFavorites:self.currentTemple];
 		}
 		else {// The button they tapped read Add to Favorites
 			
-		object.isFavorite = [NSNumber numberWithBool:YES];
+			object.isFavorite = [NSNumber numberWithBool:YES];
 			[self.managedObjectContext save:nil];
 			[tableView cellForRowAtIndexPath:indexPath].textLabel.text = @"Remove from Favorites";
+			[self.favoritesDelegate addedToFavorites:self.currentTemple];
 		}
 		[tableView deselectRowAtIndexPath:indexPath animated:YES];
+		[self.managedObjectContext save:nil];
 	}
 }
 
@@ -453,8 +457,9 @@
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
-	UIAlertView *locationErrorAlert = [[UIAlertView alloc]initWithTitle:@"Location Failed" message:@"Failed to determine location. We don't know why." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-	[locationErrorAlert show];
+//	UIAlertView *locationErrorAlert = [[UIAlertView alloc]initWithTitle:@"Location Failed" message:@"Failed to determine location. We don't know why." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+//	[locationErrorAlert show];
+	NSLog(@"Failed to determine location on detail page");
 }
 
 

@@ -17,7 +17,6 @@
 
 @property(strong, nonatomic) NSArray *filteredList;
 @property(strong, nonatomic) NSMutableArray *favoritesList;
-@property BOOL isSearching; // Is the user searching for something?
 
 @end
 
@@ -28,33 +27,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
+	self.definesPresentationContext = YES;
 	[self setupSearchBar];
-	
 	UIColor *magnesium = [UIColor colorWithRed:150.0/255 green:150.0/255 blue:150.0/255 alpha:1.0];
 	self.tableView.sectionIndexColor = magnesium;
 	
 	[self loadFavoritesList];
-}
-
-- (void)viewDidAppear:(BOOL)animated{
-	[super viewDidAppear:animated];
-	
-	//Did we add to favorites list?
-	NSMutableArray *oldFavorites = [self.favoritesList mutableCopy];
-	[self loadFavoritesList];
-	if ([oldFavorites count] > [self.favoritesList count]) { // Removed a favorite temple
-		NSMutableArray *oldFavoritesBeforeDelete = [oldFavorites copy];
-		[oldFavorites removeObjectsInArray:[self.favoritesList copy]];
-		
-		NSIndexPath *path = [NSIndexPath indexPathForItem:[oldFavoritesBeforeDelete indexOfObject:oldFavorites[0]] inSection:kFavoritesSection];
-		[self.tableView deleteRowsAtIndexPaths: @[path] withRowAnimation:UITableViewRowAnimationFade];
-	}
-	else if([oldFavorites count] < [self.favoritesList count]){ // Added a favorite temple on the end
-		NSIndexPath *path = [NSIndexPath indexPathForItem:[self.favoritesList count] - 1 inSection:kFavoritesSection];
-		[self.tableView insertRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationFade];
-	}
-	
-	
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,7 +48,7 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
 		NSManagedObject *object;
 		
-        if (self.isSearching) {
+        if (self.searchController.active) {
             nextViewController.currentTemple = self.filteredList[[indexPath row]];
         }else{
 			if (indexPath.section == kFavoritesSection) {
@@ -85,6 +63,7 @@
 		
 		//Create dependency injection: http://stackoverflow.com/questions/21050408/how-to-get-managedobjectcontext-for-viewcontroller-other-than-getting-it-from-ap to pass managedObjectContext along
 		nextViewController.managedObjectContext = self.managedObjectContext;
+		nextViewController.favoritesDelegate = self;
 	}
 }
 
@@ -92,14 +71,14 @@
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    if (self.isSearching)
+    if (self.searchController.active)
         return 1;
     else
         return [[self.fetchedResultsController sections] count] + 1; // For favorites
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (self.isSearching) {
+    if (self.searchController.active) {
         return [self.filteredList count];
 	}else if(section == kFavoritesSection){
 		return [self.favoritesList count];
@@ -112,7 +91,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    if (self.isSearching) {
+    if (self.searchController.active) {
         Temple *filteredTemple = [self.filteredList objectAtIndex:[indexPath row]];
         cell.textLabel.text = [filteredTemple name];
         
@@ -141,7 +120,7 @@
 }
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-	if (self.isSearching) {
+	if (self.searchController.active) {
 		return nil; // No names of any sections in the search view.
 	}else if(section == kFavoritesSection){
 		return @"Favorites";
@@ -152,9 +131,7 @@
 }
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView{
-	if (self.isSearching) {
-		return nil;
-	}
+	if(self.searchController.active) return nil;
 	NSArray *letters = [self.fetchedResultsController sectionIndexTitles];
 	NSString *search = UITableViewIndexSearch;
 	NSMutableArray *indexTitles = [[NSMutableArray alloc]initWithArray:letters];
@@ -254,6 +231,13 @@
 
 
 #pragma mark - UISearchResultsUpdating Delegate
+
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController{
+	NSString *searchString = searchController.searchBar.text;
+	[self searchForText:searchString];
+	[self.tableView reloadData];
+}
+
 - (void)searchForText:(NSString *)searchString{
     if (self.managedObjectContext)
     {
@@ -282,45 +266,41 @@
     return searchFetchRequest;
 }
 
-
-- (void)updateSearchResultsForSearchController:(UISearchController *)searchController{
-    NSString *searchString = searchController.searchBar.text;
-    [self searchForText:searchString];
-    [self.tableView reloadData];
+#pragma mark - FavoritesDelegate
+-(void)addedToFavorites:(Temple*) temple{
+	[self loadFavoritesList];
+	[self.tableView reloadData];
 }
 
-#pragma mark - UISearchBar Delegate
-
-- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar{
-    self.isSearching = YES;
-}
-
-- (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar{
-	self.isSearching = NO;
+-(void)removedFromFavorites:(Temple*) temple{
+	[self loadFavoritesList];
+	[self.tableView reloadData];
 }
 
 #pragma mark - Utility Methods
 
 - (void)setupSearchBar {
 	///Set up search bar in code since XCode search bar is deprecated: http://useyourloaf.com/blog/2015/02/16/updating-to-the-ios-8-search-controller.html
+	
 	self.searchController = [[UISearchController alloc]initWithSearchResultsController:nil];
 	self.tableView.tableHeaderView = self.searchController.searchBar;
 	self.searchController.searchResultsUpdater = self; // This controller will respond to the UISearchResultsUpdating protocol.
 	self.searchController.dimsBackgroundDuringPresentation = NO;
-	self.searchController.searchBar.delegate = self;
-	self.definesPresentationContext = YES;  //Allows the search view to cover the table view.
+	[self.searchController.searchBar sizeToFit];
 }
 
 - (void)loadFavoritesList{
 	NSFetchRequest *favoritesFetch = [[NSFetchRequest alloc]initWithEntityName:@"Temple"];
 	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"isFavorite == YES"];
 	[favoritesFetch setPredicate:predicate];
+	
+	NSSortDescriptor *alphaName = [[NSSortDescriptor alloc]initWithKey:@"name" ascending:YES];
+	[favoritesFetch setSortDescriptors:@[alphaName]];
 
 	NSError *error;
-	self.favoritesList = [NSMutableArray arrayWithArray:[self.managedObjectContext executeFetchRequest:favoritesFetch error:&error]];
-	if (error != nil) {
-		NSLog(@"Fetching favorites failed.");
-	}
+	if(!(self.favoritesList = [NSMutableArray arrayWithArray:[self.managedObjectContext executeFetchRequest:favoritesFetch error:&error]])){
+		NSLog(@"Failed to fetch favorites");
+	};
 }
 
 - (void)removeFavoritesDesignation:(Temple*)temple{
@@ -331,5 +311,7 @@
 	object.isFavorite = [NSNumber numberWithBool:NO];
 	[self.managedObjectContext save:nil];
 }
+
 @end
+
 
