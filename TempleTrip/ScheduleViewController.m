@@ -17,6 +17,7 @@
 #pragma mark - ViewLifeCycle
 
 -(void) viewDidLoad{
+    [super viewDidLoad];
 	self.today = self.scheduleDict[self.dayTapped];
 	[self schedulePicker].delegate = self;
 	upcomingDates = [ScheduleViewController getUpcomingDatesArrayWithDay: self.dayTapped count: 52 weekdays:self.daysOfWeek];

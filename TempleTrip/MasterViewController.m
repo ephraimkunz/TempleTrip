@@ -21,17 +21,22 @@
 @end
 
 @implementation MasterViewController
+{
+	BOOL shouldUpdateFetchedResultsController;
+	NSString * sortTableBy;
+}
 
 #pragma mark - View Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	self.definesPresentationContext = YES;
-	[self setupSearchBar];
-	UIColor *magnesium = [UIColor colorWithRed:150.0/255 green:150.0/255 blue:150.0/255 alpha:1.0];
-	self.tableView.sectionIndexColor = magnesium;
+	//Set default sort
+	shouldUpdateFetchedResultsController = false;
+	sortTableBy = @"name";
 	
+	self.definesPresentationContext = YES;
+    [self setupSearchBar];
 	[self loadFavoritesList];
 }
 
@@ -62,6 +67,7 @@
         }
 		
 		//Create dependency injection: http://stackoverflow.com/questions/21050408/how-to-get-managedobjectcontext-for-viewcontroller-other-than-getting-it-from-ap to pass managedObjectContext along
+        
 		nextViewController.managedObjectContext = self.managedObjectContext;
 		nextViewController.favoritesDelegate = self;
 	}
@@ -91,6 +97,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
     if (self.searchController.active) {
         Temple *filteredTemple = [self.filteredList objectAtIndex:[indexPath row]];
         cell.textLabel.text = [filteredTemple name];
@@ -106,6 +113,7 @@
             NSString *formattedDate = [NSDateFormatter localizedStringFromDate:date dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterNoStyle];
             cell.detailTextLabel.text = formattedDate;
         }
+        
         else{
             cell.detailTextLabel.text = filteredTemple.dedication;
         }
@@ -120,7 +128,7 @@
 }
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-	if (self.searchController.active) {
+	if (self.searchController.active || [sortTableBy isEqualToString:@"dedication"]) {
 		return nil; // No names of any sections in the search view.
 	}else if(section == kFavoritesSection){
 		return @"Favorites";
@@ -131,7 +139,7 @@
 }
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView{
-	if(self.searchController.active) return nil;
+	if(self.searchController.active || [sortTableBy isEqualToString:@"dedication"]) return nil;
 	NSArray *letters = [self.fetchedResultsController sectionIndexTitles];
 	NSString *search = UITableViewIndexSearch;
 	NSMutableArray *indexTitles = [[NSMutableArray alloc]initWithArray:letters];
@@ -193,7 +201,7 @@
 
 - (NSFetchedResultsController *)fetchedResultsController // Custom getter.
 {
-    if (_fetchedResultsController != nil) {
+    if (_fetchedResultsController != nil && !shouldUpdateFetchedResultsController) {
         return _fetchedResultsController;
     }
     
@@ -206,7 +214,7 @@
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:sortTableBy ascending:YES];
     NSArray *sortDescriptors = @[sortDescriptor];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
@@ -215,6 +223,9 @@
     // nil for section name key path means "no sections".
     NSFetchedResultsController *aFetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:@"firstLetter" cacheName:@"Master"];
     aFetchedResultsController.delegate = self;
+	
+	shouldUpdateFetchedResultsController = NO;
+	
     _fetchedResultsController = aFetchedResultsController;
     
 	NSError *error = nil;
@@ -224,7 +235,6 @@
 	    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 	    abort();
 	}
-    
     return _fetchedResultsController;
 }    
 
@@ -280,11 +290,9 @@
 #pragma mark - Utility Methods
 
 - (void)setupSearchBar {
-	///Set up search bar in code since XCode search bar is deprecated: http://useyourloaf.com/blog/2015/02/16/updating-to-the-ios-8-search-controller.html
-	
 	self.searchController = [[UISearchController alloc]initWithSearchResultsController:nil];
 	self.tableView.tableHeaderView = self.searchController.searchBar;
-	self.searchController.searchResultsUpdater = self; // This controller will respond to the UISearchResultsUpdating protocol.
+	self.searchController.searchResultsUpdater = self;
 	self.searchController.dimsBackgroundDuringPresentation = NO;
 	[self.searchController.searchBar sizeToFit];
 }
@@ -312,6 +320,26 @@
 	[self.managedObjectContext save:nil];
 }
 
+- (IBAction)sortSegmentSelected:(id)sender {
+	UISegmentedControl* sortBy = (UISegmentedControl *)sender;
+	
+	shouldUpdateFetchedResultsController = YES;
+	
+	NSInteger index = sortBy.selectedSegmentIndex;
+	switch (index) {
+		case 0:
+			sortTableBy = @"name";
+			break;
+		case 1:
+			sortTableBy = @"dedication";
+			break;
+  default:
+			sortTableBy = @"name";
+			NSLog(@"Unrecognized selector index %ld in segmented control", (long)index);
+			break;
+	}
+	[self.tableView reloadData];
+}
 @end
 
 

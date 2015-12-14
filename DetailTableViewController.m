@@ -9,6 +9,7 @@
 #import "DetailTableViewController.h"
 #import "Temple.h"
 #import "ScheduleViewController.h"
+#import "TempleTrip-Swift.h"
 
 #define kDefaultRowHeight 44
 #define kAddressSection 0
@@ -126,6 +127,8 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	switch (section) {
 		case kAddressSection:
+			return 2;
+			break;
 		case kPhotoSection:
 			return 1;
 			break;
@@ -155,11 +158,21 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	UITableViewCell *cell;
+	
     
 	switch (indexPath.section) {
 		case kAddressSection:{
-			cell = [tableView dequeueReusableCellWithIdentifier:@"AddressCell"];
-			cell.textLabel.text = self.currentTemple.address;
+			if (indexPath.row == 0) {
+				cell = [tableView dequeueReusableCellWithIdentifier:@"AddressCell"];
+				cell.textLabel.text = self.currentTemple.address;
+			}
+			else if(indexPath.row == 1){
+				ServicesAvailableCell* servicesCell = [tableView dequeueReusableCellWithIdentifier:@"ServicesAvailableCell"];
+                servicesCell.LeftLabel.text = self.currentTemple.hasClothing ? @"Rental clothing" : @"No rental clothing";
+                servicesCell.RightLabel.text = self.currentTemple.hasCafeteria ? @"Cafeteria" : @"No cafeteria";
+                return servicesCell;
+				
+			}
 			break;
 		}
 		case kPhotoSection:{
@@ -230,7 +243,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-	if(indexPath.section == kAddressSection){ // Address tapped
+	if(indexPath.section == kAddressSection && indexPath.row == 0){ // Address tapped
 		
 		NSString *mapsString = [[NSString stringWithFormat:@"http://maps.apple.com/?daddr=%@&saddr=%f,%f", self.currentTemple.address, currentLocation.coordinate.latitude, currentLocation.coordinate.longitude]stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 		NSURL *mapsUrl = [NSURL URLWithString:mapsString];

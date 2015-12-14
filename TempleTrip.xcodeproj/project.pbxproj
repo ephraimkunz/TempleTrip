@@ -23,6 +23,7 @@
 		18C8F5041BD1D29000FFF64A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180C096F1B8EB62200764003 /* CoreLocation.framework */; };
 		18CB44DA1B745444001FA4B4 /* results.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18CB44D91B745444001FA4B4 /* results.txt */; };
 		18CB44E11B751B95001FA4B4 /* Temple.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CB44E01B751B95001FA4B4 /* Temple.m */; };
+		18DC93FC1C1D213500D1E367 /* ServicesAvailableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DC93FB1C1D213500D1E367 /* ServicesAvailableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		18CB44D91B745444001FA4B4 /* results.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = results.txt; sourceTree = "<group>"; };
 		18CB44DF1B751B95001FA4B4 /* Temple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Temple.h; path = ../Temple.h; sourceTree = "<group>"; };
 		18CB44E01B751B95001FA4B4 /* Temple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Temple.m; path = ../Temple.m; sourceTree = "<group>"; };
+		18DC93FB1C1D213500D1E367 /* ServicesAvailableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesAvailableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				180C096D1B8EA01F00764003 /* DetailTableViewController.m */,
 				1802C4001C1CFE420079A631 /* FavoritesDelegate.h */,
 				181EF7F51B73CF880010D2EA /* Main.storyboard */,
+				18DC93FB1C1D213500D1E367 /* ServicesAvailableCell.swift */,
 				18A2EF6D1BE87A4000FB4D69 /* ScheduleViewController.h */,
 				18A2EF6E1BE87A4000FB4D69 /* ScheduleViewController.m */,
 				181EF7F81B73CF880010D2EA /* Images.xcassets */,
@@ -145,7 +148,6 @@
 				1877D7241C0759060022BF60 /* Crashlytics.framework */,
 				18ABEC411BF5579900AA7EB7 /* EventKit.framework */,
 				180C096F1B8EB62200764003 /* CoreLocation.framework */,
-				18CB44D91B745444001FA4B4 /* results.txt */,
 				181EF7E61B73CF870010D2EA /* Info.plist */,
 				181EF7E71B73CF870010D2EA /* main.m */,
 			);
@@ -175,6 +177,7 @@
 				181EF7EC1B73CF880010D2EA /* TempleTrip.xcdatamodeld */,
 				18CB44DF1B751B95001FA4B4 /* Temple.h */,
 				18CB44E01B751B95001FA4B4 /* Temple.m */,
+				18CB44D91B745444001FA4B4 /* results.txt */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 		181EF7DA1B73CF870010D2EA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Ephraim Kunz";
 				TargetAttributes = {
@@ -302,6 +306,7 @@
 				180C096E1B8EA01F00764003 /* DetailTableViewController.m in Sources */,
 				18CB44E11B751B95001FA4B4 /* Temple.m in Sources */,
 				181EF7F11B73CF880010D2EA /* MasterViewController.m in Sources */,
+				18DC93FC1C1D213500D1E367 /* ServicesAvailableCell.swift in Sources */,
 				181EF7EB1B73CF880010D2EA /* AppDelegate.m in Sources */,
 				181EF7E81B73CF870010D2EA /* main.m in Sources */,
 				181EF7EE1B73CF880010D2EA /* TempleTrip.xcdatamodeld in Sources */,
@@ -432,8 +437,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -444,6 +451,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ephraimhowardkunz.templetrip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TempleTrip/TempleTrip-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -452,8 +461,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -463,6 +474,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ephraimhowardkunz.templetrip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "TempleTrip/TempleTrip-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

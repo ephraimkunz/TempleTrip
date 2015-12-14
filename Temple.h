@@ -23,5 +23,8 @@
 @property (nonatomic, retain) NSString * firstLetter;
 @property (nonatomic, retain) NSString * localImagePath;
 @property (nonatomic, retain) NSNumber * isFavorite;
+@property (nonatomic) BOOL hasCafeteria;
+@property (nonatomic) BOOL hasClothing;
+
 
 @end

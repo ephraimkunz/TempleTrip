@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #import "FavoritesDelegate.h"
+
 @class Temple;
 
 @interface DetailTableViewController : UITableViewController<CLLocationManagerDelegate>

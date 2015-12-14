@@ -20,4 +20,6 @@
 @dynamic endowmentSchedule;
 @dynamic localImagePath;
 @dynamic isFavorite;
+@dynamic hasCafeteria;
+@dynamic hasClothing;
 @end

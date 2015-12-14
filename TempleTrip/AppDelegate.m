@@ -175,6 +175,12 @@
         temple.telephone = [item valueForKey:@"telephone"];
         temple.endowmentSchedule = [item valueForKey:@"endowmentSchedule"];
         temple.firstLetter = [temple.name substringToIndex:1];
+    
+        NSString *firstTwoLetters = [[[item valueForKey:@"servicesAvailable"]valueForKey:@"Cafeteria"] substringToIndex:2] == nil ? @"No" : [[[item valueForKey:@"servicesAvailable"]valueForKey:@"Cafeteria"] substringToIndex:2];
+		temple.hasCafeteria = ![firstTwoLetters isEqualToString:@"No"];
+		
+		firstTwoLetters = [[[item valueForKey:@"servicesAvailable"]valueForKey:@"Clothing"] substringToIndex:2] == nil ? @"No" : [[[item valueForKey:@"servicesAvailable"]valueForKey:@"Clothing"] substringToIndex:2];
+        temple.hasClothing = ![firstTwoLetters isEqualToString:@"No"];
     }
 	[self.managedObjectContext save:nil];
 }
