@@ -62,16 +62,10 @@
 	scheduleDict = [self scheduleDictFromKeys:scheduleKeys];
 	
 	scaledImage = [DetailTableViewController imageWithImage:[self getImage] scaledToWidth:self.tableView.frame.size.width];
-	
-	//Testing code
-	CLGeocoder *geoCoder = [[CLGeocoder alloc]init];
-	[geoCoder geocodeAddressString:self.currentTemple.address completionHandler:^(NSArray *placemarks, NSError *error) {
-		//NSLog(@"The latitude and longitude are %@", placemarks[0]);
-	}];
-	
+    
 	//Set up the call button in the navigation bar.
 	if ([[UIApplication sharedApplication] canOpenURL: [NSURL URLWithString:@"tel://"]]) {
-		UIBarButtonItem *callButton = [[UIBarButtonItem alloc]initWithTitle:@"Call" style:UIBarButtonItemStylePlain target:self action:@selector(beginCall)];
+        UIBarButtonItem *callButton =[[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"phoneIcon"] style:UIBarButtonItemStylePlain target:self action:@selector(beginCall)];
 		self.navigationItem.rightBarButtonItem = callButton;
 	}
 }
@@ -244,8 +238,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 	if(indexPath.section == kAddressSection && indexPath.row == 0){ // Address tapped
-		
-		NSString *mapsString = [[NSString stringWithFormat:@"http://maps.apple.com/?daddr=%@&saddr=%f,%f", self.currentTemple.address, currentLocation.coordinate.latitude, currentLocation.coordinate.longitude]stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSCharacterSet *set = [NSCharacterSet alphanumericCharacterSet];
+        NSString *mapsString = [[NSString stringWithFormat:@"http://maps.apple.com/?daddr=%@&saddr=%f,%f", self.currentTemple.address, currentLocation.coordinate.latitude, currentLocation.coordinate.longitude]stringByAddingPercentEncodingWithAllowedCharacters: set];
+
 		NSURL *mapsUrl = [NSURL URLWithString:mapsString];
 		[[UIApplication sharedApplication]openURL:mapsUrl];
 		[self.tableView deselectRowAtIndexPath:indexPath animated:NO];

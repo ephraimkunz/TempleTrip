@@ -14,7 +14,6 @@
 		181EF7F11B73CF880010D2EA /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181EF7F01B73CF880010D2EA /* MasterViewController.m */; };
 		181EF7F71B73CF880010D2EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181EF7F51B73CF880010D2EA /* Main.storyboard */; };
 		181EF7F91B73CF880010D2EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 181EF7F81B73CF880010D2EA /* Images.xcassets */; };
-		181EF7FC1B73CF880010D2EA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 181EF7FA1B73CF880010D2EA /* LaunchScreen.xib */; };
 		181EF8081B73CF880010D2EA /* TempleTripTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 181EF8071B73CF880010D2EA /* TempleTripTests.m */; };
 		1877D7251C0759060022BF60 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1877D7231C0759060022BF60 /* Fabric.framework */; };
 		1877D7261C0759060022BF60 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1877D7241C0759060022BF60 /* Crashlytics.framework */; };
@@ -24,6 +23,7 @@
 		18CB44DA1B745444001FA4B4 /* results.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18CB44D91B745444001FA4B4 /* results.txt */; };
 		18CB44E11B751B95001FA4B4 /* Temple.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CB44E01B751B95001FA4B4 /* Temple.m */; };
 		18DC93FC1C1D213500D1E367 /* ServicesAvailableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DC93FB1C1D213500D1E367 /* ServicesAvailableCell.swift */; };
+		18DC94041C1F7E1E00D1E367 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18DC94031C1F7E1E00D1E367 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +64,6 @@
 		181EF7F01B73CF880010D2EA /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		181EF7F61B73CF880010D2EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		181EF7F81B73CF880010D2EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		181EF7FB1B73CF880010D2EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		181EF8011B73CF880010D2EA /* TempleTripTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TempleTripTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		181EF8061B73CF880010D2EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		181EF8071B73CF880010D2EA /* TempleTripTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TempleTripTests.m; sourceTree = "<group>"; };
@@ -77,6 +76,8 @@
 		18CB44DF1B751B95001FA4B4 /* Temple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Temple.h; path = ../Temple.h; sourceTree = "<group>"; };
 		18CB44E01B751B95001FA4B4 /* Temple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Temple.m; path = ../Temple.m; sourceTree = "<group>"; };
 		18DC93FB1C1D213500D1E367 /* ServicesAvailableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesAvailableCell.swift; sourceTree = "<group>"; };
+		18DC93FE1C1F5E2700D1E367 /* TempleTrip-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TempleTrip-Bridging-Header.h"; sourceTree = "<group>"; };
+		18DC94031C1F7E1E00D1E367 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +105,7 @@
 		181EF7D91B73CF870010D2EA = {
 			isa = PBXGroup;
 			children = (
+				18DC94031C1F7E1E00D1E367 /* Launch Screen.storyboard */,
 				181EF7E41B73CF870010D2EA /* TempleTrip */,
 				181EF8041B73CF880010D2EA /* TempleTripTests */,
 				181EF7E31B73CF870010D2EA /* Products */,
@@ -134,7 +136,6 @@
 				18A2EF6D1BE87A4000FB4D69 /* ScheduleViewController.h */,
 				18A2EF6E1BE87A4000FB4D69 /* ScheduleViewController.m */,
 				181EF7F81B73CF880010D2EA /* Images.xcassets */,
-				181EF7FA1B73CF880010D2EA /* LaunchScreen.xib */,
 				18CB44DE1B75195B001FA4B4 /* Model */,
 				181EF7E51B73CF870010D2EA /* Supporting Files */,
 			);
@@ -144,12 +145,13 @@
 		181EF7E51B73CF870010D2EA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18DC93FE1C1F5E2700D1E367 /* TempleTrip-Bridging-Header.h */,
+				181EF7E61B73CF870010D2EA /* Info.plist */,
+				181EF7E71B73CF870010D2EA /* main.m */,
 				1877D7231C0759060022BF60 /* Fabric.framework */,
 				1877D7241C0759060022BF60 /* Crashlytics.framework */,
 				18ABEC411BF5579900AA7EB7 /* EventKit.framework */,
 				180C096F1B8EB62200764003 /* CoreLocation.framework */,
-				181EF7E61B73CF870010D2EA /* Info.plist */,
-				181EF7E71B73CF870010D2EA /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -267,8 +269,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				181EF7F71B73CF880010D2EA /* Main.storyboard in Resources */,
-				181EF7FC1B73CF880010D2EA /* LaunchScreen.xib in Resources */,
 				181EF7F91B73CF880010D2EA /* Images.xcassets in Resources */,
+				18DC94041C1F7E1E00D1E367 /* Launch Screen.storyboard in Resources */,
 				18CB44DA1B745444001FA4B4 /* results.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,14 +343,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		181EF7FA1B73CF880010D2EA /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				181EF7FB1B73CF880010D2EA /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -389,7 +383,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -426,7 +420,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
