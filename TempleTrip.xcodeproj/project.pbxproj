@@ -77,7 +77,7 @@
 		18CB44E01B751B95001FA4B4 /* Temple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Temple.m; path = ../Temple.m; sourceTree = "<group>"; };
 		18DC93FB1C1D213500D1E367 /* ServicesAvailableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesAvailableCell.swift; sourceTree = "<group>"; };
 		18DC93FE1C1F5E2700D1E367 /* TempleTrip-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TempleTrip-Bridging-Header.h"; sourceTree = "<group>"; };
-		18DC94031C1F7E1E00D1E367 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		18DC94031C1F7E1E00D1E367 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "../Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +105,6 @@
 		181EF7D91B73CF870010D2EA = {
 			isa = PBXGroup;
 			children = (
-				18DC94031C1F7E1E00D1E367 /* Launch Screen.storyboard */,
 				181EF7E41B73CF870010D2EA /* TempleTrip */,
 				181EF8041B73CF880010D2EA /* TempleTripTests */,
 				181EF7E31B73CF870010D2EA /* Products */,
@@ -131,6 +130,7 @@
 				180C096C1B8EA01F00764003 /* DetailTableViewController.h */,
 				180C096D1B8EA01F00764003 /* DetailTableViewController.m */,
 				1802C4001C1CFE420079A631 /* FavoritesDelegate.h */,
+				18DC94031C1F7E1E00D1E367 /* Launch Screen.storyboard */,
 				181EF7F51B73CF880010D2EA /* Main.storyboard */,
 				18DC93FB1C1D213500D1E367 /* ServicesAvailableCell.swift */,
 				18A2EF6D1BE87A4000FB4D69 /* ScheduleViewController.h */,

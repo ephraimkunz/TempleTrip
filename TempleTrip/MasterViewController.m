@@ -31,10 +31,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	
-	//Set default sort
-	shouldUpdateFetchedResultsController = false;
-	sortTableBy = @"name";
-	
 	self.definesPresentationContext = YES;
     [self setupSearchBar];
 	[self loadFavoritesList];
@@ -128,7 +124,7 @@
 }
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-	if (self.searchController.active || [sortTableBy isEqualToString:@"dedication"]) {
+	if (self.searchController.active) {
 		return nil; // No names of any sections in the search view.
 	}else if(section == kFavoritesSection){
 		return @"Favorites";
@@ -139,7 +135,7 @@
 }
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView{
-	if(self.searchController.active || [sortTableBy isEqualToString:@"dedication"]) return nil;
+	if(self.searchController.active) return nil;
 	NSArray *letters = [self.fetchedResultsController sectionIndexTitles];
 	NSString *search = UITableViewIndexSearch;
 	NSMutableArray *indexTitles = [[NSMutableArray alloc]initWithArray:letters];
@@ -214,7 +210,7 @@
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:sortTableBy ascending:YES];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
     NSArray *sortDescriptors = @[sortDescriptor];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
@@ -320,26 +316,6 @@
 	[self.managedObjectContext save:nil];
 }
 
-- (IBAction)sortSegmentSelected:(id)sender {
-	UISegmentedControl* sortBy = (UISegmentedControl *)sender;
-	
-	shouldUpdateFetchedResultsController = YES;
-	
-	NSInteger index = sortBy.selectedSegmentIndex;
-	switch (index) {
-		case 0:
-			sortTableBy = @"name";
-			break;
-		case 1:
-			sortTableBy = @"dedication";
-			break;
-  default:
-			sortTableBy = @"name";
-			NSLog(@"Unrecognized selector index %ld in segmented control", (long)index);
-			break;
-	}
-	[self.tableView reloadData];
-}
 @end
 
 

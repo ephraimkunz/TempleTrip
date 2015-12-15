@@ -183,7 +183,10 @@
 			NSString *dayName = weekdays[indexPath.row];
 			NSArray *scheduleForDay = scheduleDict[dayName];
 			NSString *displayTime = [self getDateStringStart: scheduleForDay[0] end:[scheduleForDay lastObject]];
-			cell.detailTextLabel.text = displayTime;//[NSString stringWithFormat:@"%@ - %@", scheduleForDay[0], [scheduleForDay lastObject]];
+			cell.detailTextLabel.text = displayTime;
+            if ( [displayTime isEqualToString:@""]) {
+                cell.accessoryType = UITableViewCellAccessoryNone;
+            }
 			
 			cell.textLabel.text = dayName;
 		}
