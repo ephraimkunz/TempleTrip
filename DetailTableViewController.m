@@ -10,6 +10,7 @@
 #import "Temple.h"
 #import "ScheduleViewController.h"
 #import "TempleTrip-Swift.h"
+@import Crashlytics;
 
 #define kDefaultRowHeight 44
 #define kAddressSection 0
@@ -36,6 +37,11 @@
 }
 
 #pragma mark - View Lifecycle
+
+-(void) viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [[Crashlytics sharedInstance] setObjectValue:self.currentTemple.name forKey:@"currentTemple"];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -241,8 +247,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 	if(indexPath.section == kAddressSection && indexPath.row == 0){ // Address tapped
-        NSCharacterSet *set = [NSCharacterSet alphanumericCharacterSet];
-        NSString *mapsString = [[NSString stringWithFormat:@"http://maps.apple.com/?daddr=%@&saddr=%f,%f", self.currentTemple.address, currentLocation.coordinate.latitude, currentLocation.coordinate.longitude]stringByAddingPercentEncodingWithAllowedCharacters: set];
+        NSCharacterSet *set = [NSCharacterSet URLQueryAllowedCharacterSet];
+        NSString *mapsString = [[NSString stringWithFormat:@"http://maps.apple.com/?daddr=%@&saddr=%f,%f", self.currentTemple.address, currentLocation.coordinate.latitude, currentLocation.coordinate.longitude] stringByAddingPercentEncodingWithAllowedCharacters: set];
 
 		NSURL *mapsUrl = [NSURL URLWithString:mapsString];
 		[[UIApplication sharedApplication]openURL:mapsUrl];

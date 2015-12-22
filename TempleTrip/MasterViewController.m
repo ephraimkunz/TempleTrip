@@ -11,6 +11,8 @@
 #import "Temple.h"
 #import "DetailTableViewController.h"
 
+@import Crashlytics;
+
 #define kFavoritesSection 0 //What section we keep favorite temples in.
 
 @interface MasterViewController ()
@@ -27,6 +29,11 @@
 }
 
 #pragma mark - View Lifecycle
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [[Crashlytics sharedInstance] setObjectValue:@"" forKey:@"currentTemple"];
+    [[Crashlytics sharedInstance]setIntValue:(int)[self.favoritesList count] forKey:@"numberOfFavorites"];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
