@@ -30,6 +30,14 @@
     
     [self preloadData];
     
+    //Setup default user preferences
+    
+    NSURL *defaultPrefsFile = [[NSBundle mainBundle]
+                               URLForResource:@"DefaultPreferences" withExtension:@"plist"];
+    NSDictionary *defaultPrefs =
+    [NSDictionary dictionaryWithContentsOfURL:defaultPrefsFile];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:defaultPrefs];
+    
     return YES;
 }
 

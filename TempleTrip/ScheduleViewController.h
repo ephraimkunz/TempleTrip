@@ -9,16 +9,17 @@
 #import <UIKit/UIKit.h>
 @import EventKit;
 
-@interface ScheduleViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate>
+@interface ScheduleViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *ScheduleTableView;
+@property (weak, nonatomic) IBOutlet UILabel *footerLabel;
 
 @property (strong, nonatomic) NSDictionary * scheduleDict;
 @property (strong, nonatomic) NSString *templeName;
 @property(nonatomic) NSArray *daysOfWeek;
 @property(nonatomic) NSString *dayTapped;
 @property(nonatomic) NSArray *today;
-
-@property (weak, nonatomic) IBOutlet UILabel *FullDateLabel;
-@property (weak, nonatomic) IBOutlet UIPickerView *schedulePicker;
+@property(nonatomic) NSString *location;
 
 -(BOOL)dateIsToday:(NSDate*) date;
 

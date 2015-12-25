@@ -36,6 +36,16 @@
 	CLLocation *currentLocation;
 }
 
+-(instancetype) initWithTemple: (Temple *) aTemple managedContext: (NSManagedObjectContext *) context favoritesDelegate: (id) delegate{
+    self = [super initWithStyle:UITableViewStyleGrouped];
+    if (self != nil) {
+        self.currentTemple = aTemple;
+        self.managedObjectContext = context;
+        self.favoritesDelegate = delegate;
+    }
+    return self;
+}
+
 #pragma mark - View Lifecycle
 
 -(void) viewDidAppear:(BOOL)animated{
@@ -110,11 +120,14 @@
 	if ([[segue identifier] isEqualToString:@"Schedule"]) {
 		
 		NSString *weekdayTapped = [self.tableView cellForRowAtIndexPath:[self.tableView indexPathForCell:(UITableViewCell*)sender]].textLabel.text;
-		ScheduleViewController *nextViewController = [segue destinationViewController];
-		nextViewController.dayTapped = weekdayTapped;
-		nextViewController.daysOfWeek = weekdays;
-		nextViewController.scheduleDict = scheduleDict;
-		nextViewController.templeName = self.currentTemple.name;
+		UINavigationController *navController = [segue destinationViewController];
+        ScheduleViewController *scheduleController = navController.viewControllers[0];
+		scheduleController.dayTapped = weekdayTapped;
+		scheduleController.daysOfWeek = weekdays;
+		scheduleController.scheduleDict = scheduleDict;
+		scheduleController.templeName = self.currentTemple.name;
+        scheduleController.location = self.currentTemple.address;
+        //[navController setViewControllers:@[scheduleController] animated:NO];
 	}
 }
 

@@ -8,18 +8,32 @@
 
 #import "ScheduleViewController.h"
 #import "DetailTableViewController.h"
+#import "TempleTrip-Swift.h"
 
 @implementation ScheduleViewController{
 	NSArray* upcomingDates;
 	EKEventStore *store;
+    NSString * eventTitle;
+    NSString * eventLocation; // Will change if the user modifies. So we keep this instance variable while the property will remain unchanged.
+    BOOL shouldRemindForEvent;
+    NSString *labelText;
+    UITextField *textFieldToResign; // Holds a reference to the text field that we will resign when the user scrolls or taps outside of the currently edited text field.
 }
 
 #pragma mark - ViewLifeCycle
 
 -(void) viewDidLoad{
     [super viewDidLoad];
-	self.today = self.scheduleDict[self.dayTapped];
-	[self schedulePicker].delegate = self;
+    
+    self.ScheduleTableView.delegate = self;
+    self.ScheduleTableView.dataSource = self;
+
+    eventTitle = [NSString stringWithFormat:@"Trip to %@ temple", self.templeName];
+    eventLocation = self.location;
+    shouldRemindForEvent = NO;
+    
+    self.today = self.scheduleDict[self.dayTapped];
+    
 	upcomingDates = [ScheduleViewController getUpcomingDatesArrayWithDay: self.dayTapped count: 52 weekdays:self.daysOfWeek];
 	
 	store = [[EKEventStore alloc]init];
@@ -28,8 +42,13 @@
 			NSLog(@"There was an error granting access to Event entities:%@", error.description);
 		}
 	}];
-	
-	self.FullDateLabel.text = @"Choose a day and time";
+    
+    //Set up tap gesture to resign the textField.
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(resignActiveTextField)];
+    tap.cancelsTouchesInView = NO;
+    [self.view addGestureRecognizer:tap];
 }
 
 #pragma mark -  PickerViewDataSource
@@ -59,7 +78,6 @@
 			}
 			NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
 			[formatter setDateFormat:@"EEEE dd MMM"];
-			//[formatter setDateStyle:NSDateFormatterMediumStyle];
 			
 			NSString* formattedDate = [formatter stringFromDate:upcomingDates[row]];
 			NSRange firstSpaceRange = [formattedDate rangeOfString:@" "];
@@ -81,6 +99,7 @@
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
 	NSDate *selectedDate;
 	NSString *time;
+    [self resignActiveTextField];
 	
 	if (component == 0) {
 		selectedDate = upcomingDates[row];
@@ -94,16 +113,99 @@
 		time = self.today[row];
 	}
 	else{
-		time = self.today[[self.schedulePicker selectedRowInComponent:1]];
+		time = self.today[[pickerView selectedRowInComponent:1]];
 	}
 	
 	NSDateFormatter * formatter = [[NSDateFormatter alloc]init];
 	[formatter setDateStyle:NSDateFormatterLongStyle];
 	
-	NSString *labelText = [NSString stringWithFormat:@"%@ - %@", [formatter stringFromDate:selectedDate], [DetailTableViewController getDisplayDate:time]];
-	
-	self.FullDateLabel.text = labelText;
+	labelText = [NSString stringWithFormat:@"%@ - %@", [formatter stringFromDate:selectedDate], [DetailTableViewController getDisplayDate:time]];
 }
+
+
+#pragma mark - TableView
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 2;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    switch (section) {
+        case 0:
+        case 1:
+            return 2;
+            break;
+        default:
+            return 5000; //Bad deal if we hit this.
+    }
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 1 && indexPath.row == 0) {
+        return 200;
+    }
+    return 44;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    switch (indexPath.section){
+        case 0:{
+            if (indexPath.row == 0) {
+                EditableTextTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EditLabelCell"];
+                cell.editableText.text = eventTitle;
+                cell.editableText.placeholder = @"Title";
+                cell.editableText.delegate = self;
+                return cell;
+            }
+            else if(indexPath.row == 1){
+                EditableTextTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EditLabelCell"];
+                cell.editableText.text = eventLocation;
+                cell.editableText.placeholder = @"Location";
+                cell.editableText.delegate = self;
+                return cell;
+            }
+        }
+        case 1:{
+            if (indexPath.row == 0) {
+                SchedulePickerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SchedulePickerCell"];
+                cell.SchedulePicker.dataSource = self;
+                cell.SchedulePicker.delegate = self;
+                return cell;
+            }
+            else{
+                return [tableView dequeueReusableCellWithIdentifier:@"LabelCell"];
+            }
+        }
+        default:{ //Bad news if we hit this
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LabelCell"];
+            cell.textLabel.text = @"Out of bounds index path";
+            NSLog(@"Out of bounds index path with section: %ld, row: %ld", (long)indexPath.section, (long)indexPath.row);
+            
+            return cell;
+        }
+    }
+}
+
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(indexPath.section == 1 && indexPath.row == 1){
+        UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
+        if(shouldRemindForEvent){
+            shouldRemindForEvent = NO;
+            cell.accessoryType = UITableViewCellAccessoryNone;
+            self.footerLabel.text = @"";
+            [tableView deselectRowAtIndexPath:indexPath animated:YES];
+        }
+        else{
+            shouldRemindForEvent = YES;
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+            
+            int minutesBeforeAlert = [[NSUserDefaults standardUserDefaults]integerForKey:@"alert_preference"];
+            self.footerLabel.text = [NSString stringWithFormat:@"You will be alerted %d minutes before the session.", minutesBeforeAlert];
+            [tableView deselectRowAtIndexPath:indexPath animated:YES];
+        }
+    }
+}
+
 
 
 #pragma mark - Class Methods
@@ -149,10 +251,23 @@
 
 - (IBAction)saveTapped:(id)sender {
 	EKEvent *event = [EKEvent eventWithEventStore:store];
-	event.title = [NSString stringWithFormat:@"Trip to %@ temple", self.templeName];
+    
+    event.title = eventTitle;
+    event.location = eventLocation;
+    event.calendar = [store defaultCalendarForNewEvents];
+    
+    //Add alarm if cell selected
+    if (shouldRemindForEvent) {
+        NSTimeInterval interval = -([[NSUserDefaults standardUserDefaults]integerForKey:@"alert_preference"] * 60); //Get seconds from minutes.
+        EKAlarm *alarm = [EKAlarm alarmWithRelativeOffset: interval];
+        [event addAlarm:alarm];
+    }
 	
-	NSDate *dateWithoutTime = upcomingDates[[self.schedulePicker selectedRowInComponent:0]];
-	NSString * time = self.today[[self.schedulePicker selectedRowInComponent:1]];
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:1];
+    SchedulePickerTableViewCell *cell = [self.ScheduleTableView cellForRowAtIndexPath:indexPath];
+    
+	NSDate *dateWithoutTime = upcomingDates[[cell.SchedulePicker selectedRowInComponent:0]];
+	NSString * time = self.today[[cell.SchedulePicker selectedRowInComponent:1]];
 	long colonLocation = [time rangeOfString:@":"].location;
 	NSInteger hour = [[time substringToIndex:colonLocation]integerValue];
 	NSInteger minute = [[time substringFromIndex:colonLocation + 1]integerValue];
@@ -160,15 +275,11 @@
 	NSDate *totalDate = [[NSCalendar currentCalendar]dateBySettingHour:hour minute:minute second:0 ofDate:dateWithoutTime options:0];
 	
 	event.startDate = totalDate;
-	
 	double secondsInTwoHours = 60 * 60 * 2;
 	event.endDate = [event.startDate dateByAddingTimeInterval: (NSTimeInterval)secondsInTwoHours];
 	
-	event.calendar = [store defaultCalendarForNewEvents];
-	
-	
 	//Confirm with user
-	UIAlertController * confirmAddEventController = [UIAlertController alertControllerWithTitle:@"Add to calendar" message:@"Are you sure you want to add this event to your calendar?" preferredStyle:UIAlertControllerStyleAlert];
+	UIAlertController * confirmAddEventController = [UIAlertController alertControllerWithTitle:@"Add to Calendar" message:@"Are you sure you want to add this event to your calendar?" preferredStyle:UIAlertControllerStyleAlert];
 	
 	UIAlertAction *confirm = [UIAlertAction actionWithTitle:@"Add" style:UIAlertActionStyleDefault handler:^(UIAlertAction* action){
 		
@@ -181,9 +292,6 @@
 	[confirmAddEventController addAction:confirm];
 	
 	[self presentViewController:confirmAddEventController animated:YES completion:nil];
-	
-	
-							  
 }
 
 
@@ -195,5 +303,43 @@
 	
 	return today.month == passedIn.month && today.year == passedIn.year && today.day == passedIn.day;
 }
+
+#pragma mark - UITextFieldDelegate
+
+-(void)textFieldDidEndEditing:(UITextField *)textField{
+    
+    //Find out which text view this is.
+    NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:0];
+    EditableTextTableViewCell *titleCell = [self.ScheduleTableView cellForRowAtIndexPath:path];
+    path = [NSIndexPath indexPathForRow:1 inSection:0];
+    
+    EditableTextTableViewCell *locationCell = [self.ScheduleTableView cellForRowAtIndexPath:path];
+    if ([textField isEqual: titleCell.editableText]) {
+        if (textField.text != eventTitle)
+            eventTitle = textField.text;
+    }
+    else if([textField isEqual:locationCell.editableText]){
+        if(textField.text != eventLocation)
+            eventLocation = textField.text;
+    }
+    else{
+        NSLog(@"Error occured when unrecognized textField finished editing.");
+    }
+}
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField{
+    textFieldToResign = textField;
+}
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField endEditing:NO];
+    [textField resignFirstResponder];
+    return YES;
+}
+
+-(void) resignActiveTextField{
+    [textFieldToResign resignFirstResponder];
+}
+
 
 @end
