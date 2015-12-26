@@ -34,12 +34,15 @@
     NSRange colonPosition = [time rangeOfString:@":"];
     NSInteger hour = [[time substringToIndex:colonPosition.location] integerValue];
     NSString *minutes = [time substringFromIndex:colonPosition.location + 1];
-    if (hour == 12) {
+    if (hour >= 12 && hour < 24) {
         isAfternoon = YES;
+        if (hour != 12) {
+            hour -= 12;
+        }
     }
-    if (hour > 12) {
-        hour = hour - 12;
-        isAfternoon = YES;
+    if (hour == 24) {
+        isAfternoon = NO;
+        hour -= 12;
     }
     NSString *postfix = @"am";
     if (isAfternoon) {

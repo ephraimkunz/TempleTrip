@@ -14,7 +14,6 @@
 		181EF7F11B73CF880010D2EA /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181EF7F01B73CF880010D2EA /* MasterViewController.m */; };
 		181EF7F71B73CF880010D2EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181EF7F51B73CF880010D2EA /* Main.storyboard */; };
 		181EF7F91B73CF880010D2EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 181EF7F81B73CF880010D2EA /* Images.xcassets */; };
-		181EF8081B73CF880010D2EA /* TempleTripTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 181EF8071B73CF880010D2EA /* TempleTripTests.m */; };
 		1827873B1C2B148500196E0F /* SchedulePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827873A1C2B148500196E0F /* SchedulePickerTableViewCell.swift */; };
 		1827873F1C2B2A3700196E0F /* EditableTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827873E1C2B2A3700196E0F /* EditableTextTableViewCell.swift */; };
 		1877D7251C0759060022BF60 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1877D7231C0759060022BF60 /* Fabric.framework */; };
@@ -28,6 +27,8 @@
 		18C6CE941C2E35B100779183 /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C6CE8F1C2E35B100779183 /* DetailTableViewController.m */; };
 		18C6CE951C2E35B100779183 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C6CE901C2E35B100779183 /* Launch Screen.storyboard */; };
 		18C6CE961C2E35B100779183 /* Temple.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C6CE921C2E35B100779183 /* Temple.m */; };
+		18C6CE981C2E372D00779183 /* DateTimeHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C6CE971C2E372D00779183 /* DateTimeHelperTest.m */; };
+		18C6CE9A1C2E3E2500779183 /* ImageHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C6CE991C2E3E2500779183 /* ImageHelperTest.m */; };
 		18CB44DA1B745444001FA4B4 /* results.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18CB44D91B745444001FA4B4 /* results.txt */; };
 		18DC93FC1C1D213500D1E367 /* ServicesAvailableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DC93FB1C1D213500D1E367 /* ServicesAvailableCell.swift */; };
 /* End PBXBuildFile section */
@@ -69,7 +70,6 @@
 		181EF7F81B73CF880010D2EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		181EF8011B73CF880010D2EA /* TempleTripTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TempleTripTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		181EF8061B73CF880010D2EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		181EF8071B73CF880010D2EA /* TempleTripTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TempleTripTests.m; sourceTree = "<group>"; };
 		1827873A1C2B148500196E0F /* SchedulePickerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchedulePickerTableViewCell.swift; sourceTree = "<group>"; };
 		1827873E1C2B2A3700196E0F /* EditableTextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditableTextTableViewCell.swift; sourceTree = "<group>"; };
 		1877D7231C0759060022BF60 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
@@ -89,6 +89,8 @@
 		18C6CE901C2E35B100779183 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		18C6CE911C2E35B100779183 /* Temple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Temple.h; sourceTree = "<group>"; };
 		18C6CE921C2E35B100779183 /* Temple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Temple.m; sourceTree = "<group>"; };
+		18C6CE971C2E372D00779183 /* DateTimeHelperTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateTimeHelperTest.m; sourceTree = "<group>"; };
+		18C6CE991C2E3E2500779183 /* ImageHelperTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageHelperTest.m; sourceTree = "<group>"; };
 		18CB44D91B745444001FA4B4 /* results.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = results.txt; sourceTree = "<group>"; };
 		18DC93FB1C1D213500D1E367 /* ServicesAvailableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesAvailableCell.swift; sourceTree = "<group>"; };
 		18DC93FE1C1F5E2700D1E367 /* TempleTrip-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TempleTrip-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -169,8 +171,9 @@
 		181EF8041B73CF880010D2EA /* TempleTripTests */ = {
 			isa = PBXGroup;
 			children = (
-				181EF8071B73CF880010D2EA /* TempleTripTests.m */,
 				181EF8051B73CF880010D2EA /* Supporting Files */,
+				18C6CE971C2E372D00779183 /* DateTimeHelperTest.m */,
+				18C6CE991C2E3E2500779183 /* ImageHelperTest.m */,
 			);
 			path = TempleTripTests;
 			sourceTree = "<group>";
@@ -364,7 +367,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				181EF8081B73CF880010D2EA /* TempleTripTests.m in Sources */,
+				18C6CE981C2E372D00779183 /* DateTimeHelperTest.m in Sources */,
+				18C6CE9A1C2E3E2500779183 /* ImageHelperTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
