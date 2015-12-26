@@ -11,7 +11,7 @@
 
 @interface ScheduleViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 
-@property (weak, nonatomic) IBOutlet UITableView *ScheduleTableView;
+@property (weak, nonatomic) IBOutlet UITableView *scheduleTableView;
 @property (weak, nonatomic) IBOutlet UILabel *footerLabel;
 
 @property (strong, nonatomic) NSDictionary * scheduleDict;

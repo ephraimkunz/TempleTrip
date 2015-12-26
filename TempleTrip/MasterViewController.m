@@ -33,6 +33,10 @@
     [super viewDidAppear:animated];
     [[Crashlytics sharedInstance] setObjectValue:@"" forKey:@"currentTemple"];
     [[Crashlytics sharedInstance]setIntValue:(int)[self.favoritesList count] forKey:@"numberOfFavorites"];
+    
+    //Reload favorites after visiting detail screen.
+    [self loadFavoritesList];
+    [self.tableView reloadData];
 }
 
 - (void)viewDidLoad {
@@ -72,7 +76,6 @@
 		//Create dependency injection: http://stackoverflow.com/questions/21050408/how-to-get-managedobjectcontext-for-viewcontroller-other-than-getting-it-from-ap to pass managedObjectContext along
         
 		nextViewController.managedObjectContext = self.managedObjectContext;
-		nextViewController.favoritesDelegate = self;
 	}
 }
 
@@ -277,17 +280,6 @@
 	[searchFetchRequest setSortDescriptors:@[sortDescriptor]];
     
     return searchFetchRequest;
-}
-
-#pragma mark - FavoritesDelegate
--(void)addedToFavorites:(Temple*) temple{
-	[self loadFavoritesList];
-	[self.tableView reloadData];
-}
-
--(void)removedFromFavorites:(Temple*) temple{
-	[self loadFavoritesList];
-	[self.tableView reloadData];
 }
 
 #pragma mark - Utility Methods

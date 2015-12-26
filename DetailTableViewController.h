@@ -7,18 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreLocation/CoreLocation.h>
-#import "FavoritesDelegate.h"
+#import "DetailDataSource.h"
 
 @class Temple;
 
-@interface DetailTableViewController : UITableViewController<CLLocationManagerDelegate>
+@interface DetailTableViewController : UITableViewController
 
 @property(strong, nonatomic) Temple *currentTemple;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property(strong, nonatomic) id <FavoritesDelegate> favoritesDelegate;
-
-+(NSString*)getDisplayDate:(NSString*) militaryTime;
--(NSString *)parsePhoneNumber:(NSString *)number;
+@property(strong, nonatomic) DetailDataSource *detailDataSource;
 	
 @end

@@ -9,6 +9,7 @@
 #import "ScheduleViewController.h"
 #import "DetailTableViewController.h"
 #import "TempleTrip-Swift.h"
+#import "DateTimeHelper.h"
 
 @implementation ScheduleViewController{
 	NSArray* upcomingDates;
@@ -16,7 +17,6 @@
     NSString * eventTitle;
     NSString * eventLocation; // Will change if the user modifies. So we keep this instance variable while the property will remain unchanged.
     BOOL shouldRemindForEvent;
-    NSString *labelText;
     UITextField *textFieldToResign; // Holds a reference to the text field that we will resign when the user scrolls or taps outside of the currently edited text field.
 }
 
@@ -25,8 +25,8 @@
 -(void) viewDidLoad{
     [super viewDidLoad];
     
-    self.ScheduleTableView.delegate = self;
-    self.ScheduleTableView.dataSource = self;
+    self.scheduleTableView.delegate = self;
+    self.scheduleTableView.dataSource = self;
 
     eventTitle = [NSString stringWithFormat:@"Trip to %@ temple", self.templeName];
     eventLocation = self.location;
@@ -87,7 +87,7 @@
 		}
 		case 1:{
 			NSString* militaryTime = self.today[row];
-			return [DetailTableViewController getDisplayDate:militaryTime];
+			return [DateTimeHelper getDisplayDateWithMilitaryTime:militaryTime];
 			break;
 		}
 		default:
@@ -118,8 +118,6 @@
 	
 	NSDateFormatter * formatter = [[NSDateFormatter alloc]init];
 	[formatter setDateStyle:NSDateFormatterLongStyle];
-	
-	labelText = [NSString stringWithFormat:@"%@ - %@", [formatter stringFromDate:selectedDate], [DetailTableViewController getDisplayDate:time]];
 }
 
 
@@ -199,10 +197,41 @@
             shouldRemindForEvent = YES;
             cell.accessoryType = UITableViewCellAccessoryCheckmark;
             
-            int minutesBeforeAlert = [[NSUserDefaults standardUserDefaults]integerForKey:@"alert_preference"];
-            self.footerLabel.text = [NSString stringWithFormat:@"You will be alerted %d minutes before the session.", minutesBeforeAlert];
+            NSInteger minutesBeforeAlert = [[NSUserDefaults standardUserDefaults]integerForKey:@"alert_preference"];
+            self.footerLabel.text = [NSString stringWithFormat:@"You will be alerted %@ before the session.", [self getAlertTimeLabel: minutesBeforeAlert]];
             [tableView deselectRowAtIndexPath:indexPath animated:YES];
         }
+    }
+}
+
+-(NSString *)getAlertTimeLabel: (NSInteger)minutesBeforeAlert{
+    switch (minutesBeforeAlert) {
+        case 0:
+            return @"right";
+        case 5:
+        case 15:
+        case 30:
+        case 45:
+            return [NSString stringWithFormat:@"%ld minutes", minutesBeforeAlert];
+            break;
+        
+        case 60:
+            return @"1 hour";
+            break;
+        case 120:
+            return @"2 hours";
+            break;
+            
+        case 1440:
+            return @"1 day";
+            break;
+        case 2880:
+            return @"2 days";
+            break;
+        default:
+            NSLog(@"Error with undefined minutesBeforeAlert variable");
+            return @"some time";
+            break;
     }
 }
 
@@ -264,7 +293,7 @@
     }
 	
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:1];
-    SchedulePickerTableViewCell *cell = [self.ScheduleTableView cellForRowAtIndexPath:indexPath];
+    SchedulePickerTableViewCell *cell = [self.scheduleTableView cellForRowAtIndexPath:indexPath];
     
 	NSDate *dateWithoutTime = upcomingDates[[cell.SchedulePicker selectedRowInComponent:0]];
 	NSString * time = self.today[[cell.SchedulePicker selectedRowInComponent:1]];
@@ -310,10 +339,10 @@
     
     //Find out which text view this is.
     NSIndexPath *path = [NSIndexPath indexPathForRow:0 inSection:0];
-    EditableTextTableViewCell *titleCell = [self.ScheduleTableView cellForRowAtIndexPath:path];
+    EditableTextTableViewCell *titleCell = [self.scheduleTableView cellForRowAtIndexPath:path];
     path = [NSIndexPath indexPathForRow:1 inSection:0];
     
-    EditableTextTableViewCell *locationCell = [self.ScheduleTableView cellForRowAtIndexPath:path];
+    EditableTextTableViewCell *locationCell = [self.scheduleTableView cellForRowAtIndexPath:path];
     if ([textField isEqual: titleCell.editableText]) {
         if (textField.text != eventTitle)
             eventTitle = textField.text;
