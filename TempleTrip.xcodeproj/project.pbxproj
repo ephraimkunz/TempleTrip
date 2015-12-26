@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		18081B7E1C2CF7B5000998AB /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18081B7D1C2CF7B5000998AB /* Settings.bundle */; };
-		18081B801C2D070F000998AB /* DefaultPreferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18081B7F1C2D070F000998AB /* DefaultPreferences.plist */; };
-		180C096E1B8EA01F00764003 /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180C096D1B8EA01F00764003 /* DetailTableViewController.m */; };
 		181EF7E81B73CF870010D2EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 181EF7E71B73CF870010D2EA /* main.m */; };
 		181EF7EB1B73CF880010D2EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 181EF7EA1B73CF880010D2EA /* AppDelegate.m */; };
 		181EF7EE1B73CF880010D2EA /* TempleTrip.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 181EF7EC1B73CF880010D2EA /* TempleTrip.xcdatamodeld */; };
@@ -26,10 +24,12 @@
 		18C6CE861C2DB8FE00779183 /* DetailDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C6CE851C2DB8FE00779183 /* DetailDataSource.m */; };
 		18C6CE891C2DBACA00779183 /* ImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C6CE881C2DBACA00779183 /* ImageHelper.m */; };
 		18C6CE8C1C2DC06800779183 /* DateTimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C6CE8B1C2DC06800779183 /* DateTimeHelper.m */; };
+		18C6CE931C2E35B100779183 /* DefaultPreferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18C6CE8D1C2E35B100779183 /* DefaultPreferences.plist */; };
+		18C6CE941C2E35B100779183 /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C6CE8F1C2E35B100779183 /* DetailTableViewController.m */; };
+		18C6CE951C2E35B100779183 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C6CE901C2E35B100779183 /* Launch Screen.storyboard */; };
+		18C6CE961C2E35B100779183 /* Temple.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C6CE921C2E35B100779183 /* Temple.m */; };
 		18CB44DA1B745444001FA4B4 /* results.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18CB44D91B745444001FA4B4 /* results.txt */; };
-		18CB44E11B751B95001FA4B4 /* Temple.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CB44E01B751B95001FA4B4 /* Temple.m */; };
 		18DC93FC1C1D213500D1E367 /* ServicesAvailableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DC93FB1C1D213500D1E367 /* ServicesAvailableCell.swift */; };
-		18DC94041C1F7E1E00D1E367 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18DC94031C1F7E1E00D1E367 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,9 +57,6 @@
 
 /* Begin PBXFileReference section */
 		18081B7D1C2CF7B5000998AB /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
-		18081B7F1C2D070F000998AB /* DefaultPreferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = DefaultPreferences.plist; path = ../DefaultPreferences.plist; sourceTree = "<group>"; };
-		180C096C1B8EA01F00764003 /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailTableViewController.h; path = ../DetailTableViewController.h; sourceTree = "<group>"; };
-		180C096D1B8EA01F00764003 /* DetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailTableViewController.m; path = ../DetailTableViewController.m; sourceTree = "<group>"; };
 		181EF7E21B73CF870010D2EA /* TempleTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TempleTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		181EF7E61B73CF870010D2EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		181EF7E71B73CF870010D2EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -86,12 +83,15 @@
 		18C6CE881C2DBACA00779183 /* ImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageHelper.m; sourceTree = "<group>"; };
 		18C6CE8A1C2DC06800779183 /* DateTimeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateTimeHelper.h; sourceTree = "<group>"; };
 		18C6CE8B1C2DC06800779183 /* DateTimeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateTimeHelper.m; sourceTree = "<group>"; };
+		18C6CE8D1C2E35B100779183 /* DefaultPreferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DefaultPreferences.plist; sourceTree = "<group>"; };
+		18C6CE8E1C2E35B100779183 /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewController.h; sourceTree = "<group>"; };
+		18C6CE8F1C2E35B100779183 /* DetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewController.m; sourceTree = "<group>"; };
+		18C6CE901C2E35B100779183 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		18C6CE911C2E35B100779183 /* Temple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Temple.h; sourceTree = "<group>"; };
+		18C6CE921C2E35B100779183 /* Temple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Temple.m; sourceTree = "<group>"; };
 		18CB44D91B745444001FA4B4 /* results.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = results.txt; sourceTree = "<group>"; };
-		18CB44DF1B751B95001FA4B4 /* Temple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Temple.h; path = ../Temple.h; sourceTree = "<group>"; };
-		18CB44E01B751B95001FA4B4 /* Temple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Temple.m; path = ../Temple.m; sourceTree = "<group>"; };
 		18DC93FB1C1D213500D1E367 /* ServicesAvailableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesAvailableCell.swift; sourceTree = "<group>"; };
 		18DC93FE1C1F5E2700D1E367 /* TempleTrip-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TempleTrip-Bridging-Header.h"; sourceTree = "<group>"; };
-		18DC94031C1F7E1E00D1E367 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "../Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,7 +155,7 @@
 				18C6CE881C2DBACA00779183 /* ImageHelper.m */,
 				181EF7F81B73CF880010D2EA /* Images.xcassets */,
 				18081B7D1C2CF7B5000998AB /* Settings.bundle */,
-				18081B7F1C2D070F000998AB /* DefaultPreferences.plist */,
+				18C6CE8D1C2E35B100779183 /* DefaultPreferences.plist */,
 				18DC93FE1C1F5E2700D1E367 /* TempleTrip-Bridging-Header.h */,
 				181EF7E61B73CF870010D2EA /* Info.plist */,
 				181EF7E71B73CF870010D2EA /* main.m */,
@@ -186,7 +186,7 @@
 		182787381C2B0DCE00196E0F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				18DC94031C1F7E1E00D1E367 /* Launch Screen.storyboard */,
+				18C6CE901C2E35B100779183 /* Launch Screen.storyboard */,
 				181EF7F51B73CF880010D2EA /* Main.storyboard */,
 				1827873E1C2B2A3700196E0F /* EditableTextTableViewCell.swift */,
 				1827873A1C2B148500196E0F /* SchedulePickerTableViewCell.swift */,
@@ -202,8 +202,8 @@
 				18C6CE851C2DB8FE00779183 /* DetailDataSource.m */,
 				181EF7EF1B73CF880010D2EA /* MasterViewController.h */,
 				181EF7F01B73CF880010D2EA /* MasterViewController.m */,
-				180C096C1B8EA01F00764003 /* DetailTableViewController.h */,
-				180C096D1B8EA01F00764003 /* DetailTableViewController.m */,
+				18C6CE8E1C2E35B100779183 /* DetailTableViewController.h */,
+				18C6CE8F1C2E35B100779183 /* DetailTableViewController.m */,
 				18A2EF6D1BE87A4000FB4D69 /* ScheduleViewController.h */,
 				18A2EF6E1BE87A4000FB4D69 /* ScheduleViewController.m */,
 			);
@@ -214,8 +214,8 @@
 			isa = PBXGroup;
 			children = (
 				181EF7EC1B73CF880010D2EA /* TempleTrip.xcdatamodeld */,
-				18CB44DF1B751B95001FA4B4 /* Temple.h */,
-				18CB44E01B751B95001FA4B4 /* Temple.m */,
+				18C6CE911C2E35B100779183 /* Temple.h */,
+				18C6CE921C2E35B100779183 /* Temple.m */,
 				18CB44D91B745444001FA4B4 /* results.txt */,
 			);
 			name = Model;
@@ -307,10 +307,10 @@
 			files = (
 				181EF7F71B73CF880010D2EA /* Main.storyboard in Resources */,
 				181EF7F91B73CF880010D2EA /* Images.xcassets in Resources */,
+				18C6CE951C2E35B100779183 /* Launch Screen.storyboard in Resources */,
+				18C6CE931C2E35B100779183 /* DefaultPreferences.plist in Resources */,
 				18081B7E1C2CF7B5000998AB /* Settings.bundle in Resources */,
-				18DC94041C1F7E1E00D1E367 /* Launch Screen.storyboard in Resources */,
 				18CB44DA1B745444001FA4B4 /* results.txt in Resources */,
-				18081B801C2D070F000998AB /* DefaultPreferences.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,8 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				180C096E1B8EA01F00764003 /* DetailTableViewController.m in Sources */,
-				18CB44E11B751B95001FA4B4 /* Temple.m in Sources */,
+				18C6CE941C2E35B100779183 /* DetailTableViewController.m in Sources */,
 				181EF7F11B73CF880010D2EA /* MasterViewController.m in Sources */,
 				18C6CE891C2DBACA00779183 /* ImageHelper.m in Sources */,
 				18DC93FC1C1D213500D1E367 /* ServicesAvailableCell.swift in Sources */,
@@ -355,6 +354,7 @@
 				181EF7EE1B73CF880010D2EA /* TempleTrip.xcdatamodeld in Sources */,
 				18C6CE861C2DB8FE00779183 /* DetailDataSource.m in Sources */,
 				1827873F1C2B2A3700196E0F /* EditableTextTableViewCell.swift in Sources */,
+				18C6CE961C2E35B100779183 /* Temple.m in Sources */,
 				18A2EF6F1BE87A4000FB4D69 /* ScheduleViewController.m in Sources */,
 				18C6CE8C1C2DC06800779183 /* DateTimeHelper.m in Sources */,
 			);
