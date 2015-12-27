@@ -12,6 +12,7 @@
 #import <Crashlytics/Crashlytics.h>
 #import "MasterViewController.h"
 #import "Temple.h"
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -37,6 +38,22 @@
     NSDictionary *defaultPrefs =
     [NSDictionary dictionaryWithContentsOfURL:defaultPrefsFile];
     [[NSUserDefaults standardUserDefaults] registerDefaults:defaultPrefs];
+    
+    // [Optional] Power your app with Local Datastore. For more info, go to
+    // https://parse.com/docs/ios/guide#local-datastore
+    //[Parse enableLocalDatastore];
+    
+    // Initialize Parse.
+    [Parse setApplicationId:@"JUJurzhFM1UwVK1cY0JHyyJCw17ai5QH1cJ5F880"
+                  clientKey:@"9CWv8oo8D44QyF9FA41aeFYY8Fx8AVOS3sghINzP"];
+    
+    // [Optional] Track statistics around application opens.
+    //[PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    // Test Parse
+    //PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+    //testObject[@"foo"] = @"bar";
+    //[testObject saveInBackground];
     
     return YES;
 }
@@ -146,6 +163,12 @@
 }
 
 #pragma mark - Parse Temples Json
+
+/* These methods are mainly to allow someone without internet access to 
+ get started with the app. The app ships with results.txt, a JSON store of
+ temple data that we will initialize Core Data with here. Going forward,
+ we will pull updates from the Parse server and update Core Data directly.
+ */
 
 -(NSArray *)parseTempleJson:(NSString *)path{
     NSData *data = [NSData dataWithContentsOfFile:path];

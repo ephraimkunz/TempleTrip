@@ -153,6 +153,7 @@
                 cell.editableText.text = eventTitle;
                 cell.editableText.placeholder = @"Title";
                 cell.editableText.delegate = self;
+                cell.selectionStyle = UITableViewCellSelectionStyleNone;
                 return cell;
             }
             else if(indexPath.row == 1){
@@ -160,6 +161,7 @@
                 cell.editableText.text = eventLocation;
                 cell.editableText.placeholder = @"Location";
                 cell.editableText.delegate = self;
+                cell.selectionStyle = UITableViewCellSelectionStyleNone;
                 return cell;
             }
         }
@@ -185,6 +187,15 @@
 }
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    //Ensure that tapping the cells with textFields opens up editing, even if they didn't hit the exact field
+    if (indexPath.section == 0) {
+        EditableTextTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+        textFieldToResign = cell.editableText;
+        [textFieldToResign becomeFirstResponder];
+        //[tableView deselectRowAtIndexPath:indexPath animated:YES]; Not needed since cell selection styles for this section set to none.
+    }
+    
+    
     if(indexPath.section == 1 && indexPath.row == 1){
         UITableViewCell * cell = [tableView cellForRowAtIndexPath:indexPath];
         if(shouldRemindForEvent){
@@ -212,7 +223,7 @@
         case 15:
         case 30:
         case 45:
-            return [NSString stringWithFormat:@"%ld minutes", minutesBeforeAlert];
+            return [NSString stringWithFormat:@"%ld minutes", (long)minutesBeforeAlert];
             break;
         
         case 60:
@@ -233,6 +244,13 @@
             return @"some time";
             break;
     }
+}
+
+- (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath{
+//    if (indexPath.section == 0) {
+//        return NO;
+//    }
+    return YES;
 }
 
 
