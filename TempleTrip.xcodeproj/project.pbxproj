@@ -16,14 +16,6 @@
 		181EF7F91B73CF880010D2EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 181EF7F81B73CF880010D2EA /* Images.xcassets */; };
 		1827873B1C2B148500196E0F /* SchedulePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827873A1C2B148500196E0F /* SchedulePickerTableViewCell.swift */; };
 		1827873F1C2B2A3700196E0F /* EditableTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827873E1C2B2A3700196E0F /* EditableTextTableViewCell.swift */; };
-		1842AE5F1C2F63A800FF5A66 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1842AE5E1C2F63A800FF5A66 /* AudioToolbox.framework */; };
-		1842AE611C2F63B600FF5A66 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1842AE601C2F63B600FF5A66 /* CFNetwork.framework */; };
-		1842AE631C2F63C300FF5A66 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1842AE621C2F63C300FF5A66 /* CoreGraphics.framework */; };
-		1842AE671C2F63DF00FF5A66 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1842AE661C2F63DF00FF5A66 /* QuartzCore.framework */; };
-		1842AE691C2F63E800FF5A66 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1842AE681C2F63E800FF5A66 /* Security.framework */; };
-		1842AE6D1C2F63FE00FF5A66 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1842AE6C1C2F63FE00FF5A66 /* SystemConfiguration.framework */; };
-		1842AE6F1C2F640D00FF5A66 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1842AE6E1C2F640D00FF5A66 /* libz.tbd */; };
-		1842AE711C2F641E00FF5A66 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1842AE701C2F641E00FF5A66 /* libsqlite3.tbd */; };
 		1877D7251C0759060022BF60 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1877D7231C0759060022BF60 /* Fabric.framework */; };
 		1877D7261C0759060022BF60 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1877D7241C0759060022BF60 /* Crashlytics.framework */; };
 		18A2EF6F1BE87A4000FB4D69 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2EF6E1BE87A4000FB4D69 /* ScheduleViewController.m */; };
@@ -117,14 +109,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1842AE711C2F641E00FF5A66 /* libsqlite3.tbd in Frameworks */,
-				1842AE6F1C2F640D00FF5A66 /* libz.tbd in Frameworks */,
-				1842AE6D1C2F63FE00FF5A66 /* SystemConfiguration.framework in Frameworks */,
-				1842AE691C2F63E800FF5A66 /* Security.framework in Frameworks */,
-				1842AE671C2F63DF00FF5A66 /* QuartzCore.framework in Frameworks */,
-				1842AE631C2F63C300FF5A66 /* CoreGraphics.framework in Frameworks */,
-				1842AE611C2F63B600FF5A66 /* CFNetwork.framework in Frameworks */,
-				1842AE5F1C2F63A800FF5A66 /* AudioToolbox.framework in Frameworks */,
 				18ABEC421BF5579900AA7EB7 /* EventKit.framework in Frameworks */,
 				1877D7261C0759060022BF60 /* Crashlytics.framework in Frameworks */,
 				1877D7251C0759060022BF60 /* Fabric.framework in Frameworks */,
