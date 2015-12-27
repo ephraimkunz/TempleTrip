@@ -5655,7 +5655,7 @@
 "photoLink": "https://www.lds.org/bc/content/church/temples/rexburg-idaho/images/rexburg-idaho-808x480-CWD_101106_RWooley_008.jpg",
 "place": "United States, Rexburg, Idaho",
 "rawEndowmentSchedule": {
-"1st Wednesday, 7:15-8:45 p.m.": "\u00a0",
+"1st Wednesday": "7:15-8:45 p.m.",
 "Monday": "Closed",
 "Tuesday-Saturday \u00a0": "6:00, 6:45, 7:30, 8:15, 9:00, 9:45, 10:30, 11:15 a.m.; 12:00 noon, 12:45, 1:30, 2:15, 3:00, 3:45, 4:30, 5:15, 6:00, 6:45, 7:30 p.m."
 },
