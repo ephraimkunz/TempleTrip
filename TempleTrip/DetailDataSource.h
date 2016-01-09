@@ -15,6 +15,11 @@
 
 
 - (instancetype) initWithImage: (UIImage *) newImage Temple: (Temple *) newTemple ManagedObjectContext: (NSManagedObjectContext *) newContext;
+
+- (NSIndexPath *)imageIndexPath;
+
+-(void) setScaledImageIfNeededWithWidth: (float) width;
+
 + (NSMutableDictionary*)scheduleDictFromEndowmentDictionary: (NSDictionary *) dictionary;
 
 @property(strong, nonatomic) NSDictionary *scheduleDict;

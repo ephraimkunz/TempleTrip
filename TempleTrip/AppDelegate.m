@@ -29,8 +29,6 @@
     MasterViewController *controller = (MasterViewController *)navigationController.topViewController;
     controller.managedObjectContext = self.managedObjectContext;
     
-    [self preloadData];
-    
     //Setup default user preferences
     
     NSURL *defaultPrefsFile = [[NSBundle mainBundle]
@@ -54,6 +52,12 @@
     //PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
     //testObject[@"foo"] = @"bar";
     //[testObject saveInBackground];
+    
+    // Check to see if we should initialize CoreData from results.txt.
+    if([[NSUserDefaults standardUserDefaults] boolForKey:@"shouldReloadCoreData"]){
+        [self preloadData];
+        [[NSUserDefaults standardUserDefaults]setBool:NO forKey:@"shouldReloadCoreData"];
+    }
     
     return YES;
 }
@@ -179,21 +183,11 @@
     return temples;
 }
 
--(BOOL)dataInCoreData{
-    NSManagedObjectContext *context = [self managedObjectContext];
-    NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Temple"];
-    NSArray *templeArray = [context executeFetchRequest:request error:nil];
-    
-    return templeArray.count > 0;
-}
-
 -(void)preloadData{
-    if ([self dataInCoreData]) {
-        return;
-    }
+    
     [self removeData];
 	
-    NSString *path = [[NSBundle mainBundle]pathForResource:@"results" ofType:@"txt"];
+    NSString *path = [[NSBundle mainBundle]pathForResource:@"results" ofType:@"json"];
     NSArray *temples = [self parseTempleJson:path];
     
     for (id item in temples) {

@@ -55,6 +55,12 @@
     self.tableView.dataSource = self.detailDataSource;
 }
 
+- (void) viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
+    NSIndexPath *imagePath = [self.detailDataSource imageIndexPath];
+    [self.detailDataSource setScaledImageIfNeededWithWidth:size.width];
+    [self.tableView reloadRowsAtIndexPaths:@[imagePath] withRowAnimation:UITableViewRowAnimationNone];
+}
+
 #pragma mark - Navigation
 
 -(BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{

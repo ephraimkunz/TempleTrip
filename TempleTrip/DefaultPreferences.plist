@@ -4,5 +4,7 @@
 <dict>
 	<key>alert_preference</key>
 	<integer>45</integer>
+	<key>shouldReloadCoreData</key>
+	<true/>
 </dict>
 </plist>

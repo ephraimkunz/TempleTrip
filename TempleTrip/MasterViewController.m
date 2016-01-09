@@ -245,7 +245,9 @@
     return _fetchedResultsController;
 }    
 
-
+-(void)controllerDidChangeContent:(NSFetchedResultsController *)controller{
+    [self.tableView reloadData];
+}
 
 #pragma mark - UISearchResultsUpdating Delegate
 
@@ -334,7 +336,7 @@
                 NSError *fetchError;
                 NSArray *fetchedTemples;
                 if (!(fetchedTemples = [self.managedObjectContext executeFetchRequest:request error:&fetchError])){
-                    NSLog(@"Error fetching core data temple for updated temple from Parse with name: %@, error: %@", temple[@"name"], fetchError.description);
+                    NSLog(@"Error fetching core data temple for updated temple from Parse with name: %@, error: %@. Maybe it is a new temple.", temple[@"name"], fetchError.description);
                 }
                 
                 if (fetchedTemples.count > 1) {
@@ -365,6 +367,8 @@
                 firstTwoLetters = [[[temple valueForKey:@"servicesAvailable"]valueForKey:@"Clothing"] substringToIndex:2] == nil ? @"No" : [[[temple valueForKey:@"servicesAvailable"]valueForKey:@"Clothing"] substringToIndex:2];
                 cdTemple.hasClothing = ![firstTwoLetters isEqualToString:@"No"];
                 
+                cdTemple.existsOnServer = YES;
+                
                 NSError *saveError;
                 if (![self.managedObjectContext save:&saveError]){
                     NSLog(@"Error saving updated temple with name: %@ to CD, %@", cdTemple.name, saveError.description);
@@ -372,9 +376,28 @@
                 else{
                     successUpdated ++;
                 }
+                
             }
             NSLog(@"Success updating or adding %ld out of %lu temples in core data from Parse server", (long)successUpdated, (unsigned long)[objects count]);
-            [self.tableView reloadData];
+            
+            //Remove temples not on the server;
+            NSFetchRequest *toDelete = [[NSFetchRequest alloc]initWithEntityName:@"Temple"];
+            [toDelete setPredicate:[NSPredicate predicateWithFormat:@"existsOnServer = NO"]];
+            NSArray *notOnServer;
+            if((notOnServer = [self.managedObjectContext executeFetchRequest:toDelete error:nil])){
+                NSLog(@"Success deleting %ld temples in core data", notOnServer.count);
+                for(Temple *temple in notOnServer){
+                    [self.managedObjectContext deleteObject:temple];
+                }
+            }
+            [self.managedObjectContext save:nil];
+            
+            //Reset existsOnServer to NO for everything
+            NSArray *everything = [self.managedObjectContext executeFetchRequest:[[NSFetchRequest alloc] initWithEntityName:@"Temple"] error:nil];
+            for(Temple* temple in everything){
+                temple.existsOnServer = NO;
+            }
+            [self.managedObjectContext save:nil];
         }
         else{
             NSLog(@"Error fetching all temples from the server");

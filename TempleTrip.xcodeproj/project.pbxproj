@@ -29,7 +29,7 @@
 		18C6CE961C2E35B100779183 /* Temple.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C6CE921C2E35B100779183 /* Temple.m */; };
 		18C6CE981C2E372D00779183 /* DateTimeHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C6CE971C2E372D00779183 /* DateTimeHelperTest.m */; };
 		18C6CE9A1C2E3E2500779183 /* ImageHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C6CE991C2E3E2500779183 /* ImageHelperTest.m */; };
-		18CB44DA1B745444001FA4B4 /* results.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18CB44D91B745444001FA4B4 /* results.txt */; };
+		18CB44DA1B745444001FA4B4 /* results.json in Resources */ = {isa = PBXBuildFile; fileRef = 18CB44D91B745444001FA4B4 /* results.json */; };
 		18DC93FC1C1D213500D1E367 /* ServicesAvailableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DC93FB1C1D213500D1E367 /* ServicesAvailableCell.swift */; };
 		D97489EB576067C38185E4B1 /* libPods-TempleTrip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48BE3C56B3F1FDAA202AB214 /* libPods-TempleTrip.a */; };
 /* End PBXBuildFile section */
@@ -100,7 +100,7 @@
 		18C6CE921C2E35B100779183 /* Temple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Temple.m; sourceTree = "<group>"; };
 		18C6CE971C2E372D00779183 /* DateTimeHelperTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateTimeHelperTest.m; sourceTree = "<group>"; };
 		18C6CE991C2E3E2500779183 /* ImageHelperTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageHelperTest.m; sourceTree = "<group>"; };
-		18CB44D91B745444001FA4B4 /* results.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = results.txt; sourceTree = "<group>"; };
+		18CB44D91B745444001FA4B4 /* results.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = results.json; sourceTree = "<group>"; };
 		18DC93FB1C1D213500D1E367 /* ServicesAvailableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesAvailableCell.swift; sourceTree = "<group>"; };
 		18DC93FE1C1F5E2700D1E367 /* TempleTrip-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TempleTrip-Bridging-Header.h"; sourceTree = "<group>"; };
 		48BE3C56B3F1FDAA202AB214 /* libPods-TempleTrip.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TempleTrip.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -209,7 +209,6 @@
 				181EF7F51B73CF880010D2EA /* Main.storyboard */,
 				1827873E1C2B2A3700196E0F /* EditableTextTableViewCell.swift */,
 				1827873A1C2B148500196E0F /* SchedulePickerTableViewCell.swift */,
-				18DC93FB1C1D213500D1E367 /* ServicesAvailableCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -220,6 +219,7 @@
 				18C6CE841C2DB8FE00779183 /* DetailDataSource.h */,
 				18C6CE851C2DB8FE00779183 /* DetailDataSource.m */,
 				181EF7EF1B73CF880010D2EA /* MasterViewController.h */,
+				18DC93FB1C1D213500D1E367 /* ServicesAvailableCell.swift */,
 				181EF7F01B73CF880010D2EA /* MasterViewController.m */,
 				18C6CE8E1C2E35B100779183 /* DetailTableViewController.h */,
 				18C6CE8F1C2E35B100779183 /* DetailTableViewController.m */,
@@ -251,7 +251,7 @@
 				181EF7EC1B73CF880010D2EA /* TempleTrip.xcdatamodeld */,
 				18C6CE911C2E35B100779183 /* Temple.h */,
 				18C6CE921C2E35B100779183 /* Temple.m */,
-				18CB44D91B745444001FA4B4 /* results.txt */,
+				18CB44D91B745444001FA4B4 /* results.json */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -365,7 +365,7 @@
 				18C6CE951C2E35B100779183 /* Launch Screen.storyboard in Resources */,
 				18C6CE931C2E35B100779183 /* DefaultPreferences.plist in Resources */,
 				18081B7E1C2CF7B5000998AB /* Settings.bundle in Resources */,
-				18CB44DA1B745444001FA4B4 /* results.txt in Resources */,
+				18CB44DA1B745444001FA4B4 /* results.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

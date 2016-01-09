@@ -22,4 +22,5 @@
 @dynamic isFavorite;
 @dynamic hasCafeteria;
 @dynamic hasClothing;
+@dynamic existsOnServer;
 @end

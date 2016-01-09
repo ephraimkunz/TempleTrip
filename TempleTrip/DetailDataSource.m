@@ -72,7 +72,12 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == kPhotoSection) {
-        [self setScaledImageIfNeededWithWidth:tableView.frame.size.width];
+        //First time we see the image, we need to find correct height and scale it. Thereafter, the transition
+        //coordinator will handle it.
+        if (scaledImage == nil) {
+            [self setScaledImageIfNeededWithWidth:tableView.frame.size.width];
+        }
+        
         return scaledImage.size.height;
     }
     else{
@@ -209,6 +214,10 @@
         expandedSchedule[key] = distinctTimes;
     }
     return expandedSchedule;
+}
+
+- (NSIndexPath *)imageIndexPath{
+    return [NSIndexPath indexPathForRow:0 inSection:kPhotoSection];
 }
 
 

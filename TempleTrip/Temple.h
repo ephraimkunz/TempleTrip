@@ -25,6 +25,7 @@
 @property (nonatomic, retain) NSNumber * isFavorite;
 @property (nonatomic) BOOL hasCafeteria;
 @property (nonatomic) BOOL hasClothing;
+@property (nonatomic) BOOL existsOnServer;
 
 
 @end
