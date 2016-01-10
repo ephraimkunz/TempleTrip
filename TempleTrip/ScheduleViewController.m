@@ -97,27 +97,7 @@
 
 #pragma mark - PickerViewDelegate
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
-	NSDate *selectedDate;
-	NSString *time;
     [self resignActiveTextField];
-	
-	if (component == 0) {
-		selectedDate = upcomingDates[row];
-	}
-	else{
-		selectedDate = upcomingDates[[pickerView selectedRowInComponent:0]];
-	}
-	
-	
-	if (component == 1) {
-		time = self.today[row];
-	}
-	else{
-		time = self.today[[pickerView selectedRowInComponent:1]];
-	}
-	
-	NSDateFormatter * formatter = [[NSDateFormatter alloc]init];
-	[formatter setDateStyle:NSDateFormatterLongStyle];
 }
 
 
