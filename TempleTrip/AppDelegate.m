@@ -25,8 +25,12 @@
     // Override point for customization after application launch.
 	[Fabric with:@[[Crashlytics class]]];
 
-    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+    
+    UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
+    
+    UINavigationController *navigationController = [splitViewController.viewControllers firstObject];
     MasterViewController *controller = (MasterViewController *)navigationController.topViewController;
+    
     controller.managedObjectContext = self.managedObjectContext;
     
     //Setup default user preferences

@@ -8,11 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "FavoritesUpdatingProtocol.h"
 
 @class Temple;
 
 @interface DetailDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
 
+@property(strong, nonatomic) id<FavoritesUpdatingProtocol> delegate;
 
 - (instancetype) initWithImage: (UIImage *) newImage Temple: (Temple *) newTemple ManagedObjectContext: (NSManagedObjectContext *) newContext;
 

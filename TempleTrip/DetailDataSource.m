@@ -173,13 +173,14 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    
     if(indexPath.section == kAddressSection && indexPath.row == 0){ // Address tapped
         NSCharacterSet *set = [NSCharacterSet URLQueryAllowedCharacterSet];
         NSString *mapsString = [[NSString stringWithFormat:@"http://maps.apple.com/?daddr=%@", temple.address] stringByAddingPercentEncodingWithAllowedCharacters: set];
         
         NSURL *mapsUrl = [NSURL URLWithString:mapsString];
         [[UIApplication sharedApplication]openURL:mapsUrl];
-        [tableView deselectRowAtIndexPath:indexPath animated:NO];
     }
     
     else if(indexPath.section == kAddToFavoritesSection){
@@ -197,8 +198,11 @@
             [context save:nil];
             [tableView cellForRowAtIndexPath:indexPath].textLabel.text = @"Remove from Favorites";
         }
-        [tableView deselectRowAtIndexPath:indexPath animated:YES];
         [context save:nil];
+        
+        if ([self.delegate respondsToSelector:@selector(favoritesDidUpdate)]) {
+            [self.delegate favoritesDidUpdate];
+        }
     }
 }
 

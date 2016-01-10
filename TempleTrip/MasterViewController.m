@@ -10,6 +10,7 @@
 #import "MasterViewController.h"
 #import "Temple.h"
 #import "DetailTableViewController.h"
+#import "CTFeedbackViewController.h"
 #import <Parse/Parse.h>
 
 @import Crashlytics;
@@ -42,8 +43,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
 	self.definesPresentationContext = YES;
+    self.title = @"Temples";
     [self setupSearchBar];
 	[self loadFavoritesList];
 }
@@ -57,7 +58,9 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"ShowDetail"]) {
-        DetailTableViewController *nextViewController = [segue destinationViewController];
+        
+        UINavigationController *navController = [segue destinationViewController];
+        DetailTableViewController *nextViewController = (DetailTableViewController *)[navController topViewController];
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
 		NSManagedObject *object;
 		
@@ -75,7 +78,6 @@
         }
 		
 		//Create dependency injection: http://stackoverflow.com/questions/21050408/how-to-get-managedobjectcontext-for-viewcontroller-other-than-getting-it-from-ap to pass managedObjectContext along
-        
 		nextViewController.managedObjectContext = self.managedObjectContext;
 	}
 }
@@ -385,7 +387,7 @@
             [toDelete setPredicate:[NSPredicate predicateWithFormat:@"existsOnServer = NO"]];
             NSArray *notOnServer;
             if((notOnServer = [self.managedObjectContext executeFetchRequest:toDelete error:nil])){
-                NSLog(@"Success deleting %ld temples in core data", notOnServer.count);
+                NSLog(@"Success deleting %ld temples in core data", (unsigned long)notOnServer.count);
                 for(Temple *temple in notOnServer){
                     [self.managedObjectContext deleteObject:temple];
                 }
@@ -405,6 +407,22 @@
         
         [sender endRefreshing];
     }];
+}
+
+#pragma mark - FavoritesUpdatingProtocol
+
+-(void)favoritesDidUpdate{
+    [self loadFavoritesList];
+    [self.tableView reloadData];
+}
+
+
+- (IBAction)feedbackTapped:(id)sender {
+    CTFeedbackViewController *feedbackViewController = [CTFeedbackViewController controllerWithTopics:CTFeedbackViewController.defaultTopics localizedTopics:CTFeedbackViewController.defaultLocalizedTopics];
+    feedbackViewController.toRecipients = @[@"ephraimkunz@me.com"];
+    
+    feedbackViewController.useHTML = NO;
+    [self.navigationController pushViewController:feedbackViewController animated:YES];
 }
 
 @end
