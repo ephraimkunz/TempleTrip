@@ -10,6 +10,10 @@
 #import "MasterViewController.h"
 #import "Temple.h"
 #import "DetailTableViewController.h"
+#import "CTFeedbackViewController.h"
+#import <Parse/Parse.h>
+
+@import Crashlytics;
 
 #define kFavoritesSection 0 //What section we keep favorite temples in.
 
@@ -27,15 +31,20 @@
 }
 
 #pragma mark - View Lifecycle
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [[Crashlytics sharedInstance] setObjectValue:@"" forKey:@"currentTemple"];
+    [[Crashlytics sharedInstance]setIntValue:(int)[self.favoritesList count] forKey:@"numberOfFavorites"];
+    
+    //Reload favorites after visiting detail screen.
+    [self loadFavoritesList];
+    [self.tableView reloadData];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
-	//Set default sort
-	shouldUpdateFetchedResultsController = false;
-	sortTableBy = @"name";
-	
 	self.definesPresentationContext = YES;
+    self.title = @"Temples";
     [self setupSearchBar];
 	[self loadFavoritesList];
 }
@@ -49,7 +58,9 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"ShowDetail"]) {
-        DetailTableViewController *nextViewController = [segue destinationViewController];
+        
+        UINavigationController *navController = [segue destinationViewController];
+        DetailTableViewController *nextViewController = (DetailTableViewController *)[navController topViewController];
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
 		NSManagedObject *object;
 		
@@ -67,9 +78,7 @@
         }
 		
 		//Create dependency injection: http://stackoverflow.com/questions/21050408/how-to-get-managedobjectcontext-for-viewcontroller-other-than-getting-it-from-ap to pass managedObjectContext along
-        
 		nextViewController.managedObjectContext = self.managedObjectContext;
-		nextViewController.favoritesDelegate = self;
 	}
 }
 
@@ -128,7 +137,7 @@
 }
 
 -(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-	if (self.searchController.active || [sortTableBy isEqualToString:@"dedication"]) {
+	if (self.searchController.active) {
 		return nil; // No names of any sections in the search view.
 	}else if(section == kFavoritesSection){
 		return @"Favorites";
@@ -139,7 +148,7 @@
 }
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView{
-	if(self.searchController.active || [sortTableBy isEqualToString:@"dedication"]) return nil;
+	if(self.searchController.active) return nil;
 	NSArray *letters = [self.fetchedResultsController sectionIndexTitles];
 	NSString *search = UITableViewIndexSearch;
 	NSMutableArray *indexTitles = [[NSMutableArray alloc]initWithArray:letters];
@@ -214,7 +223,7 @@
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:sortTableBy ascending:YES];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
     NSArray *sortDescriptors = @[sortDescriptor];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
@@ -238,7 +247,9 @@
     return _fetchedResultsController;
 }    
 
-
+-(void)controllerDidChangeContent:(NSFetchedResultsController *)controller{
+    [self.tableView reloadData];
+}
 
 #pragma mark - UISearchResultsUpdating Delegate
 
@@ -276,17 +287,6 @@
     return searchFetchRequest;
 }
 
-#pragma mark - FavoritesDelegate
--(void)addedToFavorites:(Temple*) temple{
-	[self loadFavoritesList];
-	[self.tableView reloadData];
-}
-
--(void)removedFromFavorites:(Temple*) temple{
-	[self loadFavoritesList];
-	[self.tableView reloadData];
-}
-
 #pragma mark - Utility Methods
 
 - (void)setupSearchBar {
@@ -319,27 +319,112 @@
 	object.isFavorite = [NSNumber numberWithBool:NO];
 	[self.managedObjectContext save:nil];
 }
-
-- (IBAction)sortSegmentSelected:(id)sender {
-	UISegmentedControl* sortBy = (UISegmentedControl *)sender;
-	
-	shouldUpdateFetchedResultsController = YES;
-	
-	NSInteger index = sortBy.selectedSegmentIndex;
-	switch (index) {
-		case 0:
-			sortTableBy = @"name";
-			break;
-		case 1:
-			sortTableBy = @"dedication";
-			break;
-  default:
-			sortTableBy = @"name";
-			NSLog(@"Unrecognized selector index %ld in segmented control", (long)index);
-			break;
-	}
-	[self.tableView reloadData];
+- (IBAction)refresh:(UIRefreshControl *)sender {
+    
+    //Get the new temple JSON from the server
+    PFQuery *allTemplesQuery = [PFQuery queryWithClassName:@"Temple"];
+    [allTemplesQuery setLimit:1000];
+    
+    [allTemplesQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
+        if (!error) {
+            NSLog(@"Success fetching %lu temples from Parse server", (unsigned long)[objects count]);
+            NSInteger successUpdated = 0;
+            
+            //Load them into core data. If there is a temple in the JSON that we don't have, create it.
+            for(PFObject *temple in objects){
+                
+                NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Temple"];
+                [request setPredicate:[NSPredicate predicateWithFormat:@"name == %@", temple[@"name"]]];
+                NSError *fetchError;
+                NSArray *fetchedTemples;
+                if (!(fetchedTemples = [self.managedObjectContext executeFetchRequest:request error:&fetchError])){
+                    NSLog(@"Error fetching core data temple for updated temple from Parse with name: %@, error: %@. Maybe it is a new temple.", temple[@"name"], fetchError.description);
+                }
+                
+                if (fetchedTemples.count > 1) {
+                    NSLog(@"More than one temple in Core Data for name: %@", temple[@"name"]);
+                }
+                
+                Temple *cdTemple;
+                
+                if (fetchedTemples.count == 0) { //New temple, we need to add it the DB.
+                    cdTemple = [NSEntityDescription insertNewObjectForEntityForName:@"Temple" inManagedObjectContext:self.managedObjectContext];
+                    cdTemple.name = [temple valueForKey:@"name"];
+                }
+                else{ //Update an existing temple.
+                    cdTemple = fetchedTemples[0];
+                }
+                
+                cdTemple.dedication = [temple valueForKey:@"dedication"];
+                cdTemple.place = [temple valueForKey:@"place"];
+                cdTemple.address = [temple valueForKey:@"address"];
+                cdTemple.imageLink = [temple valueForKey:@"photoLink"];
+                cdTemple.telephone = [temple valueForKey:@"telephone"];
+                cdTemple.endowmentSchedule = [temple valueForKey:@"endowmentSchedule"];
+                cdTemple.firstLetter = [[temple valueForKey:@"name"] substringToIndex:1];
+                
+                NSString *firstTwoLetters = [[[temple valueForKey:@"servicesAvailable"]valueForKey:@"Cafeteria"] substringToIndex:2] == nil ? @"No" : [[[temple valueForKey:@"servicesAvailable"]valueForKey:@"Cafeteria"] substringToIndex:2];
+                cdTemple.hasCafeteria = ![firstTwoLetters isEqualToString:@"No"];
+                
+                firstTwoLetters = [[[temple valueForKey:@"servicesAvailable"]valueForKey:@"Clothing"] substringToIndex:2] == nil ? @"No" : [[[temple valueForKey:@"servicesAvailable"]valueForKey:@"Clothing"] substringToIndex:2];
+                cdTemple.hasClothing = ![firstTwoLetters isEqualToString:@"No"];
+                
+                cdTemple.existsOnServer = YES;
+                
+                NSError *saveError;
+                if (![self.managedObjectContext save:&saveError]){
+                    NSLog(@"Error saving updated temple with name: %@ to CD, %@", cdTemple.name, saveError.description);
+                }
+                else{
+                    successUpdated ++;
+                }
+                
+            }
+            NSLog(@"Success updating or adding %ld out of %lu temples in core data from Parse server", (long)successUpdated, (unsigned long)[objects count]);
+            
+            //Remove temples not on the server;
+            NSFetchRequest *toDelete = [[NSFetchRequest alloc]initWithEntityName:@"Temple"];
+            [toDelete setPredicate:[NSPredicate predicateWithFormat:@"existsOnServer = NO"]];
+            NSArray *notOnServer;
+            if((notOnServer = [self.managedObjectContext executeFetchRequest:toDelete error:nil])){
+                NSLog(@"Success deleting %ld temples in core data", (unsigned long)notOnServer.count);
+                for(Temple *temple in notOnServer){
+                    [self.managedObjectContext deleteObject:temple];
+                }
+            }
+            [self.managedObjectContext save:nil];
+            
+            //Reset existsOnServer to NO for everything
+            NSArray *everything = [self.managedObjectContext executeFetchRequest:[[NSFetchRequest alloc] initWithEntityName:@"Temple"] error:nil];
+            for(Temple* temple in everything){
+                temple.existsOnServer = NO;
+            }
+            [self.managedObjectContext save:nil];
+        }
+        else{
+            NSLog(@"Error fetching all temples from the server");
+        }
+        
+        [sender endRefreshing];
+    }];
 }
+
+#pragma mark - FavoritesUpdatingProtocol
+
+-(void)favoritesDidUpdate{
+    [self loadFavoritesList];
+    [self.tableView reloadData];
+}
+
+
+- (IBAction)feedbackTapped:(id)sender {
+    CTFeedbackViewController *feedbackViewController = [CTFeedbackViewController controllerWithTopics:CTFeedbackViewController.defaultTopics localizedTopics:CTFeedbackViewController.defaultLocalizedTopics];
+    feedbackViewController.toRecipients = @[@"ephraimkunz@me.com"];
+    
+    feedbackViewController.useHTML = NO;
+    [self.navigationController pushViewController:feedbackViewController animated:YES];
+}
+
 @end
 
 

@@ -12,6 +12,7 @@
 #import <Crashlytics/Crashlytics.h>
 #import "MasterViewController.h"
 #import "Temple.h"
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -24,11 +25,43 @@
     // Override point for customization after application launch.
 	[Fabric with:@[[Crashlytics class]]];
 
-    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+    
+    UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
+    
+    UINavigationController *navigationController = [splitViewController.viewControllers firstObject];
     MasterViewController *controller = (MasterViewController *)navigationController.topViewController;
+    
     controller.managedObjectContext = self.managedObjectContext;
     
-    [self preloadData];
+    //Setup default user preferences
+    
+    NSURL *defaultPrefsFile = [[NSBundle mainBundle]
+                               URLForResource:@"DefaultPreferences" withExtension:@"plist"];
+    NSDictionary *defaultPrefs =
+    [NSDictionary dictionaryWithContentsOfURL:defaultPrefsFile];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:defaultPrefs];
+    
+    // [Optional] Power your app with Local Datastore. For more info, go to
+    // https://parse.com/docs/ios/guide#local-datastore
+    //[Parse enableLocalDatastore];
+    
+    // Initialize Parse.
+    [Parse setApplicationId:@"JUJurzhFM1UwVK1cY0JHyyJCw17ai5QH1cJ5F880"
+                  clientKey:@"9CWv8oo8D44QyF9FA41aeFYY8Fx8AVOS3sghINzP"];
+    
+    // [Optional] Track statistics around application opens.
+    //[PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    // Test Parse
+    //PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+    //testObject[@"foo"] = @"bar";
+    //[testObject saveInBackground];
+    
+    // Check to see if we should initialize CoreData from results.txt.
+    if([[NSUserDefaults standardUserDefaults] boolForKey:@"shouldReloadCoreData"]){
+        [self preloadData];
+        [[NSUserDefaults standardUserDefaults]setBool:NO forKey:@"shouldReloadCoreData"];
+    }
     
     return YES;
 }
@@ -139,6 +172,12 @@
 
 #pragma mark - Parse Temples Json
 
+/* These methods are mainly to allow someone without internet access to 
+ get started with the app. The app ships with results.txt, a JSON store of
+ temple data that we will initialize Core Data with here. Going forward,
+ we will pull updates from the Parse server and update Core Data directly.
+ */
+
 -(NSArray *)parseTempleJson:(NSString *)path{
     NSData *data = [NSData dataWithContentsOfFile:path];
     NSArray *temples = nil;
@@ -148,21 +187,11 @@
     return temples;
 }
 
--(BOOL)dataInCoreData{
-    NSManagedObjectContext *context = [self managedObjectContext];
-    NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Temple"];
-    NSArray *templeArray = [context executeFetchRequest:request error:nil];
-    
-    return templeArray.count > 0;
-}
-
 -(void)preloadData{
-    if ([self dataInCoreData]) {
-        return;
-    }
+    
     [self removeData];
 	
-    NSString *path = [[NSBundle mainBundle]pathForResource:@"results" ofType:@"txt"];
+    NSString *path = [[NSBundle mainBundle]pathForResource:@"results" ofType:@"json"];
     NSArray *temples = [self parseTempleJson:path];
     
     for (id item in temples) {

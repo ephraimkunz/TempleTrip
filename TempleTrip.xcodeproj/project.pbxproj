@@ -7,23 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		180C096E1B8EA01F00764003 /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180C096D1B8EA01F00764003 /* DetailTableViewController.m */; };
+		18081B7E1C2CF7B5000998AB /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18081B7D1C2CF7B5000998AB /* Settings.bundle */; };
 		181EF7E81B73CF870010D2EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 181EF7E71B73CF870010D2EA /* main.m */; };
 		181EF7EB1B73CF880010D2EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 181EF7EA1B73CF880010D2EA /* AppDelegate.m */; };
 		181EF7EE1B73CF880010D2EA /* TempleTrip.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 181EF7EC1B73CF880010D2EA /* TempleTrip.xcdatamodeld */; };
 		181EF7F11B73CF880010D2EA /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 181EF7F01B73CF880010D2EA /* MasterViewController.m */; };
 		181EF7F71B73CF880010D2EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181EF7F51B73CF880010D2EA /* Main.storyboard */; };
 		181EF7F91B73CF880010D2EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 181EF7F81B73CF880010D2EA /* Images.xcassets */; };
-		181EF8081B73CF880010D2EA /* TempleTripTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 181EF8071B73CF880010D2EA /* TempleTripTests.m */; };
+		1827873B1C2B148500196E0F /* SchedulePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827873A1C2B148500196E0F /* SchedulePickerTableViewCell.swift */; };
+		1827873F1C2B2A3700196E0F /* EditableTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827873E1C2B2A3700196E0F /* EditableTextTableViewCell.swift */; };
+		184DBFD51C41A23C00572D80 /* GlobalSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184DBFD41C41A23C00572D80 /* GlobalSplitViewController.m */; };
 		1877D7251C0759060022BF60 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1877D7231C0759060022BF60 /* Fabric.framework */; };
 		1877D7261C0759060022BF60 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1877D7241C0759060022BF60 /* Crashlytics.framework */; };
 		18A2EF6F1BE87A4000FB4D69 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2EF6E1BE87A4000FB4D69 /* ScheduleViewController.m */; };
 		18ABEC421BF5579900AA7EB7 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18ABEC411BF5579900AA7EB7 /* EventKit.framework */; };
-		18C8F5041BD1D29000FFF64A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180C096F1B8EB62200764003 /* CoreLocation.framework */; };
-		18CB44DA1B745444001FA4B4 /* results.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18CB44D91B745444001FA4B4 /* results.txt */; };
-		18CB44E11B751B95001FA4B4 /* Temple.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CB44E01B751B95001FA4B4 /* Temple.m */; };
+		18C6CE861C2DB8FE00779183 /* DetailDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C6CE851C2DB8FE00779183 /* DetailDataSource.m */; };
+		18C6CE891C2DBACA00779183 /* ImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C6CE881C2DBACA00779183 /* ImageHelper.m */; };
+		18C6CE8C1C2DC06800779183 /* DateTimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C6CE8B1C2DC06800779183 /* DateTimeHelper.m */; };
+		18C6CE931C2E35B100779183 /* DefaultPreferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18C6CE8D1C2E35B100779183 /* DefaultPreferences.plist */; };
+		18C6CE941C2E35B100779183 /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C6CE8F1C2E35B100779183 /* DetailTableViewController.m */; };
+		18C6CE951C2E35B100779183 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18C6CE901C2E35B100779183 /* Launch Screen.storyboard */; };
+		18C6CE961C2E35B100779183 /* Temple.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C6CE921C2E35B100779183 /* Temple.m */; };
+		18C6CE981C2E372D00779183 /* DateTimeHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C6CE971C2E372D00779183 /* DateTimeHelperTest.m */; };
+		18C6CE9A1C2E3E2500779183 /* ImageHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C6CE991C2E3E2500779183 /* ImageHelperTest.m */; };
+		18CB44DA1B745444001FA4B4 /* results.json in Resources */ = {isa = PBXBuildFile; fileRef = 18CB44D91B745444001FA4B4 /* results.json */; };
 		18DC93FC1C1D213500D1E367 /* ServicesAvailableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DC93FB1C1D213500D1E367 /* ServicesAvailableCell.swift */; };
-		18DC94041C1F7E1E00D1E367 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18DC94031C1F7E1E00D1E367 /* Launch Screen.storyboard */; };
+		D97489EB576067C38185E4B1 /* libPods-TempleTrip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48BE3C56B3F1FDAA202AB214 /* libPods-TempleTrip.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,10 +59,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1802C4001C1CFE420079A631 /* FavoritesDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesDelegate.h; sourceTree = "<group>"; };
-		180C096C1B8EA01F00764003 /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailTableViewController.h; path = ../DetailTableViewController.h; sourceTree = "<group>"; };
-		180C096D1B8EA01F00764003 /* DetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailTableViewController.m; path = ../DetailTableViewController.m; sourceTree = "<group>"; };
-		180C096F1B8EB62200764003 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		18081B7D1C2CF7B5000998AB /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		181EF7E21B73CF870010D2EA /* TempleTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TempleTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		181EF7E61B73CF870010D2EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		181EF7E71B73CF870010D2EA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -66,18 +72,44 @@
 		181EF7F81B73CF880010D2EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		181EF8011B73CF880010D2EA /* TempleTripTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TempleTripTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		181EF8061B73CF880010D2EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		181EF8071B73CF880010D2EA /* TempleTripTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TempleTripTests.m; sourceTree = "<group>"; };
+		1827873A1C2B148500196E0F /* SchedulePickerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchedulePickerTableViewCell.swift; sourceTree = "<group>"; };
+		1827873E1C2B2A3700196E0F /* EditableTextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditableTextTableViewCell.swift; sourceTree = "<group>"; };
+		1842AE5E1C2F63A800FF5A66 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		1842AE601C2F63B600FF5A66 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		1842AE621C2F63C300FF5A66 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1842AE661C2F63DF00FF5A66 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		1842AE681C2F63E800FF5A66 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		1842AE6C1C2F63FE00FF5A66 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1842AE6E1C2F640D00FF5A66 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		1842AE701C2F641E00FF5A66 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		184C59E01C41C1DA0052241D /* FavoritesUpdatingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesUpdatingProtocol.h; sourceTree = "<group>"; };
+		184DBFD31C41A23C00572D80 /* GlobalSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalSplitViewController.h; sourceTree = "<group>"; };
+		184DBFD41C41A23C00572D80 /* GlobalSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalSplitViewController.m; sourceTree = "<group>"; };
 		1877D7231C0759060022BF60 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = SOURCE_ROOT; };
 		1877D7241C0759060022BF60 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = SOURCE_ROOT; };
 		18A2EF6D1BE87A4000FB4D69 /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
 		18A2EF6E1BE87A4000FB4D69 /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
 		18ABEC411BF5579900AA7EB7 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
-		18CB44D91B745444001FA4B4 /* results.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = results.txt; sourceTree = "<group>"; };
-		18CB44DF1B751B95001FA4B4 /* Temple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Temple.h; path = ../Temple.h; sourceTree = "<group>"; };
-		18CB44E01B751B95001FA4B4 /* Temple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Temple.m; path = ../Temple.m; sourceTree = "<group>"; };
+		18C6CE841C2DB8FE00779183 /* DetailDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailDataSource.h; sourceTree = "<group>"; };
+		18C6CE851C2DB8FE00779183 /* DetailDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailDataSource.m; sourceTree = "<group>"; };
+		18C6CE871C2DBACA00779183 /* ImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageHelper.h; sourceTree = "<group>"; };
+		18C6CE881C2DBACA00779183 /* ImageHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageHelper.m; sourceTree = "<group>"; };
+		18C6CE8A1C2DC06800779183 /* DateTimeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateTimeHelper.h; sourceTree = "<group>"; };
+		18C6CE8B1C2DC06800779183 /* DateTimeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateTimeHelper.m; sourceTree = "<group>"; };
+		18C6CE8D1C2E35B100779183 /* DefaultPreferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DefaultPreferences.plist; sourceTree = "<group>"; };
+		18C6CE8E1C2E35B100779183 /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewController.h; sourceTree = "<group>"; };
+		18C6CE8F1C2E35B100779183 /* DetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewController.m; sourceTree = "<group>"; };
+		18C6CE901C2E35B100779183 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		18C6CE911C2E35B100779183 /* Temple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Temple.h; sourceTree = "<group>"; };
+		18C6CE921C2E35B100779183 /* Temple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Temple.m; sourceTree = "<group>"; };
+		18C6CE971C2E372D00779183 /* DateTimeHelperTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateTimeHelperTest.m; sourceTree = "<group>"; };
+		18C6CE991C2E3E2500779183 /* ImageHelperTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageHelperTest.m; sourceTree = "<group>"; };
+		18CB44D91B745444001FA4B4 /* results.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = results.json; sourceTree = "<group>"; };
 		18DC93FB1C1D213500D1E367 /* ServicesAvailableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesAvailableCell.swift; sourceTree = "<group>"; };
 		18DC93FE1C1F5E2700D1E367 /* TempleTrip-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TempleTrip-Bridging-Header.h"; sourceTree = "<group>"; };
-		18DC94031C1F7E1E00D1E367 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		48BE3C56B3F1FDAA202AB214 /* libPods-TempleTrip.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TempleTrip.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		56780992B64A9583DA24A4AB /* Pods-TempleTrip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TempleTrip.release.xcconfig"; path = "Pods/Target Support Files/Pods-TempleTrip/Pods-TempleTrip.release.xcconfig"; sourceTree = "<group>"; };
+		F15E867ADE006CBFE68FBBF3 /* Pods-TempleTrip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TempleTrip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TempleTrip/Pods-TempleTrip.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,9 +118,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				18ABEC421BF5579900AA7EB7 /* EventKit.framework in Frameworks */,
-				18C8F5041BD1D29000FFF64A /* CoreLocation.framework in Frameworks */,
 				1877D7261C0759060022BF60 /* Crashlytics.framework in Frameworks */,
 				1877D7251C0759060022BF60 /* Fabric.framework in Frameworks */,
+				D97489EB576067C38185E4B1 /* libPods-TempleTrip.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,10 +137,11 @@
 		181EF7D91B73CF870010D2EA = {
 			isa = PBXGroup;
 			children = (
-				18DC94031C1F7E1E00D1E367 /* Launch Screen.storyboard */,
 				181EF7E41B73CF870010D2EA /* TempleTrip */,
 				181EF8041B73CF880010D2EA /* TempleTripTests */,
 				181EF7E31B73CF870010D2EA /* Products */,
+				54F765108F7E829D331F8A4E /* Pods */,
+				F80AD0A57AE6DCAA82D10212 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,20 +157,13 @@
 		181EF7E41B73CF870010D2EA /* TempleTrip */ = {
 			isa = PBXGroup;
 			children = (
-				181EF7E91B73CF870010D2EA /* AppDelegate.h */,
-				181EF7EA1B73CF880010D2EA /* AppDelegate.m */,
-				181EF7EF1B73CF880010D2EA /* MasterViewController.h */,
-				181EF7F01B73CF880010D2EA /* MasterViewController.m */,
-				180C096C1B8EA01F00764003 /* DetailTableViewController.h */,
-				180C096D1B8EA01F00764003 /* DetailTableViewController.m */,
-				1802C4001C1CFE420079A631 /* FavoritesDelegate.h */,
-				181EF7F51B73CF880010D2EA /* Main.storyboard */,
-				18DC93FB1C1D213500D1E367 /* ServicesAvailableCell.swift */,
-				18A2EF6D1BE87A4000FB4D69 /* ScheduleViewController.h */,
-				18A2EF6E1BE87A4000FB4D69 /* ScheduleViewController.m */,
-				181EF7F81B73CF880010D2EA /* Images.xcassets */,
+				182787391C2B0DFB00196E0F /* Controllers */,
+				182787381C2B0DCE00196E0F /* View */,
 				18CB44DE1B75195B001FA4B4 /* Model */,
 				181EF7E51B73CF870010D2EA /* Supporting Files */,
+				181EF7E91B73CF870010D2EA /* AppDelegate.h */,
+				181EF7EA1B73CF880010D2EA /* AppDelegate.m */,
+				184C59E01C41C1DA0052241D /* FavoritesUpdatingProtocol.h */,
 			);
 			path = TempleTrip;
 			sourceTree = "<group>";
@@ -145,13 +171,20 @@
 		181EF7E51B73CF870010D2EA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18C6CE8A1C2DC06800779183 /* DateTimeHelper.h */,
+				18C6CE8B1C2DC06800779183 /* DateTimeHelper.m */,
+				18C6CE871C2DBACA00779183 /* ImageHelper.h */,
+				18C6CE881C2DBACA00779183 /* ImageHelper.m */,
+				181EF7F81B73CF880010D2EA /* Images.xcassets */,
+				18081B7D1C2CF7B5000998AB /* Settings.bundle */,
+				18C6CE8D1C2E35B100779183 /* DefaultPreferences.plist */,
 				18DC93FE1C1F5E2700D1E367 /* TempleTrip-Bridging-Header.h */,
 				181EF7E61B73CF870010D2EA /* Info.plist */,
 				181EF7E71B73CF870010D2EA /* main.m */,
+				1842AE721C2F646400FF5A66 /* Parse dependencies */,
 				1877D7231C0759060022BF60 /* Fabric.framework */,
 				1877D7241C0759060022BF60 /* Crashlytics.framework */,
 				18ABEC411BF5579900AA7EB7 /* EventKit.framework */,
-				180C096F1B8EB62200764003 /* CoreLocation.framework */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -159,8 +192,9 @@
 		181EF8041B73CF880010D2EA /* TempleTripTests */ = {
 			isa = PBXGroup;
 			children = (
-				181EF8071B73CF880010D2EA /* TempleTripTests.m */,
 				181EF8051B73CF880010D2EA /* Supporting Files */,
+				18C6CE971C2E372D00779183 /* DateTimeHelperTest.m */,
+				18C6CE991C2E3E2500779183 /* ImageHelperTest.m */,
 			);
 			path = TempleTripTests;
 			sourceTree = "<group>";
@@ -173,15 +207,77 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		182787381C2B0DCE00196E0F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				18C6CE901C2E35B100779183 /* Launch Screen.storyboard */,
+				181EF7F51B73CF880010D2EA /* Main.storyboard */,
+				1827873E1C2B2A3700196E0F /* EditableTextTableViewCell.swift */,
+				1827873A1C2B148500196E0F /* SchedulePickerTableViewCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		182787391C2B0DFB00196E0F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				18C6CE841C2DB8FE00779183 /* DetailDataSource.h */,
+				18C6CE851C2DB8FE00779183 /* DetailDataSource.m */,
+				181EF7EF1B73CF880010D2EA /* MasterViewController.h */,
+				18DC93FB1C1D213500D1E367 /* ServicesAvailableCell.swift */,
+				181EF7F01B73CF880010D2EA /* MasterViewController.m */,
+				18C6CE8E1C2E35B100779183 /* DetailTableViewController.h */,
+				18C6CE8F1C2E35B100779183 /* DetailTableViewController.m */,
+				18A2EF6D1BE87A4000FB4D69 /* ScheduleViewController.h */,
+				18A2EF6E1BE87A4000FB4D69 /* ScheduleViewController.m */,
+				184DBFD31C41A23C00572D80 /* GlobalSplitViewController.h */,
+				184DBFD41C41A23C00572D80 /* GlobalSplitViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		1842AE721C2F646400FF5A66 /* Parse dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				1842AE701C2F641E00FF5A66 /* libsqlite3.tbd */,
+				1842AE6E1C2F640D00FF5A66 /* libz.tbd */,
+				1842AE6C1C2F63FE00FF5A66 /* SystemConfiguration.framework */,
+				1842AE681C2F63E800FF5A66 /* Security.framework */,
+				1842AE661C2F63DF00FF5A66 /* QuartzCore.framework */,
+				1842AE621C2F63C300FF5A66 /* CoreGraphics.framework */,
+				1842AE601C2F63B600FF5A66 /* CFNetwork.framework */,
+				1842AE5E1C2F63A800FF5A66 /* AudioToolbox.framework */,
+			);
+			name = "Parse dependencies";
+			path = ..;
+			sourceTree = "<group>";
+		};
 		18CB44DE1B75195B001FA4B4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				181EF7EC1B73CF880010D2EA /* TempleTrip.xcdatamodeld */,
-				18CB44DF1B751B95001FA4B4 /* Temple.h */,
-				18CB44E01B751B95001FA4B4 /* Temple.m */,
-				18CB44D91B745444001FA4B4 /* results.txt */,
+				18C6CE911C2E35B100779183 /* Temple.h */,
+				18C6CE921C2E35B100779183 /* Temple.m */,
+				18CB44D91B745444001FA4B4 /* results.json */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		54F765108F7E829D331F8A4E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F15E867ADE006CBFE68FBBF3 /* Pods-TempleTrip.debug.xcconfig */,
+				56780992B64A9583DA24A4AB /* Pods-TempleTrip.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F80AD0A57AE6DCAA82D10212 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48BE3C56B3F1FDAA202AB214 /* libPods-TempleTrip.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,11 +287,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 181EF80B1B73CF880010D2EA /* Build configuration list for PBXNativeTarget "TempleTrip" */;
 			buildPhases = (
+				65858CD9C6B007975C514EDF /* Check Pods Manifest.lock */,
 				181EF7DE1B73CF870010D2EA /* Sources */,
 				181EF7DF1B73CF870010D2EA /* Frameworks */,
 				181EF7E01B73CF870010D2EA /* Resources */,
 				18C8F4FF1BD1D0CE00FFF64A /* Embed Frameworks */,
 				1877D7221C0758F20022BF60 /* ShellScript */,
+				6C91B069CA11456482630431 /* Embed Pods Frameworks */,
+				BE88C8F67E81C2534AAAD649 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,8 +369,10 @@
 			files = (
 				181EF7F71B73CF880010D2EA /* Main.storyboard in Resources */,
 				181EF7F91B73CF880010D2EA /* Images.xcassets in Resources */,
-				18DC94041C1F7E1E00D1E367 /* Launch Screen.storyboard in Resources */,
-				18CB44DA1B745444001FA4B4 /* results.txt in Resources */,
+				18C6CE951C2E35B100779183 /* Launch Screen.storyboard in Resources */,
+				18C6CE931C2E35B100779183 /* DefaultPreferences.plist in Resources */,
+				18081B7E1C2CF7B5000998AB /* Settings.bundle in Resources */,
+				18CB44DA1B745444001FA4B4 /* results.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +399,51 @@
 			shellPath = /bin/sh;
 			shellScript = "./Fabric.framework/run abd7e04d91a9cd3680a3cac4718edbb8b6044ad8 0b7f30e6caca457e72ae2610360cae3ce53bed94b81a4fa41b590d5277d38b34";
 		};
+		65858CD9C6B007975C514EDF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6C91B069CA11456482630431 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TempleTrip/Pods-TempleTrip-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BE88C8F67E81C2534AAAD649 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TempleTrip/Pods-TempleTrip-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -305,14 +451,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				180C096E1B8EA01F00764003 /* DetailTableViewController.m in Sources */,
-				18CB44E11B751B95001FA4B4 /* Temple.m in Sources */,
+				18C6CE941C2E35B100779183 /* DetailTableViewController.m in Sources */,
 				181EF7F11B73CF880010D2EA /* MasterViewController.m in Sources */,
+				184DBFD51C41A23C00572D80 /* GlobalSplitViewController.m in Sources */,
+				18C6CE891C2DBACA00779183 /* ImageHelper.m in Sources */,
 				18DC93FC1C1D213500D1E367 /* ServicesAvailableCell.swift in Sources */,
+				1827873B1C2B148500196E0F /* SchedulePickerTableViewCell.swift in Sources */,
 				181EF7EB1B73CF880010D2EA /* AppDelegate.m in Sources */,
 				181EF7E81B73CF870010D2EA /* main.m in Sources */,
 				181EF7EE1B73CF880010D2EA /* TempleTrip.xcdatamodeld in Sources */,
+				18C6CE861C2DB8FE00779183 /* DetailDataSource.m in Sources */,
+				1827873F1C2B2A3700196E0F /* EditableTextTableViewCell.swift in Sources */,
+				18C6CE961C2E35B100779183 /* Temple.m in Sources */,
 				18A2EF6F1BE87A4000FB4D69 /* ScheduleViewController.m in Sources */,
+				18C6CE8C1C2DC06800779183 /* DateTimeHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,7 +472,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				181EF8081B73CF880010D2EA /* TempleTripTests.m in Sources */,
+				18C6CE981C2E372D00779183 /* DateTimeHelperTest.m in Sources */,
+				18C6CE9A1C2E3E2500779183 /* ImageHelperTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +582,7 @@
 		};
 		181EF80C1B73CF880010D2EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F15E867ADE006CBFE68FBBF3 /* Pods-TempleTrip.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -438,6 +592,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/TempleTrip",
 				);
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(SRCROOT)";
 				INFOPLIST_FILE = TempleTrip/Info.plist;
@@ -453,6 +608,7 @@
 		};
 		181EF80D1B73CF880010D2EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56780992B64A9583DA24A4AB /* Pods-TempleTrip.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -462,6 +618,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/TempleTrip",
 				);
 				INFOPLIST_FILE = TempleTrip/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

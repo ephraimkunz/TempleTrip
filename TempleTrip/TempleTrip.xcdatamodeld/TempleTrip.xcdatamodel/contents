@@ -4,6 +4,7 @@
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="dedication" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="endowmentSchedule" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="existsOnServer" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
         <attribute name="firstLetter" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="hasCafeteria" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="hasClothing" optional="YES" attributeType="Boolean" syncable="YES"/>
@@ -16,6 +17,6 @@
         <userInfo/>
     </entity>
     <elements>
-        <element name="Temple" positionX="261" positionY="189" width="128" height="223"/>
+        <element name="Temple" positionX="261" positionY="189" width="128" height="238"/>
     </elements>
 </model>
