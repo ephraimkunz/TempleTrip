@@ -33,6 +33,7 @@
     shouldRemindForEvent = NO;
     
     self.today = self.scheduleDict[self.dayTapped];
+    self.daysOfWeek = @[@"Sunday", @"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Friday", @"Saturday"];
     
 	upcomingDates = [ScheduleViewController getUpcomingDatesArrayWithDay: self.dayTapped count: 52 weekdays:self.daysOfWeek];
 	
@@ -245,7 +246,7 @@
 	NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
 	NSDateComponents *comps = [gregorian components:NSCalendarUnitWeekday fromDate:[NSDate date]];
 	long realWeekday = [comps weekday];
-	long viewingWeekday = [weekdays indexOfObjectIdenticalTo:startDay] + 2; //To compare with realWeekDay, we can't be 0 indexed and we have to start on Sunday.
+	long viewingWeekday = [weekdays indexOfObject:startDay] + 1; //To compare with realWeekDay, we must start at 1
 	
 	if (viewingWeekday < realWeekday) {
 		viewingWeekday += 7;
