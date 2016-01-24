@@ -112,7 +112,7 @@
             
             //Load the appropriate schedule data.
             
-            NSString *dayName = [DateTimeHelper getWeekdays][indexPath.row];
+            NSString *dayName = [DateTimeHelper getWeekdays][indexPath.row + 1]; // Don't want to include Sunday
             NSArray *timesForWeekday = self.scheduleDict[dayName];
             NSString *displayTime = [DateTimeHelper getDisplayDateRangeWithStart:timesForWeekday[0] End:[timesForWeekday lastObject]];
             cell.detailTextLabel.text = displayTime;

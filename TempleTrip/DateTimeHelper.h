@@ -13,4 +13,8 @@
 + (NSArray *)getWeekdays;
 + (NSString *)getDisplayDateRangeWithStart: (NSString *) militaryStart End: (NSString *) militaryEnd;
 + (NSString *)getDisplayDateWithMilitaryTime: (NSString *) time;
++ (NSArray *)getUpcomingDatesArrayWithDay:(NSString *)startDay count:(NSInteger)numToCalculate;
++ (NSDate *)getDateFromString:(NSString *)aString;
++ (NSArray *)getAllDatesFromStringArray:(NSArray *)inputStringArray;
++ (BOOL) datesAreEqual:(NSDate *)date1 Other:(NSDate *)date2;
 @end

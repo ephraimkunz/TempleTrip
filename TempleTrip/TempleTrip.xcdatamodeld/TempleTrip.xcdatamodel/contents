@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15C50" minimumToolsVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Automatic">
     <entity name="Temple" representedClassName="Temple">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="closedDates" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="dedication" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="endowmentSchedule" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="existsOnServer" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
@@ -17,6 +18,6 @@
         <userInfo/>
     </entity>
     <elements>
-        <element name="Temple" positionX="261" positionY="189" width="128" height="238"/>
+        <element name="Temple" positionX="261" positionY="189" width="128" height="255"/>
     </elements>
 </model>

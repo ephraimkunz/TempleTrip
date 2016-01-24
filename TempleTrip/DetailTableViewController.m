@@ -97,9 +97,8 @@
 		UINavigationController *navController = [segue destinationViewController];
         ScheduleViewController *scheduleController = navController.viewControllers[0];
 		scheduleController.dayTapped = weekdayTapped;
-		scheduleController.templeName = self.currentTemple.name;
-        scheduleController.location = self.currentTemple.address;
         scheduleController.scheduleDict = [DetailDataSource scheduleDictFromEndowmentDictionary:self.currentTemple.endowmentSchedule];
+        scheduleController.currentTemple = self.currentTemple;
 	}
 }
 

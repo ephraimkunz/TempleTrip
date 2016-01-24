@@ -26,7 +26,7 @@
 }
 
 - (void)testGetWeekdays {
-    NSArray *weekDays = @[@"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Friday", @"Saturday"];
+    NSArray *weekDays = @[@"Sunday", @"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Friday", @"Saturday"];
     NSArray *results = [DateTimeHelper getWeekdays];
     
     for (int i = 0; i < weekDays.count; ++i) {
@@ -67,6 +67,24 @@
     
     result = [DateTimeHelper getDisplayDateWithMilitaryTime:@"24:45"];
     XCTAssertEqualObjects(result, @"12:45 am");
+}
+
+-(void)testGetDateFromString{
+    NSDateComponents *components = [[NSDateComponents alloc]init];
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    
+    [components setYear:2016];
+    [components setMonth:3];
+    [components setDay:22];
+    NSDate *expectedDate = [calendar dateFromComponents:components];
+    
+    NSDate *result = [DateTimeHelper getDateFromString:@"2016-03-22"];
+    XCTAssertNotNil(result);
+    XCTAssertEqual(expectedDate, result);
+    
+    
+    result = [DateTimeHelper getDateFromString:@"01-21-23"];
+    XCTAssertNil(result);
 }
 
 @end

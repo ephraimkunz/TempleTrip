@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Temple.h"
 @import EventKit;
 
 @interface ScheduleViewController : UIViewController<UIPickerViewDataSource, UIPickerViewDelegate, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
@@ -14,13 +15,12 @@
 @property (weak, nonatomic) IBOutlet UITableView *scheduleTableView;
 @property (weak, nonatomic) IBOutlet UILabel *footerLabel;
 
+@property(strong, nonatomic) Temple *currentTemple;
 @property (strong, nonatomic) NSDictionary * scheduleDict;
-@property (strong, nonatomic) NSString *templeName;
-@property(nonatomic) NSArray *daysOfWeek;
 @property(nonatomic) NSString *dayTapped;
-@property(nonatomic) NSArray *today;
-@property(nonatomic) NSString *location;
+@property(nonatomic) NSArray *sessionTimesForToday;
 
+- (BOOL)isClosedDate:(NSDate *)aDate;
 -(BOOL)dateIsToday:(NSDate*) date;
 
 @end
