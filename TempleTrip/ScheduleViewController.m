@@ -115,6 +115,8 @@
     if(component == DATE_COMPONENT){
         NSDate *currentRow = upcomingDates[row];
         if([self isClosedDate:currentRow]){
+            
+            //TODO: Won't work properly if we have two in a row closed or if the first day in the picker is closed when the view launches.
             if (row == 0)
                 [pickerView selectRow:row + 1 inComponent:component animated:YES];
             else
