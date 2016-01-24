@@ -74,6 +74,7 @@
 		181EF8061B73CF880010D2EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1827873A1C2B148500196E0F /* SchedulePickerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SchedulePickerTableViewCell.swift; sourceTree = "<group>"; };
 		1827873E1C2B2A3700196E0F /* EditableTextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditableTextTableViewCell.swift; sourceTree = "<group>"; };
+		182DE7BE1C5489470001AD61 /* TempleTrip 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "TempleTrip 2.xcdatamodel"; sourceTree = "<group>"; };
 		1842AE5E1C2F63A800FF5A66 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		1842AE601C2F63B600FF5A66 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		1842AE621C2F63C300FF5A66 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -696,9 +697,10 @@
 		181EF7EC1B73CF880010D2EA /* TempleTrip.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				182DE7BE1C5489470001AD61 /* TempleTrip 2.xcdatamodel */,
 				181EF7ED1B73CF880010D2EA /* TempleTrip.xcdatamodel */,
 			);
-			currentVersion = 181EF7ED1B73CF880010D2EA /* TempleTrip.xcdatamodel */;
+			currentVersion = 182DE7BE1C5489470001AD61 /* TempleTrip 2.xcdatamodel */;
 			path = TempleTrip.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

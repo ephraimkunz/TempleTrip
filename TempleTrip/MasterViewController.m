@@ -369,6 +369,10 @@
                 firstTwoLetters = [[[temple valueForKey:@"servicesAvailable"]valueForKey:@"Clothing"] substringToIndex:2] == nil ? @"No" : [[[temple valueForKey:@"servicesAvailable"]valueForKey:@"Clothing"] substringToIndex:2];
                 cdTemple.hasClothing = ![firstTwoLetters isEqualToString:@"No"];
                 
+                NSMutableArray *closedDatesArray = [[NSMutableArray alloc]initWithArray:[[temple valueForKey:@"closures"]valueForKey:@"Maintenance Dates"]];
+                [closedDatesArray addObjectsFromArray:[[temple valueForKey:@"closures"]valueForKey:@"Other Dates"]];
+                cdTemple.closedDates = [closedDatesArray copy];
+                
                 cdTemple.existsOnServer = YES;
                 
                 NSError *saveError;
