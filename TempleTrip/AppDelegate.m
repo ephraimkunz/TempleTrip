@@ -23,8 +23,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-	[Fabric with:@[[Crashlytics class]]];
-
+    [Fabric with:@[[Crashlytics class]]];
     
     UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
     
@@ -120,10 +119,15 @@
     // Create the coordinator and store
     
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
+    NSDictionary *options = @{
+                              NSMigratePersistentStoresAutomaticallyOption : @YES,
+                              NSInferMappingModelAutomaticallyOption : @YES
+                              };
+    
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"TempleTrip.sqlite"];
     NSError *error = nil;
     NSString *failureReason = @"There was an error creating or loading the application's saved data.";
-    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options error:&error]) {
         // Report any error we got.
         NSMutableDictionary *dict = [NSMutableDictionary dictionary];
         dict[NSLocalizedDescriptionKey] = @"Failed to initialize the application's saved data";
@@ -210,6 +214,10 @@
 		
 		firstTwoLetters = [[[item valueForKey:@"servicesAvailable"]valueForKey:@"Clothing"] substringToIndex:2] == nil ? @"No" : [[[item valueForKey:@"servicesAvailable"]valueForKey:@"Clothing"] substringToIndex:2];
         temple.hasClothing = ![firstTwoLetters isEqualToString:@"No"];
+        
+        NSMutableArray *closedDatesArray = [[NSMutableArray alloc]initWithArray:[[item valueForKey:@"closures"]valueForKey:@"Maintenance Dates"]];
+        [closedDatesArray addObjectsFromArray:[[item valueForKey:@"closures"]valueForKey:@"Other Dates"]];
+        temple.closedDates = [closedDatesArray copy];
     }
 	[self.managedObjectContext save:nil];
 }

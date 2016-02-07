@@ -62,11 +62,29 @@
         self.navigationItem.rightBarButtonItem = callButton;
     }
     
-    //Set up table view
-    UIImage *image = [ImageHelper getImageFromWebOrCacheForTemple:self.currentTemple withContext:self.managedObjectContext];
-    [ImageHelper saveTempleImage:image forTemple:self.currentTemple withContext:self.managedObjectContext];
+    //Set up table view - Get the photo in the background
     
-    self.detailDataSource = [[DetailDataSource alloc]initWithImage: image Temple:self.currentTemple ManagedObjectContext: self.managedObjectContext];
+    //If we have an image cached, pass it directly to the dataSource so we can immediatly display the image.
+    if ([ImageHelper getCacheImagePathForTemple:self.currentTemple withContext:self.managedObjectContext] != nil) {
+        UIImage * image = [ImageHelper getImageFromWebOrCacheForTemple:self.currentTemple withContext:self.managedObjectContext];
+        [ImageHelper saveTempleImage:image forTemple:self.currentTemple withContext:self.managedObjectContext];
+        self.detailDataSource = [[DetailDataSource alloc]initWithImage:image Temple:self.currentTemple ManagedObjectContext:self.managedObjectContext];
+    }
+    
+    //No image cached, so get it from the web on the background thread and call reloadData when we have it.
+    else{
+        self.detailDataSource = [[DetailDataSource alloc]initWithTemple:self.currentTemple ManagedObjectContext: self.managedObjectContext];
+
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+            UIImage *image = [ImageHelper getImageFromWebOrCacheForTemple:self.currentTemple withContext:self.managedObjectContext];
+            [ImageHelper saveTempleImage:image forTemple:self.currentTemple withContext:self.managedObjectContext];
+            self.detailDataSource.image = image;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableView reloadData];
+            });
+        });
+    }
+    
     self.tableView.delegate = self.detailDataSource;
     self.tableView.dataSource = self.detailDataSource;
     
@@ -97,9 +115,8 @@
 		UINavigationController *navController = [segue destinationViewController];
         ScheduleViewController *scheduleController = navController.viewControllers[0];
 		scheduleController.dayTapped = weekdayTapped;
-		scheduleController.templeName = self.currentTemple.name;
-        scheduleController.location = self.currentTemple.address;
         scheduleController.scheduleDict = [DetailDataSource scheduleDictFromEndowmentDictionary:self.currentTemple.endowmentSchedule];
+        scheduleController.currentTemple = self.currentTemple;
 	}
 }
 

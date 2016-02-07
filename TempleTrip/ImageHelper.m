@@ -11,6 +11,9 @@
 @implementation ImageHelper
 
 + (UIImage *)imageWithImage: (UIImage *)sourceImage scaledToWidth: (float) width{
+    if(sourceImage == nil){ //May happen if the async fetch hasn't finished yet.
+        return nil;
+    }
     float oldWidth = sourceImage.size.width;
     float scaleFactor = width / oldWidth;
     

@@ -19,16 +19,14 @@
 #define kAddToFavoritesSection 3
 
 @implementation DetailDataSource{
-    UIImage *image;
     UIImage *scaledImage;
     Temple *temple;
     NSManagedObjectContext *context;
 }
-
-- (instancetype) initWithImage: (UIImage *) newImage Temple: (Temple *) newTemple ManagedObjectContext: (NSManagedObjectContext *) newContext{
+- (instancetype) initWithImage: (UIImage*)Image Temple: (Temple *) newTemple ManagedObjectContext: (NSManagedObjectContext *) newContext{
     self = [super init];
     if (self) {
-        image = newImage;
+        self.image = Image;
         temple = newTemple;
         context = newContext;
         //Convert a dictionary of the form dayName: string to the form dayname: array of military times.
@@ -37,9 +35,13 @@
     return self;
 }
 
+- (instancetype) initWithTemple: (Temple *) newTemple ManagedObjectContext: (NSManagedObjectContext *) newContext{
+    return [self initWithImage:nil Temple:newTemple ManagedObjectContext:newContext];
+}
+
 -(void) setScaledImageIfNeededWithWidth: (float) width{
     if (scaledImage == nil || scaledImage.size.width != width) {
-        scaledImage = [ImageHelper imageWithImage:image scaledToWidth:width];
+        scaledImage = [ImageHelper imageWithImage:self.image scaledToWidth:width];
     }
 }
 
@@ -112,7 +114,7 @@
             
             //Load the appropriate schedule data.
             
-            NSString *dayName = [DateTimeHelper getWeekdays][indexPath.row];
+            NSString *dayName = [DateTimeHelper getWeekdays][indexPath.row + 1]; // Don't want to include Sunday
             NSArray *timesForWeekday = self.scheduleDict[dayName];
             NSString *displayTime = [DateTimeHelper getDisplayDateRangeWithStart:timesForWeekday[0] End:[timesForWeekday lastObject]];
             cell.detailTextLabel.text = displayTime;

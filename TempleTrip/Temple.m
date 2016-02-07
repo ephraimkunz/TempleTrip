@@ -23,4 +23,5 @@
 @dynamic hasCafeteria;
 @dynamic hasClothing;
 @dynamic existsOnServer;
+@dynamic closedDates;
 @end
