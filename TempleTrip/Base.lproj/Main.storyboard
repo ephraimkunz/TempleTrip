@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="P9w-aM-oW2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="P9w-aM-oW2">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--Global Split View Controller-->
@@ -343,6 +342,7 @@
                     <connections>
                         <outlet property="ScheduleTableView" destination="IlD-Cs-1nH" id="RWH-2l-ZgZ"/>
                         <outlet property="footerLabel" destination="zse-kF-8Yz" id="XRb-8z-Ubl"/>
+                        <outlet property="saveButton" destination="dN6-nI-QSP" id="V3C-XB-IXY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qyO-oK-082" userLabel="First Responder" sceneMemberID="firstResponder"/>

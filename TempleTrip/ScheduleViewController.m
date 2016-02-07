@@ -11,6 +11,10 @@
 #import "TempleTrip-Swift.h"
 #import "DateTimeHelper.h"
 
+#define NUM_DAYS_IN_PICKER 52 // One year ahead
+#define DATE_COMPONENT 0
+#define TIME_COMPONENT 1
+
 @implementation ScheduleViewController{
 	NSArray* upcomingDates;
 	EKEventStore *store;
@@ -18,6 +22,7 @@
     NSString * eventLocation; // Will change if the user modifies. So we keep this instance variable while the property will remain unchanged.
     BOOL shouldRemindForEvent;
     UITextField *textFieldToResign; // Holds a reference to the text field that we will resign when the user scrolls or taps outside of the currently edited text field.
+    NSArray *closedDates;
 }
 
 #pragma mark - ViewLifeCycle
@@ -27,14 +32,16 @@
     
     self.scheduleTableView.delegate = self;
     self.scheduleTableView.dataSource = self;
+    
+    closedDates = [DateTimeHelper getAllDatesFromStringArray:self.currentTemple.closedDates];
 
-    eventTitle = [NSString stringWithFormat:@"Trip to %@ temple", self.templeName];
-    eventLocation = self.location;
+    eventTitle = [NSString stringWithFormat:@"Trip to %@ temple", self.currentTemple.name];
+    eventLocation = self.currentTemple.address;
     shouldRemindForEvent = NO;
     
-    self.today = self.scheduleDict[self.dayTapped];
+    self.sessionTimesForToday = self.scheduleDict[self.dayTapped];
     
-	upcomingDates = [ScheduleViewController getUpcomingDatesArrayWithDay: self.dayTapped count: 52 weekdays:self.daysOfWeek];
+    upcomingDates = [DateTimeHelper getUpcomingDatesArrayWithDay:self.dayTapped count:NUM_DAYS_IN_PICKER];
 	
 	store = [[EKEventStore alloc]init];
 	[store requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError *error){
@@ -62,7 +69,7 @@
 			return [upcomingDates count];
 			break;
 		case 1:
-			return self.today.count;
+			return self.sessionTimesForToday.count;
 			break;
 			
 		default:
@@ -70,11 +77,11 @@
 	}
 }
 
--(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
+-(NSAttributedString *)pickerView:(UIPickerView *)pickerView attributedTitleForRow:(NSInteger)row forComponent:(NSInteger)component{
 	switch (component) {
-		case 0:{
+		case DATE_COMPONENT:{
 			if (row == 0 && [self dateIsToday:upcomingDates[0]]) {
-				return @"Today";
+                return [[NSAttributedString alloc]initWithString:@"Today"];
 			}
 			NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
 			[formatter setDateFormat:@"EEEE dd MMM"];
@@ -82,22 +89,51 @@
 			NSString* formattedDate = [formatter stringFromDate:upcomingDates[row]];
 			NSRange firstSpaceRange = [formattedDate rangeOfString:@" "];
 			formattedDate = [NSString stringWithFormat:@"%@%@", [formattedDate substringToIndex:3], [formattedDate substringFromIndex:firstSpaceRange.location]];
-			return formattedDate;
+            
+            NSDate *currentRow = upcomingDates[row];
+            if ([self isClosedDate:currentRow]) {
+                return [[NSAttributedString alloc]initWithString:formattedDate attributes:@{NSForegroundColorAttributeName:[UIColor redColor]}];
+            }
+			return [[NSAttributedString alloc]initWithString:formattedDate];
 			break;
 		}
-		case 1:{
-			NSString* militaryTime = self.today[row];
-			return [DateTimeHelper getDisplayDateWithMilitaryTime:militaryTime];
+		case TIME_COMPONENT:{
+			NSString* militaryTime = self.sessionTimesForToday[row];
+			return [[NSAttributedString alloc] initWithString:[DateTimeHelper getDisplayDateWithMilitaryTime:militaryTime]];
 			break;
 		}
 		default:
-			return @"Should never be hit";
+			return [[NSAttributedString alloc]initWithString:@"Should never be hit"];
 	}
 }
 
 #pragma mark - PickerViewDelegate
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     [self resignActiveTextField];
+
+    //Handle closed days: scroll up or down to the next day.
+    if(component == DATE_COMPONENT){
+        NSDate *currentRow = upcomingDates[row];
+        if([self isClosedDate:currentRow]){
+            
+//            if (row == 0)
+//                [pickerView selectRow:row + 1 inComponent:component animated:YES];
+//            else
+//                [pickerView selectRow:row - 1 inComponent:component animated:YES];
+            self.saveButton.enabled = NO;
+        }
+        else{
+            self.saveButton.enabled = YES;
+        }
+    }
+}
+
+- (BOOL) isClosedDate:(NSDate *)aDate{
+    NSUInteger inClosedList = [closedDates indexOfObjectPassingTest:^BOOL(NSDate *obj, NSUInteger idx, BOOL *stop){
+        return [DateTimeHelper datesAreEqual:obj Other:aDate];
+    }];
+    BOOL isClosed = (long)inClosedList != NSNotFound;
+    return isClosed;
 }
 
 
@@ -233,43 +269,6 @@
     return YES;
 }
 
-
-
-#pragma mark - Class Methods
-
-+(NSArray *)getUpcomingDatesArrayWithDay:(NSString *)startDay count:(NSInteger)numToCalculate weekdays:(NSArray*) weekdays{
-	NSMutableArray* results = [[NSMutableArray alloc]init];
-	
-	//Get the current weekday number
-	
-	NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-	NSDateComponents *comps = [gregorian components:NSCalendarUnitWeekday fromDate:[NSDate date]];
-	long realWeekday = [comps weekday];
-	long viewingWeekday = [weekdays indexOfObjectIdenticalTo:startDay] + 2; //To compare with realWeekDay, we can't be 0 indexed and we have to start on Sunday.
-	
-	if (viewingWeekday < realWeekday) {
-		viewingWeekday += 7;
-	}
-	long daysAhead = viewingWeekday - realWeekday;
-	
-	NSDateComponents* comps2 = [NSDateComponents new];
-	comps2.day	= daysAhead;
-	
-	NSDate* first = [[NSCalendar currentCalendar]dateByAddingComponents:comps2 toDate:[NSDate date] options:0];
-	[results addObject:first];
-	
-	//Get the calendar date of the next weekday for the view.
-	
-	for (int i = 0; i < numToCalculate - 1; ++i) {
-		NSDateComponents *comps3 = [NSDateComponents new];
-		comps3.day = 7; //Add each one exactly one week out.
-		NSDate* weekAhead = [[NSCalendar currentCalendar]dateByAddingComponents:comps3 toDate:results[i] options:0];
-		[results addObject:weekAhead];
-	}
-	return results;
-}
-
-
 #pragma mark - IBActions
 
 - (IBAction)cancelTapped:(id)sender {
@@ -294,7 +293,7 @@
     SchedulePickerTableViewCell *cell = [self.scheduleTableView cellForRowAtIndexPath:indexPath];
     
 	NSDate *dateWithoutTime = upcomingDates[[cell.SchedulePicker selectedRowInComponent:0]];
-	NSString * time = self.today[[cell.SchedulePicker selectedRowInComponent:1]];
+	NSString * time = self.sessionTimesForToday[[cell.SchedulePicker selectedRowInComponent:1]];
 	long colonLocation = [time rangeOfString:@":"].location;
 	NSInteger hour = [[time substringToIndex:colonLocation]integerValue];
 	NSInteger minute = [[time substringFromIndex:colonLocation + 1]integerValue];

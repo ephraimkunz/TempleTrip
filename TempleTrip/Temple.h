@@ -20,6 +20,7 @@
 @property (nonatomic, retain) NSString * imageLink;
 @property (nonatomic, retain) NSString * telephone;
 @property (nonatomic, retain) NSDictionary * endowmentSchedule;
+@property (nonatomic, retain) NSArray * closedDates;
 @property (nonatomic, retain) NSString * firstLetter;
 @property (nonatomic, retain) NSString * localImagePath;
 @property (nonatomic, retain) NSNumber * isFavorite;
