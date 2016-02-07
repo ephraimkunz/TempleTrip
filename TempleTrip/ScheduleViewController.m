@@ -92,7 +92,7 @@
             
             NSDate *currentRow = upcomingDates[row];
             if ([self isClosedDate:currentRow]) {
-                return [[NSAttributedString alloc]initWithString:formattedDate attributes:@{NSForegroundColorAttributeName:[UIColor lightGrayColor]}];
+                return [[NSAttributedString alloc]initWithString:formattedDate attributes:@{NSForegroundColorAttributeName:[UIColor redColor]}];
             }
 			return [[NSAttributedString alloc]initWithString:formattedDate];
 			break;
@@ -116,11 +116,14 @@
         NSDate *currentRow = upcomingDates[row];
         if([self isClosedDate:currentRow]){
             
-            //TODO: Won't work properly if we have two in a row closed or if the first day in the picker is closed when the view launches.
-            if (row == 0)
-                [pickerView selectRow:row + 1 inComponent:component animated:YES];
-            else
-                [pickerView selectRow:row - 1 inComponent:component animated:YES];
+//            if (row == 0)
+//                [pickerView selectRow:row + 1 inComponent:component animated:YES];
+//            else
+//                [pickerView selectRow:row - 1 inComponent:component animated:YES];
+            self.saveButton.enabled = NO;
+        }
+        else{
+            self.saveButton.enabled = YES;
         }
     }
 }
@@ -129,7 +132,8 @@
     NSUInteger inClosedList = [closedDates indexOfObjectPassingTest:^BOOL(NSDate *obj, NSUInteger idx, BOOL *stop){
         return [DateTimeHelper datesAreEqual:obj Other:aDate];
     }];
-    return (long)inClosedList != NSNotFound;
+    BOOL isClosed = (long)inClosedList != NSNotFound;
+    return isClosed;
 }
 
 

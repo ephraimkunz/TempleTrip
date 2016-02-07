@@ -116,7 +116,7 @@
 + (BOOL) datesAreEqual:(NSDate *)date1 Other:(NSDate *)date2{
     NSDateComponents *component1 = [[NSCalendar currentCalendar]components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:date1];
     NSDateComponents *component2 = [[NSCalendar currentCalendar]components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:date2];
-    return [component1 day] == [component2 day] && [component1 month] == [component1 month] && [component1 year] == [component1 year];
+    return [component1 day] == [component2 day] && [component1 month] == [component2 month] && [component1 year] == [component2 year];
 }
 
 

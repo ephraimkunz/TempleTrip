@@ -23,16 +23,20 @@
     Temple *temple;
     NSManagedObjectContext *context;
 }
-
-- (instancetype) initWithTemple: (Temple *) newTemple ManagedObjectContext: (NSManagedObjectContext *) newContext{
+- (instancetype) initWithImage: (UIImage*)Image Temple: (Temple *) newTemple ManagedObjectContext: (NSManagedObjectContext *) newContext{
     self = [super init];
     if (self) {
+        self.image = Image;
         temple = newTemple;
         context = newContext;
         //Convert a dictionary of the form dayName: string to the form dayname: array of military times.
         self.scheduleDict = [DetailDataSource scheduleDictFromEndowmentDictionary:temple.endowmentSchedule];
     }
     return self;
+}
+
+- (instancetype) initWithTemple: (Temple *) newTemple ManagedObjectContext: (NSManagedObjectContext *) newContext{
+    return [self initWithImage:nil Temple:newTemple ManagedObjectContext:newContext];
 }
 
 -(void) setScaledImageIfNeededWithWidth: (float) width{

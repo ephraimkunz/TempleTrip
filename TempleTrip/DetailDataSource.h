@@ -17,6 +17,7 @@
 @property(strong, nonatomic) id<FavoritesUpdatingProtocol> delegate;
 
 - (instancetype) initWithTemple: (Temple *) newTemple ManagedObjectContext: (NSManagedObjectContext *) newContext;
+- (instancetype) initWithImage: (UIImage*)Image Temple: (Temple *) newTemple ManagedObjectContext: (NSManagedObjectContext *) newContext;
 
 - (NSIndexPath *)imageIndexPath;
 

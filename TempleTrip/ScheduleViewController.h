@@ -23,4 +23,6 @@
 - (BOOL)isClosedDate:(NSDate *)aDate;
 -(BOOL)dateIsToday:(NSDate*) date;
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
+
 @end

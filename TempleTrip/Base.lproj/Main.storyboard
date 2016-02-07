@@ -342,6 +342,7 @@
                     <connections>
                         <outlet property="ScheduleTableView" destination="IlD-Cs-1nH" id="RWH-2l-ZgZ"/>
                         <outlet property="footerLabel" destination="zse-kF-8Yz" id="XRb-8z-Ubl"/>
+                        <outlet property="saveButton" destination="dN6-nI-QSP" id="V3C-XB-IXY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qyO-oK-082" userLabel="First Responder" sceneMemberID="firstResponder"/>
