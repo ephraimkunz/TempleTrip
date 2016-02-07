@@ -10,8 +10,8 @@
 #import "MasterViewController.h"
 #import "Temple.h"
 #import "DetailTableViewController.h"
-#import "CTFeedbackViewController.h"
 #import <Parse/Parse.h>
+#import "AppContextHelper.h"
 
 @import Crashlytics;
 
@@ -422,11 +422,33 @@
 
 
 - (IBAction)feedbackTapped:(id)sender {
-    CTFeedbackViewController *feedbackViewController = [CTFeedbackViewController controllerWithTopics:CTFeedbackViewController.defaultTopics localizedTopics:CTFeedbackViewController.defaultLocalizedTopics];
-    feedbackViewController.toRecipients = @[@"ephraimkunz@me.com"];
-    
-    feedbackViewController.useHTML = NO;
-    [self.navigationController pushViewController:feedbackViewController animated:YES];
+    if([MFMailComposeViewController canSendMail]){
+        
+        NSString *body = [NSString stringWithFormat:@"\n\n\nDevice: %@\niOS: %@\nApp: %@\nVersion: %@\nBuild: %@",
+                [AppContextHelper platformString],
+                [AppContextHelper systemVersion],
+                [AppContextHelper appName],
+                [AppContextHelper appVersion],
+                [AppContextHelper appBuild]];
+
+        
+        MFMailComposeViewController *controller = [[MFMailComposeViewController alloc]init];
+        controller.mailComposeDelegate = self;
+        [controller setToRecipients:@[@"ephraimkunz@me.com"]];
+        [controller setSubject:@"Feedback for TempleTrip"];
+        [controller setMessageBody:body isHTML:NO];
+        
+        [self presentViewController:controller animated:YES completion:nil];
+    }
+    else{
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error sending feedback" message:@"Mail must be set up on this device to send feedback" preferredStyle:UIAlertControllerStyleAlert];
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
+}
+
+#pragma mark - MFMailComposeView Delegate
+-(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

@@ -19,16 +19,14 @@
 #define kAddToFavoritesSection 3
 
 @implementation DetailDataSource{
-    UIImage *image;
     UIImage *scaledImage;
     Temple *temple;
     NSManagedObjectContext *context;
 }
 
-- (instancetype) initWithImage: (UIImage *) newImage Temple: (Temple *) newTemple ManagedObjectContext: (NSManagedObjectContext *) newContext{
+- (instancetype) initWithTemple: (Temple *) newTemple ManagedObjectContext: (NSManagedObjectContext *) newContext{
     self = [super init];
     if (self) {
-        image = newImage;
         temple = newTemple;
         context = newContext;
         //Convert a dictionary of the form dayName: string to the form dayname: array of military times.
@@ -39,7 +37,7 @@
 
 -(void) setScaledImageIfNeededWithWidth: (float) width{
     if (scaledImage == nil || scaledImage.size.width != width) {
-        scaledImage = [ImageHelper imageWithImage:image scaledToWidth:width];
+        scaledImage = [ImageHelper imageWithImage:self.image scaledToWidth:width];
     }
 }
 

@@ -62,11 +62,19 @@
         self.navigationItem.rightBarButtonItem = callButton;
     }
     
-    //Set up table view
-    UIImage *image = [ImageHelper getImageFromWebOrCacheForTemple:self.currentTemple withContext:self.managedObjectContext];
-    [ImageHelper saveTempleImage:image forTemple:self.currentTemple withContext:self.managedObjectContext];
+    //Set up table view - Get the photo in the background
     
-    self.detailDataSource = [[DetailDataSource alloc]initWithImage: image Temple:self.currentTemple ManagedObjectContext: self.managedObjectContext];
+    self.detailDataSource = [[DetailDataSource alloc]initWithTemple:self.currentTemple ManagedObjectContext: self.managedObjectContext];
+
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        UIImage *image = [ImageHelper getImageFromWebOrCacheForTemple:self.currentTemple withContext:self.managedObjectContext];
+        [ImageHelper saveTempleImage:image forTemple:self.currentTemple withContext:self.managedObjectContext];
+        self.detailDataSource.image = image;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
+    });
+    
     self.tableView.delegate = self.detailDataSource;
     self.tableView.dataSource = self.detailDataSource;
     

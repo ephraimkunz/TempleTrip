@@ -21,6 +21,8 @@
 		1877D7261C0759060022BF60 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1877D7241C0759060022BF60 /* Crashlytics.framework */; };
 		18A2EF6F1BE87A4000FB4D69 /* ScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A2EF6E1BE87A4000FB4D69 /* ScheduleViewController.m */; };
 		18ABEC421BF5579900AA7EB7 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18ABEC411BF5579900AA7EB7 /* EventKit.framework */; };
+		18AF86D61C66EA3400A355C7 /* PlatformNames.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18AF86D51C66EA3400A355C7 /* PlatformNames.plist */; };
+		18AF86D91C66EB8B00A355C7 /* AppContextHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AF86D81C66EB8B00A355C7 /* AppContextHelper.m */; };
 		18C6CE861C2DB8FE00779183 /* DetailDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C6CE851C2DB8FE00779183 /* DetailDataSource.m */; };
 		18C6CE891C2DBACA00779183 /* ImageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C6CE881C2DBACA00779183 /* ImageHelper.m */; };
 		18C6CE8C1C2DC06800779183 /* DateTimeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C6CE8B1C2DC06800779183 /* DateTimeHelper.m */; };
@@ -91,6 +93,9 @@
 		18A2EF6D1BE87A4000FB4D69 /* ScheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleViewController.h; sourceTree = "<group>"; };
 		18A2EF6E1BE87A4000FB4D69 /* ScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleViewController.m; sourceTree = "<group>"; };
 		18ABEC411BF5579900AA7EB7 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		18AF86D51C66EA3400A355C7 /* PlatformNames.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PlatformNames.plist; sourceTree = "<group>"; };
+		18AF86D71C66EB8B00A355C7 /* AppContextHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppContextHelper.h; sourceTree = "<group>"; };
+		18AF86D81C66EB8B00A355C7 /* AppContextHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppContextHelper.m; sourceTree = "<group>"; };
 		18C6CE841C2DB8FE00779183 /* DetailDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailDataSource.h; sourceTree = "<group>"; };
 		18C6CE851C2DB8FE00779183 /* DetailDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailDataSource.m; sourceTree = "<group>"; };
 		18C6CE871C2DBACA00779183 /* ImageHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageHelper.h; sourceTree = "<group>"; };
@@ -172,6 +177,7 @@
 		181EF7E51B73CF870010D2EA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18AF86D51C66EA3400A355C7 /* PlatformNames.plist */,
 				18C6CE8A1C2DC06800779183 /* DateTimeHelper.h */,
 				18C6CE8B1C2DC06800779183 /* DateTimeHelper.m */,
 				18C6CE871C2DBACA00779183 /* ImageHelper.h */,
@@ -186,6 +192,8 @@
 				1877D7231C0759060022BF60 /* Fabric.framework */,
 				1877D7241C0759060022BF60 /* Crashlytics.framework */,
 				18ABEC411BF5579900AA7EB7 /* EventKit.framework */,
+				18AF86D71C66EB8B00A355C7 /* AppContextHelper.h */,
+				18AF86D81C66EB8B00A355C7 /* AppContextHelper.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -371,6 +379,7 @@
 				181EF7F71B73CF880010D2EA /* Main.storyboard in Resources */,
 				181EF7F91B73CF880010D2EA /* Images.xcassets in Resources */,
 				18C6CE951C2E35B100779183 /* Launch Screen.storyboard in Resources */,
+				18AF86D61C66EA3400A355C7 /* PlatformNames.plist in Resources */,
 				18C6CE931C2E35B100779183 /* DefaultPreferences.plist in Resources */,
 				18081B7E1C2CF7B5000998AB /* Settings.bundle in Resources */,
 				18CB44DA1B745444001FA4B4 /* results.json in Resources */,
@@ -460,6 +469,7 @@
 				1827873B1C2B148500196E0F /* SchedulePickerTableViewCell.swift in Sources */,
 				181EF7EB1B73CF880010D2EA /* AppDelegate.m in Sources */,
 				181EF7E81B73CF870010D2EA /* main.m in Sources */,
+				18AF86D91C66EB8B00A355C7 /* AppContextHelper.m in Sources */,
 				181EF7EE1B73CF880010D2EA /* TempleTrip.xcdatamodeld in Sources */,
 				18C6CE861C2DB8FE00779183 /* DetailDataSource.m in Sources */,
 				1827873F1C2B2A3700196E0F /* EditableTextTableViewCell.swift in Sources */,

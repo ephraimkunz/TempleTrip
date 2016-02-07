@@ -5,7 +5,6 @@
 
 target 'TempleTrip' do
 pod 'Parse'
-pod 'CTFeedback'
 pod 'iRate'
 end
 

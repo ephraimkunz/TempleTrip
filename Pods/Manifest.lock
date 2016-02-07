@@ -1,18 +1,15 @@
 PODS:
   - Bolts/Tasks (1.6.0)
-  - CTFeedback (1.0.21)
   - iRate (1.11.4)
   - Parse (1.12.0):
     - Bolts/Tasks (~> 1.5)
 
 DEPENDENCIES:
-  - CTFeedback
   - iRate
   - Parse
 
 SPEC CHECKSUMS:
   Bolts: f52a250053bb517ca874523c3913776359ab3def
-  CTFeedback: 30a7d644dc113f524f7969149dc9b6c11dc5ab6d
   iRate: 599ed07c854e0695f3c605d1b2a64c67d912acb7
   Parse: de2c52a9a1421b91ae7594ab8ce191afd184f19b
 

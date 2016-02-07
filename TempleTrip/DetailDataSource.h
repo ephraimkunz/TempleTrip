@@ -16,7 +16,7 @@
 
 @property(strong, nonatomic) id<FavoritesUpdatingProtocol> delegate;
 
-- (instancetype) initWithImage: (UIImage *) newImage Temple: (Temple *) newTemple ManagedObjectContext: (NSManagedObjectContext *) newContext;
+- (instancetype) initWithTemple: (Temple *) newTemple ManagedObjectContext: (NSManagedObjectContext *) newContext;
 
 - (NSIndexPath *)imageIndexPath;
 
@@ -25,4 +25,5 @@
 + (NSMutableDictionary*)scheduleDictFromEndowmentDictionary: (NSDictionary *) dictionary;
 
 @property(strong, nonatomic) NSDictionary *scheduleDict;
+@property(strong, nonatomic) UIImage *image;
 @end
