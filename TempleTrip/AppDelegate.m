@@ -40,16 +40,16 @@
     [NSDictionary dictionaryWithContentsOfURL:defaultPrefsFile];
     [[NSUserDefaults standardUserDefaults] registerDefaults:defaultPrefs];
     
-    // [Optional] Power your app with Local Datastore. For more info, go to
-    // https://parse.com/docs/ios/guide#local-datastore
-    //[Parse enableLocalDatastore];
     
     // Initialize Parse.
-    [Parse setApplicationId:@"JUJurzhFM1UwVK1cY0JHyyJCw17ai5QH1cJ5F880"
-                  clientKey:@"9CWv8oo8D44QyF9FA41aeFYY8Fx8AVOS3sghINzP"];
-    
-    // [Optional] Track statistics around application opens.
-    //[PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    //[Parse setApplicationId:@"JUJurzhFM1UwVK1cY0JHyyJCw17ai5QH1cJ5F880"
+       //           clientKey:@"9CWv8oo8D44QyF9FA41aeFYY8Fx8AVOS3sghINzP"];
+    ParseClientConfiguration *configuration = [ParseClientConfiguration configurationWithBlock: ^(id<ParseMutableClientConfiguration> config) {
+       [config setApplicationId:@"JUJurzhFM1UwVK1cY0JHyyJCw17ai5QH1cJ5F880"];
+       [config setClientKey:@"unused"];
+        [config setServer:@"http://templetrip-server.herokuapp.com/parse"];
+    }];
+    [Parse initializeWithConfiguration:configuration];
     
     // Test Parse
     //PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
