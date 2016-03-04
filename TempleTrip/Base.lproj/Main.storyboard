@@ -328,7 +328,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Trip" id="hqv-M3-QaB">
-                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="cancel" id="lM4-88-7lI">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="lM4-88-7lI">
                             <connections>
                                 <action selector="cancelTapped:" destination="aH6-4c-c9A" id="nxL-l9-b24"/>
                             </connections>
