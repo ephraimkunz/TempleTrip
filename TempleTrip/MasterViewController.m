@@ -320,8 +320,7 @@
 	[self.managedObjectContext save:nil];
 }
 - (IBAction)refresh:(UIRefreshControl *)sender {
-    NetworkHelper *networkHelper = [[NetworkHelper alloc]init];
-    [networkHelper fetchAndUpdateTemplesFromParseWithManagedObjectContext:self.managedObjectContext block:^(void){
+    [NetworkHelper fetchAndUpdateTemplesFromParseWithManagedObjectContext:self.managedObjectContext block:^(void){
         [sender endRefreshing];
     }];
 }

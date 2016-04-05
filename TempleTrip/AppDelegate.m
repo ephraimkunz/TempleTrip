@@ -56,8 +56,7 @@
     }
     
     //Try to update from Parse on every launch
-    NetworkHelper *helper = [[NetworkHelper alloc]init];
-    [helper fetchAndUpdateTemplesFromParseWithManagedObjectContext:self.managedObjectContext block:nil];
+    [NetworkHelper fetchAndUpdateTemplesFromParseWithManagedObjectContext:self.managedObjectContext block:nil];
     
     return YES;
 }

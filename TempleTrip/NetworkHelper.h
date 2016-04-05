@@ -13,6 +13,6 @@
 
 @interface NetworkHelper : NSObject
 
-- (void) fetchAndUpdateTemplesFromParseWithManagedObjectContext:(NSManagedObjectContext *) context block:(void(^)(void)) block;
++ (void) fetchAndUpdateTemplesFromParseWithManagedObjectContext:(NSManagedObjectContext *) context block:(void(^)(void)) block;
 
 @end
