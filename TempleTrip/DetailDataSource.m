@@ -54,7 +54,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     switch (section) {
         case kAddressSection:
-            return 2;
+            return 3;
             break;
         case kPhotoSection:
             return 1;
@@ -96,6 +96,10 @@
                 cell.textLabel.text = temple.address;
             }
             else if(indexPath.row == 1){
+                cell = [tableView dequeueReusableCellWithIdentifier:@"AddressCell"];
+                cell.textLabel.text = @"Web link placeholder";
+            }
+            else if(indexPath.row == 2){
                 ServicesAvailableCell* servicesCell = [tableView dequeueReusableCellWithIdentifier:@"ServicesAvailableCell"];
                 servicesCell.LeftLabel.text = temple.hasClothing ? @"Rental clothing" : @"No rental clothing";
                 servicesCell.RightLabel.text = temple.hasCafeteria ? @"Cafeteria" : @"No cafeteria";

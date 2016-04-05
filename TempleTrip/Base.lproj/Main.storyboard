@@ -220,6 +220,36 @@
             </objects>
             <point key="canvasLocation" x="2140" y="176"/>
         </scene>
+        <!--Detail Web View Controller-->
+        <scene sceneID="Adb-9d-hbc">
+            <objects>
+                <viewController id="f2X-Xg-U5b" customClass="DetailWebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WME-hb-RoT"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ap5-Xn-3RF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qCj-Wq-Q1d">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Sl-o1-bdV">
+                                <rect key="frame" x="20" y="28" width="560" height="564"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Sl-o1-bdV" firstAttribute="top" secondItem="WME-hb-RoT" secondAttribute="bottom" constant="8" symbolic="YES" id="21G-RW-6DK"/>
+                            <constraint firstItem="Ap5-Xn-3RF" firstAttribute="top" secondItem="6Sl-o1-bdV" secondAttribute="bottom" constant="8" symbolic="YES" id="3Tt-jh-NCM"/>
+                            <constraint firstItem="6Sl-o1-bdV" firstAttribute="leading" secondItem="qCj-Wq-Q1d" secondAttribute="leading" constant="20" symbolic="YES" id="Q8E-Iw-Omh"/>
+                            <constraint firstAttribute="trailing" secondItem="6Sl-o1-bdV" secondAttribute="trailing" constant="20" symbolic="YES" id="Rb8-j1-DZP"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vv9-do-r5H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2818" y="171"/>
+        </scene>
         <!--New Trip-->
         <scene sceneID="FQ3-vV-h2Z">
             <objects>

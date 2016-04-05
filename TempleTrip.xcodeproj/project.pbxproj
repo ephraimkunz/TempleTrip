@@ -34,6 +34,8 @@
 		18C6CE9A1C2E3E2500779183 /* ImageHelperTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C6CE991C2E3E2500779183 /* ImageHelperTest.m */; };
 		18CB44DA1B745444001FA4B4 /* results.json in Resources */ = {isa = PBXBuildFile; fileRef = 18CB44D91B745444001FA4B4 /* results.json */; };
 		18DC93FC1C1D213500D1E367 /* ServicesAvailableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DC93FB1C1D213500D1E367 /* ServicesAvailableCell.swift */; };
+		18EB7BEB1CB4237D00A0D659 /* DetailWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EB7BEA1CB4237D00A0D659 /* DetailWebViewController.swift */; };
+		18EB7BEE1CB4270A00A0D659 /* NetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EB7BED1CB4270A00A0D659 /* NetworkHelper.m */; };
 		D97489EB576067C38185E4B1 /* libPods-TempleTrip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48BE3C56B3F1FDAA202AB214 /* libPods-TempleTrip.a */; };
 /* End PBXBuildFile section */
 
@@ -113,6 +115,9 @@
 		18CB44D91B745444001FA4B4 /* results.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = results.json; sourceTree = "<group>"; };
 		18DC93FB1C1D213500D1E367 /* ServicesAvailableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesAvailableCell.swift; sourceTree = "<group>"; };
 		18DC93FE1C1F5E2700D1E367 /* TempleTrip-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TempleTrip-Bridging-Header.h"; sourceTree = "<group>"; };
+		18EB7BEA1CB4237D00A0D659 /* DetailWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailWebViewController.swift; sourceTree = "<group>"; };
+		18EB7BEC1CB4270A00A0D659 /* NetworkHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkHelper.h; sourceTree = "<group>"; };
+		18EB7BED1CB4270A00A0D659 /* NetworkHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkHelper.m; sourceTree = "<group>"; };
 		48BE3C56B3F1FDAA202AB214 /* libPods-TempleTrip.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TempleTrip.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56780992B64A9583DA24A4AB /* Pods-TempleTrip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TempleTrip.release.xcconfig"; path = "Pods/Target Support Files/Pods-TempleTrip/Pods-TempleTrip.release.xcconfig"; sourceTree = "<group>"; };
 		F15E867ADE006CBFE68FBBF3 /* Pods-TempleTrip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TempleTrip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TempleTrip/Pods-TempleTrip.debug.xcconfig"; sourceTree = "<group>"; };
@@ -194,6 +199,8 @@
 				18ABEC411BF5579900AA7EB7 /* EventKit.framework */,
 				18AF86D71C66EB8B00A355C7 /* AppContextHelper.h */,
 				18AF86D81C66EB8B00A355C7 /* AppContextHelper.m */,
+				18EB7BEC1CB4270A00A0D659 /* NetworkHelper.h */,
+				18EB7BED1CB4270A00A0D659 /* NetworkHelper.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -241,6 +248,7 @@
 				18A2EF6E1BE87A4000FB4D69 /* ScheduleViewController.m */,
 				184DBFD31C41A23C00572D80 /* GlobalSplitViewController.h */,
 				184DBFD41C41A23C00572D80 /* GlobalSplitViewController.m */,
+				18EB7BEA1CB4237D00A0D659 /* DetailWebViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -464,8 +472,10 @@
 				18C6CE941C2E35B100779183 /* DetailTableViewController.m in Sources */,
 				181EF7F11B73CF880010D2EA /* MasterViewController.m in Sources */,
 				184DBFD51C41A23C00572D80 /* GlobalSplitViewController.m in Sources */,
+				18EB7BEE1CB4270A00A0D659 /* NetworkHelper.m in Sources */,
 				18C6CE891C2DBACA00779183 /* ImageHelper.m in Sources */,
 				18DC93FC1C1D213500D1E367 /* ServicesAvailableCell.swift in Sources */,
+				18EB7BEB1CB4237D00A0D659 /* DetailWebViewController.swift in Sources */,
 				1827873B1C2B148500196E0F /* SchedulePickerTableViewCell.swift in Sources */,
 				181EF7EB1B73CF880010D2EA /* AppDelegate.m in Sources */,
 				181EF7E81B73CF870010D2EA /* main.m in Sources */,
