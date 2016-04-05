@@ -13,8 +13,8 @@
 #import "DateTimeHelper.h"
 
 #define kDefaultRowHeight 44
-#define kAddressSection 0
-#define kPhotoSection 1
+#define kAddressSection 1
+#define kPhotoSection 0
 #define kScheduleSection 2
 #define kAddToFavoritesSection 3
 
@@ -145,7 +145,7 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     switch (section) {
         case kAddressSection:
-            return @"Address";
+            return @"Information";
             break;
         case kPhotoSection:
             return nil;

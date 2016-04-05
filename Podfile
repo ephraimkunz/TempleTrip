@@ -6,6 +6,7 @@
 target 'TempleTrip' do
 pod 'Parse'
 pod 'iRate'
+pod 'ChameleonFramework'
 end
 
 target 'TempleTripTests' do

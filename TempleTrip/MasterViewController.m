@@ -354,7 +354,7 @@
                 else{ //Update an existing temple.
                     cdTemple = fetchedTemples[0];
                 }
-                
+                NSString* name = [temple valueForKey:@"name"];
                 cdTemple.dedication = [temple valueForKey:@"dedication"];
                 cdTemple.place = [temple valueForKey:@"place"];
                 cdTemple.address = [temple valueForKey:@"address"];
