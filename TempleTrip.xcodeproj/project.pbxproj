@@ -36,6 +36,7 @@
 		18DC93FC1C1D213500D1E367 /* ServicesAvailableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DC93FB1C1D213500D1E367 /* ServicesAvailableCell.swift */; };
 		18EB7BEB1CB4237D00A0D659 /* DetailWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EB7BEA1CB4237D00A0D659 /* DetailWebViewController.swift */; };
 		18EB7BEE1CB4270A00A0D659 /* NetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EB7BED1CB4270A00A0D659 /* NetworkHelper.m */; };
+		18EB7BF01CB5457F00A0D659 /* LaunchWebViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EB7BEF1CB5457F00A0D659 /* LaunchWebViewProtocol.swift */; };
 		D97489EB576067C38185E4B1 /* libPods-TempleTrip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48BE3C56B3F1FDAA202AB214 /* libPods-TempleTrip.a */; };
 /* End PBXBuildFile section */
 
@@ -118,6 +119,7 @@
 		18EB7BEA1CB4237D00A0D659 /* DetailWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailWebViewController.swift; sourceTree = "<group>"; };
 		18EB7BEC1CB4270A00A0D659 /* NetworkHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkHelper.h; sourceTree = "<group>"; };
 		18EB7BED1CB4270A00A0D659 /* NetworkHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkHelper.m; sourceTree = "<group>"; };
+		18EB7BEF1CB5457F00A0D659 /* LaunchWebViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchWebViewProtocol.swift; sourceTree = "<group>"; };
 		48BE3C56B3F1FDAA202AB214 /* libPods-TempleTrip.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TempleTrip.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56780992B64A9583DA24A4AB /* Pods-TempleTrip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TempleTrip.release.xcconfig"; path = "Pods/Target Support Files/Pods-TempleTrip/Pods-TempleTrip.release.xcconfig"; sourceTree = "<group>"; };
 		F15E867ADE006CBFE68FBBF3 /* Pods-TempleTrip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TempleTrip.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TempleTrip/Pods-TempleTrip.debug.xcconfig"; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				181EF7E91B73CF870010D2EA /* AppDelegate.h */,
 				181EF7EA1B73CF880010D2EA /* AppDelegate.m */,
 				184C59E01C41C1DA0052241D /* FavoritesUpdatingProtocol.h */,
+				18EB7BEF1CB5457F00A0D659 /* LaunchWebViewProtocol.swift */,
 			);
 			path = TempleTrip;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			children = (
 				18C6CE901C2E35B100779183 /* Launch Screen.storyboard */,
 				181EF7F51B73CF880010D2EA /* Main.storyboard */,
+				18DC93FB1C1D213500D1E367 /* ServicesAvailableCell.swift */,
 				1827873E1C2B2A3700196E0F /* EditableTextTableViewCell.swift */,
 				1827873A1C2B148500196E0F /* SchedulePickerTableViewCell.swift */,
 			);
@@ -241,9 +245,8 @@
 				18C6CE851C2DB8FE00779183 /* DetailDataSource.m */,
 				181EF7EF1B73CF880010D2EA /* MasterViewController.h */,
 				181EF7F01B73CF880010D2EA /* MasterViewController.m */,
-				18DC93FB1C1D213500D1E367 /* ServicesAvailableCell.swift */,
-				18C6CE8E1C2E35B100779183 /* DetailTableViewController.h */,
 				18C6CE8F1C2E35B100779183 /* DetailTableViewController.m */,
+				18C6CE8E1C2E35B100779183 /* DetailTableViewController.h */,
 				18A2EF6D1BE87A4000FB4D69 /* ScheduleViewController.h */,
 				18A2EF6E1BE87A4000FB4D69 /* ScheduleViewController.m */,
 				184DBFD31C41A23C00572D80 /* GlobalSplitViewController.h */,
@@ -473,6 +476,7 @@
 				181EF7F11B73CF880010D2EA /* MasterViewController.m in Sources */,
 				184DBFD51C41A23C00572D80 /* GlobalSplitViewController.m in Sources */,
 				18EB7BEE1CB4270A00A0D659 /* NetworkHelper.m in Sources */,
+				18EB7BF01CB5457F00A0D659 /* LaunchWebViewProtocol.swift in Sources */,
 				18C6CE891C2DBACA00779183 /* ImageHelper.m in Sources */,
 				18DC93FC1C1D213500D1E367 /* ServicesAvailableCell.swift in Sources */,
 				18EB7BEB1CB4237D00A0D659 /* DetailWebViewController.swift in Sources */,

@@ -93,6 +93,7 @@
     //Set up dataSource delegate (so it can tell the master view to update if a favorite is added.)
     UINavigationController *masterNav = self.splitViewController.viewControllers.firstObject;
     self.detailDataSource.delegate = (id)masterNav.topViewController;
+    self.detailDataSource.webDelegate = self; // We will be the controller to launch the webview.
 }
 
 - (void) viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
@@ -135,6 +136,11 @@
 -(NSString *)parsePhoneNumber:(NSString *)number{
 	NSString *cleanedString = [[number componentsSeparatedByCharactersInSet:[[NSCharacterSet characterSetWithCharactersInString:@"0123456789"] invertedSet]] componentsJoinedByString:@""];
 	return cleanedString;
+}
+
+-(void)launchWebView:(NSURL *)url{
+    DetailWebViewController *webViewController = [[DetailWebViewController alloc]init];
+    [self.navigationController pushViewController:webViewController animated:YES];
 }
 
 @end

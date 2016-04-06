@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 #import "FavoritesUpdatingProtocol.h"
 
+@protocol LaunchWebViewProtocol;
 @class Temple;
 
 @interface DetailDataSource : NSObject <UITableViewDataSource, UITableViewDelegate>
@@ -27,4 +28,5 @@
 
 @property(strong, nonatomic) NSDictionary *scheduleDict;
 @property(strong, nonatomic) UIImage *image;
+@property(strong, nonatomic) id<LaunchWebViewProtocol> webDelegate;
 @end

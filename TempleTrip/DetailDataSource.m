@@ -188,6 +188,13 @@
         NSURL *mapsUrl = [NSURL URLWithString:mapsString];
         [[UIApplication sharedApplication]openURL:mapsUrl];
     }
+    else if(indexPath.section == kAddressSection && indexPath.row == 1){ //Tapped web link
+        if(self.webDelegate){
+            NSURL *url = [[NSURL alloc]initWithString:@"https://www.apple.com"];
+            [self.webDelegate launchWebView:url];
+        }
+        
+    }
     
     else if(indexPath.section == kAddToFavoritesSection){
         NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Temple"];
