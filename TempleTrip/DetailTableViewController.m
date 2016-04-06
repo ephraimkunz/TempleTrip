@@ -139,7 +139,7 @@
 }
 
 -(void)launchWebView:(NSURL *)url{
-    DetailWebViewController *webViewController = [[DetailWebViewController alloc]init];
+    DetailWebViewController *webViewController = [[DetailWebViewController alloc]initWithUrl:url];
     [self.navigationController pushViewController:webViewController animated:YES];
 }
 
