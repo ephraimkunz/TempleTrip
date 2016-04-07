@@ -13,8 +13,8 @@
 #import "DateTimeHelper.h"
 
 #define kDefaultRowHeight 44
-#define kAddressSection 0
-#define kPhotoSection 1
+#define kAddressSection 1
+#define kPhotoSection 0
 #define kScheduleSection 2
 #define kAddToFavoritesSection 3
 
@@ -54,7 +54,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     switch (section) {
         case kAddressSection:
-            return 2;
+            return 3;
             break;
         case kPhotoSection:
             return 1;
@@ -96,6 +96,10 @@
                 cell.textLabel.text = temple.address;
             }
             else if(indexPath.row == 1){
+                cell = [tableView dequeueReusableCellWithIdentifier:@"AddressCell"];
+                cell.textLabel.text = temple.webViewUrl;
+            }
+            else if(indexPath.row == 2){
                 ServicesAvailableCell* servicesCell = [tableView dequeueReusableCellWithIdentifier:@"ServicesAvailableCell"];
                 servicesCell.LeftLabel.text = temple.hasClothing ? @"Rental clothing" : @"No rental clothing";
                 servicesCell.RightLabel.text = temple.hasCafeteria ? @"Cafeteria" : @"No cafeteria";
@@ -145,7 +149,7 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
     switch (section) {
         case kAddressSection:
-            return @"Address";
+            return @"Information";
             break;
         case kPhotoSection:
             return nil;
@@ -183,6 +187,13 @@
         
         NSURL *mapsUrl = [NSURL URLWithString:mapsString];
         [[UIApplication sharedApplication]openURL:mapsUrl];
+    }
+    else if(indexPath.section == kAddressSection && indexPath.row == 1){ //Tapped web link
+        if(self.webDelegate){
+            NSURL *url = [[NSURL alloc]initWithString:temple.webViewUrl];
+            [self.webDelegate launchWebView:url];
+        }
+        
     }
     
     else if(indexPath.section == kAddToFavoritesSection){

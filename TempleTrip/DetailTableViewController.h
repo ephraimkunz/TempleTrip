@@ -10,8 +10,9 @@
 #import "DetailDataSource.h"
 
 @class Temple;
+@protocol LaunchWebViewProtocol;
 
-@interface DetailTableViewController : UITableViewController
+@interface DetailTableViewController : UITableViewController <LaunchWebViewProtocol>
 
 @property(strong, nonatomic) Temple *currentTemple;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;

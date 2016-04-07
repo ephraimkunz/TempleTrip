@@ -37,6 +37,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.tableView.contentInset = UIEdgeInsetsMake(-36, 0, 0, 0); //Show the image aligned with bottom of navigation bar
+
     self.navigationItem.leftItemsSupplementBackButton = YES;
     self.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
     
@@ -91,6 +93,7 @@
     //Set up dataSource delegate (so it can tell the master view to update if a favorite is added.)
     UINavigationController *masterNav = self.splitViewController.viewControllers.firstObject;
     self.detailDataSource.delegate = (id)masterNav.topViewController;
+    self.detailDataSource.webDelegate = self; // We will be the controller to launch the webview.
 }
 
 - (void) viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator{
@@ -133,6 +136,11 @@
 -(NSString *)parsePhoneNumber:(NSString *)number{
 	NSString *cleanedString = [[number componentsSeparatedByCharactersInSet:[[NSCharacterSet characterSetWithCharactersInString:@"0123456789"] invertedSet]] componentsJoinedByString:@""];
 	return cleanedString;
+}
+
+-(void)launchWebView:(NSURL *)url{
+    DetailWebViewController *controller = [[DetailWebViewController alloc]initWithURL:url];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 @end

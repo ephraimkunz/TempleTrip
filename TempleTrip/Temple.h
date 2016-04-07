@@ -14,6 +14,7 @@
 @interface Temple : NSManagedObject
 
 @property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSString * webViewUrl;
 @property (nonatomic, retain) NSString * dedication;
 @property (nonatomic, retain) NSString * place;
 @property (nonatomic, retain) NSString * address;

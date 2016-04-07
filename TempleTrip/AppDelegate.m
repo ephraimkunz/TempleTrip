@@ -13,6 +13,9 @@
 #import "MasterViewController.h"
 #import "Temple.h"
 #import <Parse/Parse.h>
+#import "NetworkHelper.h"
+#import <ChameleonFramework/Chameleon.h>
+
 
 @interface AppDelegate ()
 
@@ -22,8 +25,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
     [Fabric with:@[[Crashlytics class]]];
+    
+    //[Chameleon setGlobalThemeUsingPrimaryColor:FlatSkyBlueDark withContentStyle:UIContentStyleContrast];
     
     UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
     
@@ -41,9 +46,6 @@
     [[NSUserDefaults standardUserDefaults] registerDefaults:defaultPrefs];
     
     
-    // Initialize Parse.
-    //[Parse setApplicationId:@"JUJurzhFM1UwVK1cY0JHyyJCw17ai5QH1cJ5F880"
-       //           clientKey:@"9CWv8oo8D44QyF9FA41aeFYY8Fx8AVOS3sghINzP"];
     ParseClientConfiguration *configuration = [ParseClientConfiguration configurationWithBlock: ^(id<ParseMutableClientConfiguration> config) {
        [config setApplicationId:@"JUJurzhFM1UwVK1cY0JHyyJCw17ai5QH1cJ5F880"];
        [config setClientKey:@"unused"];
@@ -51,16 +53,16 @@
     }];
     [Parse initializeWithConfiguration:configuration];
     
-    // Test Parse
-    //PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-    //testObject[@"foo"] = @"bar";
-    //[testObject saveInBackground];
-    
     // Check to see if we should initialize CoreData from results.txt.
     if([[NSUserDefaults standardUserDefaults] boolForKey:@"shouldReloadCoreData"]){
         [self preloadData];
         [[NSUserDefaults standardUserDefaults]setBool:NO forKey:@"shouldReloadCoreData"];
     }
+    
+    //Try to update from Parse on every launch
+    [NetworkHelper fetchAndUpdateTemplesFromParseWithManagedObjectContext:self.managedObjectContext completionBlock:^(void){
+        NSLog(@"Startup fetch of temples from Parse complete.");
+    }];
     
     return YES;
 }
@@ -208,6 +210,7 @@
         temple.telephone = [item valueForKey:@"telephone"];
         temple.endowmentSchedule = [item valueForKey:@"endowmentSchedule"];
         temple.firstLetter = [temple.name substringToIndex:1];
+        temple.webViewUrl = [item valueForKey:@"detailLink"];
     
         NSString *firstTwoLetters = [[[item valueForKey:@"servicesAvailable"]valueForKey:@"Cafeteria"] substringToIndex:2] == nil ? @"No" : [[[item valueForKey:@"servicesAvailable"]valueForKey:@"Cafeteria"] substringToIndex:2];
 		temple.hasCafeteria = ![firstTwoLetters isEqualToString:@"No"];

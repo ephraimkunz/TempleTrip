@@ -82,3 +82,16 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-TempleTrip/Bolts.framework"
+  install_framework "Pods-TempleTrip/ChameleonFramework.framework"
+  install_framework "Pods-TempleTrip/Parse.framework"
+  install_framework "Pods-TempleTrip/iRate.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-TempleTrip/Bolts.framework"
+  install_framework "Pods-TempleTrip/ChameleonFramework.framework"
+  install_framework "Pods-TempleTrip/Parse.framework"
+  install_framework "Pods-TempleTrip/iRate.framework"
+fi

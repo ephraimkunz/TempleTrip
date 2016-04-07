@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'C1D33083179830A36B74246C'
+               BlueprintIdentifier = '3D271DCC4043A426E351FABC'
                BlueprintName = 'Pods-TempleTrip'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-TempleTrip.a'>
+               BuildableName = 'Pods_TempleTrip.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
