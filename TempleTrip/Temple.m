@@ -24,4 +24,5 @@
 @dynamic hasClothing;
 @dynamic existsOnServer;
 @dynamic closedDates;
+@dynamic webViewUrl;
 @end

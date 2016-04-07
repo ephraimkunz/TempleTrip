@@ -204,6 +204,7 @@
         temple.telephone = [item valueForKey:@"telephone"];
         temple.endowmentSchedule = [item valueForKey:@"endowmentSchedule"];
         temple.firstLetter = [temple.name substringToIndex:1];
+        temple.webViewUrl = [item valueForKey:@"detailLink"];
     
         NSString *firstTwoLetters = [[[item valueForKey:@"servicesAvailable"]valueForKey:@"Cafeteria"] substringToIndex:2] == nil ? @"No" : [[[item valueForKey:@"servicesAvailable"]valueForKey:@"Cafeteria"] substringToIndex:2];
 		temple.hasCafeteria = ![firstTwoLetters isEqualToString:@"No"];

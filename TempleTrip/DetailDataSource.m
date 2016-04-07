@@ -97,7 +97,7 @@
             }
             else if(indexPath.row == 1){
                 cell = [tableView dequeueReusableCellWithIdentifier:@"AddressCell"];
-                cell.textLabel.text = @"Web link placeholder";
+                cell.textLabel.text = temple.webViewUrl;
             }
             else if(indexPath.row == 2){
                 ServicesAvailableCell* servicesCell = [tableView dequeueReusableCellWithIdentifier:@"ServicesAvailableCell"];
@@ -190,7 +190,7 @@
     }
     else if(indexPath.section == kAddressSection && indexPath.row == 1){ //Tapped web link
         if(self.webDelegate){
-            NSURL *url = [[NSURL alloc]initWithString:@"https://www.apple.com"];
+            NSURL *url = [[NSURL alloc]initWithString:temple.webViewUrl];
             [self.webDelegate launchWebView:url];
         }
         

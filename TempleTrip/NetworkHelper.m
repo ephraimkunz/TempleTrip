@@ -50,6 +50,7 @@
                 cdTemple.telephone = [temple valueForKey:@"telephone"];
                 cdTemple.endowmentSchedule = [temple valueForKey:@"endowmentSchedule"];
                 cdTemple.firstLetter = [[temple valueForKey:@"name"] substringToIndex:1];
+                cdTemple.webViewUrl = [temple valueForKey:@"detailLink"];
                 
                 NSString *firstTwoLetters = [[[temple valueForKey:@"servicesAvailable"]valueForKey:@"Cafeteria"] substringToIndex:2] == nil ? @"No" : [[[temple valueForKey:@"servicesAvailable"]valueForKey:@"Cafeteria"] substringToIndex:2];
                 cdTemple.hasCafeteria = ![firstTwoLetters isEqualToString:@"No"];
