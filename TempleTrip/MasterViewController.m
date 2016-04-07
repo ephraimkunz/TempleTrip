@@ -47,6 +47,9 @@
     self.title = @"Temples";
     [self setupSearchBar];
 	[self loadFavoritesList];
+    
+    self.refreshControl = [[UIRefreshControl alloc]init];
+    [self.refreshControl addTarget:self action:@selector(refreshTemples) forControlEvents:UIControlEventValueChanged];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -319,9 +322,11 @@
 	object.isFavorite = [NSNumber numberWithBool:NO];
 	[self.managedObjectContext save:nil];
 }
-- (IBAction)refresh:(UIRefreshControl *)sender {
-    [NetworkHelper fetchAndUpdateTemplesFromParseWithManagedObjectContext:self.managedObjectContext block:^(void){
-        [sender endRefreshing];
+
+- (void)refreshTemples{
+    [NetworkHelper fetchAndUpdateTemplesFromParseWithManagedObjectContext:self.managedObjectContext completionBlock:^(void){
+        NSLog(@"End refreshing completion block called");
+        [self.refreshControl endRefreshing];
     }];
 }
 

@@ -16,6 +16,7 @@
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (strong, nonatomic) UISearchController *searchController;
+@property (strong, nonatomic) UIRefreshControl *refreshControl;
 
 
 @end

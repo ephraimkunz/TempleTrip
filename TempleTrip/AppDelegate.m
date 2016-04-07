@@ -14,6 +14,8 @@
 #import "Temple.h"
 #import <Parse/Parse.h>
 #import "NetworkHelper.h"
+#import <ChameleonFramework/Chameleon.h>
+
 
 @interface AppDelegate ()
 
@@ -25,6 +27,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     [Fabric with:@[[Crashlytics class]]];
+    
+    //[Chameleon setGlobalThemeUsingPrimaryColor:FlatSkyBlueDark withContentStyle:UIContentStyleContrast];
     
     UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
     
@@ -56,7 +60,9 @@
     }
     
     //Try to update from Parse on every launch
-    [NetworkHelper fetchAndUpdateTemplesFromParseWithManagedObjectContext:self.managedObjectContext block:nil];
+    [NetworkHelper fetchAndUpdateTemplesFromParseWithManagedObjectContext:self.managedObjectContext completionBlock:^(void){
+        NSLog(@"Startup fetch of temples from Parse complete.");
+    }];
     
     return YES;
 }

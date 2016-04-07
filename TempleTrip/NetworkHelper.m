@@ -10,7 +10,7 @@
 
 @implementation NetworkHelper
 
-+ (void) fetchAndUpdateTemplesFromParseWithManagedObjectContext:(NSManagedObjectContext *) context block:(void(^)(void)) block{
++ (void) fetchAndUpdateTemplesFromParseWithManagedObjectContext:(NSManagedObjectContext *) context completionBlock:(void(^)(void)) block{
     //Get the new temple JSON from the server
     PFQuery *allTemplesQuery = [PFQuery queryWithClassName:@"Temple"];
     [allTemplesQuery setLimit:1000];
@@ -97,11 +97,9 @@
         else{
             NSLog(@"Error fetching all temples from the server");
         }
-    }];
-    
-    if(block){
+        
         block();
-    }
+    }];
 }
 
 @end
