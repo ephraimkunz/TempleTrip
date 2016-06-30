@@ -8,7 +8,7 @@
 # Created:     26/06/2015
 # Copyright:   (c) Ephraim Kunz 2015
 #-------------------------------------------------------------------------------
-import urllib.request as urlRequest
+import urllib.request
 import html.parser
 import datetime
 import time
@@ -45,8 +45,10 @@ def populateTempleListing(indexUrl):
     templeStatsParser = TempleStatsParser()
     templeSimpleParser = TempleSimpleParser()
 
-    htmlObject = urlRequest.urlopen(indexUrl)
-
+    
+    req = urllib.request.Request(indexUrl)
+    req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36')
+    htmlObject = urllib.request.urlopen(req)
     for line in htmlObject.readlines():
         decodedLine = line.decode('utf-8').strip()
 
@@ -72,7 +74,9 @@ def populateTempleListing(indexUrl):
 
 def populateTempleDetail(temple):
     """Given a temple object, fills it with data recieved in response to following temple.detailLink."""
-    htmlObject = urlRequest.urlopen(temple.detailLink)
+    req = urllib.request.Request(temple.detailLink)
+    req.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36')
+    htmlObject = urllib.request.urlopen(req)
     detailParser = TempleDetailParser()
     scheduleParser = TempleScheduleParser()
 
