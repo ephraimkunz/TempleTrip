@@ -9,5 +9,5 @@
 import Foundation
 
 @objc protocol LaunchWebViewProtocol {
-    func launchWebView(url:NSURL) -> Void
+    func launchWebView(_ url:URL) -> Void
 }
