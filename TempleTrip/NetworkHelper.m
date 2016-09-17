@@ -13,17 +13,17 @@
 + (void) fetchAndUpdateTemplesFromParseWithManagedObjectContext:(NSManagedObjectContext *) context completionBlock:(void(^)(void)) block{
     //Get the new temple JSON from the server
     PFQuery *allTemplesQuery = [PFQuery queryWithClassName:@"Temple"];
-    [allTemplesQuery setLimit:1000];
+    allTemplesQuery.limit = 1000;
     [allTemplesQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error){
         if (!error) {
-            NSLog(@"Success fetching %lu temples from Parse server", (unsigned long)[objects count]);
+            NSLog(@"Success fetching %lu temples from Parse server", (unsigned long)objects.count);
             NSInteger successUpdated = 0;
             
             //Load them into core data. If there is a temple in the JSON that we don't have, create it.
             for(PFObject *temple in objects){
                 
                 NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Temple"];
-                [request setPredicate:[NSPredicate predicateWithFormat:@"name == %@", temple[@"name"]]];
+                request.predicate = [NSPredicate predicateWithFormat:@"name == %@", temple[@"name"]];
                 NSError *fetchError;
                 NSArray *fetchedTemples;
                 if (!(fetchedTemples = [context executeFetchRequest:request error:&fetchError])){
@@ -73,11 +73,11 @@
                 }
                 
             }
-            NSLog(@"Success updating or adding %ld out of %lu temples in core data from Parse server", (long)successUpdated, (unsigned long)[objects count]);
+            NSLog(@"Success updating or adding %ld out of %lu temples in core data from Parse server", (long)successUpdated, (unsigned long)objects.count);
             
             //Remove temples not on the server;
             NSFetchRequest *toDelete = [[NSFetchRequest alloc]initWithEntityName:@"Temple"];
-            [toDelete setPredicate:[NSPredicate predicateWithFormat:@"existsOnServer = NO"]];
+            toDelete.predicate = [NSPredicate predicateWithFormat:@"existsOnServer = NO"];
             NSArray *notOnServer;
             if((notOnServer = [context executeFetchRequest:toDelete error:nil])){
                 NSLog(@"Success deleting %ld temples in core data", (unsigned long)notOnServer.count);

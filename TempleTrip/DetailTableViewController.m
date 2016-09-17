@@ -49,7 +49,7 @@
         self.managedObjectContext = masterController.managedObjectContext;
         NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Temple"];
         NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
-        [request setSortDescriptors:@[descriptor]];
+        request.sortDescriptors = @[descriptor];
         
         NSArray *all = [self.managedObjectContext executeFetchRequest:request error:nil];
         self.currentTemple = all.firstObject;
@@ -111,11 +111,11 @@
 }
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-	if ([[segue identifier] isEqualToString:@"Schedule"]) {
+	if ([segue.identifier isEqualToString:@"Schedule"]) {
         
         UITableViewCell *senderCell = sender;
 		NSString *weekdayTapped = senderCell.textLabel.text;
-		UINavigationController *navController = [segue destinationViewController];
+		UINavigationController *navController = segue.destinationViewController;
         ScheduleViewController *scheduleController = navController.viewControllers[0];
 		scheduleController.dayTapped = weekdayTapped;
         scheduleController.scheduleDict = [DetailDataSource scheduleDictFromEndowmentDictionary:self.currentTemple.endowmentSchedule];
@@ -134,7 +134,7 @@
 }
 
 -(NSString *)parsePhoneNumber:(NSString *)number{
-	NSString *cleanedString = [[number componentsSeparatedByCharactersInSet:[[NSCharacterSet characterSetWithCharactersInString:@"0123456789"] invertedSet]] componentsJoinedByString:@""];
+	NSString *cleanedString = [[number componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"0123456789"].invertedSet] componentsJoinedByString:@""];
 	return cleanedString;
 }
 

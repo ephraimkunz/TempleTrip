@@ -66,7 +66,7 @@
 -(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
 	switch (component) {
 		case 0:
-			return [upcomingDates count];
+			return upcomingDates.count;
 			break;
 		case 1:
 			return self.sessionTimesForToday.count;
@@ -84,7 +84,7 @@
                 return [[NSAttributedString alloc]initWithString:@"Today"];
 			}
 			NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-			[formatter setDateFormat:@"EEEE dd MMM"];
+			formatter.dateFormat = @"EEEE dd MMM";
 			
 			NSString* formattedDate = [formatter stringFromDate:upcomingDates[row]];
 			NSRange firstSpaceRange = [formattedDate rangeOfString:@" "];
@@ -280,7 +280,7 @@
     
     event.title = eventTitle;
     event.location = eventLocation;
-    event.calendar = [store defaultCalendarForNewEvents];
+    event.calendar = store.defaultCalendarForNewEvents;
     
     //Add alarm if cell selected
     if (shouldRemindForEvent) {
@@ -295,8 +295,8 @@
 	NSDate *dateWithoutTime = upcomingDates[[cell.SchedulePicker selectedRowInComponent:0]];
 	NSString * time = self.sessionTimesForToday[[cell.SchedulePicker selectedRowInComponent:1]];
 	long colonLocation = [time rangeOfString:@":"].location;
-	NSInteger hour = [[time substringToIndex:colonLocation]integerValue];
-	NSInteger minute = [[time substringFromIndex:colonLocation + 1]integerValue];
+	NSInteger hour = [time substringToIndex:colonLocation].integerValue;
+	NSInteger minute = [time substringFromIndex:colonLocation + 1].integerValue;
 	
 	NSDate *totalDate = [[NSCalendar currentCalendar]dateBySettingHour:hour minute:minute second:0 ofDate:dateWithoutTime options:0];
 	

@@ -35,7 +35,7 @@
     }
     BOOL isAfternoon = NO;
     NSRange colonPosition = [time rangeOfString:@":"];
-    NSInteger hour = [[time substringToIndex:colonPosition.location] integerValue];
+    NSInteger hour = [time substringToIndex:colonPosition.location].integerValue;
     NSString *minutes = [time substringFromIndex:colonPosition.location + 1];
     if (hour >= 12 && hour < 24) {
         isAfternoon = YES;
@@ -63,7 +63,7 @@
     //Get the current weekday number. This is the index of the day of the week of today.
     NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDateComponents *comps = [gregorian components:NSCalendarUnitWeekday fromDate:[NSDate date]];
-    long currentLiveWeekday = [comps weekday];
+    long currentLiveWeekday = comps.weekday;
     
     //Get the weekday number of the day of the week the user is currently viewing.
     long viewingWeekday = [mondayThroughFriday indexOfObject:startDay] + 1; //NSDateComponents uses Sunday=1, Monday=2 ... So we must offset for 0 indexing.
@@ -94,7 +94,7 @@
 
 + (NSDate *)getDateFromString:(NSString *)aString{
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-    [formatter setDateFormat:@"YYYY-MM-dd"]; //Following ISO-8601 format
+    formatter.dateFormat = @"YYYY-MM-dd"; //Following ISO-8601 format
     return [formatter dateFromString:aString];
 }
 
@@ -116,7 +116,7 @@
 + (BOOL) datesAreEqual:(NSDate *)date1 Other:(NSDate *)date2{
     NSDateComponents *component1 = [[NSCalendar currentCalendar]components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:date1];
     NSDateComponents *component2 = [[NSCalendar currentCalendar]components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:date2];
-    return [component1 day] == [component2 day] && [component1 month] == [component2 month] && [component1 year] == [component2 year];
+    return component1.day == component2.day && component1.month == component2.month && component1.year == component2.year;
 }
 
 

@@ -36,10 +36,10 @@
 
 + (NSString *)getCacheImagePathForTemple: (Temple *) temple withContext: (NSManagedObjectContext *) context{
     NSFetchRequest *request = [[NSFetchRequest alloc]init];
-    [request setEntity:[NSEntityDescription entityForName:@"Temple" inManagedObjectContext: context]];
+    request.entity = [NSEntityDescription entityForName:@"Temple" inManagedObjectContext: context];
     
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name == %@", temple.name];
-    [request setPredicate:predicate];
+    request.predicate = predicate;
     
     NSError *error;
     NSArray *results = [context executeFetchRequest:request error:&error];
@@ -70,16 +70,16 @@
 
 + (void)saveTempleImage: (UIImage*)image forTemple: (Temple *) temple withContext: (NSManagedObjectContext *) context{
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0]; // Path to picture directory.
+    NSString *documentsDirectory = paths[0]; // Path to picture directory.
     
     NSString *imagePath =[documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png",[temple.name stringByReplacingOccurrencesOfString:@" " withString:@"_"]]];
     
     //Save new path to CoreData.
     NSFetchRequest *request = [[NSFetchRequest alloc]init];
-    [request setEntity:[NSEntityDescription entityForName:@"Temple" inManagedObjectContext:context]];
+    request.entity = [NSEntityDescription entityForName:@"Temple" inManagedObjectContext:context];
     
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name == %@", temple.name];
-    [request setPredicate:predicate];
+    request.predicate = predicate;
     
     NSArray *results = [context executeFetchRequest:request error:nil];
     

@@ -120,7 +120,7 @@
             
             NSString *dayName = [DateTimeHelper getWeekdays][indexPath.row + 1]; // Don't want to include Sunday
             NSArray *timesForWeekday = self.scheduleDict[dayName];
-            NSString *displayTime = [DateTimeHelper getDisplayDateRangeWithStart:timesForWeekday[0] End:[timesForWeekday lastObject]];
+            NSString *displayTime = [DateTimeHelper getDisplayDateRangeWithStart:timesForWeekday[0] End:timesForWeekday.lastObject];
             cell.detailTextLabel.text = displayTime;
             if ( [displayTime isEqualToString:@""]) {
                 cell.accessoryType = UITableViewCellAccessoryNone;
@@ -130,7 +130,7 @@
         }
         case kAddToFavoritesSection:{
             cell = [tableView dequeueReusableCellWithIdentifier:@"AddToFavoritesCell"];
-            if ([temple.isFavorite isEqualToNumber:[NSNumber numberWithBool:YES]]) {
+            if ([temple.isFavorite isEqualToNumber:@YES]) {
                 cell.textLabel.text = @"Remove from Favorites";
             }
             else{
@@ -199,15 +199,15 @@
     else if(indexPath.section == kAddToFavoritesSection){
         NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Temple"];
         NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name = %@", temple.name];
-        [request setPredicate:predicate];
+        request.predicate = predicate;
         Temple *object = [context executeFetchRequest:request error:nil][0];
-        if ([temple.isFavorite isEqualToNumber:[NSNumber numberWithBool:YES]]) { // The button they tapped read Remove from Favorites
-            object.isFavorite = [NSNumber numberWithBool:NO];
+        if ([temple.isFavorite isEqualToNumber:@YES]) { // The button they tapped read Remove from Favorites
+            object.isFavorite = @NO;
             [tableView cellForRowAtIndexPath:indexPath].textLabel.text = @"Add to Favorites";
         }
         else {// The button they tapped read Add to Favorites
             
-            object.isFavorite = [NSNumber numberWithBool:YES];
+            object.isFavorite = @YES;
             [context save:nil];
             [tableView cellForRowAtIndexPath:indexPath].textLabel.text = @"Remove from Favorites";
         }

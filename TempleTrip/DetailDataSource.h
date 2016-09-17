@@ -18,9 +18,9 @@
 @property(strong, nonatomic) id<FavoritesUpdatingProtocol> delegate;
 
 - (instancetype) initWithTemple: (Temple *) newTemple ManagedObjectContext: (NSManagedObjectContext *) newContext;
-- (instancetype) initWithImage: (UIImage*)Image Temple: (Temple *) newTemple ManagedObjectContext: (NSManagedObjectContext *) newContext;
+- (instancetype) initWithImage: (UIImage*)Image Temple: (Temple *) newTemple ManagedObjectContext: (NSManagedObjectContext *) newContext NS_DESIGNATED_INITIALIZER;
 
-- (NSIndexPath *)imageIndexPath;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSIndexPath *imageIndexPath;
 
 -(void) setScaledImageIfNeededWithWidth: (float) width;
 

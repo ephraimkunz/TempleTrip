@@ -32,7 +32,7 @@
     
     UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
     
-    UINavigationController *navigationController = [splitViewController.viewControllers firstObject];
+    UINavigationController *navigationController = (splitViewController.viewControllers).firstObject;
     MasterViewController *controller = (MasterViewController *)navigationController.topViewController;
     
     controller.managedObjectContext = self.managedObjectContext;
@@ -47,9 +47,9 @@
     
     
     ParseClientConfiguration *configuration = [ParseClientConfiguration configurationWithBlock: ^(id<ParseMutableClientConfiguration> config) {
-       [config setApplicationId:@"JUJurzhFM1UwVK1cY0JHyyJCw17ai5QH1cJ5F880"];
-       [config setClientKey:@"unused"];
-        [config setServer:@"http://templetrip-server.herokuapp.com/parse"];
+       config.applicationId = @"JUJurzhFM1UwVK1cY0JHyyJCw17ai5QH1cJ5F880";
+       config.clientKey = @"unused";
+        config.server = @"http://templetrip-server.herokuapp.com/parse";
     }];
     [Parse initializeWithConfiguration:configuration];
     
@@ -99,7 +99,7 @@
 
 - (NSURL *)applicationDocumentsDirectory {
     // The directory the application uses to store the Core Data store file. This code uses a directory named "com.EphraimKunz.TempleTrip" in the application's documents directory.
-    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+    return [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask].lastObject;
 }
 
 - (NSManagedObjectModel *)managedObjectModel {
@@ -120,7 +120,7 @@
     
     // Create the coordinator and store
     
-    _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
+    _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:self.managedObjectModel];
     NSDictionary *options = @{
                               NSMigratePersistentStoresAutomaticallyOption : @YES,
                               NSInferMappingModelAutomaticallyOption : @YES
@@ -138,7 +138,7 @@
         error = [NSError errorWithDomain:@"YOUR_ERROR_DOMAIN" code:9999 userInfo:dict];
         // Replace this with code to handle the error appropriately.
         // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        NSLog(@"Unresolved error %@, %@", error, error.userInfo);
         abort();
     }
     
@@ -152,12 +152,12 @@
         return _managedObjectContext;
     }
     
-    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
+    NSPersistentStoreCoordinator *coordinator = self.persistentStoreCoordinator;
     if (!coordinator) {
         return nil;
     }
     _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
-    [_managedObjectContext setPersistentStoreCoordinator:coordinator];
+    _managedObjectContext.persistentStoreCoordinator = coordinator;
     return _managedObjectContext;
 }
 
@@ -167,10 +167,10 @@
     NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
     if (managedObjectContext != nil) {
         NSError *error = nil;
-        if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
+        if (managedObjectContext.hasChanges && ![managedObjectContext save:&error]) {
             // Replace this implementation with code to handle the error appropriately.
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            NSLog(@"Unresolved error %@, %@", error, error.userInfo);
             abort();
         }
     }
@@ -226,7 +226,7 @@
 }
 
 -(void)removeData{
-    NSManagedObjectContext *context = [self managedObjectContext];
+    NSManagedObjectContext *context = self.managedObjectContext;
     NSFetchRequest *delete = [NSFetchRequest fetchRequestWithEntityName:@"Temple"];
     NSArray *allTemples = [context executeFetchRequest:delete error:nil];
     for (Temple* item in allTemples) {

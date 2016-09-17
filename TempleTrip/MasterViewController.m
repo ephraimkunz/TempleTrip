@@ -34,7 +34,7 @@
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     [[Crashlytics sharedInstance] setObjectValue:@"" forKey:@"currentTemple"];
-    [[Crashlytics sharedInstance]setIntValue:(int)[self.favoritesList count] forKey:@"numberOfFavorites"];
+    [[Crashlytics sharedInstance]setIntValue:(int)(self.favoritesList).count forKey:@"numberOfFavorites"];
     
     //Reload favorites after visiting detail screen.
     [self loadFavoritesList];
@@ -60,22 +60,22 @@
 #pragma mark - Segues
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"ShowDetail"]) {
+    if ([segue.identifier isEqualToString:@"ShowDetail"]) {
         
-        UINavigationController *navController = [segue destinationViewController];
-        DetailTableViewController *nextViewController = (DetailTableViewController *)[navController topViewController];
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        UINavigationController *navController = segue.destinationViewController;
+        DetailTableViewController *nextViewController = (DetailTableViewController *)navController.topViewController;
+        NSIndexPath *indexPath = (self.tableView).indexPathForSelectedRow;
 		NSManagedObject *object;
 		
         if (self.searchController.active) {
-            nextViewController.currentTemple = self.filteredList[[indexPath row]];
+            nextViewController.currentTemple = self.filteredList[indexPath.row];
         }else{
 			if (indexPath.section == kFavoritesSection) {
-				object = [self.favoritesList objectAtIndex:indexPath.row];
+				object = (self.favoritesList)[indexPath.row];
 			}
 			else{
 				NSIndexPath *modified = [NSIndexPath indexPathForRow:indexPath.row inSection:indexPath.section - 1];
-				object = [[self fetchedResultsController] objectAtIndexPath:modified];
+				object = [self.fetchedResultsController objectAtIndexPath:modified];
 			}
             nextViewController.currentTemple = (Temple *)object;
         }
@@ -92,17 +92,17 @@
     if (self.searchController.active)
         return 1;
     else
-        return [[self.fetchedResultsController sections] count] + 1; // For favorites
+        return (self.fetchedResultsController).sections.count + 1; // For favorites
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     if (self.searchController.active) {
-        return [self.filteredList count];
+        return (self.filteredList).count;
 	}else if(section == kFavoritesSection){
-		return [self.favoritesList count];
+		return (self.favoritesList).count;
 	}else{
-        id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section - 1];
-        return [sectionInfo numberOfObjects];
+        id <NSFetchedResultsSectionInfo> sectionInfo = (self.fetchedResultsController).sections[section - 1];
+        return sectionInfo.numberOfObjects;
     }
 }
 
@@ -111,14 +111,14 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
     if (self.searchController.active) {
-        Temple *filteredTemple = [self.filteredList objectAtIndex:[indexPath row]];
-        cell.textLabel.text = [filteredTemple name];
+        Temple *filteredTemple = (self.filteredList)[indexPath.row];
+        cell.textLabel.text = filteredTemple.name;
         
         //Configure dedication date as detail label.
         NSString *dateCandidate = filteredTemple.dedication;
         
         NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-        [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
+        formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss";
         NSDate *date = [formatter dateFromString:dateCandidate];
         
         if (date) {
@@ -145,14 +145,14 @@
 	}else if(section == kFavoritesSection){
 		return @"Favorites";
 	}else{
-		id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section  - 1];
-		return [sectionInfo name];
+		id <NSFetchedResultsSectionInfo> sectionInfo = (self.fetchedResultsController).sections[section  - 1];
+		return sectionInfo.name;
 	}
 }
 
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView{
 	if(self.searchController.active) return nil;
-	NSArray *letters = [self.fetchedResultsController sectionIndexTitles];
+	NSArray *letters = (self.fetchedResultsController).sectionIndexTitles;
 	NSString *search = UITableViewIndexSearch;
 	NSMutableArray *indexTitles = [[NSMutableArray alloc]initWithArray:letters];
 	[indexTitles insertObject:search atIndex:0];
@@ -197,7 +197,7 @@
     NSString *dateCandidate = [object valueForKey:@"dedication"];
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-    [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
+    formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss";
     NSDate *date = [formatter dateFromString:dateCandidate];
     
     if (date) {
@@ -220,16 +220,16 @@
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     // Edit the entity name as appropriate.
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"Temple" inManagedObjectContext:self.managedObjectContext];
-    [fetchRequest setEntity:entity];
+    fetchRequest.entity = entity;
     
     // Set the batch size to a suitable number.
-    [fetchRequest setFetchBatchSize:20];
+    fetchRequest.fetchBatchSize = 20;
     
     // Edit the sort key as appropriate.
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
     NSArray *sortDescriptors = @[sortDescriptor];
     
-    [fetchRequest setSortDescriptors:sortDescriptors];
+    fetchRequest.sortDescriptors = sortDescriptors;
     
     // Edit the section name key path and cache name if appropriate.
     // nil for section name key path means "no sections".
@@ -244,7 +244,7 @@
 	if (![self.fetchedResultsController performFetch:&error]) {
 	     // Replace this implementation with code to handle the error appropriately.
 	     // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
-	    NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+	    NSLog(@"Unresolved error %@, %@", error, error.userInfo);
 	    abort();
 	}
     return _fetchedResultsController;
@@ -271,7 +271,7 @@
         
         NSPredicate *predicate = [NSPredicate predicateWithFormat:predicateFormat, searchAttribute, searchString];
         if (![searchString isEqualToString:@""]) {
-            [request setPredicate:predicate];
+            request.predicate = predicate;
         }
         
         NSError *error = nil;
@@ -282,10 +282,10 @@
 - (NSFetchRequest *)createSearchFetchRequest{ // Create a new one each time so we can be sure it is "clean" when all text is deleted (returns everything).
 	NSFetchRequest *searchFetchRequest = [[NSFetchRequest alloc] init];
 	NSEntityDescription *entity = [NSEntityDescription entityForName:@"Temple" inManagedObjectContext:self.managedObjectContext];
-	[searchFetchRequest setEntity:entity];
+	searchFetchRequest.entity = entity;
 	
 	NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
-	[searchFetchRequest setSortDescriptors:@[sortDescriptor]];
+	searchFetchRequest.sortDescriptors = @[sortDescriptor];
     
     return searchFetchRequest;
 }
@@ -303,10 +303,10 @@
 - (void)loadFavoritesList{
 	NSFetchRequest *favoritesFetch = [[NSFetchRequest alloc]initWithEntityName:@"Temple"];
 	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"isFavorite == YES"];
-	[favoritesFetch setPredicate:predicate];
+	favoritesFetch.predicate = predicate;
 	
 	NSSortDescriptor *alphaName = [[NSSortDescriptor alloc]initWithKey:@"name" ascending:YES];
-	[favoritesFetch setSortDescriptors:@[alphaName]];
+	favoritesFetch.sortDescriptors = @[alphaName];
 
 	NSError *error;
 	if(!(self.favoritesList = [NSMutableArray arrayWithArray:[self.managedObjectContext executeFetchRequest:favoritesFetch error:&error]])){
@@ -317,9 +317,9 @@
 - (void)removeFavoritesDesignation:(Temple*)temple{
 	NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Temple"];
 	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name = %@", temple.name];
-	[request setPredicate:predicate];
+	request.predicate = predicate;
 	Temple *object = [self.managedObjectContext executeFetchRequest:request error:nil][0];
-	object.isFavorite = [NSNumber numberWithBool:NO];
+	object.isFavorite = @NO;
 	[self.managedObjectContext save:nil];
 }
 
