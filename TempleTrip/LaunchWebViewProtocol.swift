@@ -10,4 +10,6 @@ import Foundation
 
 @objc protocol LaunchWebViewProtocol {
     func launchWebView(_ url:URL) -> Void
+    
+    func displayHTML(_ html:NSString) ->Void
 }

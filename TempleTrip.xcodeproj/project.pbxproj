@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18033D161D8E025400BC5D79 /* WebKitWrapperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18033D151D8E025400BC5D79 /* WebKitWrapperViewController.m */; };
 		18081B7E1C2CF7B5000998AB /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 18081B7D1C2CF7B5000998AB /* Settings.bundle */; };
 		181EF7E81B73CF870010D2EA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 181EF7E71B73CF870010D2EA /* main.m */; };
 		181EF7EB1B73CF880010D2EA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 181EF7EA1B73CF880010D2EA /* AppDelegate.m */; };
@@ -64,6 +65,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		18033D131D8DF83000BC5D79 /* TempleTrip 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "TempleTrip 4.xcdatamodel"; sourceTree = "<group>"; };
+		18033D141D8E025400BC5D79 /* WebKitWrapperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebKitWrapperViewController.h; sourceTree = "<group>"; };
+		18033D151D8E025400BC5D79 /* WebKitWrapperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebKitWrapperViewController.m; sourceTree = "<group>"; };
 		18081B7D1C2CF7B5000998AB /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		181EF7E21B73CF870010D2EA /* TempleTrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TempleTrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		181EF7E61B73CF870010D2EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -248,6 +252,8 @@
 				181EF7F01B73CF880010D2EA /* MasterViewController.m */,
 				18C6CE8F1C2E35B100779183 /* DetailTableViewController.m */,
 				18C6CE8E1C2E35B100779183 /* DetailTableViewController.h */,
+				18033D141D8E025400BC5D79 /* WebKitWrapperViewController.h */,
+				18033D151D8E025400BC5D79 /* WebKitWrapperViewController.m */,
 				18A2EF6D1BE87A4000FB4D69 /* ScheduleViewController.h */,
 				18A2EF6E1BE87A4000FB4D69 /* ScheduleViewController.m */,
 				184DBFD31C41A23C00572D80 /* GlobalSplitViewController.h */,
@@ -484,6 +490,7 @@
 				18EB7BEB1CB4237D00A0D659 /* DetailWebViewController.swift in Sources */,
 				1827873B1C2B148500196E0F /* SchedulePickerTableViewCell.swift in Sources */,
 				181EF7EB1B73CF880010D2EA /* AppDelegate.m in Sources */,
+				18033D161D8E025400BC5D79 /* WebKitWrapperViewController.m in Sources */,
 				181EF7E81B73CF870010D2EA /* main.m in Sources */,
 				18AF86D91C66EB8B00A355C7 /* AppContextHelper.m in Sources */,
 				181EF7EE1B73CF880010D2EA /* TempleTrip.xcdatamodeld in Sources */,
@@ -730,11 +737,12 @@
 		181EF7EC1B73CF880010D2EA /* TempleTrip.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				18033D131D8DF83000BC5D79 /* TempleTrip 4.xcdatamodel */,
 				18EB7BF21CB5FB7700A0D659 /* TempleTrip 3.xcdatamodel */,
 				182DE7BE1C5489470001AD61 /* TempleTrip 2.xcdatamodel */,
 				181EF7ED1B73CF880010D2EA /* TempleTrip.xcdatamodel */,
 			);
-			currentVersion = 18EB7BF21CB5FB7700A0D659 /* TempleTrip 3.xcdatamodel */;
+			currentVersion = 18033D131D8DF83000BC5D79 /* TempleTrip 4.xcdatamodel */;
 			path = TempleTrip.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -25,4 +25,5 @@
 @dynamic existsOnServer;
 @dynamic closedDates;
 @dynamic webViewUrl;
+@dynamic prayer;
 @end

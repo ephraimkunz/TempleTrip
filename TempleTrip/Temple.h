@@ -24,6 +24,7 @@
 @property (nonatomic, retain) NSArray * closedDates;
 @property (nonatomic, retain) NSString * firstLetter;
 @property (nonatomic, retain) NSString * localImagePath;
+@property (nonatomic, retain) NSString * prayer;
 @property (nonatomic, retain) NSNumber * isFavorite;
 @property (nonatomic) BOOL hasCafeteria;
 @property (nonatomic) BOOL hasClothing;

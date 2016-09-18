@@ -12,7 +12,9 @@
 #import "TempleTrip-Swift.h"
 #import "ImageHelper.h"
 #import "MasterViewController.h"
+#import "WebKitWrapperViewController.h"
 
+@import WebKit;
 @import Crashlytics;
 
 @implementation DetailTableViewController{
@@ -141,6 +143,20 @@
 -(void)launchWebView:(NSURL *)url{
     DetailWebViewController *controller = [[DetailWebViewController alloc]initWithURL:url];
     [self.navigationController pushViewController:controller animated:YES];
+}
+
+-(void)displayHTML: (NSString *)html{
+    WebKitWrapperViewController *vc = [[WebKitWrapperViewController alloc]init];
+    
+    NSString *display = @"<html><head><meta charset=\"UTF-8\" name=\"viewport\" content=\"width=device-width, initial-scale=1\"><style>body{ font-size:16px; }</style></head><body>";
+    
+    //Convert values like \u2014 in the parsed html to their actual characters, like -.
+    NSData *data = [html dataUsingEncoding:NSUTF8StringEncoding];
+    html = [[NSString alloc] initWithData:data encoding:NSNonLossyASCIIStringEncoding];
+    display = [[display stringByAppendingString:html]stringByAppendingString:@"</body></html>"];
+
+    [vc loadHTMLString:display];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

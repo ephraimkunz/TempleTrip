@@ -54,7 +54,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     switch (section) {
         case kAddressSection:
-            return 3;
+            return 4;
             break;
         case kPhotoSection:
             return 1;
@@ -100,6 +100,10 @@
                 cell.textLabel.text = temple.webViewUrl;
             }
             else if(indexPath.row == 2){
+                cell = [tableView dequeueReusableCellWithIdentifier:@"AddressCell"];
+                cell.textLabel.text = @"Dedicatory Prayer";
+            }
+            else if(indexPath.row == 3){
                 ServicesAvailableCell* servicesCell = [tableView dequeueReusableCellWithIdentifier:@"ServicesAvailableCell"];
                 servicesCell.LeftLabel.text = temple.hasClothing ? @"Rental clothing" : @"No rental clothing";
                 servicesCell.RightLabel.text = temple.hasCafeteria ? @"Cafeteria" : @"No cafeteria";
@@ -194,6 +198,19 @@
             [self.webDelegate launchWebView:url];
         }
         
+    }
+    
+    else if(indexPath.section == kAddressSection && indexPath.row == 2){ //Tapped dedicatory prayer link
+        if(self.webDelegate){
+            NSString *displayableHTML;
+            if(!temple.prayer){
+                displayableHTML = @"This temple has not been dedicated yet.";
+            }
+            else{
+                displayableHTML = [temple.prayer stringByReplacingOccurrencesOfString:@"\\\"" withString:@"\""]; //Remove escaped " marks from HTML
+            }
+            [self.webDelegate displayHTML: displayableHTML];
+        }
     }
     
     else if(indexPath.section == kAddToFavoritesSection){
