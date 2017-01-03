@@ -49,7 +49,7 @@
     ParseClientConfiguration *configuration = [ParseClientConfiguration configurationWithBlock: ^(id<ParseMutableClientConfiguration> config) {
        config.applicationId = @"JUJurzhFM1UwVK1cY0JHyyJCw17ai5QH1cJ5F880";
        config.clientKey = @"unused";
-        config.server = @"http://templetrip-server.herokuapp.com/parse";
+        config.server = @"https://templetrip-server.herokuapp.com/parse";
     }];
     [Parse initializeWithConfiguration:configuration];
     

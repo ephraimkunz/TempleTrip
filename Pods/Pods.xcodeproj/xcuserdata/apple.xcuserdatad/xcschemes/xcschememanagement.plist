@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-TempleTripTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>iRate.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,32 +37,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>00E74CED770597EF76DEE6FE824D1B7A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>146D4D3BEC39209E7FD55AD619B9712E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2C8AA1BAF35413BDB954A1DF93576ED1</key>
+		<key>5F9CDF21330F4787AC04D56E0E745343</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4269436FE1F6F64DCC0A0964A9DE8B4B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>6095DE398C2BCE7C24317310CA12FDDD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7129FAB61478FA70223DADF4921468CD</key>
+		<key>755CD526B42EB45B8BFB3445038FEFD7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,27 +57,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8DFC442202E43CF8D54C93A4191CE72F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>935A7E52B6D8B7E37EAEA138EDC52155</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9B57F4EE4746045CEAE2D933A3C8EC9E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9BBDDACEDB7A87DE32EAD764EC24879C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B272B33F162D6E5C3510BA50ECF2684B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

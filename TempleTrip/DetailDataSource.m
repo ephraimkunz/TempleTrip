@@ -187,7 +187,7 @@
     
     if(indexPath.section == kAddressSection && indexPath.row == 0){ // Address tapped
         NSCharacterSet *set = [NSCharacterSet URLQueryAllowedCharacterSet];
-        NSString *mapsString = [[NSString stringWithFormat:@"http://maps.apple.com/?daddr=%@", temple.address] stringByAddingPercentEncodingWithAllowedCharacters: set];
+        NSString *mapsString = [[NSString stringWithFormat:@"https://maps.apple.com/?daddr=%@", temple.address] stringByAddingPercentEncodingWithAllowedCharacters: set];
         
         NSURL *mapsUrl = [NSURL URLWithString:mapsString];
         [[UIApplication sharedApplication]openURL:mapsUrl];
