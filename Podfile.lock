@@ -4,7 +4,7 @@ PODS:
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
   - iRate (1.11.7)
-  - Parse (1.14.2):
+  - Parse (1.14.4):
     - Bolts/Tasks (~> 1.8)
 
 DEPENDENCIES:
@@ -16,8 +16,8 @@ SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   iRate: adae3f183d83c925ac42d7a2e86e89e838963f57
-  Parse: 4335d65f40cb3d43190d723144bbe1afb9c38230
+  Parse: b0aa91d2c435e53d4a9af26e741e014c9b35c42e
 
 PODFILE CHECKSUM: 39bb56279f79a8990176166f4b4e9f8e752b3cc3
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.2.1
