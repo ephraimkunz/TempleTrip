@@ -23,6 +23,12 @@
     Temple *temple;
     NSManagedObjectContext *context;
 }
+
+- (instancetype) init {
+    @throw [NSException exceptionWithName:@"Must initialize with a temple and MOC" reason:@"DetailDataSource must be initialized with a temple and MOC. Call initWithTemple: ManagedObjectContext: instead." userInfo:nil];
+    return [self initWithTemple:nil ManagedObjectContext:nil];
+}
+
 - (instancetype) initWithImage: (UIImage*)Image Temple: (Temple *) newTemple ManagedObjectContext: (NSManagedObjectContext *) newContext{
     self = [super init];
     if (self) {
